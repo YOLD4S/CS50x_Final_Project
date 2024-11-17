@@ -49,6 +49,10 @@ CREATE TABLE IF NOT EXISTS `ashes_of_war` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`affinity_id` int NOT NULL,
+	`desc` text NOT NULL,
+	`fp_cost` int,
+	`fp_cost_light` int,
+	`fp_cost_heavy` int,
 	PRIMARY KEY (`id`)
 );
 
@@ -81,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `npcs` (
 	`name` varchar(255) NOT NULL,
 	`hp` int NOT NULL,
 	`human` bool NOT NULL,
+	`dropped_item_id` int NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -124,7 +129,64 @@ CREATE TABLE IF NOT EXISTS `armor_sets` (
 	PRIMARY KEY (`id`)
 );
 
+CREATE TABLE IF NOT EXISTS `talismans` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`info` text NOT NULL,
+	`weight` float NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `magic` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`type` varchar(255) NOT NULL,
+	`info` text NOT NULL,
+	`fp_cost` int NOT NULL,
+	`fp_cost_continuous` int NOT NULL,
+	`stamina_cost` int NOT NULL,
+	`slots_used` int NOT NULL,
+	`req_int` int NOT NULL,
+	`req_fai` int NOT NULL,
+	`req_arc` int NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `spirit_ashes` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`info` text NOT NULL,
+	`fp_cost` int NOT NULL,
+	`hp_cost` int NOT NULL,
+	`hp` int NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `items` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`name` varchar(255) NOT NULL,
+	`type` varchar(255) NOT NULL,
+	`price` int,
+	`desc` int NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `bolsters` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`info` text NOT NULL,
+	`max_held` int NOT NULL,
+	`max_storage` int NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `key_items` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`info1` text NOT NULL,
+	`info2` text NOT NULL,
+	`type` varchar(255) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
 ALTER TABLE `affinities` ADD CONSTRAINT `affinities_fk2` FOREIGN KEY (`affinity_passive_id`) REFERENCES `effects`(`id`);
+ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+
 ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk1` FOREIGN KEY (`main_weapon_id`) REFERENCES `weapons`(`id`);
 
 ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk2` FOREIGN KEY (`affinity_id`) REFERENCES `affinities`(`id`);
@@ -142,6 +204,10 @@ ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk2` FOREIGN KEY (`affin
 
 ALTER TABLE `locations` ADD CONSTRAINT `locations_fk2` FOREIGN KEY (`region`) REFERENCES `regions`(`id`);
 ALTER TABLE `npcs` ADD CONSTRAINT `npcs_fk1` FOREIGN KEY (`encounter_id`) REFERENCES `npc_encounters`(`id`);
+
+ALTER TABLE `npcs` ADD CONSTRAINT `npcs_fk5` FOREIGN KEY (`dropped_item_id`) REFERENCES `items`(`id`);
+ALTER TABLE `armors` ADD CONSTRAINT `armors_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+
 ALTER TABLE `armors` ADD CONSTRAINT `armors_fk1` FOREIGN KEY (`set_id`) REFERENCES `armor_sets`(`id`);
 ALTER TABLE `npc_encounters` ADD CONSTRAINT `npc_encounters_fk4` FOREIGN KEY (`location_id`) REFERENCES `locations`(`id`);
 ALTER TABLE `npc_gear` ADD CONSTRAINT `npc_gear_fk0` FOREIGN KEY (`id`) REFERENCES `npcs`(`id`);
@@ -161,3 +227,10 @@ ALTER TABLE `npc_gear` ADD CONSTRAINT `npc_gear_fk6` FOREIGN KEY (`armor_body_id
 ALTER TABLE `npc_gear` ADD CONSTRAINT `npc_gear_fk7` FOREIGN KEY (`armor_arms_id`) REFERENCES `armors`(`id`);
 
 ALTER TABLE `npc_gear` ADD CONSTRAINT `npc_gear_fk8` FOREIGN KEY (`armor_legs_id`) REFERENCES `armors`(`id`);
+
+ALTER TABLE `talismans` ADD CONSTRAINT `talismans_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+ALTER TABLE `magic` ADD CONSTRAINT `magic_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+ALTER TABLE `spirit_ashes` ADD CONSTRAINT `spirit_ashes_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+
+ALTER TABLE `bolsters` ADD CONSTRAINT `bolsters_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+ALTER TABLE `key_items` ADD CONSTRAINT `key_items_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
