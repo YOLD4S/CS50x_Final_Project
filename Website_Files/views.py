@@ -26,7 +26,7 @@ def item_page(item_key):
 def npcs_page():
     db_npcs = current_app.config["db_npcs"]
     npcs = db_npcs.get_npcs()
-    return render_template("npcs.html", npcs=sorted(npcs))
+    return render_template("npcs.html", npcs=npcs)
 
 
 def npc_page(npc_key):

@@ -54,5 +54,5 @@ class NPCDatabase:
         npcs = []
         for npc_key, npc in self.npcs.items():
             npc_ = NPC(name=npc.name, hp=npc.hp, human=npc.human, drops=npc.drops, image_path=npc.image_path)
-            npcs.append(npc_)
+            npcs.append((npc_key, npc_))
         return npcs
