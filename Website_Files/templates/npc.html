@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}npc{% endblock %}
+{% block content %}
+    <h1 class="title">npc</h1>
+
+    <table class="table">
+      <tr>
+        <th>Title:</th>
+        <td>{{ npc.title }}</td>
+      </tr>
+      {% if npc.year %}
+      <tr>
+        <th>Year:</th>
+        <td>{{ npc.year }}</td>
+      </tr>
+      {% endif %}
+    </table>
+{% endblock %}
