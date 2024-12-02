@@ -30,8 +30,8 @@ def npcs_page():
 
 
 def npc_page(npc_key):
-    db_NPC = current_app.config["db_NPC"]
-    npc = db_NPC.get_npc(npc_key)
+    db_npcs = current_app.config["db_npcs"]
+    npc = db_npcs.get_npc(npc_key)
     if npc is None:
         abort(404)
     return render_template("npc.html", npc=npc)

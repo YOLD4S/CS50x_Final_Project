@@ -1,17 +1,17 @@
 {% extends "layout.html" %}
-{% block title %}npc{% endblock %}
+{% block title %}NPC{% endblock %}
 {% block content %}
-    <h1 class="title">npc</h1>
+    <h1 class="title">NPC</h1>
 
     <table class="table">
       <tr>
         <th>Title:</th>
-        <td>{{ npc.title }}</td>
+        <td>{{ npc.name }}</td>
       </tr>
-      {% if npc.year %}
+      {% if npc.name %}
       <tr>
-        <th>Year:</th>
-        <td>{{ npc.year }}</td>
+        <th>Name:</th>
+        <td>{{ npc.name }}</td>
       </tr>
       {% endif %}
     </table>
