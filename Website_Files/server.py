@@ -23,6 +23,10 @@ def create_app():
     db_npc = NPCDatabase()
     db_npc.add_npc(NPC("AlihaSN", 10, False, 13, "images/SN.png"))
     db_npc.add_npc(NPC("AlihanSN", 100, True, 123, "images/SN.png"))
+    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, "images/SN.png"))
+    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, "images/SN.png"))
+    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, "images/SN.png"))
+    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, "images/SN.png"))
     app.config["db_npcs"] = db_npc
 
 
