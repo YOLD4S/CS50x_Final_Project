@@ -184,6 +184,32 @@ CREATE TABLE IF NOT EXISTS `key_items` (
 	PRIMARY KEY (`id`)
 );
 
+CREATE TABLE IF NOT EXISTS `users` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`name` varchar(255) NOT NULL,
+	`email` varchar(255),
+	`password_hash` varchar(255) NOT NULL,
+	`steam_url` varchar(255),
+	`profile_picture` varchar(255),
+	`created_at` timestamp NOT NULL,
+	`last_login` timestamp NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `characters` (
+	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
+	`name` varchar(255) NOT NULL,
+	`creator_id` int NOT NULL,
+	`weapon_id` int NOT NULL,
+	`weapon_skill_id` int NOT NULL,
+	`armor_head_id` int NOT NULL,
+	`armor_body_id` int NOT NULL,
+	`armor_arms_id` int NOT NULL,
+	`armor_legs_id` int NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
 ALTER TABLE `affinities` ADD CONSTRAINT `affinities_fk2` FOREIGN KEY (`affinity_passive_id`) REFERENCES `effects`(`id`);
 ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
 
@@ -234,3 +260,17 @@ ALTER TABLE `spirit_ashes` ADD CONSTRAINT `spirit_ashes_fk0` FOREIGN KEY (`id`) 
 
 ALTER TABLE `bolsters` ADD CONSTRAINT `bolsters_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
 ALTER TABLE `key_items` ADD CONSTRAINT `key_items_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk2` FOREIGN KEY (`creator_id`) REFERENCES `users`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk3` FOREIGN KEY (`weapon_id`) REFERENCES `weapons_w_affinities`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk4` FOREIGN KEY (`weapon_skill_id`) REFERENCES `weapon_skills`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk5` FOREIGN KEY (`armor_head_id`) REFERENCES `armors`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk6` FOREIGN KEY (`armor_body_id`) REFERENCES `armors`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk7` FOREIGN KEY (`armor_arms_id`) REFERENCES `armors`(`id`);
+
+ALTER TABLE `characters` ADD CONSTRAINT `characters_fk8` FOREIGN KEY (`armor_legs_id`) REFERENCES `armors`(`id`);
