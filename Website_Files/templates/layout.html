@@ -3,23 +3,30 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>My items - {% block title %}{% endblock %}</title>
+    <title>My Items - {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
     <link rel="stylesheet"
           href="{{ url_for('static', filename='myitems.css') }}"/>
   </head>
   <body>
     <header>
+
       <nav class="navbar" aria-label="main navigation">
         <div class="navbar-brand">
           <span class="navbar-item">
-            <a class="button is-link" href="{{ url_for('home_page') }}">Home</a>
+            <a class="button is-link {% if request.endpoint == 'home_page' %}is-active{% endif %}" href="{{ url_for('home_page') }}">Home</a>
           </span>
           <span class="navbar-item">
-            <a class="button is-link" href="{{ url_for('items_page') }}">List items</a>
+            <a class="button is-link {% if request.endpoint == 'npcs_page' %}is-active{% endif %}" href="{{ url_for('npcs_page') }}">NPCs</a>
           </span>
           <span class="navbar-item">
-            <a class="button is-link" href="{{ url_for('npcs_page') }}">List npcs</a>
+            <a class="button is-link {% if request.endpoint == 'weapons_page' %}is-active{% endif %}" href="{{ url_for('weapons_page') }}">Weapons</a>
+          </span>
+          <span class="navbar-item">
+            <a class="button is-link {% if request.endpoint == 'armors_page' %}is-active{% endif %}" href="{{ url_for('armors_page') }}">Armors</a>
+          </span>
+          <span class="navbar-item">
+            <a class="button is-link {% if request.endpoint == 'items_page' %}is-active{% endif %}" href="{{ url_for('items_page') }}">Items</a>
           </span>
         </div>
       </nav>
@@ -35,7 +42,7 @@
 
     <footer class="footer">
       <div class="content">
-        <small>&copy; 2024-2025, Arif Eren Yoldas</small>
+        <small>&copy; 2024, Your Team Name</small>
       </div>
     </footer>
   </body>

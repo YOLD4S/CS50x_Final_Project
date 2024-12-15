@@ -3,17 +3,21 @@ from flask import Flask
 import views
 from database import ItemDatabase, NPCDatabase
 from elements import Item, NPC
+from db import get_db, close_db
 
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object("settings")
+    app.teardown_appcontext(close_db)
 
     app.add_url_rule("/", view_func=views.home_page)
     app.add_url_rule("/items", view_func=views.items_page)
     app.add_url_rule("/items/<int:item_key>", view_func=views.item_page)
     app.add_url_rule("/npcs", view_func=views.npcs_page)
     app.add_url_rule("/npcs/<int:npc_key>", view_func=views.npc_page)
+    app.add_url_rule("/weapons", view_func=views.weapons_page)
+    app.add_url_rule("/armors", view_func=views.armors_page)
 
     db_item = ItemDatabase()
     db_item.add_item(Item("Slaughterhouse-Five", year=1972))

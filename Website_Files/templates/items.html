@@ -1,20 +1,23 @@
 {% extends "layout.html" %}
-{% block title %}Item list{% endblock %}
+{% block title %}Items{% endblock %}
 {% block content %}
-    <h1 class="title">Items</h1>
-
-    {% if items %}
-    <table class="table is-striped is-fullwidth">
-      {% for item_key, item in items %}
-      <tr>
-        <td>
-          <a href="{{ url_for('item_page', item_key=item_key) }}">
-            {{ item.title }}
-            {% if item.year %} ({{ item.year }}) {% endif %}
-          </a>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
-    {% endif %}
+<h1 class="title">Items</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Description</th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.desc }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from flask import abort, current_app, render_template
+from db import get_db
 
 
 def home_page():
@@ -10,9 +11,11 @@ def home_page():
 
 
 def items_page():
-    db_items = current_app.config["db_items"]
-    items = db_items.get_items()
-    return render_template("items.html", items=sorted(items))
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM items")
+    items = cursor.fetchall()
+    return render_template("items.html", items=items)
 
 
 def item_page(item_key):
@@ -24,8 +27,10 @@ def item_page(item_key):
 
 
 def npcs_page():
-    db_npcs = current_app.config["db_npcs"]
-    npcs = db_npcs.get_npcs()
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM npcs")
+    npcs = cursor.fetchall()
     return render_template("npcs.html", npcs=npcs)
 
 
@@ -35,3 +40,18 @@ def npc_page(npc_key):
     if npc is None:
         abort(404)
     return render_template("npc.html", npc=npc)
+
+def weapons_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM weapons")
+    weapons = cursor.fetchall()
+    return render_template("weapons.html", weapons=weapons)
+
+
+def armors_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM armors")
+    armors = cursor.fetchall()
+    return render_template("armors.html", armors=armors)

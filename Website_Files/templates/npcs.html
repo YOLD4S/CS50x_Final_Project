@@ -1,20 +1,23 @@
 {% extends "layout.html" %}
-{% block title %}npc list{% endblock %}
+{% block title %}NPCs{% endblock %}
 {% block content %}
-    <h1 class="title">NPCs</h1>
-
-    {% if npcs %}
-    <table class="table is-striped is-fullwidth">
-      {% for npc_key, npc in npcs %}
-      <tr>
-        <td>
-          <a href="{{ url_for('npc_page', npc_key=npc_key) }}">
-            {{ npc.name }}
-            {% if npc.name %} ({{ npc.name }}) {% endif %}
-          </a>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
-    {% endif %}
+<h1 class="title">NPCs</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>HP</th>
+        <th>Human</th>
+        <th>Dropped Item</th>
+    </tr>
+    {% for npc in npcs %}
+    <tr>
+        <td>{{ npc.id }}</td>
+        <td>{{ npc.name }}</td>
+        <td>{{ npc.hp }}</td>
+        <td>{{ 'Yes' if npc.human else 'No' }}</td>
+        <td>{{ npc.dropped_item_id }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

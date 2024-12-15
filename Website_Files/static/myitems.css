@@ -98,3 +98,12 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+.navbar .is-active {
+  background-color: #71a8f1;
+  color: white;
+}
+
+.navbar a {
+  margin: 0 5px;
+}
