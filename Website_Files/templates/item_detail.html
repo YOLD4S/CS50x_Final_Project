@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}{{ item.name }}{% endblock %}
+{% block content %}
+<h1 class="title">{{ item.name }}</h1>
+<table class="table">
+    <tr><th>ID</th><td>{{ item.id }}</td></tr>
+    <tr><th>Type</th><td>{{ item.type }}</td></tr>
+    <tr><th>Price</th><td>{{ item.price }}</td></tr>
+    <tr><th>Description</th><td>{{ item.desc }}</td></tr>
+</table>
+{% endblock %}

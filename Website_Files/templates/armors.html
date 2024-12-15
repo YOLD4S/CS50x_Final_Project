@@ -2,22 +2,11 @@
 {% block title %}Armors{% endblock %}
 {% block content %}
 <h1 class="title">Armors</h1>
-<table class="table">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Weight</th>
-        <th>Equip Slot</th>
-    </tr>
+<ul>
     {% for armor in armors %}
-    <tr>
-        <td>{{ armor.id }}</td>
-        <td>{{ armor.name }}</td>
-        <td>{{ armor.desc }}</td>
-        <td>{{ armor.weight }}</td>
-        <td>{{ armor.equip_slot }}</td>
-    </tr>
+    <li>
+        <a href="{{ url_for('armor_detail_page', armor_id=armor.id) }}">{{ armor.name }}</a>
+    </li>
     {% endfor %}
-</table>
+</ul>
 {% endblock %}

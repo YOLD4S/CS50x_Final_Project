@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `items` (
 	`name` varchar(255) NOT NULL,
 	`type` varchar(255) NOT NULL,
 	`price` int,
-	`desc` int NOT NULL,
+	`desc` varchar(255),
 	PRIMARY KEY (`id`)
 );
 

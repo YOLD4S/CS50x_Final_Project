@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}{{ npc.name }}{% endblock %}
+{% block content %}
+<h1 class="title">{{ npc.name }}</h1>
+<table class="table">
+    <tr><th>ID</th><td>{{ npc.id }}</td></tr>
+    <tr><th>HP</th><td>{{ npc.hp }}</td></tr>
+    <tr><th>Human</th><td>{{ 'Yes' if npc.human else 'No' }}</td></tr>
+    <tr><th>Dropped Item ID</th><td>{{ npc.dropped_item_id }}</td></tr>
+</table>
+{% endblock %}

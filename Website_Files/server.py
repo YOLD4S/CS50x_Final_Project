@@ -18,6 +18,10 @@ def create_app():
     app.add_url_rule("/npcs/<int:npc_key>", view_func=views.npc_page)
     app.add_url_rule("/weapons", view_func=views.weapons_page)
     app.add_url_rule("/armors", view_func=views.armors_page)
+    app.add_url_rule("/npcs/<int:npc_id>", view_func=views.npc_detail_page)
+    app.add_url_rule("/items/<int:item_id>", view_func=views.item_detail_page)
+    app.add_url_rule("/weapons/<int:weapon_id>", view_func=views.weapon_detail_page)
+    app.add_url_rule("/armors/<int:armor_id>", view_func=views.armor_detail_page)
 
     db_item = ItemDatabase()
     db_item.add_item(Item("Slaughterhouse-Five", year=1972))

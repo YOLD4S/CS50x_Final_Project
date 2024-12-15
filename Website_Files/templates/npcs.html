@@ -2,22 +2,11 @@
 {% block title %}NPCs{% endblock %}
 {% block content %}
 <h1 class="title">NPCs</h1>
-<table class="table">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>HP</th>
-        <th>Human</th>
-        <th>Dropped Item</th>
-    </tr>
+<ul>
     {% for npc in npcs %}
-    <tr>
-        <td>{{ npc.id }}</td>
-        <td>{{ npc.name }}</td>
-        <td>{{ npc.hp }}</td>
-        <td>{{ 'Yes' if npc.human else 'No' }}</td>
-        <td>{{ npc.dropped_item_id }}</td>
-    </tr>
+    <li>
+        <a href="{{ url_for('npc_detail_page', npc_id=npc.id) }}">{{ npc.name }}</a>
+    </li>
     {% endfor %}
-</table>
+</ul>
 {% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ weapon.name }}{% endblock %}
+{% block content %}
+<h1 class="title">{{ weapon.name }}</h1>
+<table class="table">
+    <tr><th>ID</th><td>{{ weapon.id }}</td></tr>
+    <tr><th>Group ID</th><td>{{ weapon.group_id }}</td></tr>
+    <tr><th>Description</th><td>{{ weapon.desc }}</td></tr>
+    <tr><th>Weight</th><td>{{ weapon.weight }}</td></tr>
+    <tr><th>Required Strength</th><td>{{ weapon.req_str }}</td></tr>
+    <tr><th>Required Dexterity</th><td>{{ weapon.req_dex }}</td></tr>
+    <tr><th>Required Intelligence</th><td>{{ weapon.req_int }}</td></tr>
+    <tr><th>Required Faith</th><td>{{ weapon.req_fai }}</td></tr>
+    <tr><th>Required Arcane</th><td>{{ weapon.req_arc }}</td></tr>
+</table>
+{% endblock %}

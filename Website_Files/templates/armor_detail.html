@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}{{ armor.name }}{% endblock %}
+{% block content %}
+<h1 class="title">{{ armor.name }}</h1>
+<table class="table">
+    <tr><th>ID</th><td>{{ armor.id }}</td></tr>
+    <tr><th>Set ID</th><td>{{ armor.set_id }}</td></tr>
+    <tr><th>Equip Slot</th><td>{{ armor.equip_slot }}</td></tr>
+    <tr><th>Description</th><td>{{ armor.desc }}</td></tr>
+    <tr><th>Weight</th><td>{{ armor.weight }}</td></tr>
+    <tr><th>Can Be Altered</th><td>{{ 'Yes' if armor.can_alter else 'No' }}</td></tr>
+</table>
+{% endblock %}
