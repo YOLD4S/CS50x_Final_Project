@@ -10,7 +10,11 @@ CREATE TABLE IF NOT EXISTS `weapons_w_affinities` (
 	`main_weapon_id` int NOT NULL,
 	`affinity_id` int NOT NULL,
 	`name` varchar(255) NOT NULL,
-	`scaling` varchar(255),
+	`str_scaling` int,
+	`dex_scaling` int NOT NULL,
+	`int_scaling` int NOT NULL,
+	`fai_scaling` int NOT NULL,
+	`arc_scaling` int NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -23,7 +27,6 @@ CREATE TABLE IF NOT EXISTS `effects` (
 CREATE TABLE IF NOT EXISTS `weapon_skills` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
-	`aow_id` int,
 	PRIMARY KEY (`id`)
 );
 
@@ -49,6 +52,7 @@ CREATE TABLE IF NOT EXISTS `ashes_of_war` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`affinity_id` int NOT NULL,
+	`skill_id` int NOT NULL,
 	`desc` text NOT NULL,
 	`fp_cost` int,
 	`fp_cost_light` int,
@@ -217,7 +221,7 @@ ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk1` FOR
 
 ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk2` FOREIGN KEY (`affinity_id`) REFERENCES `affinities`(`id`);
 
-ALTER TABLE `weapon_skills` ADD CONSTRAINT `weapon_skills_fk2` FOREIGN KEY (`aow_id`) REFERENCES `ashes_of_war`(`id`);
+
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk1` FOREIGN KEY (`group_id`) REFERENCES `weapon_groups`(`id`);
 
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk5` FOREIGN KEY (`weapon_passive_id`) REFERENCES `effects`(`id`);
@@ -226,6 +230,8 @@ ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk6` FOREIGN KEY (`hidden_effect_i
 
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk7` FOREIGN KEY (`default_skill_id`) REFERENCES `weapon_skills`(`id`);
 ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk2` FOREIGN KEY (`affinity_id`) REFERENCES `affinities`(`id`);
+
+ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk3` FOREIGN KEY (`skill_id`) REFERENCES `weapon_skills`(`id`);
 
 
 ALTER TABLE `locations` ADD CONSTRAINT `locations_fk2` FOREIGN KEY (`region`) REFERENCES `regions`(`id`);
