@@ -32,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `weapon_skills` (
 CREATE TABLE IF NOT EXISTS `weapons` (
 	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`group_id` int NOT NULL,
-	`weapon_id` int NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`desc` text NOT NULL,
 	`weapon_passive_id` int NOT NULL,
@@ -44,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `weapons` (
 	`req_int` smallint NOT NULL DEFAULT '0',
 	`req_fai` smallint NOT NULL DEFAULT '0',
 	`req_arc` smallint NOT NULL DEFAULT '0',
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `ashes_of_war` (
 	`fp_cost` int,
 	`fp_cost_light` int,
 	`fp_cost_heavy` int,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -78,7 +79,9 @@ CREATE TABLE IF NOT EXISTS `regions` (
 CREATE TABLE IF NOT EXISTS `locations` (
 	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`name` varchar(255) NOT NULL,
-	`region` int NOT NULL,
+	`region_id` int NOT NULL,
+	`desc` text,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -90,6 +93,7 @@ CREATE TABLE IF NOT EXISTS `npcs` (
 	`human` bool NOT NULL,
 	`gear_id` int,
 	`dropped_item_id` int NOT NULL,
+	`image_url` int NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -101,6 +105,7 @@ CREATE TABLE IF NOT EXISTS `armors` (
 	`weight` float NOT NULL,
 	`price` int NOT NULL,
 	`can_alter` bool NOT NULL,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -139,6 +144,7 @@ CREATE TABLE IF NOT EXISTS `talismans` (
 	`desc` text NOT NULL,
 	`weight` float NOT NULL,
 	`price` int NOT NULL,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -154,6 +160,7 @@ CREATE TABLE IF NOT EXISTS `magic` (
 	`req_int` int NOT NULL,
 	`req_fai` int NOT NULL,
 	`req_arc` int NOT NULL,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -164,6 +171,7 @@ CREATE TABLE IF NOT EXISTS `spirit_ashes` (
 	`fp_cost` int NOT NULL,
 	`hp_cost` int NOT NULL,
 	`hp` int NOT NULL,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -181,6 +189,7 @@ CREATE TABLE IF NOT EXISTS `bolsters` (
 	`max_held` int NOT NULL,
 	`max_storage` int NOT NULL,
 	`price` int NOT NULL,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -189,6 +198,7 @@ CREATE TABLE IF NOT EXISTS `key_items` (
 	`info` text NOT NULL,
 	`desc` text NOT NULL,
 	`type_id` int NOT NULL,
+	`image_url` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -197,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 	`username` varchar(255) NOT NULL UNIQUE,
 	`name` varchar(255) NOT NULL,
 	`email` varchar(255),
-	`password_hash` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
 	`steam_url` varchar(255),
 	`profile_picture` varchar(255),
 	`created_at` timestamp NOT NULL,
@@ -247,17 +257,17 @@ ALTER TABLE `weapons_w_affinities` ADD CONSTRAINT `weapons_w_affinities_fk2` FOR
 
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk1` FOREIGN KEY (`group_id`) REFERENCES `weapon_groups`(`id`);
 
-ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk5` FOREIGN KEY (`weapon_passive_id`) REFERENCES `effects`(`id`);
+ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk4` FOREIGN KEY (`weapon_passive_id`) REFERENCES `effects`(`id`);
 
-ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk6` FOREIGN KEY (`hidden_effect_id`) REFERENCES `effects`(`id`);
+ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk5` FOREIGN KEY (`hidden_effect_id`) REFERENCES `effects`(`id`);
 
-ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk7` FOREIGN KEY (`default_skill_id`) REFERENCES `weapon_skills`(`id`);
+ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk6` FOREIGN KEY (`default_skill_id`) REFERENCES `weapon_skills`(`id`);
 ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk2` FOREIGN KEY (`affinity_id`) REFERENCES `affinities`(`id`);
 
 ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk3` FOREIGN KEY (`skill_id`) REFERENCES `weapon_skills`(`id`);
 
 
-ALTER TABLE `locations` ADD CONSTRAINT `locations_fk2` FOREIGN KEY (`region`) REFERENCES `regions`(`id`);
+ALTER TABLE `locations` ADD CONSTRAINT `locations_fk2` FOREIGN KEY (`region_id`) REFERENCES `regions`(`id`);
 ALTER TABLE `npcs` ADD CONSTRAINT `npcs_fk1` FOREIGN KEY (`encounter_id`) REFERENCES `npc_encounters`(`id`);
 
 ALTER TABLE `npcs` ADD CONSTRAINT `npcs_fk5` FOREIGN KEY (`gear_id`) REFERENCES `gear`(`id`);
