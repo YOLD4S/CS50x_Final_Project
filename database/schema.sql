@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 	`username` varchar(255) NOT NULL UNIQUE,
 	`name` varchar(255) NOT NULL,
 	`email` varchar(255),
-	`password` varchar(255) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
 	`steam_url` varchar(255),
 	`profile_picture` varchar(255),
 	`created_at` timestamp NOT NULL,
@@ -302,7 +302,7 @@ ALTER TABLE `magic` ADD CONSTRAINT `magic_fk1` FOREIGN KEY (`type_id`) REFERENCE
 ALTER TABLE `spirit_ashes` ADD CONSTRAINT `spirit_ashes_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
 ALTER TABLE `items` ADD CONSTRAINT `items_fk1` FOREIGN KEY (`type_id`) REFERENCES `item_types`(`id`);
 ALTER TABLE `bolsters` ADD CONSTRAINT `bolsters_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
-ALTER TABLE `key_items` ADD CONSTRAINT `key_items_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
+ALTER TABLE `key_items` ADD CONSTRAINT `key_items_fk0` FOREIGN KEY (`id`) REFERENCES `items`(`id`); 
 
 ALTER TABLE `key_items` ADD CONSTRAINT `key_items_fk3` FOREIGN KEY (`type_id`) REFERENCES `key_item_types`(`id`);
 
