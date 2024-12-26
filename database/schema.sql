@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 	`username` varchar(255) NOT NULL UNIQUE,
 	`name` varchar(255) NOT NULL,
 	`email` varchar(255),
-	`password_hash` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
 	`steam_url` varchar(255),
 	`profile_picture` varchar(255),
 	`created_at` timestamp NOT NULL,
