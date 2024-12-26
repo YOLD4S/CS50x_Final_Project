@@ -8,12 +8,12 @@ CREATE TABLE IF NOT EXISTS `affinities` (
 CREATE TABLE IF NOT EXISTS `weapons_w_affinities` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`main_weapon_id` int NOT NULL,
-	`affinity_id` int NOT NULL,
+	`affinity_id` int,
 	`str_scaling` int,
-	`dex_scaling` int NOT NULL,
-	`int_scaling` int NOT NULL,
-	`fai_scaling` int NOT NULL,
-	`arc_scaling` int NOT NULL,
+	`dex_scaling` int NOT NULL DEFAULT '0',
+	`int_scaling` int NOT NULL DEFAULT '0',
+	`fai_scaling` int NOT NULL DEFAULT '0',
+	`arc_scaling` int NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`)
 );
 
@@ -33,17 +33,17 @@ CREATE TABLE IF NOT EXISTS `weapons` (
 	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`group_id` int NOT NULL,
 	`name` varchar(255) NOT NULL,
-	`desc` text NOT NULL,
-	`weapon_passive_id` int NOT NULL,
-	`hidden_effect_id` int NOT NULL,
-	`default_skill_id` int NOT NULL,
+	`desc` text,
+	`weapon_passive_id` int,
+	`hidden_effect_id` int,
+	`default_skill_id` int,
 	`weight` float NOT NULL,
 	`req_str` smallint NOT NULL DEFAULT '0',
 	`req_dex` smallint NOT NULL DEFAULT '0',
 	`req_int` smallint NOT NULL DEFAULT '0',
 	`req_fai` smallint NOT NULL DEFAULT '0',
 	`req_arc` smallint NOT NULL DEFAULT '0',
-	`image_url` varchar(255) NOT NULL,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -53,10 +53,10 @@ CREATE TABLE IF NOT EXISTS `ashes_of_war` (
 	`affinity_id` int NOT NULL,
 	`skill_id` int NOT NULL,
 	`desc` text NOT NULL,
-	`fp_cost` int,
+	`fp_cost` int NOT NULL DEFAULT '0',
 	`fp_cost_light` int,
 	`fp_cost_heavy` int,
-	`image_url` varchar(255) NOT NULL,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -92,8 +92,8 @@ CREATE TABLE IF NOT EXISTS `npcs` (
 	`hp` int NOT NULL,
 	`human` bool NOT NULL,
 	`gear_id` int,
-	`dropped_item_id` int NOT NULL,
-	`image_url` int NOT NULL,
+	`dropped_item_id` int,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -101,11 +101,11 @@ CREATE TABLE IF NOT EXISTS `armors` (
 	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`set_id` int NOT NULL,
 	`equip_slot_id` int NOT NULL,
-	`desc` text NOT NULL,
+	`desc` text,
 	`weight` float NOT NULL,
 	`price` int NOT NULL,
 	`can_alter` bool NOT NULL,
-	`image_url` varchar(255) NOT NULL,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `talismans` (
 	`desc` text NOT NULL,
 	`weight` float NOT NULL,
 	`price` int NOT NULL,
-	`image_url` varchar(255) NOT NULL,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -154,13 +154,13 @@ CREATE TABLE IF NOT EXISTS `magic` (
 	`info` text NOT NULL,
 	`desc` text NOT NULL,
 	`fp_cost` int NOT NULL,
-	`fp_cost_continuous` int NOT NULL,
+	`fp_cost_continuous` int,
 	`stamina_cost` int NOT NULL,
-	`slots_used` int NOT NULL,
-	`req_int` int NOT NULL,
-	`req_fai` int NOT NULL,
-	`req_arc` int NOT NULL,
-	`image_url` varchar(255) NOT NULL,
+	`slots_used` int NOT NULL DEFAULT '0',
+	`req_int` int NOT NULL DEFAULT '0',
+	`req_fai` int NOT NULL DEFAULT '0',
+	`req_arc` int NOT NULL DEFAULT '0',
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -169,9 +169,9 @@ CREATE TABLE IF NOT EXISTS `spirit_ashes` (
 	`info` text NOT NULL,
 	`desc` text NOT NULL,
 	`fp_cost` int NOT NULL,
-	`hp_cost` int NOT NULL,
+	`hp_cost` int,
 	`hp` int NOT NULL,
-	`image_url` varchar(255) NOT NULL,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -188,8 +188,8 @@ CREATE TABLE IF NOT EXISTS `bolsters` (
 	`desc` text NOT NULL,
 	`max_held` int NOT NULL,
 	`max_storage` int NOT NULL,
-	`price` int NOT NULL,
-	`image_url` varchar(255) NOT NULL,
+	`price` int,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -198,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `key_items` (
 	`info` text NOT NULL,
 	`desc` text NOT NULL,
 	`type_id` int NOT NULL,
-	`image_url` varchar(255) NOT NULL,
+	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
 
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
 	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`name` varchar(255) NOT NULL,
 	`creator_id` int NOT NULL,
-	`gear_id` int NOT NULL,
+	`gear_id` int,
 	PRIMARY KEY (`id`)
 );
 
