@@ -14,7 +14,9 @@ def create_app():
     app.add_url_rule("/", view_func=views.home_page)
     app.add_url_rule("/items", view_func=views.items_page)
     app.add_url_rule("/items/<int:item_key>", view_func=views.item_page)
-    app.add_url_rule("/npcs", view_func=views.npcs_page)
+    app.add_url_rule("/npcs", view_func=views.npcs_page, methods=["GET", "POST"])
+    app.add_url_rule("/add_npc", view_func=views.add_npc)
+    app.add_url_rule("/add_new_npc", view_func=views.add_new_npc, methods=["GET", "POST"])
     app.add_url_rule("/npcs/<int:npc_key>", view_func=views.npc_page)
     app.add_url_rule("/weapons", view_func=views.weapons_page)
     app.add_url_rule("/armors", view_func=views.armors_page)
@@ -29,12 +31,10 @@ def create_app():
     app.config["db_items"] = db_item
 
     db_npc = NPCDatabase()
-    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, "images/SN.png"))
-    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, "images/SN.png"))
-    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, "images/SN.png"))
-    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, "images/SN.png"))
-    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, "images/SN.png"))
-    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, "images/SN.png"))
+    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, False))
+    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, False))
+    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, True))
+    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, True))
     app.config["db_npcs"] = db_npc
 
 

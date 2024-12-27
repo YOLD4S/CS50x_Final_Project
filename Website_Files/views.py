@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from flask import abort, current_app, render_template
+from flask import abort, current_app, render_template, request, flash
 from db import get_db
 
 
@@ -33,11 +33,45 @@ def item_page(item_key):
         abort(404)
     return render_template("item.html", item=item)
 
+def add_new_npc():
+    if request.method == "POST":
+        name = request.form.get("name")
+        hp = request.form.get("hp")
+        runes = request.form.get("runes")
+        location_id = request.form.get("location_id") or 0 
+        only_night = request.form.get("only_night") == "on"
+
+        try:
+            if not name or not hp or not runes:
+                flash("All fields except Location ID are required.", "error")
+                return render_template("add_npc.html")
+
+            db = get_db()
+            cursor = db.cursor()
+            query = """
+                INSERT INTO npc_encounters (name, hp, runes, location_id, only_night)
+                VALUES (%s, %s, %s, %s, %s)
+            """
+            cursor.execute(query, (name, hp, runes, location_id, only_night))
+            db.commit()
+            flash("NPC added successfully!", "success")
+            return redirect(url_for("npcs_page"))
+        except Exception as e:
+            flash(f"An error occurred: {str(e)}", "error")
+            return render_template("add_npc.html")
+
+    return render_template("npcs.html")
+
+
+def add_npc():
+
+    return render_template("add_npc.html")
+
 
 def npcs_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT id, name FROM npcs ORDER BY name ASC")
+    cursor.execute("SELECT id, name FROM npc_encounters ORDER BY name ASC")
     npcs = cursor.fetchall()
     return render_template("npcs.html", npcs=npcs)
 
