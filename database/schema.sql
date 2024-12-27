@@ -260,14 +260,14 @@ ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk4` FOREIGN KEY (`weapon_passive_
 
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk5` FOREIGN KEY (`hidden_effect_id`) REFERENCES `effects`(`id`);
 
-<<<<<<< Updated upstream
+
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk6` FOREIGN KEY (`default_skill_id`) REFERENCES `weapon_skills`(`id`);
-=======
+
 ALTER TABLE `weapons` ADD CONSTRAINT `weapons_fk7` FOREIGN KEY (`default_skill_id`) REFERENCES `weapon_skills`(`id`);
 
 
 ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk1` FOREIGN KEY (`id`) REFERENCES `items`(`id`);
->>>>>>> Stashed changes
+
 ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk2` FOREIGN KEY (`affinity_id`) REFERENCES `affinities`(`id`);
 
 ALTER TABLE `ashes_of_war` ADD CONSTRAINT `ashes_of_war_fk3` FOREIGN KEY (`skill_id`) REFERENCES `weapon_skills`(`id`);
