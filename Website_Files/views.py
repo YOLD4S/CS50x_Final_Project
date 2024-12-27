@@ -1,83 +1,12 @@
-from flask import (
-    Flask, 
-    render_template,
-    request, 
-    session, 
-    flash, 
-    redirect, 
-    url_for, 
-    abort,
-    current_app
-)
-from werkzeug.security import check_password_hash, generate_password_hash
+from datetime import datetime
+
+from flask import abort, current_app, render_template
 from db import get_db
 
 
 def home_page():
     return render_template("home.html")
 
-
-
-def login_page():
-    # Redirect if user is already logged in
-    if session.get('user_id'):
-        return redirect(url_for('home_page'))
-        
-    if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        
-        # Add input validation
-        if not username or not password:
-            flash("Please provide both username and password.", "error")
-            return render_template("login.html")
-            
-        try:
-            db = get_db()
-            cursor = db.cursor(dictionary=True)
-            cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
-            user = cursor.fetchone()
-            
-            if user and check_password_hash(user["password"], password):
-                session["user_id"] = user["id"]
-                session["username"] = user["username"]
-                flash("You have been logged in successfully!", "success")
-                return redirect(url_for("home_page"))
-            
-            flash("Invalid username or password.", "error")
-        except Exception as e:
-            flash("An error occurred during login. Please try again.", "error")
-            print(f"Login error: {str(e)}")  # For debugging
-            
-    return render_template("login.html")
-
-
-def logout_page():
-    session.clear()
-    flash("You have been logged out successfully!", "success")
-    return redirect(url_for("home_page"))
-
-def register_page():
-    if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        password_confirm = request.form.get("password_confirm")
-        if not username or not password or not password_confirm:
-            flash("All fields are required.", "error")
-        elif password != password_confirm:
-            flash("Passwords do not match.", "error")
-        else:
-            db = get_db()
-            cursor = db.cursor()
-            query = """
-                INSERT INTO users (username, password)
-                VALUES (%s, %s)
-            """
-            cursor.execute(query, (username, generate_password_hash(password)))
-            db.commit()
-            flash("You have been registered successfully!", "success")
-            return redirect(url_for("login_page"))
-    return render_template("register.html")
 
 def items_page():
     return render_template("items.html")

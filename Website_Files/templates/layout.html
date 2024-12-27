@@ -29,9 +29,9 @@
         </a>
         <div style="margin-left: auto; display: flex;">
           <a class="button is-link {% if request.endpoint == 'npcs_page' %}is-active{% endif %}"
-            href="{{ url_for('login_page') }}" style="padding: 10px 20px; font-size: 16px;">LogIn</a>
+            href="{{ url_for('npcs_page') }}" style="padding: 10px 20px; font-size: 16px;">LogIn</a>
           <a class="button is-link {% if request.endpoint == 'items_page' %}is-active{% endif %}"
-            href="{{ url_for('register_page') }}"
+            href="{{ url_for('items_page') }}"
             style="margin-right: 10px; padding: 10px 20px; background-color: rgba(34, 139, 34, 0.559);font-size: 16px;">Register</a>
         </div>
       </div>
