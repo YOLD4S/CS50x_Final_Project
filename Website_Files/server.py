@@ -11,9 +11,21 @@ from db import get_db, close_db
 def create_app():
     app = Flask(__name__)
     app.config.from_object("settings")
+    
+    # Add these session configurations
+    app.config["SESSION_PERMANENT"] = False
+    app.config["SESSION_TYPE"] = "filesystem"
+    Session(app)
+    
+    # Configure secret key for session management
+    app.secret_key = 'your-secret-key-here'  # Replace with a secure secret key
+    
     app.teardown_appcontext(close_db)
 
     app.add_url_rule("/", view_func=views.home_page)
+    app.add_url_rule("/login", view_func=views.login_page, methods=["GET", "POST"])
+    app.add_url_rule("/logout", view_func=views.logout_page)
+    app.add_url_rule("/register", view_func=views.register_page, methods=["GET", "POST"])
     app.add_url_rule("/items", view_func=views.items_page)
     app.add_url_rule("/items/<int:item_key>", view_func=views.item_page)
     app.add_url_rule("/npcs", view_func=views.npcs_page, methods=["GET", "POST"])

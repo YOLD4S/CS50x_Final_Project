@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Items{% endblock %}
+{% block content %}
+<h1 class="title">Items</h1>
+
+<span class="navbar-item">
+    <a class="button is-link {% if request.endpoint == 'weapons_page' %}is-active{% endif %}" href="{{ url_for('weapons_page') }}">Weapons</a>
+</span>
+<span class="navbar-item">
+    <a class="button is-link {% if request.endpoint == 'armors_page' %}is-active{% endif %}" href="{{ url_for('armors_page') }}">Armors</a>
+</span>
+
+{% endblock %}
