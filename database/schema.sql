@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `npc_encounters` (
 	`name` varchar(255) NOT NULL,
 	`hp` int NOT NULL,
 	`runes` int NOT NULL,
-	`location_id` int NOT NULL,
+	`location_id` int,
 	`only_night` bool NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`)
 );
