@@ -1,0 +1,4031 @@
+id,type_id,name
+1,1,Dagger
+2,1,Heavy Dagger
+3,1,Keen Dagger
+4,1,Quality Dagger
+5,1,Fire Dagger
+6,1,Flame Art Dagger
+7,1,Lightning Dagger
+8,1,Sacred Dagger
+9,1,Magic Dagger
+10,1,Cold Dagger
+11,1,Poison Dagger
+12,1,Blood Dagger
+13,1,Occult Dagger
+14,1,Black Knife
+15,1,Parrying Dagger
+16,1,Heavy Parrying Dagger
+17,1,Keen Parrying Dagger
+18,1,Quality Parrying Dagger
+19,1,Fire Parrying Dagger
+20,1,Flame Art Parrying Dagger
+21,1,Lightning Parrying Dagger
+22,1,Sacred Parrying Dagger
+23,1,Magic Parrying Dagger
+24,1,Cold Parrying Dagger
+25,1,Poison Parrying Dagger
+26,1,Blood Parrying Dagger
+27,1,Occult Parrying Dagger
+28,1,Miséricorde
+29,1,Heavy Miséricorde
+30,1,Keen Miséricorde
+31,1,Quality Miséricorde
+32,1,Fire Miséricorde
+33,1,Flame Art Miséricorde
+34,1,Lightning Miséricorde
+35,1,Sacred Miséricorde
+36,1,Magic Miséricorde
+37,1,Cold Miséricorde
+38,1,Poison Miséricorde
+39,1,Blood Miséricorde
+40,1,Occult Miséricorde
+41,1,Reduvia
+42,1,Crystal Knife
+43,1,Celebrant's Sickle
+44,1,Celebrant's Heavy Sickle
+45,1,Celebrant's Keen Sickle
+46,1,Celebrant's Quality Sickle
+47,1,Celebrant's Fire Sickle
+48,1,Celebrant's Flame Art Sickle
+49,1,Celebrant's Lightning Sickle
+50,1,Celebrant's Sacred Sickle
+51,1,Celebrant's Magic Sickle
+52,1,Celebrant's Cold Sickle
+53,1,Celebrant's Poison Sickle
+54,1,Celebrant's Blood Sickle
+55,1,Celebrant's Occult Sickle
+56,1,Glintstone Kris
+57,1,Scorpion's Stinger
+58,1,Great Knife
+59,1,Heavy Great Knife
+60,1,Keen Great Knife
+61,1,Quality Great Knife
+62,1,Fire Great Knife
+63,1,Flame Art Great Knife
+64,1,Lightning Great Knife
+65,1,Sacred Great Knife
+66,1,Magic Great Knife
+67,1,Cold Great Knife
+68,1,Poison Great Knife
+69,1,Blood Great Knife
+70,1,Occult Great Knife
+71,1,Wakizashi
+72,1,Heavy Wakizashi
+73,1,Keen Wakizashi
+74,1,Quality Wakizashi
+75,1,Fire Wakizashi
+76,1,Flame Art Wakizashi
+77,1,Lightning Wakizashi
+78,1,Sacred Wakizashi
+79,1,Magic Wakizashi
+80,1,Cold Wakizashi
+81,1,Poison Wakizashi
+82,1,Blood Wakizashi
+83,1,Occult Wakizashi
+84,1,Cinquedea
+85,1,Ivory Sickle
+86,1,Bloodstained Dagger
+87,1,Heavy Bloodstained Dagger
+88,1,Keen Bloodstained Dagger
+89,1,Quality Bloodstained Dagger
+90,1,Fire Bloodstained Dagger
+91,1,Flame Art Bloodstained Dagger
+92,1,Lightning Bloodstained Dagger
+93,1,Sacred Bloodstained Dagger
+94,1,Magic Bloodstained Dagger
+95,1,Cold Bloodstained Dagger
+96,1,Poison Bloodstained Dagger
+97,1,Blood Bloodstained Dagger
+98,1,Occult Bloodstained Dagger
+99,1,Erdsteel Dagger
+100,1,Heavy Erdsteel Dagger
+101,1,Keen Erdsteel Dagger
+102,1,Quality Erdsteel Dagger
+103,1,Fire Erdsteel Dagger
+104,1,Flame Art Erdsteel Dagger
+105,1,Lightning Erdsteel Dagger
+106,1,Sacred Erdsteel Dagger
+107,1,Magic Erdsteel Dagger
+108,1,Cold Erdsteel Dagger
+109,1,Poison Erdsteel Dagger
+110,1,Blood Erdsteel Dagger
+111,1,Occult Erdsteel Dagger
+112,1,Blade of Calling
+113,1,Longsword
+114,1,Heavy Longsword
+115,1,Keen Longsword
+116,1,Quality Longsword
+117,1,Fire Longsword
+118,1,Flame Art Longsword
+119,1,Lightning Longsword
+120,1,Sacred Longsword
+121,1,Magic Longsword
+122,1,Cold Longsword
+123,1,Poison Longsword
+124,1,Bloody Longsword
+125,1,Occult Longsword
+126,1,Short Sword
+127,1,Heavy Short Sword
+128,1,Keen Short Sword
+129,1,Quality Short Sword
+130,1,Fire Short Sword
+131,1,Flame Art Short Sword
+132,1,Lightning Short Sword
+133,1,Sacred Short Sword
+134,1,Magic Short Sword
+135,1,Cold Short Sword
+136,1,Poison Short Sword
+137,1,Blood Short Sword
+138,1,Occult Short Sword
+139,1,Broadsword
+140,1,Heavy Broadsword
+141,1,Keen Broadsword
+142,1,Quality Broadsword
+143,1,Fire Broadsword
+144,1,Flame Art Broadsword
+145,1,Lightning Broadsword
+146,1,Sacred Broadsword
+147,1,Magic Broadsword
+148,1,Cold Broadsword
+149,1,Poison Broadsword
+150,1,Blood Broadsword
+151,1,Occult Broadsword
+152,1,Lordsworn's Straight Sword
+153,1,Lordsworn's Heavy Straight Sword
+154,1,Lordsworn's Keen Straight Sword
+155,1,Lordsworn's Quality Straight Sword
+156,1,Lordsworn's Fire Straight Sword
+157,1,Lordsworn's Flame Art Straight Sword
+158,1,Lordsworn's Lightning Straight Sword
+159,1,Lordsworn's Sacred Straight Sword
+160,1,Lordsworn's Magic Straight Sword
+161,1,Lordsworn's Cold Straight Sword
+162,1,Lordsworn's Poison Straight Sword
+163,1,Lordsworn's Blood Straight Sword
+164,1,Lordsworn's Occult Straight Sword
+165,1,Weathered Straight Sword
+166,1,Weathered Heavy Straight Sword
+167,1,Weathered Keen Straight Sword
+168,1,Weathered Quality Straight Sword
+169,1,Weathered Fire Straight Sword
+170,1,Weathered Flame Art Straight Sword
+171,1,Weathered Lightning Straight Sword
+172,1,Weathered Sacred Straight Sword
+173,1,Weathered Magic Straight Sword
+174,1,Weathered Cold Straight Sword
+175,1,Weathered Poison Straight Sword
+176,1,Weathered Blood Straight Sword
+177,1,Weathered Occult Straight Sword
+178,1,Ornamental Straight Sword
+179,1,Golden Epitaph
+180,1,Nox Flowing Sword
+181,1,Inseparable Sword
+182,1,Coded Sword
+183,1,Sword of Night and Flame
+184,1,Crystal Sword
+185,1,Carian Knight's Sword
+186,1,Sword of St. Trina
+187,1,Miquellan Knight's Sword
+188,1,Cane Sword
+189,1,Heavy Cane Sword
+190,1,Keen Cane Sword
+191,1,Quality Cane Sword
+192,1,Fire Cane Sword
+193,1,Flame Art Cane Sword
+194,1,Lightning Cane Sword
+195,1,Sacred Cane Sword
+196,1,Magic Cane Sword
+197,1,Cold Cane Sword
+198,1,Poison Cane Sword
+199,1,Blood Cane Sword
+200,1,Occult Cane Sword
+201,1,Regalia of Eochaid
+202,1,Noble's Slender Sword
+203,1,Noble's Heavy Slender Sword
+204,1,Noble's Keen Slender Sword
+205,1,Noble's Quality Slender Sword
+206,1,Noble's Fire Slender Sword
+207,1,Noble's Flame Art Slender Sword
+208,1,Noble's Lightning Slender Sword
+209,1,Noble's Sacred Slender Sword
+210,1,Noble's Magic Slender Sword
+211,1,Noble's Cold Slender Sword
+212,1,Noble's Poison Slender Sword
+213,1,Noble's Blood Slender Sword
+214,1,Noble's Occult Slender Sword
+215,1,Warhawk's Talon
+216,1,Warhawk's Heavy Talon
+217,1,Warhawk's Keen Talon
+218,1,Warhawk's Quality Talon
+219,1,Warhawk's Fire Talon
+220,1,Warhawk's Flame Art Talon
+221,1,Warhawk's Lightning Talon
+222,1,Warhawk's Sacred Talon
+223,1,Warhawk's Magic Talon
+224,1,Warhawk's Cold Talon
+225,1,Warhawk's Poison Talon
+226,1,Warhawk's Blood Talon
+227,1,Warhawk's Occult Talon
+228,1,Lazuli Glintstone Sword
+229,1,Rotten Crystal Sword
+230,1,Bastard Sword
+231,1,Heavy Bastard Sword
+232,1,Keen Bastard Sword
+233,1,Quality Bastard Sword
+234,1,Fire Bastard Sword
+235,1,Flame Art Bastard Sword
+236,1,Lightning Bastard Sword
+237,1,Sacred Bastard Sword
+238,1,Magic Bastard Sword
+239,1,Cold Bastard Sword
+240,1,Poison Bastard Sword
+241,1,Bloody Bastard Sword
+242,1,Occult Bastard Sword
+243,1,Forked Greatsword
+244,1,Heavy Forked Greatsword
+245,1,Keen Forked Greatsword
+246,1,Quality Forked Greatsword
+247,1,Fire Forked Greatsword
+248,1,Flame Art Forked Greatsword
+249,1,Lightning Forked Greatsword
+250,1,Sacred Forked Greatsword
+251,1,Magic Forked Greatsword
+252,1,Cold Forked Greatsword
+253,1,Poison Forked Greatsword
+254,1,Blood Forked Greatsword
+255,1,Occult Forked Greatsword
+256,1,Iron Greatsword
+257,1,Heavy Iron Greatsword
+258,1,Keen Iron Greatsword
+259,1,Quality Iron Greatsword
+260,1,Fire Iron Greatsword
+261,1,Flame Art Iron Greatsword
+262,1,Lightning Iron Greatsword
+263,1,Sacred Iron Greatsword
+264,1,Magic Iron Greatsword
+265,1,Cold Iron Greatsword
+266,1,Poison Iron Greatsword
+267,1,Blood Iron Greatsword
+268,1,Occult Iron Greatsword
+269,1,Lordsworn's Greatsword
+270,1,Lordsworn's Heavy Greatsword
+271,1,Lordsworn's Keen Greatsword
+272,1,Lordsworn's Quality Greatsword
+273,1,Lordsworn's Fire Greatsword
+274,1,Lordsworn's Flame Art Greatsword
+275,1,Lordsworn's Lightning Greatsword
+276,1,Lordsworn's Sacred Greatsword
+277,1,Lordsworn's Magic Greatsword
+278,1,Lordsworn's Cold Greatsword
+279,1,Lordsworn's Poison Greatsword
+280,1,Lordsworn's Blood Greatsword
+281,1,Lordsworn's Occult Greatsword
+282,1,Knight's Greatsword
+283,1,Knight's Heavy Greatsword
+284,1,Knight's Keen Greatsword
+285,1,Knight's Quality Greatsword
+286,1,Knight's Fire Greatsword
+287,1,Knight's Flame Art Greatsword
+288,1,Knight's Lightning Greatsword
+289,1,Knight's Sacred Greatsword
+290,1,Knight's Magic Greatsword
+291,1,Knight's Cold Greatsword
+292,1,Knight's Poison Greatsword
+293,1,Knight's Blood Greatsword
+294,1,Knight's Occult Greatsword
+295,1,Flamberge
+296,1,Heavy Flamberge
+297,1,Keen Flamberge
+298,1,Quality Flamberge
+299,1,Fire Flamberge
+300,1,Flame Art Flamberge
+301,1,Lightning Flamberge
+302,1,Sacred Flamberge
+303,1,Magic Flamberge
+304,1,Cold Flamberge
+305,1,Poison Flamberge
+306,1,Blood Flamberge
+307,1,Occult Flamberge
+308,1,Ordovis's Greatsword
+309,1,Alabaster Lord's Sword
+310,1,Banished Knight's Greatsword
+311,1,Banished Knight's Heavy Greatsword
+312,1,Banished Knight's Keen Greatsword
+313,1,Banished Knight's Quality Greatsword
+314,1,Banished Knight's Fire Greatsword
+315,1,Banished Knight's Flame Art Greatsword
+316,1,Banished Knight's Lightning Greatsword
+317,1,Banished Knight's Sacred Greatsword
+318,1,Banished Knight's Magic Greatsword
+319,1,Banished Knight's Cold Greatsword
+320,1,Banished Knight's Poison Greatsword
+321,1,Banished Knight's Blood Greatsword
+322,1,Banished Knight's Occult Greatsword
+323,1,Dark Moon Greatsword
+324,1,Sacred Relic Sword
+325,1,Helphen's Steeple
+326,1,Blasphemous Blade
+327,1,Marais Executioner's Sword
+328,1,Sword of Milos
+329,1,Golden Order Greatsword
+330,1,Claymore
+331,1,Heavy Claymore
+332,1,Keen Claymore
+333,1,Quality Claymore
+334,1,Fire Claymore
+335,1,Flame Art Claymore
+336,1,Lightning Claymore
+337,1,Sacred Claymore
+338,1,Magic Claymore
+339,1,Cold Claymore
+340,1,Poison Claymore
+341,1,Blood Claymore
+342,1,Occult Claymore
+343,1,Gargoyle's Greatsword
+344,1,Gargoyle's Heavy Greatsword
+345,1,Gargoyle's Keen Greatsword
+346,1,Gargoyle's Quality Greatsword
+347,1,Gargoyle's Fire Greatsword
+348,1,Gargoyle's Flame Art Greatsword
+349,1,Gargoyle's Lightning Greatsword
+350,1,Gargoyle's Sacred Greatsword
+351,1,Gargoyle's Magic Greatsword
+352,1,Gargoyle's Cold Greatsword
+353,1,Gargoyle's Poison Greatsword
+354,1,Gargoyle's Blood Greatsword
+355,1,Gargoyle's Occult Greatsword
+356,1,Death's Poker
+357,1,Gargoyle's Blackblade
+358,1,Greatsword
+359,1,Heavy Greatsword
+360,1,Keen Greatsword
+361,1,Quality Greatsword
+362,1,Fire Greatsword
+363,1,Flame Art Greatsword
+364,1,Lightning Greatsword
+365,1,Sacred Greatsword
+366,1,Magic Greatsword
+367,1,Cold Greatsword
+368,1,Poison Greatsword
+369,1,Blood Greatsword
+370,1,Occult Greatsword
+371,1,Watchdog's Greatsword
+372,1,Watchdog's Heavy Greatsword
+373,1,Watchdog's Keen Greatsword
+374,1,Watchdog's Quality Greatsword
+375,1,Watchdog's Fire Greatsword
+376,1,Watchdog's Flame Art Greatsword
+377,1,Watchdog's Lightning Greatsword
+378,1,Watchdog's Sacred Greatsword
+379,1,Watchdog's Magic Greatsword
+380,1,Watchdog's Cold Greatsword
+381,1,Watchdog's Poison Greatsword
+382,1,Watchdog's Blood Greatsword
+383,1,Watchdog's Occult Greatsword
+384,1,Maliketh's Black Blade
+385,1,Troll's Golden Sword
+386,1,Troll's Golden Heavy Sword
+387,1,Troll's Golden Keen Sword
+388,1,Troll's Golden Quality Sword
+389,1,Troll's Golden Fire Sword
+390,1,Troll's Golden Flame Art Sword
+391,1,Troll's Golden Lightning Sword
+392,1,Troll's Golden Sacred Sword
+393,1,Troll's Golden Magic Sword
+394,1,Troll's Golden Cold Sword
+395,1,Troll's Golden Poison Sword
+396,1,Troll's Golden Blood Sword
+397,1,Troll's Golden Occult Sword
+398,1,Zweihander
+399,1,Heavy Zweihander
+400,1,Keen Zweihander
+401,1,Quality Zweihander
+402,1,Fire Zweihander
+403,1,Flame Art Zweihander
+404,1,Lightning Zweihander
+405,1,Sacred Zweihander
+406,1,Magic Zweihander
+407,1,Cold Zweihander
+408,1,Poison Zweihander
+409,1,Blood Zweihander
+410,1,Occult Zweihander
+411,1,Starscourge Greatsword
+412,1,Royal Greatsword
+413,1,Godslayer's Greatsword
+414,1,Ruins Greatsword
+415,1,Grafted Blade Greatsword
+416,1,Troll Knight's Sword
+417,1,Estoc
+418,1,Heavy Estoc
+419,1,Keen Estoc
+420,1,Quality Estoc
+421,1,Fire Estoc
+422,1,Flame Art Estoc
+423,1,Lightning Estoc
+424,1,Sacred Estoc
+425,1,Magic Estoc
+426,1,Cold Estoc
+427,1,Poison Estoc
+428,1,Blood Estoc
+429,1,Occult Estoc
+430,1,Cleanrot Knight's Sword
+431,1,Cleanrot Knight's Heavy Sword
+432,1,Cleanrot Knight's Keen Sword
+433,1,Cleanrot Knight's Quality Sword
+434,1,Cleanrot Knight's Fire Sword
+435,1,Cleanrot Knight's Flame Art Sword
+436,1,Cleanrot Knight's Lightning Sword
+437,1,Cleanrot Knight's Sacred Sword
+438,1,Cleanrot Knight's Magic Sword
+439,1,Cleanrot Knight's Cold Sword
+440,1,Cleanrot Knight's Poison Sword
+441,1,Cleanrot Knight's Blood Sword
+442,1,Cleanrot Knight's Occult Sword
+443,1,Rapier
+444,1,Heavy Rapier
+445,1,Keen Rapier
+446,1,Quality Rapier
+447,1,Fire Rapier
+448,1,Flame Art Rapier
+449,1,Lightning Rapier
+450,1,Sacred Rapier
+451,1,Magic Rapier
+452,1,Cold Rapier
+453,1,Poison Rapier
+454,1,Blood Rapier
+455,1,Occult Rapier
+456,1,Rogier's Rapier
+457,1,Rogier's Heavy Rapier
+458,1,Rogier's Keen Rapier
+459,1,Rogier's Quality Rapier
+460,1,Rogier's Fire Rapier
+461,1,Rogier's Flame Art Rapier
+462,1,Rogier's Lightning Rapier
+463,1,Rogier's Sacred Rapier
+464,1,Rogier's Magic Rapier
+465,1,Rogier's Cold Rapier
+466,1,Rogier's Poison Rapier
+467,1,Rogier's Blood Rapier
+468,1,Rogier's Occult Rapier
+469,1,Antspur Rapier
+470,1,Heavy Antspur Rapier
+471,1,Keen Antspur Rapier
+472,1,Quality Antspur Rapier
+473,1,Fire Antspur Rapier
+474,1,Flame Art Antspur Rapier
+475,1,Lightning Antspur Rapier
+476,1,Sacred Antspur Rapier
+477,1,Magic Antspur Rapier
+478,1,Cold Antspur Rapier
+479,1,Poison Antspur Rapier
+480,1,Blood Antspur Rapier
+481,1,Occult Antspur Rapier
+482,1,Frozen Needle
+483,1,Noble's Estoc
+484,1,Noble's Heavy Estoc
+485,1,Noble's Keen Estoc
+486,1,Noble's Quality Estoc
+487,1,Noble's Fire Estoc
+488,1,Noble's Flame Art Estoc
+489,1,Noble's Lightning Estoc
+490,1,Noble's Sacred Estoc
+491,1,Noble's Magic Estoc
+492,1,Noble's Cold Estoc
+493,1,Noble's Poison Estoc
+494,1,Noble's Blood Estoc
+495,1,Noble's Occult Estoc
+496,1,Bloody Helice
+497,1,Godskin Stitcher
+498,1,Heavy Godskin Stitcher
+499,1,Keen Godskin Stitcher
+500,1,Quality Godskin Stitcher
+501,1,Fire Godskin Stitcher
+502,1,Flame Art Godskin Stitcher
+503,1,Lightning Godskin Stitcher
+504,1,Sacred Godskin Stitcher
+505,1,Magic Godskin Stitcher
+506,1,Cold Godskin Stitcher
+507,1,Poison Godskin Stitcher
+508,1,Blood Godskin Stitcher
+509,1,Occult Godskin Stitcher
+510,1,Great Épée
+511,1,Heavy Great Épée
+512,1,Keen Great Épée
+513,1,Quality Great Épée
+514,1,Fire Great Épée
+515,1,Flame Art Great Épée
+516,1,Lightning Great Épée
+517,1,Sacred Great Épée
+518,1,Magic Great Épée
+519,1,Cold Great Épée
+520,1,Poison Great Épée
+521,1,Blood Great Épée
+522,1,Occult Great Épée
+523,1,Dragon King's Cragblade
+524,1,Falchion
+525,1,Heavy Falchion
+526,1,Keen Falchion
+527,1,Quality Falchion
+528,1,Fire Falchion
+529,1,Flame Art Falchion
+530,1,Lightning Falchion
+531,1,Sacred Falchion
+532,1,Magic Falchion
+533,1,Cold Falchion
+534,1,Poison Falchion
+535,1,Blood Falchion
+536,1,Occult Falchion
+537,1,Beastman's Curved Sword
+538,1,Beastman's Heavy Curved Sword
+539,1,Beastman's Keen Curved Sword
+540,1,Beastman's Quality Curved Sword
+541,1,Beastman's Fire Curved Sword
+542,1,Beastman's Flame Art Curved Sword
+543,1,Beastman's Lightning Curved Sword
+544,1,Beastman's Sacred Curved Sword
+545,1,Beastman's Magic Curved Sword
+546,1,Beastman's Cold Curved Sword
+547,1,Beastman's Poison Curved Sword
+548,1,Beastman's Blood Curved Sword
+549,1,Beastman's Occult Curved Sword
+550,1,Shotel
+551,1,Heavy Shotel
+552,1,Keen Shotel
+553,1,Quality Shotel
+554,1,Fire Shotel
+555,1,Flame Art Shotel
+556,1,Lightning Shotel
+557,1,Sacred Shotel
+558,1,Magic Shotel
+559,1,Cold Shotel
+560,1,Poison Shotel
+561,1,Blood Shotel
+562,1,Occult Shotel
+563,1,Shamshir
+564,1,Heavy Shamshir
+565,1,Keen Shamshir
+566,1,Quality Shamshir
+567,1,Fire Shamshir
+568,1,Flame Art Shamshir
+569,1,Lightning Shamshir
+570,1,Sacred Shamshir
+571,1,Magic Shamshir
+572,1,Cold Shamshir
+573,1,Poison Shamshir
+574,1,Blood Shamshir
+575,1,Occult Shamshir
+576,1,Bandit's Curved Sword
+577,1,Bandit's Heavy Curved Sword
+578,1,Bandit's Keen Curved Sword
+579,1,Bandit's Quality Curved Sword
+580,1,Bandit's Fire Curved Sword
+581,1,Bandit's Flame Art Curved Sword
+582,1,Bandit's Lightning Curved Sword
+583,1,Bandit's Sacred Curved Sword
+584,1,Bandit's Magic Curved Sword
+585,1,Bandit's Cold Curved Sword
+586,1,Bandit's Poison Curved Sword
+587,1,Bandit's Blood Curved Sword
+588,1,Bandit's Occult Curved Sword
+589,1,Magma Blade
+590,1,Flowing Curved Sword
+591,1,Flowing Heavy Curved Sword
+592,1,Flowing Keen Curved Sword
+593,1,Flowing Quality Curved Sword
+594,1,Flowing Fire Curved Sword
+595,1,Flowing Flame Art Curved Sword
+596,1,Flowing Lightning Curved Sword
+597,1,Flowing Sacred Curved Sword
+598,1,Flowing Magic Curved Sword
+599,1,Flowing Cold Curved Sword
+600,1,Flowing Poison Curved Sword
+601,1,Flowing Blood Curved Sword
+602,1,Flowing Occult Curved Sword
+603,1,Wing of Astel
+604,1,Scavenger's Curved Sword
+605,1,Scavenger's Heavy Curved Sword
+606,1,Scavenger's Keen Curved Sword
+607,1,Scavenger's Quality Curved Sword
+608,1,Scavenger's Fire Curved Sword
+609,1,Scavenger's Flame Art Curved Sword
+610,1,Scavenger's Lightning Curved Sword
+611,1,Scavenger's Sacred Curved Sword
+612,1,Scavenger's Magic Curved Sword
+613,1,Scavenger's Cold Curved Sword
+614,1,Scavenger's Poison Curved Sword
+615,1,Scavenger's Blood Curved Sword
+616,1,Scavenger's Occult Curved Sword
+617,1,Eclipse Shotel
+618,1,Serpent-God's Curved Sword
+619,1,Serpent-God's Heavy Curved Sword
+620,1,Serpent-God's Keen Curved Sword
+621,1,Serpent-God's Quality Curved Sword
+622,1,Serpent-God's Fire Curved Sword
+623,1,Serpent-God's Flame Art Curved Sword
+624,1,Serpent-God's Lightning Curved Sword
+625,1,Serpent-God's Sacred Curved Sword
+626,1,Serpent-God's Magic Curved Sword
+627,1,Serpent-God's Cold Curved Sword
+628,1,Serpent-God's Poison Curved Sword
+629,1,Serpent-God's Blood Curved Sword
+630,1,Serpent-God's Occult Curved Sword
+631,1,Mantis Blade
+632,1,Heavy Mantis Blade
+633,1,Keen Mantis Blade
+634,1,Quality Mantis Blade
+635,1,Fire Mantis Blade
+636,1,Flame Art Mantis Blade
+637,1,Lightning Mantis Blade
+638,1,Sacred Mantis Blade
+639,1,Magic Mantis Blade
+640,1,Cold Mantis Blade
+641,1,Poison Mantis Blade
+642,1,Blood Mantis Blade
+643,1,Occult Mantis Blade
+644,1,Scimitar
+645,1,Heavy Scimitar
+646,1,Keen Scimitar
+647,1,Quality Scimitar
+648,1,Fire Scimitar
+649,1,Flame Art Scimitar
+650,1,Lightning Scimitar
+651,1,Sacred Scimitar
+652,1,Magic Scimitar
+653,1,Cold Scimitar
+654,1,Poison Scimitar
+655,1,Bloody Scimitar
+656,1,Occult Scimitar
+657,1,Grossmesser
+658,1,Heavy Grossmesser
+659,1,Keen Grossmesser
+660,1,Quality Grossmesser
+661,1,Fire Grossmesser
+662,1,Flame Art Grossmesser
+663,1,Lightning Grossmesser
+664,1,Sacred Grossmesser
+665,1,Magic Grossmesser
+666,1,Cold Grossmesser
+667,1,Poison Grossmesser
+668,1,Blood Grossmesser
+669,1,Occult Grossmesser
+670,1,Onyx Lord's Greatsword
+671,1,Dismounter
+672,1,Heavy Dismounter
+673,1,Keen Dismounter
+674,1,Quality Dismounter
+675,1,Fire Dismounter
+676,1,Flame Art Dismounter
+677,1,Lightning Dismounter
+678,1,Sacred Dismounter
+679,1,Magic Dismounter
+680,1,Cold Dismounter
+681,1,Poison Dismounter
+682,1,Blood Dismounter
+683,1,Occult Dismounter
+684,1,Bloodhound's Fang
+685,1,Magma Wyrm's Scalesword
+686,1,Zamor Curved Sword
+687,1,Omen Cleaver
+688,1,Heavy Omen Cleaver
+689,1,Keen Omen Cleaver
+690,1,Quality Omen Cleaver
+691,1,Fire Omen Cleaver
+692,1,Flame Art Omen Cleaver
+693,1,Lightning Omen Cleaver
+694,1,Sacred Omen Cleaver
+695,1,Magic Omen Cleaver
+696,1,Cold Omen Cleaver
+697,1,Poison Omen Cleaver
+698,1,Blood Omen Cleaver
+699,1,Occult Omen Cleaver
+700,1,Monk's Flameblade
+701,1,Monk's Heavy Flameblade
+702,1,Monk's Keen Flameblade
+703,1,Monk's Quality Flameblade
+704,1,Monk's Fire Flameblade
+705,1,Monk's Flame Art Flameblade
+706,1,Monk's Lightning Flameblade
+707,1,Monk's Sacred Flameblade
+708,1,Monk's Magic Flameblade
+709,1,Monk's Cold Flameblade
+710,1,Monk's Poison Flameblade
+711,1,Monk's Blood Flameblade
+712,1,Monk's Occult Flameblade
+713,1,Beastman's Cleaver
+714,1,Beastman's Heavy Cleaver
+715,1,Beastman's Keen Cleaver
+716,1,Beastman's Quality Cleaver
+717,1,Beastman's Fire Cleaver
+718,1,Beastman's Flame Art Cleaver
+719,1,Beastman's Lightning Cleaver
+720,1,Beastman's Sacred Cleaver
+721,1,Beastman's Magic Cleaver
+722,1,Beastman's Cold Cleaver
+723,1,Beastman's Poison Cleaver
+724,1,Beastman's Blood Cleaver
+725,1,Beastman's Occult Cleaver
+726,1,Morgott's Cursed Sword
+727,1,Uchigatana
+728,1,Heavy Uchigatana
+729,1,Keen Uchigatana
+730,1,Quality Uchigatana
+731,1,Fire Uchigatana
+732,1,Flame Art Uchigatana
+733,1,Lightning Uchigatana
+734,1,Sacred Uchigatana
+735,1,Magic Uchigatana
+736,1,Cold Uchigatana
+737,1,Poison Uchigatana
+738,1,Blood Uchigatana
+739,1,Occult Uchigatana
+740,1,Nagakiba
+741,1,Heavy Nagakiba
+742,1,Keen Nagakiba
+743,1,Quality Nagakiba
+744,1,Fire Nagakiba
+745,1,Flame Art Nagakiba
+746,1,Lightning Nagakiba
+747,1,Sacred Nagakiba
+748,1,Magic Nagakiba
+749,1,Cold Nagakiba
+750,1,Poison Nagakiba
+751,1,Blood Nagakiba
+752,1,Occult Nagakiba
+753,1,Hand of Malenia
+754,1,Meteoric Ore Blade
+755,1,Rivers of Blood
+756,1,Moonveil
+757,1,Dragonscale Blade
+758,1,Serpentbone Blade
+759,1,Twinblade
+760,1,Heavy Twinblade
+761,1,Keen Twinblade
+762,1,Quality Twinblade
+763,1,Fire Twinblade
+764,1,Flame Art Twinblade
+765,1,Lightning Twinblade
+766,1,Sacred Twinblade
+767,1,Magic Twinblade
+768,1,Cold Twinblade
+769,1,Poison Twinblade
+770,1,Bloody Twinblade
+771,1,Occult Twinblade
+772,1,Godskin Peeler
+773,1,Heavy Godskin Peeler
+774,1,Keen Godskin Peeler
+775,1,Quality Godskin Peeler
+776,1,Fire Godskin Peeler
+777,1,Flame Art Godskin Peeler
+778,1,Lightning Godskin Peeler
+779,1,Sacred Godskin Peeler
+780,1,Magic Godskin Peeler
+781,1,Cold Godskin Peeler
+782,1,Poison Godskin Peeler
+783,1,Blood Godskin Peeler
+784,1,Occult Godskin Peeler
+785,1,Twinned Knight Swords
+786,1,Heavy Twinned Knight Swords
+787,1,Keen Twinned Knight Swords
+788,1,Quality Twinned Knight Swords
+789,1,Fire Twinned Knight Swords
+790,1,Flame Art Twinned Knight Swords
+791,1,Lightning Twinned Knight Swords
+792,1,Sacred Twinned Knight Swords
+793,1,Magic Twinned Knight Swords
+794,1,Cold Twinned Knight Swords
+795,1,Poison Twinned Knight Swords
+796,1,Blood Twinned Knight Swords
+797,1,Occult Twinned Knight Swords
+798,1,Eleonora's Poleblade
+799,1,Gargoyle's Twinblade
+800,1,Gargoyle's Heavy Twinblade
+801,1,Gargoyle's Keen Twinblade
+802,1,Gargoyle's Quality Twinblade
+803,1,Gargoyle's Fire Twinblade
+804,1,Gargoyle's Flame Art Twinblade
+805,1,Gargoyle's Lightning Twinblade
+806,1,Gargoyle's Sacred Twinblade
+807,1,Gargoyle's Magic Twinblade
+808,1,Gargoyle's Cold Twinblade
+809,1,Gargoyle's Poison Twinblade
+810,1,Gargoyle's Blood Twinblade
+811,1,Gargoyle's Occult Twinblade
+812,1,Gargoyle's Black Blades
+813,1,Mace
+814,1,Heavy Mace
+815,1,Keen Mace
+816,1,Quality Mace
+817,1,Fire Mace
+818,1,Flame Art Mace
+819,1,Lightning Mace
+820,1,Sacred Mace
+821,1,Magic Mace
+822,1,Cold Mace
+823,1,Poison Mace
+824,1,Blood Mace
+825,1,Occult Mace
+826,1,Club
+827,1,Heavy Club
+828,1,Keen Club
+829,1,Quality Club
+830,1,Fire Club
+831,1,Flame Art Club
+832,1,Lightning Club
+833,1,Sacred Club
+834,1,Magic Club
+835,1,Cold Club
+836,1,Poison Club
+837,1,Bloody Club
+838,1,Occult Club
+839,1,Curved Club
+840,1,Heavy Curved Club
+841,1,Keen Curved Club
+842,1,Quality Curved Club
+843,1,Fire Curved Club
+844,1,Flame Art Curved Club
+845,1,Lightning Curved Club
+846,1,Sacred Curved Club
+847,1,Magic Curved Club
+848,1,Cold Curved Club
+849,1,Poison Curved Club
+850,1,Blood Curved Club
+851,1,Occult Curved Club
+852,1,Warpick
+853,1,Heavy Warpick
+854,1,Keen Warpick
+855,1,Quality Warpick
+856,1,Fire Warpick
+857,1,Flame Art Warpick
+858,1,Lightning Warpick
+859,1,Sacred Warpick
+860,1,Magic Warpick
+861,1,Cold Warpick
+862,1,Poison Warpick
+863,1,Blood Warpick
+864,1,Occult Warpick
+865,1,Morning Star
+866,1,Heavy Morning Star
+867,1,Keen Morning Star
+868,1,Quality Morning Star
+869,1,Fire Morning Star
+870,1,Flame Art Morning Star
+871,1,Lightning Morning Star
+872,1,Sacred Morning Star
+873,1,Magic Morning Star
+874,1,Cold Morning Star
+875,1,Poison Morning Star
+876,1,Blood Morning Star
+877,1,Occult Morning Star
+878,1,Varré's Bouquet
+879,1,Spiked Club
+880,1,Heavy Spiked Club
+881,1,Keen Spiked Club
+882,1,Quality Spiked Club
+883,1,Fire Spiked Club
+884,1,Flame Art Spiked Club
+885,1,Lightning Spiked Club
+886,1,Sacred Spiked Club
+887,1,Magic Spiked Club
+888,1,Cold Spiked Club
+889,1,Poison Spiked Club
+890,1,Blood Spiked Club
+891,1,Occult Spiked Club
+892,1,Hammer
+893,1,Heavy Hammer
+894,1,Keen Hammer
+895,1,Quality Hammer
+896,1,Fire Hammer
+897,1,Flame Art Hammer
+898,1,Lightning Hammer
+899,1,Sacred Hammer
+900,1,Magic Hammer
+901,1,Cold Hammer
+902,1,Poison Hammer
+903,1,Blood Hammer
+904,1,Occult Hammer
+905,1,Monk's Flamemace
+906,1,Monk's Heavy Flamemace
+907,1,Monk's Keen Flamemace
+908,1,Monk's Quality Flamemace
+909,1,Monk's Fire Flamemace
+910,1,Monk's Flame Art Flamemace
+911,1,Monk's Lightning Flamemace
+912,1,Monk's Sacred Flamemace
+913,1,Monk's Magic Flamemace
+914,1,Monk's Cold Flamemace
+915,1,Monk's Poison Flamemace
+916,1,Monk's Blood Flamemace
+917,1,Monk's Occult Flamemace
+918,1,Envoy's Horn
+919,1,Scepter of the All-Knowing
+920,1,Nox Flowing Hammer
+921,1,Ringed Finger
+922,1,Stone Club
+923,1,Heavy Stone Club
+924,1,Keen Stone Club
+925,1,Quality Stone Club
+926,1,Fire Stone Club
+927,1,Flame Art Stone Club
+928,1,Lightning Stone Club
+929,1,Sacred Stone Club
+930,1,Magic Stone Club
+931,1,Cold Stone Club
+932,1,Poison Stone Club
+933,1,Blood Stone Club
+934,1,Occult Stone Club
+935,1,Marika's Hammer
+936,1,Large Club
+937,1,Heavy Large Club
+938,1,Keen Large Club
+939,1,Quality Large Club
+940,1,Fire Large Club
+941,1,Flame Art Large Club
+942,1,Lightning Large Club
+943,1,Sacred Large Club
+944,1,Magic Large Club
+945,1,Cold Large Club
+946,1,Poison Large Club
+947,1,Blood Large Club
+948,1,Occult Large Club
+949,1,Greathorn Hammer
+950,1,Heavy Greathorn Hammer
+951,1,Keen Greathorn Hammer
+952,1,Quality Greathorn Hammer
+953,1,Fire Greathorn Hammer
+954,1,Flame Art Greathorn Hammer
+955,1,Lightning Greathorn Hammer
+956,1,Sacred Greathorn Hammer
+957,1,Magic Greathorn Hammer
+958,1,Cold Greathorn Hammer
+959,1,Poison Greathorn Hammer
+960,1,Blood Greathorn Hammer
+961,1,Occult Greathorn Hammer
+962,1,Battle Hammer
+963,1,Heavy Battle Hammer
+964,1,Keen Battle Hammer
+965,1,Quality Battle Hammer
+966,1,Fire Battle Hammer
+967,1,Flame Art Battle Hammer
+968,1,Lightning Battle Hammer
+969,1,Sacred Battle Hammer
+970,1,Magic Battle Hammer
+971,1,Cold Battle Hammer
+972,1,Poison Battle Hammer
+973,1,Blood Battle Hammer
+974,1,Occult Battle Hammer
+975,1,Great Mace
+976,1,Heavy Great Mace
+977,1,Keen Great Mace
+978,1,Quality Great Mace
+979,1,Fire Great Mace
+980,1,Flame Art Great Mace
+981,1,Lightning Great Mace
+982,1,Sacred Great Mace
+983,1,Magic Great Mace
+984,1,Cold Great Mace
+985,1,Poison Great Mace
+986,1,Blood Great Mace
+987,1,Occult Great Mace
+988,1,Curved Great Club
+989,1,Heavy Curved Great Club
+990,1,Keen Curved Great Club
+991,1,Quality Curved Great Club
+992,1,Fire Curved Great Club
+993,1,Flame Art Curved Great Club
+994,1,Lightning Curved Great Club
+995,1,Sacred Curved Great Club
+996,1,Magic Curved Great Club
+997,1,Cold Curved Great Club
+998,1,Poison Curved Great Club
+999,1,Blood Curved Great Club
+1000,1,Occult Curved Great Club
+1001,1,Celebrant's Skull
+1002,1,Celebrant's Heavy Skull
+1003,1,Celebrant's Keen Skull
+1004,1,Celebrant's Quality Skull
+1005,1,Celebrant's Fire Skull
+1006,1,Celebrant's Flame Art Skull
+1007,1,Celebrant's Lightning Skull
+1008,1,Celebrant's Sacred Skull
+1009,1,Celebrant's Magic Skull
+1010,1,Celebrant's Cold Skull
+1011,1,Celebrant's Poison Skull
+1012,1,Celebrant's Blood Skull
+1013,1,Celebrant's Occult Skull
+1014,1,Pickaxe
+1015,1,Heavy Pickaxe
+1016,1,Keen Pickaxe
+1017,1,Quality Pickaxe
+1018,1,Fire Pickaxe
+1019,1,Flame Art Pickaxe
+1020,1,Lightning Pickaxe
+1021,1,Sacred Pickaxe
+1022,1,Magic Pickaxe
+1023,1,Cold Pickaxe
+1024,1,Poison Pickaxe
+1025,1,Blood Pickaxe
+1026,1,Occult Pickaxe
+1027,1,Beastclaw Greathammer
+1028,1,Envoy's Long Horn
+1029,1,Cranial Vessel Candlestand
+1030,1,Great Stars
+1031,1,Heavy Great Stars
+1032,1,Keen Great Stars
+1033,1,Quality Great Stars
+1034,1,Fire Great Stars
+1035,1,Flame Art Great Stars
+1036,1,Lightning Great Stars
+1037,1,Sacred Great Stars
+1038,1,Magic Great Stars
+1039,1,Cold Great Stars
+1040,1,Poison Great Stars
+1041,1,Blood Great Stars
+1042,1,Occult Great Stars
+1043,1,Brick Hammer
+1044,1,Heavy Brick Hammer
+1045,1,Keen Brick Hammer
+1046,1,Quality Brick Hammer
+1047,1,Fire Brick Hammer
+1048,1,Flame Art Brick Hammer
+1049,1,Lightning Brick Hammer
+1050,1,Sacred Brick Hammer
+1051,1,Magic Brick Hammer
+1052,1,Cold Brick Hammer
+1053,1,Poison Brick Hammer
+1054,1,Blood Brick Hammer
+1055,1,Occult Brick Hammer
+1056,1,Devourer's Scepter
+1057,1,Rotten Battle Hammer
+1058,1,Heavy Rotten Battle Hammer
+1059,1,Keen Rotten Battle Hammer
+1060,1,Quality Rotten Battle Hammer
+1061,1,Fire Rotten Battle Hammer
+1062,1,Flame Art Rotten Battle Hammer
+1063,1,Lightning Rotten Battle Hammer
+1064,1,Sacred Rotten Battle Hammer
+1065,1,Magic Rotten Battle Hammer
+1066,1,Cold Rotten Battle Hammer
+1067,1,Poison Rotten Battle Hammer
+1068,1,Blood Rotten Battle Hammer
+1069,1,Occult Rotten Battle Hammer
+1070,1,Nightrider Flail
+1071,1,Heavy Nightrider Flail
+1072,1,Keen Nightrider Flail
+1073,1,Quality Nightrider Flail
+1074,1,Fire Nightrider Flail
+1075,1,Flame Art Nightrider Flail
+1076,1,Lightning Nightrider Flail
+1077,1,Sacred Nightrider Flail
+1078,1,Magic Nightrider Flail
+1079,1,Cold Nightrider Flail
+1080,1,Poison Nightrider Flail
+1081,1,Blood Nightrider Flail
+1082,1,Occult Nightrider Flail
+1083,1,Flail
+1084,1,Heavy Flail
+1085,1,Keen Flail
+1086,1,Quality Flail
+1087,1,Fire Flail
+1088,1,Flame Art Flail
+1089,1,Lightning Flail
+1090,1,Sacred Flail
+1091,1,Magic Flail
+1092,1,Cold Flail
+1093,1,Poison Flail
+1094,1,Blood Flail
+1095,1,Occult Flail
+1096,1,Family Heads
+1097,1,Bastard's Stars
+1098,1,Chainlink Flail
+1099,1,Heavy Chainlink Flail
+1100,1,Keen Chainlink Flail
+1101,1,Quality Chainlink Flail
+1102,1,Fire Chainlink Flail
+1103,1,Flame Art Chainlink Flail
+1104,1,Lightning Chainlink Flail
+1105,1,Sacred Chainlink Flail
+1106,1,Magic Chainlink Flail
+1107,1,Cold Chainlink Flail
+1108,1,Poison Chainlink Flail
+1109,1,Blood Chainlink Flail
+1110,1,Occult Chainlink Flail
+1111,1,Battle Axe
+1112,1,Heavy Battle Axe
+1113,1,Keen Battle Axe
+1114,1,Quality Battle Axe
+1115,1,Fire Battle Axe
+1116,1,Flame Art Battle Axe
+1117,1,Lightning Battle Axe
+1118,1,Sacred Battle Axe
+1119,1,Magic Battle Axe
+1120,1,Cold Battle Axe
+1121,1,Poison Battle Axe
+1122,1,Blood Battle Axe
+1123,1,Occult Battle Axe
+1124,1,Forked Hatchet
+1125,1,Heavy Forked Hatchet
+1126,1,Keen Forked Hatchet
+1127,1,Quality Forked Hatchet
+1128,1,Fire Forked Hatchet
+1129,1,Flame Art Forked Hatchet
+1130,1,Lightning Forked Hatchet
+1131,1,Sacred Forked Hatchet
+1132,1,Magic Forked Hatchet
+1133,1,Cold Forked Hatchet
+1134,1,Poison Forked Hatchet
+1135,1,Blood Forked Hatchet
+1136,1,Occult Forked Hatchet
+1137,1,Hand Axe
+1138,1,Heavy Hand Axe
+1139,1,Keen Hand Axe
+1140,1,Quality Hand Axe
+1141,1,Fire Hand Axe
+1142,1,Flame Art Hand Axe
+1143,1,Lightning Hand Axe
+1144,1,Sacred Hand Axe
+1145,1,Magic Hand Axe
+1146,1,Cold Hand Axe
+1147,1,Poison Hand Axe
+1148,1,Blood Hand Axe
+1149,1,Occult Hand Axe
+1150,1,Jawbone Axe
+1151,1,Heavy Jawbone Axe
+1152,1,Keen Jawbone Axe
+1153,1,Quality Jawbone Axe
+1154,1,Fire Jawbone Axe
+1155,1,Flame Art Jawbone Axe
+1156,1,Lightning Jawbone Axe
+1157,1,Sacred Jawbone Axe
+1158,1,Magic Jawbone Axe
+1159,1,Cold Jawbone Axe
+1160,1,Poison Jawbone Axe
+1161,1,Blood Jawbone Axe
+1162,1,Occult Jawbone Axe
+1163,1,Iron Cleaver
+1164,1,Heavy Iron Cleaver
+1165,1,Keen Iron Cleaver
+1166,1,Quality Iron Cleaver
+1167,1,Fire Iron Cleaver
+1168,1,Flame Art Iron Cleaver
+1169,1,Lightning Iron Cleaver
+1170,1,Sacred Iron Cleaver
+1171,1,Magic Iron Cleaver
+1172,1,Cold Iron Cleaver
+1173,1,Poison Iron Cleaver
+1174,1,Blood Iron Cleaver
+1175,1,Occult Iron Cleaver
+1176,1,Ripple Blade
+1177,1,Celebrant's Cleaver
+1178,1,Celebrant's Heavy Cleaver
+1179,1,Celebrant's Keen Cleaver
+1180,1,Celebrant's Quality Cleaver
+1181,1,Celebrant's Fire Cleaver
+1182,1,Celebrant's Flame Art Cleaver
+1183,1,Celebrant's Lightning Cleaver
+1184,1,Celebrant's Sacred Cleaver
+1185,1,Celebrant's Magic Cleaver
+1186,1,Celebrant's Cold Cleaver
+1187,1,Celebrant's Poison Cleaver
+1188,1,Celebrant's Blood Cleaver
+1189,1,Celebrant's Occult Cleaver
+1190,1,Icerind Hatchet
+1191,1,Highland Axe
+1192,1,Heavy Highland Axe
+1193,1,Keen Highland Axe
+1194,1,Quality Highland Axe
+1195,1,Fire Highland Axe
+1196,1,Flame Art Highland Axe
+1197,1,Lightning Highland Axe
+1198,1,Sacred Highland Axe
+1199,1,Magic Highland Axe
+1200,1,Cold Highland Axe
+1201,1,Poison Highland Axe
+1202,1,Bloody Highland Axe
+1203,1,Occult Highland Axe
+1204,1,Sacrificial Axe
+1205,1,Heavy Sacrificial Axe
+1206,1,Keen Sacrificial Axe
+1207,1,Quality Sacrificial Axe
+1208,1,Fire Sacrificial Axe
+1209,1,Flame Art Sacrificial Axe
+1210,1,Lightning Sacrificial Axe
+1211,1,Sacred Sacrificial Axe
+1212,1,Magic Sacrificial Axe
+1213,1,Cold Sacrificial Axe
+1214,1,Poison Sacrificial Axe
+1215,1,Blood Sacrificial Axe
+1216,1,Occult Sacrificial Axe
+1217,1,Rosus' Axe
+1218,1,Stormhawk Axe
+1219,1,Greataxe
+1220,1,Heavy Greataxe
+1221,1,Keen Greataxe
+1222,1,Quality Greataxe
+1223,1,Fire Greataxe
+1224,1,Flame Art Greataxe
+1225,1,Lightning Greataxe
+1226,1,Sacred Greataxe
+1227,1,Magic Greataxe
+1228,1,Cold Greataxe
+1229,1,Poison Greataxe
+1230,1,Blood Greataxe
+1231,1,Occult Greataxe
+1232,1,Warped Axe
+1233,1,Heavy Warped Axe
+1234,1,Keen Warped Axe
+1235,1,Quality Warped Axe
+1236,1,Fire Warped Axe
+1237,1,Flame Art Warped Axe
+1238,1,Lightning Warped Axe
+1239,1,Sacred Warped Axe
+1240,1,Magic Warped Axe
+1241,1,Cold Warped Axe
+1242,1,Poison Warped Axe
+1243,1,Blood Warped Axe
+1244,1,Occult Warped Axe
+1245,1,Great Omenkiller Cleaver
+1246,1,Heavy Great Omenkiller Cleaver
+1247,1,Keen Great Omenkiller Cleaver
+1248,1,Quality Great Omenkiller Cleaver
+1249,1,Fire Great Omenkiller Cleaver
+1250,1,Flame Art Great Omenkiller Cleaver
+1251,1,Lightning Great Omenkiller Cleaver
+1252,1,Sacred Great Omenkiller Cleaver
+1253,1,Magic Great Omenkiller Cleaver
+1254,1,Cold Great Omenkiller Cleaver
+1255,1,Poison Great Omenkiller Cleaver
+1256,1,Blood Great Omenkiller Cleaver
+1257,1,Occult Great Omenkiller Cleaver
+1258,1,Crescent Moon Axe
+1259,1,Heavy Crescent Moon Axe
+1260,1,Keen Crescent Moon Axe
+1261,1,Quality Crescent Moon Axe
+1262,1,Fire Crescent Moon Axe
+1263,1,Flame Art Crescent Moon Axe
+1264,1,Lightning Crescent Moon Axe
+1265,1,Sacred Crescent Moon Axe
+1266,1,Magic Crescent Moon Axe
+1267,1,Cold Crescent Moon Axe
+1268,1,Poison Crescent Moon Axe
+1269,1,Blood Crescent Moon Axe
+1270,1,Occult Crescent Moon Axe
+1271,1,Axe of Godrick
+1272,1,Longhaft Axe
+1273,1,Heavy Longhaft Axe
+1274,1,Keen Longhaft Axe
+1275,1,Quality Longhaft Axe
+1276,1,Fire Longhaft Axe
+1277,1,Flame Art Longhaft Axe
+1278,1,Lightning Longhaft Axe
+1279,1,Sacred Longhaft Axe
+1280,1,Magic Longhaft Axe
+1281,1,Cold Longhaft Axe
+1282,1,Poison Longhaft Axe
+1283,1,Blood Longhaft Axe
+1284,1,Occult Longhaft Axe
+1285,1,Rusted Anchor
+1286,1,Heavy Rusted Anchor
+1287,1,Keen Rusted Anchor
+1288,1,Quality Rusted Anchor
+1289,1,Fire Rusted Anchor
+1290,1,Flame Art Rusted Anchor
+1291,1,Lightning Rusted Anchor
+1292,1,Sacred Rusted Anchor
+1293,1,Magic Rusted Anchor
+1294,1,Cold Rusted Anchor
+1295,1,Poison Rusted Anchor
+1296,1,Blood Rusted Anchor
+1297,1,Occult Rusted Anchor
+1298,1,Executioner's Greataxe
+1299,1,Executioner's Heavy Greataxe
+1300,1,Executioner's Keen Greataxe
+1301,1,Executioner's Quality Greataxe
+1302,1,Executioner's Fire Greataxe
+1303,1,Executioner's Flame Art Greataxe
+1304,1,Executioner's Lightning Greataxe
+1305,1,Executioner's Sacred Greataxe
+1306,1,Executioner's Magic Greataxe
+1307,1,Executioner's Cold Greataxe
+1308,1,Executioner's Poison Greataxe
+1309,1,Executioner's Blood Greataxe
+1310,1,Executioner's Occult Greataxe
+1311,1,Winged Greathorn
+1312,1,Butchering Knife
+1313,1,Heavy Butchering Knife
+1314,1,Keen Butchering Knife
+1315,1,Quality Butchering Knife
+1316,1,Fire Butchering Knife
+1317,1,Flame Art Butchering Knife
+1318,1,Lightning Butchering Knife
+1319,1,Sacred Butchering Knife
+1320,1,Magic Butchering Knife
+1321,1,Cold Butchering Knife
+1322,1,Poison Butchering Knife
+1323,1,Blood Butchering Knife
+1324,1,Occult Butchering Knife
+1325,1,Gargoyle's Great Axe
+1326,1,Gargoyle's Heavy Great Axe
+1327,1,Gargoyle's Keen Great Axe
+1328,1,Gargoyle's Quality Great Axe
+1329,1,Gargoyle's Fire Great Axe
+1330,1,Gargoyle's Flame Art Great Axe
+1331,1,Gargoyle's Lightning Great Axe
+1332,1,Gargoyle's Sacred Great Axe
+1333,1,Gargoyle's Magic Great Axe
+1334,1,Gargoyle's Cold Great Axe
+1335,1,Gargoyle's Poison Great Axe
+1336,1,Gargoyle's Blood Great Axe
+1337,1,Gargoyle's Occult Great Axe
+1338,1,Gargoyle's Black Axe
+1339,1,Short Spear
+1340,1,Heavy Short Spear
+1341,1,Keen Short Spear
+1342,1,Quality Short Spear
+1343,1,Fire Short Spear
+1344,1,Flame Art Short Spear
+1345,1,Lightning Short Spear
+1346,1,Sacred Short Spear
+1347,1,Magic Short Spear
+1348,1,Cold Short Spear
+1349,1,Poison Short Spear
+1350,1,Blood Short Spear
+1351,1,Occult Short Spear
+1352,1,Spear
+1353,1,Heavy Spear
+1354,1,Keen Spear
+1355,1,Quality Spear
+1356,1,Fire Spear
+1357,1,Flame Art Spear
+1358,1,Lightning Spear
+1359,1,Sacred Spear
+1360,1,Magic Spear
+1361,1,Cold Spear
+1362,1,Poison Spear
+1363,1,Bloody Spear
+1364,1,Occult Spear
+1365,1,Crystal Spear
+1366,1,Clayman's Harpoon
+1367,1,Clayman's Heavy Harpoon
+1368,1,Clayman's Keen Harpoon
+1369,1,Clayman's Quality Harpoon
+1370,1,Clayman's Fire Harpoon
+1371,1,Clayman's Flame Art Harpoon
+1372,1,Clayman's Lightning Harpoon
+1373,1,Clayman's Sacred Harpoon
+1374,1,Clayman's Magic Harpoon
+1375,1,Clayman's Cold Harpoon
+1376,1,Clayman's Poison Harpoon
+1377,1,Clayman's Blood Harpoon
+1378,1,Clayman's Occult Harpoon
+1379,1,Cleanrot Spear
+1380,1,Partisan
+1381,1,Heavy Partisan
+1382,1,Keen Partisan
+1383,1,Quality Partisan
+1384,1,Fire Partisan
+1385,1,Flame Art Partisan
+1386,1,Lightning Partisan
+1387,1,Sacred Partisan
+1388,1,Magic Partisan
+1389,1,Cold Partisan
+1390,1,Poison Partisan
+1391,1,Blood Partisan
+1392,1,Occult Partisan
+1393,1,Celebrant's Rib-Rake
+1394,1,Celebrant's Heavy Rib-Rake
+1395,1,Celebrant's Keen Rib-Rake
+1396,1,Celebrant's Quality Rib-Rake
+1397,1,Celebrant's Fire Rib-Rake
+1398,1,Celebrant's Flame Art Rib-Rake
+1399,1,Celebrant's Lightning Rib-Rake
+1400,1,Celebrant's Sacred Rib-Rake
+1401,1,Celebrant's Magic Rib-Rake
+1402,1,Celebrant's Cold Rib-Rake
+1403,1,Celebrant's Poison Rib-Rake
+1404,1,Celebrant's Blood Rib-Rake
+1405,1,Celebrant's Occult Rib-Rake
+1406,1,Pike
+1407,1,Heavy Pike
+1408,1,Keen Pike
+1409,1,Quality Pike
+1410,1,Fire Pike
+1411,1,Flame Art Pike
+1412,1,Lightning Pike
+1413,1,Sacred Pike
+1414,1,Magic Pike
+1415,1,Cold Pike
+1416,1,Poison Pike
+1417,1,Blood Pike
+1418,1,Occult Pike
+1419,1,Torchpole
+1420,1,Bolt of Gransax
+1421,1,Cross-Naginata
+1422,1,Heavy Cross-Naginata
+1423,1,Keen Cross-Naginata
+1424,1,Quality Cross-Naginata
+1425,1,Fire Cross-Naginata
+1426,1,Flame Art Cross-Naginata
+1427,1,Lightning Cross-Naginata
+1428,1,Sacred Cross-Naginata
+1429,1,Magic Cross-Naginata
+1430,1,Cold Cross-Naginata
+1431,1,Poison Cross-Naginata
+1432,1,Blood Cross-Naginata
+1433,1,Occult Cross-Naginata
+1434,1,Death Ritual Spear
+1435,1,Inquisitor's Girandole
+1436,1,Spiked Spear
+1437,1,Heavy Spiked Spear
+1438,1,Keen Spiked Spear
+1439,1,Quality Spiked Spear
+1440,1,Fire Spiked Spear
+1441,1,Flame Art Spiked Spear
+1442,1,Lightning Spiked Spear
+1443,1,Sacred Spiked Spear
+1444,1,Magic Spiked Spear
+1445,1,Cold Spiked Spear
+1446,1,Poison Spiked Spear
+1447,1,Blood Spiked Spear
+1448,1,Occult Spiked Spear
+1449,1,Iron Spear
+1450,1,Heavy Iron Spear
+1451,1,Keen Iron Spear
+1452,1,Quality Iron Spear
+1453,1,Fire Iron Spear
+1454,1,Flame Art Iron Spear
+1455,1,Lightning Iron Spear
+1456,1,Sacred Iron Spear
+1457,1,Magic Iron Spear
+1458,1,Cold Iron Spear
+1459,1,Poison Iron Spear
+1460,1,Blood Iron Spear
+1461,1,Occult Iron Spear
+1462,1,Rotten Crystal Spear
+1463,1,Mohgwyn's Sacred Spear
+1464,1,Siluria's Tree
+1465,1,Serpent-Hunter
+1466,1,Vyke's War Spear
+1467,1,Lance
+1468,1,Heavy Lance
+1469,1,Keen Lance
+1470,1,Quality Lance
+1471,1,Fire Lance
+1472,1,Flame Art Lance
+1473,1,Lightning Lance
+1474,1,Sacred Lance
+1475,1,Magic Lance
+1476,1,Cold Lance
+1477,1,Poison Lance
+1478,1,Bloody Lance
+1479,1,Occult Lance
+1480,1,Treespear
+1481,1,Halberd
+1482,1,Heavy Halberd
+1483,1,Keen Halberd
+1484,1,Quality Halberd
+1485,1,Fire Halberd
+1486,1,Flame Art Halberd
+1487,1,Lightning Halberd
+1488,1,Sacred Halberd
+1489,1,Magic Halberd
+1490,1,Cold Halberd
+1491,1,Poison Halberd
+1492,1,Blood Halberd
+1493,1,Occult Halberd
+1494,1,Pest's Glaive
+1495,1,Pest's Heavy Glaive
+1496,1,Pest's Keen Glaive
+1497,1,Pest's Quality Glaive
+1498,1,Pest's Fire Glaive
+1499,1,Pest's Flame Art Glaive
+1500,1,Pest's Lightning Glaive
+1501,1,Pest's Sacred Glaive
+1502,1,Pest's Magic Glaive
+1503,1,Pest's Cold Glaive
+1504,1,Pest's Poison Glaive
+1505,1,Pest's Blood Glaive
+1506,1,Pest's Occult Glaive
+1507,1,Lucerne
+1508,1,Heavy Lucerne
+1509,1,Keen Lucerne
+1510,1,Quality Lucerne
+1511,1,Fire Lucerne
+1512,1,Flame Art Lucerne
+1513,1,Lightning Lucerne
+1514,1,Sacred Lucerne
+1515,1,Magic Lucerne
+1516,1,Cold Lucerne
+1517,1,Poison Lucerne
+1518,1,Blood Lucerne
+1519,1,Occult Lucerne
+1520,1,Banished Knight's Halberd
+1521,1,Banished Knight's Heavy Halberd
+1522,1,Banished Knight's Keen Halberd
+1523,1,Banished Knight's Quality Halberd
+1524,1,Banished Knight's Fire Halberd
+1525,1,Banished Knight's Flame Art Halberd
+1526,1,Banished Knight's Lightning Halberd
+1527,1,Banished Knight's Sacred Halberd
+1528,1,Banished Knight's Magic Halberd
+1529,1,Banished Knight's Cold Halberd
+1530,1,Banished Knight's Poison Halberd
+1531,1,Banished Knight's Blood Halberd
+1532,1,Banished Knight's Occult Halberd
+1533,1,Commander's Standard
+1534,1,Nightrider Glaive
+1535,1,Heavy Nightrider Glaive
+1536,1,Keen Nightrider Glaive
+1537,1,Quality Nightrider Glaive
+1538,1,Fire Nightrider Glaive
+1539,1,Flame Art Nightrider Glaive
+1540,1,Lightning Nightrider Glaive
+1541,1,Sacred Nightrider Glaive
+1542,1,Magic Nightrider Glaive
+1543,1,Cold Nightrider Glaive
+1544,1,Poison Nightrider Glaive
+1545,1,Blood Nightrider Glaive
+1546,1,Occult Nightrider Glaive
+1547,1,Ripple Crescent Halberd
+1548,1,Vulgar Militia Saw
+1549,1,Heavy Vulgar Militia Saw
+1550,1,Keen Vulgar Militia Saw
+1551,1,Quality Vulgar Militia Saw
+1552,1,Fire Vulgar Militia Saw
+1553,1,Flame Art Vulgar Militia Saw
+1554,1,Lightning Vulgar Militia Saw
+1555,1,Sacred Vulgar Militia Saw
+1556,1,Magic Vulgar Militia Saw
+1557,1,Cold Vulgar Militia Saw
+1558,1,Poison Vulgar Militia Saw
+1559,1,Blood Vulgar Militia Saw
+1560,1,Occult Vulgar Militia Saw
+1561,1,Golden Halberd
+1562,1,Glaive
+1563,1,Heavy Glaive
+1564,1,Keen Glaive
+1565,1,Quality Glaive
+1566,1,Fire Glaive
+1567,1,Flame Art Glaive
+1568,1,Lightning Glaive
+1569,1,Sacred Glaive
+1570,1,Magic Glaive
+1571,1,Cold Glaive
+1572,1,Poison Glaive
+1573,1,Blood Glaive
+1574,1,Occult Glaive
+1575,1,Loretta's War Sickle
+1576,1,Guardian's Swordspear
+1577,1,Guardian's Heavy Swordspear
+1578,1,Guardian's Keen Swordspear
+1579,1,Guardian's Quality Swordspear
+1580,1,Guardian's Fire Swordspear
+1581,1,Guardian's Flame Art Swordspear
+1582,1,Guardian's Lightning Swordspear
+1583,1,Guardian's Sacred Swordspear
+1584,1,Guardian's Magic Swordspear
+1585,1,Guardian's Cold Swordspear
+1586,1,Guardian's Poison Swordspear
+1587,1,Guardian's Blood Swordspear
+1588,1,Guardian's Occult Swordspear
+1589,1,Vulgar Militia Shotel
+1590,1,Heavy Vulgar Militia Shotel
+1591,1,Keen Vulgar Militia Shotel
+1592,1,Quality Vulgar Militia Shotel
+1593,1,Fire Vulgar Militia Shotel
+1594,1,Flame Art Vulgar Militia Shotel
+1595,1,Lightning Vulgar Militia Shotel
+1596,1,Sacred Vulgar Militia Shotel
+1597,1,Magic Vulgar Militia Shotel
+1598,1,Cold Vulgar Militia Shotel
+1599,1,Poison Vulgar Militia Shotel
+1600,1,Blood Vulgar Militia Shotel
+1601,1,Occult Vulgar Militia Shotel
+1602,1,Dragon Halberd
+1603,1,Gargoyle's Halberd
+1604,1,Gargoyle's Heavy Halberd
+1605,1,Gargoyle's Keen Halberd
+1606,1,Gargoyle's Quality Halberd
+1607,1,Gargoyle's Fire Halberd
+1608,1,Gargoyle's Flame Art Halberd
+1609,1,Gargoyle's Lightning Halberd
+1610,1,Gargoyle's Sacred Halberd
+1611,1,Gargoyle's Magic Halberd
+1612,1,Gargoyle's Cold Halberd
+1613,1,Gargoyle's Poison Halberd
+1614,1,Gargoyle's Blood Halberd
+1615,1,Gargoyle's Occult Halberd
+1616,1,Gargoyle's Black Halberd
+1617,1,Scythe
+1618,1,Heavy Scythe
+1619,1,Keen Scythe
+1620,1,Quality Scythe
+1621,1,Fire Scythe
+1622,1,Flame Art Scythe
+1623,1,Lightning Scythe
+1624,1,Sacred Scythe
+1625,1,Magic Scythe
+1626,1,Cold Scythe
+1627,1,Poison Scythe
+1628,1,Blood Scythe
+1629,1,Occult Scythe
+1630,1,Grave Scythe
+1631,1,Heavy Grave Scythe
+1632,1,Keen Grave Scythe
+1633,1,Quality Grave Scythe
+1634,1,Fire Grave Scythe
+1635,1,Flame Art Grave Scythe
+1636,1,Lightning Grave Scythe
+1637,1,Sacred Grave Scythe
+1638,1,Magic Grave Scythe
+1639,1,Cold Grave Scythe
+1640,1,Poison Grave Scythe
+1641,1,Blood Grave Scythe
+1642,1,Occult Grave Scythe
+1643,1,Halo Scythe
+1644,1,Winged Scythe
+1645,1,Whip
+1646,1,Heavy Whip
+1647,1,Keen Whip
+1648,1,Quality Whip
+1649,1,Fire Whip
+1650,1,Flame Art Whip
+1651,1,Lightning Whip
+1652,1,Sacred Whip
+1653,1,Magic Whip
+1654,1,Cold Whip
+1655,1,Poison Whip
+1656,1,Blood Whip
+1657,1,Occult Whip
+1658,1,Thorned Whip
+1659,1,Heavy Thorned Whip
+1660,1,Keen Thorned Whip
+1661,1,Quality Thorned Whip
+1662,1,Fire Thorned Whip
+1663,1,Flame Art Thorned Whip
+1664,1,Lightning Thorned Whip
+1665,1,Sacred Thorned Whip
+1666,1,Magic Thorned Whip
+1667,1,Cold Thorned Whip
+1668,1,Poison Thorned Whip
+1669,1,Blood Thorned Whip
+1670,1,Occult Thorned Whip
+1671,1,Magma Whip Candlestick
+1672,1,Hoslow's Petal Whip
+1673,1,Hoslow's Heavy Petal Whip
+1674,1,Hoslow's Keen Petal Whip
+1675,1,Hoslow's Quality Petal Whip
+1676,1,Hoslow's Fire Petal Whip
+1677,1,Hoslow's Flame Art Petal Whip
+1678,1,Hoslow's Lightning Petal Whip
+1679,1,Hoslow's Sacred Petal Whip
+1680,1,Hoslow's Magic Petal Whip
+1681,1,Hoslow's Cold Petal Whip
+1682,1,Hoslow's Poison Petal Whip
+1683,1,Hoslow's Blood Petal Whip
+1684,1,Hoslow's Occult Petal Whip
+1685,1,Giant's Red Braid
+1686,1,Urumi
+1687,1,Heavy Urumi
+1688,1,Keen Urumi
+1689,1,Quality Urumi
+1690,1,Fire Urumi
+1691,1,Flame Art Urumi
+1692,1,Lightning Urumi
+1693,1,Sacred Urumi
+1694,1,Magic Urumi
+1695,1,Cold Urumi
+1696,1,Poison Urumi
+1697,1,Blood Urumi
+1698,1,Occult Urumi
+1699,1,Caestus
+1700,1,Heavy Caestus
+1701,1,Keen Caestus
+1702,1,Quality Caestus
+1703,1,Fire Caestus
+1704,1,Flame Art Caestus
+1705,1,Lightning Caestus
+1706,1,Sacred Caestus
+1707,1,Magic Caestus
+1708,1,Cold Caestus
+1709,1,Poison Caestus
+1710,1,Blood Caestus
+1711,1,Occult Caestus
+1712,1,Spiked Caestus
+1713,1,Heavy Spiked Caestus
+1714,1,Keen Spiked Caestus
+1715,1,Quality Spiked Caestus
+1716,1,Fire Spiked Caestus
+1717,1,Flame Art Spiked Caestus
+1718,1,Lightning Spiked Caestus
+1719,1,Sacred Spiked Caestus
+1720,1,Magic Spiked Caestus
+1721,1,Cold Spiked Caestus
+1722,1,Poison Spiked Caestus
+1723,1,Blood Spiked Caestus
+1724,1,Occult Spiked Caestus
+1725,1,Grafted Dragon
+1726,1,Iron Ball
+1727,1,Heavy Iron Ball
+1728,1,Keen Iron Ball
+1729,1,Quality Iron Ball
+1730,1,Fire Iron Ball
+1731,1,Flame Art Iron Ball
+1732,1,Lightning Iron Ball
+1733,1,Sacred Iron Ball
+1734,1,Magic Iron Ball
+1735,1,Cold Iron Ball
+1736,1,Poison Iron Ball
+1737,1,Blood Iron Ball
+1738,1,Occult Iron Ball
+1739,1,Star Fist
+1740,1,Heavy Star Fist
+1741,1,Keen Star Fist
+1742,1,Quality Star Fist
+1743,1,Fire Star Fist
+1744,1,Flame Art Star Fist
+1745,1,Lightning Star Fist
+1746,1,Sacred Star Fist
+1747,1,Magic Star Fist
+1748,1,Cold Star Fist
+1749,1,Poison Star Fist
+1750,1,Blood Star Fist
+1751,1,Occult Star Fist
+1752,1,Katar
+1753,1,Heavy Katar
+1754,1,Keen Katar
+1755,1,Quality Katar
+1756,1,Fire Katar
+1757,1,Flame Art Katar
+1758,1,Lightning Katar
+1759,1,Sacred Katar
+1760,1,Magic Katar
+1761,1,Cold Katar
+1762,1,Poison Katar
+1763,1,Blood Katar
+1764,1,Occult Katar
+1765,1,Clinging Bone
+1766,1,Veteran's Prosthesis
+1767,1,Cipher Pata
+1768,1,Hookclaws
+1769,1,Heavy Hookclaws
+1770,1,Keen Hookclaws
+1771,1,Quality Hookclaws
+1772,1,Fire Hookclaws
+1773,1,Flame Art Hookclaws
+1774,1,Lightning Hookclaws
+1775,1,Sacred Hookclaws
+1776,1,Magic Hookclaws
+1777,1,Cold Hookclaws
+1778,1,Poison Hookclaws
+1779,1,Blood Hookclaws
+1780,1,Occult Hookclaws
+1781,1,Venomous Fang
+1782,1,Heavy Venomous Fang
+1783,1,Keen Venomous Fang
+1784,1,Quality Venomous Fang
+1785,1,Fire Venomous Fang
+1786,1,Flame Art Venomous Fang
+1787,1,Lightning Venomous Fang
+1788,1,Sacred Venomous Fang
+1789,1,Magic Venomous Fang
+1790,1,Cold Venomous Fang
+1791,1,Poison Venomous Fang
+1792,1,Blood Venomous Fang
+1793,1,Occult Venomous Fang
+1794,1,Bloodhound Claws
+1795,1,Heavy Bloodhound Claws
+1796,1,Keen Bloodhound Claws
+1797,1,Quality Bloodhound Claws
+1798,1,Fire Bloodhound Claws
+1799,1,Flame Art Bloodhound Claws
+1800,1,Lightning Bloodhound Claws
+1801,1,Sacred Bloodhound Claws
+1802,1,Magic Bloodhound Claws
+1803,1,Cold Bloodhound Claws
+1804,1,Poison Bloodhound Claws
+1805,1,Blood Bloodhound Claws
+1806,1,Occult Bloodhound Claws
+1807,1,Raptor Talons
+1808,1,Heavy Raptor Talons
+1809,1,Keen Raptor Talons
+1810,1,Quality Raptor Talons
+1811,1,Fire Raptor Talons
+1812,1,Flame Art Raptor Talons
+1813,1,Lightning Raptor Talons
+1814,1,Sacred Raptor Talons
+1815,1,Magic Raptor Talons
+1816,1,Cold Raptor Talons
+1817,1,Poison Raptor Talons
+1818,1,Blood Raptor Talons
+1819,1,Occult Raptor Talons
+1820,1,Prelate's Inferno Crozier
+1821,1,Prelate's Heavy Inferno Crozier
+1822,1,Prelate's Keen Inferno Crozier
+1823,1,Prelate's Quality Inferno Crozier
+1824,1,Prelate's Fire Inferno Crozier
+1825,1,Prelate's Flame Art Inferno Crozier
+1826,1,Prelate's Lightning Inferno Crozier
+1827,1,Prelate's Sacred Inferno Crozier
+1828,1,Prelate's Magic Inferno Crozier
+1829,1,Prelate's Cold Inferno Crozier
+1830,1,Prelate's Poison Inferno Crozier
+1831,1,Prelate's Blood Inferno Crozier
+1832,1,Prelate's Occult Inferno Crozier
+1833,1,Watchdog's Staff
+1834,1,Great Club
+1835,1,Envoy's Greathorn
+1836,1,Duelist Greataxe
+1837,1,Heavy Duelist Greataxe
+1838,1,Keen Duelist Greataxe
+1839,1,Quality Duelist Greataxe
+1840,1,Fire Duelist Greataxe
+1841,1,Flame Art Duelist Greataxe
+1842,1,Lightning Duelist Greataxe
+1843,1,Sacred Duelist Greataxe
+1844,1,Magic Duelist Greataxe
+1845,1,Cold Duelist Greataxe
+1846,1,Poison Duelist Greataxe
+1847,1,Blood Duelist Greataxe
+1848,1,Occult Duelist Greataxe
+1849,1,Axe of Godfrey
+1850,1,Dragon Greatclaw
+1851,1,Staff of the Avatar
+1852,1,Fallingstar Beast Jaw
+1853,1,Ghiza's Wheel
+1854,1,Giant-Crusher
+1855,1,Heavy Giant-Crusher
+1856,1,Keen Giant-Crusher
+1857,1,Quality Giant-Crusher
+1858,1,Fire Giant-Crusher
+1859,1,Flame Art Giant-Crusher
+1860,1,Lightning Giant-Crusher
+1861,1,Sacred Giant-Crusher
+1862,1,Magic Giant-Crusher
+1863,1,Cold Giant-Crusher
+1864,1,Poison Giant-Crusher
+1865,1,Blood Giant-Crusher
+1866,1,Occult Giant-Crusher
+1867,1,Golem's Halberd
+1868,1,Golem's Heavy Halberd
+1869,1,Golem's Keen Halberd
+1870,1,Golem's Quality Halberd
+1871,1,Golem's Fire Halberd
+1872,1,Golem's Flame Art Halberd
+1873,1,Golem's Lightning Halberd
+1874,1,Golem's Sacred Halberd
+1875,1,Golem's Magic Halberd
+1876,1,Golem's Cold Halberd
+1877,1,Golem's Poison Halberd
+1878,1,Golem's Blood Halberd
+1879,1,Golem's Occult Halberd
+1880,1,Troll's Hammer
+1881,1,Rotten Staff
+1882,1,Rotten Greataxe
+1883,1,Heavy Rotten Greataxe
+1884,1,Keen Rotten Greataxe
+1885,1,Quality Rotten Greataxe
+1886,1,Fire Rotten Greataxe
+1887,1,Flame Art Rotten Greataxe
+1888,1,Lightning Rotten Greataxe
+1889,1,Sacred Rotten Greataxe
+1890,1,Magic Rotten Greataxe
+1891,1,Cold Rotten Greataxe
+1892,1,Poison Rotten Greataxe
+1893,1,Blood Rotten Greataxe
+1894,1,Occult Rotten Greataxe
+1895,1,Torch
+1896,1,Steel-Wire Torch
+1897,1,St. Trina's Torch
+1898,1,Ghostflame Torch
+1899,1,Beast-Repellent Torch
+1900,1,Sentry's Torch
+1901,1,Buckler
+1902,1,Heavy Buckler
+1903,1,Keen Buckler
+1904,1,Quality Buckler
+1905,1,Fire Buckler
+1906,1,Flame Art Buckler
+1907,1,Lightning Buckler
+1908,1,Sacred Buckler
+1909,1,Magic Buckler
+1910,1,Cold Buckler
+1911,1,Poison Buckler
+1912,1,Bloody Buckler
+1913,1,Occult Buckler
+1914,1,Perfumer's Shield
+1915,1,Perfumer's Heavy Shield
+1916,1,Perfumer's Keen Shield
+1917,1,Perfumer's Quality Shield
+1918,1,Perfumer's Fire Shield
+1919,1,Perfumer's Flame Art Shield
+1920,1,Perfumer's Lightning Shield
+1921,1,Perfumer's Sacred Shield
+1922,1,Perfumer's Magic Shield
+1923,1,Perfumer's Cold Shield
+1924,1,Perfumer's Poison Shield
+1925,1,Perfumer's Blood Shield
+1926,1,Perfumer's Occult Shield
+1927,1,Man-Serpent's Shield
+1928,1,Man-Serpent's Heavy Shield
+1929,1,Man-Serpent's Keen Shield
+1930,1,Man-Serpent's Quality Shield
+1931,1,Man-Serpent's Fire Shield
+1932,1,Man-Serpent's Flame Art Shield
+1933,1,Man-Serpent's Lightning Shield
+1934,1,Man-Serpent's Sacred Shield
+1935,1,Man-Serpent's Magic Shield
+1936,1,Man-Serpent's Cold Shield
+1937,1,Man-Serpent's Poison Shield
+1938,1,Man-Serpent's Blood Shield
+1939,1,Man-Serpent's Occult Shield
+1940,1,Rickety Shield
+1941,1,Heavy Rickety Shield
+1942,1,Keen Rickety Shield
+1943,1,Quality Rickety Shield
+1944,1,Fire Rickety Shield
+1945,1,Flame Art Rickety Shield
+1946,1,Lightning Rickety Shield
+1947,1,Sacred Rickety Shield
+1948,1,Magic Rickety Shield
+1949,1,Cold Rickety Shield
+1950,1,Poison Rickety Shield
+1951,1,Bloody Rickety Shield
+1952,1,Occult Rickety Shield
+1953,1,Pillory Shield
+1954,1,Heavy Pillory Shield
+1955,1,Keen Pillory Shield
+1956,1,Quality Pillory Shield
+1957,1,Fire Pillory Shield
+1958,1,Flame Art Pillory Shield
+1959,1,Lightning Pillory Shield
+1960,1,Sacred Pillory Shield
+1961,1,Magic Pillory Shield
+1962,1,Cold Pillory Shield
+1963,1,Poison Pillory Shield
+1964,1,Blood Pillory Shield
+1965,1,Occult Pillory Shield
+1966,1,Beastman's Jar-Shield
+1967,1,Beastman's Heavy Jar-Shield
+1968,1,Beastman's Keen Jar-Shield
+1969,1,Beastman's Quality Jar-Shield
+1970,1,Beastman's Fire Jar-Shield
+1971,1,Beastman's Flame Art Jar-Shield
+1972,1,Beastman's Lightning Jar-Shield
+1973,1,Beastman's Sacred Jar-Shield
+1974,1,Beastman's Magic Jar-Shield
+1975,1,Beastman's Cold Jar-Shield
+1976,1,Beastman's Poison Jar-Shield
+1977,1,Beastman's Blood Jar-Shield
+1978,1,Beastman's Occult Jar-Shield
+1979,1,Red Thorn Roundshield
+1980,1,Heavy Red Thorn Roundshield
+1981,1,Keen Red Thorn Roundshield
+1982,1,Quality Red Thorn Roundshield
+1983,1,Fire Red Thorn Roundshield
+1984,1,Flame Art Red Thorn Roundshield
+1985,1,Lightning Red Thorn Roundshield
+1986,1,Sacred Red Thorn Roundshield
+1987,1,Magic Red Thorn Roundshield
+1988,1,Cold Red Thorn Roundshield
+1989,1,Poison Red Thorn Roundshield
+1990,1,Bloody Red Thorn Roundshield
+1991,1,Occult Red Thorn Roundshield
+1992,1,Scripture Wooden Shield
+1993,1,Heavy Scripture Wooden Shield
+1994,1,Keen Scripture Wooden Shield
+1995,1,Quality Scripture Wooden Shield
+1996,1,Fire Scripture Wooden Shield
+1997,1,Flame Art Scripture Wooden Shield
+1998,1,Lightning Scripture Wooden Shield
+1999,1,Sacred Scripture Wooden Shield
+2000,1,Magic Scripture Wooden Shield
+2001,1,Cold Scripture Wooden Shield
+2002,1,Poison Scripture Wooden Shield
+2003,1,Blood Scripture Wooden Shield
+2004,1,Occult Scripture Wooden Shield
+2005,1,Riveted Wooden Shield
+2006,1,Heavy Riveted Wooden Shield
+2007,1,Keen Riveted Wooden Shield
+2008,1,Quality Riveted Wooden Shield
+2009,1,Fire Riveted Wooden Shield
+2010,1,Flame Art Riveted Wooden Shield
+2011,1,Lightning Riveted Wooden Shield
+2012,1,Sacred Riveted Wooden Shield
+2013,1,Magic Riveted Wooden Shield
+2014,1,Cold Riveted Wooden Shield
+2015,1,Poison Riveted Wooden Shield
+2016,1,Blood Riveted Wooden Shield
+2017,1,Occult Riveted Wooden Shield
+2018,1,Blue-White Wooden Shield
+2019,1,Heavy Blue-White Wooden Shield
+2020,1,Keen Blue-White Wooden Shield
+2021,1,Quality Blue-White Wooden Shield
+2022,1,Fire Blue-White Wooden Shield
+2023,1,Flame Art Blue-White Wooden Shield
+2024,1,Lightning Blue-White Wooden Shield
+2025,1,Sacred Blue-White Wooden Shield
+2026,1,Magic Blue-White Wooden Shield
+2027,1,Cold Blue-White Wooden Shield
+2028,1,Poison Blue-White Wooden Shield
+2029,1,Blood Blue-White Wooden Shield
+2030,1,Occult Blue-White Wooden Shield
+2031,1,Rift Shield
+2032,1,Heavy Rift Shield
+2033,1,Keen Rift Shield
+2034,1,Quality Rift Shield
+2035,1,Fire Rift Shield
+2036,1,Flame Art Rift Shield
+2037,1,Lightning Rift Shield
+2038,1,Sacred Rift Shield
+2039,1,Magic Rift Shield
+2040,1,Cold Rift Shield
+2041,1,Poison Rift Shield
+2042,1,Blood Rift Shield
+2043,1,Occult Rift Shield
+2044,1,Iron Roundshield
+2045,1,Heavy Iron Roundshield
+2046,1,Keen Iron Roundshield
+2047,1,Quality Iron Roundshield
+2048,1,Fire Iron Roundshield
+2049,1,Flame Art Iron Roundshield
+2050,1,Lightning Iron Roundshield
+2051,1,Sacred Iron Roundshield
+2052,1,Magic Iron Roundshield
+2053,1,Cold Iron Roundshield
+2054,1,Poison Iron Roundshield
+2055,1,Bloody Iron Roundshield
+2056,1,Occult Iron Roundshield
+2057,1,Gilded Iron Shield
+2058,1,Gilded Heavy Iron Shield
+2059,1,Gilded Keen Iron Shield
+2060,1,Gilded Quality Iron Shield
+2061,1,Gilded Fire Iron Shield
+2062,1,Gilded Flame Art Iron Shield
+2063,1,Gilded Lightning Iron Shield
+2064,1,Gilded Sacred Iron Shield
+2065,1,Gilded Magic Iron Shield
+2066,1,Gilded Cold Iron Shield
+2067,1,Gilded Poison Iron Shield
+2068,1,Gilded Blood Iron Shield
+2069,1,Gilded Occult Iron Shield
+2070,1,Ice Crest Shield
+2071,1,Heavy Ice Crest Shield
+2072,1,Keen Ice Crest Shield
+2073,1,Quality Ice Crest Shield
+2074,1,Fire Ice Crest Shield
+2075,1,Flame Art Ice Crest Shield
+2076,1,Lightning Ice Crest Shield
+2077,1,Sacred Ice Crest Shield
+2078,1,Magic Ice Crest Shield
+2079,1,Cold Ice Crest Shield
+2080,1,Poison Ice Crest Shield
+2081,1,Blood Ice Crest Shield
+2082,1,Occult Ice Crest Shield
+2083,1,Smoldering Shield
+2084,1,Spiralhorn Shield
+2085,1,Heavy Spiralhorn Shield
+2086,1,Keen Spiralhorn Shield
+2087,1,Quality Spiralhorn Shield
+2088,1,Fire Spiralhorn Shield
+2089,1,Flame Art Spiralhorn Shield
+2090,1,Lightning Spiralhorn Shield
+2091,1,Sacred Spiralhorn Shield
+2092,1,Magic Spiralhorn Shield
+2093,1,Cold Spiralhorn Shield
+2094,1,Poison Spiralhorn Shield
+2095,1,Blood Spiralhorn Shield
+2096,1,Occult Spiralhorn Shield
+2097,1,Coil Shield
+2098,1,Kite Shield
+2099,1,Heavy Kite Shield
+2100,1,Keen Kite Shield
+2101,1,Quality Kite Shield
+2102,1,Fire Kite Shield
+2103,1,Flame Art Kite Shield
+2104,1,Lightning Kite Shield
+2105,1,Sacred Kite Shield
+2106,1,Magic Kite Shield
+2107,1,Cold Kite Shield
+2108,1,Poison Kite Shield
+2109,1,Blood Kite Shield
+2110,1,Occult Kite Shield
+2111,1,Marred Leather Shield
+2112,1,Marred Heavy Leather Shield
+2113,1,Marred Keen Leather Shield
+2114,1,Marred Quality Leather Shield
+2115,1,Marred Fire Leather Shield
+2116,1,Marred Flame Art Leather Shield
+2117,1,Marred Lightning Leather Shield
+2118,1,Marred Sacred Leather Shield
+2119,1,Marred Magic Leather Shield
+2120,1,Marred Cold Leather Shield
+2121,1,Marred Poison Leather Shield
+2122,1,Marred Blood Leather Shield
+2123,1,Marred Occult Leather Shield
+2124,1,Marred Wooden Shield
+2125,1,Marred Heavy Wooden Shield
+2126,1,Marred Keen Wooden Shield
+2127,1,Marred Quality Wooden Shield
+2128,1,Marred Fire Wooden Shield
+2129,1,Marred Flame Art Wooden Shield
+2130,1,Marred Lightning Wooden Shield
+2131,1,Marred Sacred Wooden Shield
+2132,1,Marred Magic Wooden Shield
+2133,1,Marred Cold Wooden Shield
+2134,1,Marred Poison Wooden Shield
+2135,1,Marred Blood Wooden Shield
+2136,1,Marred Occult Wooden Shield
+2137,1,Banished Knight's Shield
+2138,1,Banished Knight's Heavy Shield
+2139,1,Banished Knight's Keen Shield
+2140,1,Banished Knight's Quality Shield
+2141,1,Banished Knight's Fire Shield
+2142,1,Banished Knight's Flame Art Shield
+2143,1,Banished Knight's Lightning Shield
+2144,1,Banished Knight's Sacred Shield
+2145,1,Banished Knight's Magic Shield
+2146,1,Banished Knight's Cold Shield
+2147,1,Banished Knight's Poison Shield
+2148,1,Banished Knight's Blood Shield
+2149,1,Banished Knight's Occult Shield
+2150,1,Albinauric Shield
+2151,1,Heavy Albinauric Shield
+2152,1,Keen Albinauric Shield
+2153,1,Quality Albinauric Shield
+2154,1,Fire Albinauric Shield
+2155,1,Flame Art Albinauric Shield
+2156,1,Lightning Albinauric Shield
+2157,1,Sacred Albinauric Shield
+2158,1,Magic Albinauric Shield
+2159,1,Cold Albinauric Shield
+2160,1,Poison Albinauric Shield
+2161,1,Blood Albinauric Shield
+2162,1,Occult Albinauric Shield
+2163,1,Sun Realm Shield
+2164,1,Heavy Sun Realm Shield
+2165,1,Keen Sun Realm Shield
+2166,1,Quality Sun Realm Shield
+2167,1,Fire Sun Realm Shield
+2168,1,Flame Art Sun Realm Shield
+2169,1,Lightning Sun Realm Shield
+2170,1,Sacred Sun Realm Shield
+2171,1,Magic Sun Realm Shield
+2172,1,Cold Sun Realm Shield
+2173,1,Poison Sun Realm Shield
+2174,1,Blood Sun Realm Shield
+2175,1,Occult Sun Realm Shield
+2176,1,Silver Mirrorshield
+2177,1,Round Shield
+2178,1,Heavy Round Shield
+2179,1,Keen Round Shield
+2180,1,Quality Round Shield
+2181,1,Fire Round Shield
+2182,1,Flame Art Round Shield
+2183,1,Lightning Round Shield
+2184,1,Sacred Round Shield
+2185,1,Magic Round Shield
+2186,1,Cold Round Shield
+2187,1,Poison Round Shield
+2188,1,Blood Round Shield
+2189,1,Occult Round Shield
+2190,1,Scorpion Kite Shield
+2191,1,Heavy Scorpion Kite Shield
+2192,1,Keen Scorpion Kite Shield
+2193,1,Quality Scorpion Kite Shield
+2194,1,Fire Scorpion Kite Shield
+2195,1,Flame Art Scorpion Kite Shield
+2196,1,Lightning Scorpion Kite Shield
+2197,1,Sacred Scorpion Kite Shield
+2198,1,Magic Scorpion Kite Shield
+2199,1,Cold Scorpion Kite Shield
+2200,1,Poison Scorpion Kite Shield
+2201,1,Blood Scorpion Kite Shield
+2202,1,Occult Scorpion Kite Shield
+2203,1,Twinbird Kite Shield
+2204,1,Heavy Twinbird Kite Shield
+2205,1,Keen Twinbird Kite Shield
+2206,1,Quality Twinbird Kite Shield
+2207,1,Fire Twinbird Kite Shield
+2208,1,Flame Art Twinbird Kite Shield
+2209,1,Lightning Twinbird Kite Shield
+2210,1,Sacred Twinbird Kite Shield
+2211,1,Magic Twinbird Kite Shield
+2212,1,Cold Twinbird Kite Shield
+2213,1,Poison Twinbird Kite Shield
+2214,1,Blood Twinbird Kite Shield
+2215,1,Occult Twinbird Kite Shield
+2216,1,Blue-Gold Kite Shield
+2217,1,Heavy Blue-Gold Kite Shield
+2218,1,Keen Blue-Gold Kite Shield
+2219,1,Quality Blue-Gold Kite Shield
+2220,1,Fire Blue-Gold Kite Shield
+2221,1,Flame Art Blue-Gold Kite Shield
+2222,1,Lightning Blue-Gold Kite Shield
+2223,1,Sacred Blue-Gold Kite Shield
+2224,1,Magic Blue-Gold Kite Shield
+2225,1,Cold Blue-Gold Kite Shield
+2226,1,Poison Blue-Gold Kite Shield
+2227,1,Blood Blue-Gold Kite Shield
+2228,1,Occult Blue-Gold Kite Shield
+2229,1,Brass Shield
+2230,1,Heavy Brass Shield
+2231,1,Keen Brass Shield
+2232,1,Quality Brass Shield
+2233,1,Fire Brass Shield
+2234,1,Flame Art Brass Shield
+2235,1,Lightning Brass Shield
+2236,1,Sacred Brass Shield
+2237,1,Magic Brass Shield
+2238,1,Cold Brass Shield
+2239,1,Poison Brass Shield
+2240,1,Blood Brass Shield
+2241,1,Occult Brass Shield
+2242,1,Great Turtle Shell
+2243,1,Heavy Great Turtle Shell
+2244,1,Keen Great Turtle Shell
+2245,1,Quality Great Turtle Shell
+2246,1,Fire Great Turtle Shell
+2247,1,Flame Art Great Turtle Shell
+2248,1,Lightning Great Turtle Shell
+2249,1,Sacred Great Turtle Shell
+2250,1,Magic Great Turtle Shell
+2251,1,Cold Great Turtle Shell
+2252,1,Poison Great Turtle Shell
+2253,1,Blood Great Turtle Shell
+2254,1,Occult Great Turtle Shell
+2255,1,Shield of the Guilty
+2256,1,Heavy Shield of the Guilty
+2257,1,Keen Shield of the Guilty
+2258,1,Quality Shield of the Guilty
+2259,1,Fire Shield of the Guilty
+2260,1,Flame Art Shield of the Guilty
+2261,1,Lightning Shield of the Guilty
+2262,1,Sacred Shield of the Guilty
+2263,1,Magic Shield of the Guilty
+2264,1,Cold Shield of the Guilty
+2265,1,Poison Shield of the Guilty
+2266,1,Blood Shield of the Guilty
+2267,1,Occult Shield of the Guilty
+2268,1,Carian Knight's Shield
+2269,1,Carian Knight's Heavy Shield
+2270,1,Carian Knight's Keen Shield
+2271,1,Carian Knight's Quality Shield
+2272,1,Carian Knight's Fire Shield
+2273,1,Carian Knight's Flame Art Shield
+2274,1,Carian Knight's Lightning Shield
+2275,1,Carian Knight's Sacred Shield
+2276,1,Carian Knight's Magic Shield
+2277,1,Carian Knight's Cold Shield
+2278,1,Carian Knight's Poison Shield
+2279,1,Carian Knight's Bloody Shield
+2280,1,Carian Knight's Occult Shield
+2281,1,Large Leather Shield
+2282,1,Heavy Large Leather Shield
+2283,1,Keen Large Leather Shield
+2284,1,Quality Large Leather Shield
+2285,1,Fire Large Leather Shield
+2286,1,Flame Art Large Leather Shield
+2287,1,Lightning Large Leather Shield
+2288,1,Sacred Large Leather Shield
+2289,1,Magic Large Leather Shield
+2290,1,Cold Large Leather Shield
+2291,1,Poison Large Leather Shield
+2292,1,Bloody Large Leather Shield
+2293,1,Occult Large Leather Shield
+2294,1,Horse Crest Wooden Shield
+2295,1,Heavy Horse Crest Wooden Shield
+2296,1,Keen Horse Crest Wooden Shield
+2297,1,Quality Horse Crest Wooden Shield
+2298,1,Fire Horse Crest Wooden Shield
+2299,1,Flame Art Horse Crest Wooden Shield
+2300,1,Lightning Horse Crest Wooden Shield
+2301,1,Sacred Horse Crest Wooden Shield
+2302,1,Magic Horse Crest Wooden Shield
+2303,1,Cold Horse Crest Wooden Shield
+2304,1,Poison Horse Crest Wooden Shield
+2305,1,Blood Horse Crest Wooden Shield
+2306,1,Occult Horse Crest Wooden Shield
+2307,1,Candletree Wooden Shield
+2308,1,Heavy Candletree Wooden Shield
+2309,1,Keen Candletree Wooden Shield
+2310,1,Quality Candletree Wooden Shield
+2311,1,Fire Candletree Wooden Shield
+2312,1,Flame Art Candletree Wooden Shield
+2313,1,Lightning Candletree Wooden Shield
+2314,1,Sacred Candletree Wooden Shield
+2315,1,Magic Candletree Wooden Shield
+2316,1,Cold Candletree Wooden Shield
+2317,1,Poison Candletree Wooden Shield
+2318,1,Blood Candletree Wooden Shield
+2319,1,Occult Candletree Wooden Shield
+2320,1,Flame Crest Wooden Shield
+2321,1,Heavy Flame Crest Wooden Shield
+2322,1,Keen Flame Crest Wooden Shield
+2323,1,Quality Flame Crest Wooden Shield
+2324,1,Fire Flame Crest Wooden Shield
+2325,1,Flame Art Flame Crest Wooden Shield
+2326,1,Lightning Flame Crest Wooden Shield
+2327,1,Sacred Flame Crest Wooden Shield
+2328,1,Magic Flame Crest Wooden Shield
+2329,1,Cold Flame Crest Wooden Shield
+2330,1,Poison Flame Crest Wooden Shield
+2331,1,Blood Flame Crest Wooden Shield
+2332,1,Occult Flame Crest Wooden Shield
+2333,1,Hawk Crest Wooden Shield
+2334,1,Heavy Hawk Crest Wooden Shield
+2335,1,Keen Hawk Crest Wooden Shield
+2336,1,Quality Hawk Crest Wooden Shield
+2337,1,Fire Hawk Crest Wooden Shield
+2338,1,Flame Art Hawk Crest Wooden Shield
+2339,1,Lightning Hawk Crest Wooden Shield
+2340,1,Sacred Hawk Crest Wooden Shield
+2341,1,Magic Hawk Crest Wooden Shield
+2342,1,Cold Hawk Crest Wooden Shield
+2343,1,Poison Hawk Crest Wooden Shield
+2344,1,Blood Hawk Crest Wooden Shield
+2345,1,Occult Hawk Crest Wooden Shield
+2346,1,Beast Crest Heater Shield
+2347,1,Heavy Beast Crest Heater Shield
+2348,1,Keen Beast Crest Heater Shield
+2349,1,Quality Beast Crest Heater Shield
+2350,1,Fire Beast Crest Heater Shield
+2351,1,Flame Art Beast Crest Heater Shield
+2352,1,Lightning Beast Crest Heater Shield
+2353,1,Sacred Beast Crest Heater Shield
+2354,1,Magic Beast Crest Heater Shield
+2355,1,Cold Beast Crest Heater Shield
+2356,1,Poison Beast Crest Heater Shield
+2357,1,Blood Beast Crest Heater Shield
+2358,1,Occult Beast Crest Heater Shield
+2359,1,Red Crest Heater Shield
+2360,1,Heavy Red Crest Heater Shield
+2361,1,Keen Red Crest Heater Shield
+2362,1,Quality Red Crest Heater Shield
+2363,1,Fire Red Crest Heater Shield
+2364,1,Flame Art Red Crest Heater Shield
+2365,1,Lightning Red Crest Heater Shield
+2366,1,Sacred Red Crest Heater Shield
+2367,1,Magic Red Crest Heater Shield
+2368,1,Cold Red Crest Heater Shield
+2369,1,Poison Red Crest Heater Shield
+2370,1,Blood Red Crest Heater Shield
+2371,1,Occult Red Crest Heater Shield
+2372,1,Blue Crest Heater Shield
+2373,1,Heavy Blue Crest Heater Shield
+2374,1,Keen Blue Crest Heater Shield
+2375,1,Quality Blue Crest Heater Shield
+2376,1,Fire Blue Crest Heater Shield
+2377,1,Flame Art Blue Crest Heater Shield
+2378,1,Lightning Blue Crest Heater Shield
+2379,1,Sacred Blue Crest Heater Shield
+2380,1,Magic Blue Crest Heater Shield
+2381,1,Cold Blue Crest Heater Shield
+2382,1,Poison Blue Crest Heater Shield
+2383,1,Blood Blue Crest Heater Shield
+2384,1,Occult Blue Crest Heater Shield
+2385,1,Eclipse Crest Heater Shield
+2386,1,Heavy Eclipse Crest Heater Shield
+2387,1,Keen Eclipse Crest Heater Shield
+2388,1,Quality Eclipse Crest Heater Shield
+2389,1,Fire Eclipse Crest Heater Shield
+2390,1,Flame Art Eclipse Crest Heater Shield
+2391,1,Lightning Eclipse Crest Heater Shield
+2392,1,Sacred Eclipse Crest Heater Shield
+2393,1,Magic Eclipse Crest Heater Shield
+2394,1,Cold Eclipse Crest Heater Shield
+2395,1,Poison Eclipse Crest Heater Shield
+2396,1,Blood Eclipse Crest Heater Shield
+2397,1,Occult Eclipse Crest Heater Shield
+2398,1,Inverted Hawk Heater Shield
+2399,1,Heavy Inverted Hawk Heater Shield
+2400,1,Keen Inverted Hawk Heater Shield
+2401,1,Quality Inverted Hawk Heater Shield
+2402,1,Fire Inverted Hawk Heater Shield
+2403,1,Flame Art Inverted Hawk Heater Shield
+2404,1,Lightning Inverted Hawk Heater Shield
+2405,1,Sacred Inverted Hawk Heater Shield
+2406,1,Magic Inverted Hawk Heater Shield
+2407,1,Cold Inverted Hawk Heater Shield
+2408,1,Poison Inverted Hawk Heater Shield
+2409,1,Blood Inverted Hawk Heater Shield
+2410,1,Occult Inverted Hawk Heater Shield
+2411,1,Heater Shield
+2412,1,Heavy Heater Shield
+2413,1,Keen Heater Shield
+2414,1,Quality Heater Shield
+2415,1,Fire Heater Shield
+2416,1,Flame Art Heater Shield
+2417,1,Lightning Heater Shield
+2418,1,Sacred Heater Shield
+2419,1,Magic Heater Shield
+2420,1,Cold Heater Shield
+2421,1,Poison Heater Shield
+2422,1,Blood Heater Shield
+2423,1,Occult Heater Shield
+2424,1,Black Leather Shield
+2425,1,Heavy Black Leather Shield
+2426,1,Keen Black Leather Shield
+2427,1,Quality Black Leather Shield
+2428,1,Fire Black Leather Shield
+2429,1,Flame Art Black Leather Shield
+2430,1,Lightning Black Leather Shield
+2431,1,Sacred Black Leather Shield
+2432,1,Magic Black Leather Shield
+2433,1,Cold Black Leather Shield
+2434,1,Poison Black Leather Shield
+2435,1,Blood Black Leather Shield
+2436,1,Occult Black Leather Shield
+2437,1,Dragon Towershield
+2438,1,Heavy Dragon Towershield
+2439,1,Keen Dragon Towershield
+2440,1,Quality Dragon Towershield
+2441,1,Fire Dragon Towershield
+2442,1,Flame Art Dragon Towershield
+2443,1,Lightning Dragon Towershield
+2444,1,Sacred Dragon Towershield
+2445,1,Magic Dragon Towershield
+2446,1,Cold Dragon Towershield
+2447,1,Poison Dragon Towershield
+2448,1,Blood Dragon Towershield
+2449,1,Occult Dragon Towershield
+2450,1,Distinguished Greatshield
+2451,1,Distinguished Heavy Greatshield
+2452,1,Distinguished Keen Greatshield
+2453,1,Distinguished Quality Greatshield
+2454,1,Distinguished Fire Greatshield
+2455,1,Distinguished Flame Art Greatshield
+2456,1,Distinguished Lightning Greatshield
+2457,1,Distinguished Sacred Greatshield
+2458,1,Distinguished Magic Greatshield
+2459,1,Distinguished Cold Greatshield
+2460,1,Distinguished Poison Greatshield
+2461,1,Distinguished Blood Greatshield
+2462,1,Distinguished Occult Greatshield
+2463,1,Crucible Hornshield
+2464,1,Dragonclaw Shield
+2465,1,Briar Greatshield
+2466,1,Heavy Briar Greatshield
+2467,1,Keen Briar Greatshield
+2468,1,Quality Briar Greatshield
+2469,1,Fire Briar Greatshield
+2470,1,Flame Art Briar Greatshield
+2471,1,Lightning Briar Greatshield
+2472,1,Sacred Briar Greatshield
+2473,1,Magic Briar Greatshield
+2474,1,Cold Briar Greatshield
+2475,1,Poison Briar Greatshield
+2476,1,Blood Briar Greatshield
+2477,1,Occult Briar Greatshield
+2478,1,Erdtree Greatshield
+2479,1,Golden Beast Crest Shield
+2480,1,Heavy Golden Beast Crest Shield
+2481,1,Keen Golden Beast Crest Shield
+2482,1,Quality Golden Beast Crest Shield
+2483,1,Fire Golden Beast Crest Shield
+2484,1,Flame Art Golden Beast Crest Shield
+2485,1,Lightning Golden Beast Crest Shield
+2486,1,Sacred Golden Beast Crest Shield
+2487,1,Magic Golden Beast Crest Shield
+2488,1,Cold Golden Beast Crest Shield
+2489,1,Poison Golden Beast Crest Shield
+2490,1,Blood Golden Beast Crest Shield
+2491,1,Occult Golden Beast Crest Shield
+2492,1,Jellyfish Shield
+2493,1,Fingerprint Stone Shield
+2494,1,Heavy Fingerprint Stone Shield
+2495,1,Keen Fingerprint Stone Shield
+2496,1,Quality Fingerprint Stone Shield
+2497,1,Fire Fingerprint Stone Shield
+2498,1,Flame Art Fingerprint Stone Shield
+2499,1,Lightning Fingerprint Stone Shield
+2500,1,Sacred Fingerprint Stone Shield
+2501,1,Magic Fingerprint Stone Shield
+2502,1,Cold Fingerprint Stone Shield
+2503,1,Poison Fingerprint Stone Shield
+2504,1,Blood Fingerprint Stone Shield
+2505,1,Occult Fingerprint Stone Shield
+2506,1,Icon Shield
+2507,1,One-Eyed Shield
+2508,1,Visage Shield
+2509,1,Spiked Palisade Shield
+2510,1,Heavy Spiked Palisade Shield
+2511,1,Keen Spiked Palisade Shield
+2512,1,Quality Spiked Palisade Shield
+2513,1,Fire Spiked Palisade Shield
+2514,1,Flame Art Spiked Palisade Shield
+2515,1,Lightning Spiked Palisade Shield
+2516,1,Sacred Spiked Palisade Shield
+2517,1,Magic Spiked Palisade Shield
+2518,1,Cold Spiked Palisade Shield
+2519,1,Poison Spiked Palisade Shield
+2520,1,Blood Spiked Palisade Shield
+2521,1,Occult Spiked Palisade Shield
+2522,1,Manor Towershield
+2523,1,Heavy Manor Towershield
+2524,1,Keen Manor Towershield
+2525,1,Quality Manor Towershield
+2526,1,Fire Manor Towershield
+2527,1,Flame Art Manor Towershield
+2528,1,Lightning Manor Towershield
+2529,1,Sacred Manor Towershield
+2530,1,Magic Manor Towershield
+2531,1,Cold Manor Towershield
+2532,1,Poison Manor Towershield
+2533,1,Blood Manor Towershield
+2534,1,Occult Manor Towershield
+2535,1,Crossed-Tree Towershield
+2536,1,Heavy Crossed-Tree Towershield
+2537,1,Keen Crossed-Tree Towershield
+2538,1,Quality Crossed-Tree Towershield
+2539,1,Fire Crossed-Tree Towershield
+2540,1,Flame Art Crossed-Tree Towershield
+2541,1,Lightning Crossed-Tree Towershield
+2542,1,Sacred Crossed-Tree Towershield
+2543,1,Magic Crossed-Tree Towershield
+2544,1,Cold Crossed-Tree Towershield
+2545,1,Poison Crossed-Tree Towershield
+2546,1,Blood Crossed-Tree Towershield
+2547,1,Occult Crossed-Tree Towershield
+2548,1,Inverted Hawk Towershield
+2549,1,Heavy Inverted Hawk Towershield
+2550,1,Keen Inverted Hawk Towershield
+2551,1,Quality Inverted Hawk Towershield
+2552,1,Fire Inverted Hawk Towershield
+2553,1,Flame Art Inverted Hawk Towershield
+2554,1,Lightning Inverted Hawk Towershield
+2555,1,Sacred Inverted Hawk Towershield
+2556,1,Magic Inverted Hawk Towershield
+2557,1,Cold Inverted Hawk Towershield
+2558,1,Poison Inverted Hawk Towershield
+2559,1,Blood Inverted Hawk Towershield
+2560,1,Occult Inverted Hawk Towershield
+2561,1,Ant's Skull Plate
+2562,1,Redmane Greatshield
+2563,1,Heavy Redmane Greatshield
+2564,1,Keen Redmane Greatshield
+2565,1,Quality Redmane Greatshield
+2566,1,Fire Redmane Greatshield
+2567,1,Flame Art Redmane Greatshield
+2568,1,Lightning Redmane Greatshield
+2569,1,Sacred Redmane Greatshield
+2570,1,Magic Redmane Greatshield
+2571,1,Cold Redmane Greatshield
+2572,1,Poison Redmane Greatshield
+2573,1,Blood Redmane Greatshield
+2574,1,Occult Redmane Greatshield
+2575,1,Eclipse Crest Greatshield
+2576,1,Heavy Eclipse Crest Greatshield
+2577,1,Keen Eclipse Crest Greatshield
+2578,1,Quality Eclipse Crest Greatshield
+2579,1,Fire Eclipse Crest Greatshield
+2580,1,Flame Art Eclipse Crest Greatshield
+2581,1,Lightning Eclipse Crest Greatshield
+2582,1,Sacred Eclipse Crest Greatshield
+2583,1,Magic Eclipse Crest Greatshield
+2584,1,Cold Eclipse Crest Greatshield
+2585,1,Poison Eclipse Crest Greatshield
+2586,1,Blood Eclipse Crest Greatshield
+2587,1,Occult Eclipse Crest Greatshield
+2588,1,Cuckoo Greatshield
+2589,1,Heavy Cuckoo Greatshield
+2590,1,Keen Cuckoo Greatshield
+2591,1,Quality Cuckoo Greatshield
+2592,1,Fire Cuckoo Greatshield
+2593,1,Flame Art Cuckoo Greatshield
+2594,1,Lightning Cuckoo Greatshield
+2595,1,Sacred Cuckoo Greatshield
+2596,1,Magic Cuckoo Greatshield
+2597,1,Cold Cuckoo Greatshield
+2598,1,Poison Cuckoo Greatshield
+2599,1,Blood Cuckoo Greatshield
+2600,1,Occult Cuckoo Greatshield
+2601,1,Golden Greatshield
+2602,1,Heavy Golden Greatshield
+2603,1,Keen Golden Greatshield
+2604,1,Quality Golden Greatshield
+2605,1,Fire Golden Greatshield
+2606,1,Flame Art Golden Greatshield
+2607,1,Lightning Golden Greatshield
+2608,1,Sacred Golden Greatshield
+2609,1,Magic Golden Greatshield
+2610,1,Cold Golden Greatshield
+2611,1,Poison Golden Greatshield
+2612,1,Blood Golden Greatshield
+2613,1,Occult Golden Greatshield
+2614,1,Gilded Greatshield
+2615,1,Heavy Gilded Greatshield
+2616,1,Keen Gilded Greatshield
+2617,1,Quality Gilded Greatshield
+2618,1,Fire Gilded Greatshield
+2619,1,Flame Art Gilded Greatshield
+2620,1,Lightning Gilded Greatshield
+2621,1,Sacred Gilded Greatshield
+2622,1,Magic Gilded Greatshield
+2623,1,Cold Gilded Greatshield
+2624,1,Poison Gilded Greatshield
+2625,1,Blood Gilded Greatshield
+2626,1,Occult Gilded Greatshield
+2627,1,Haligtree Crest Greatshield
+2628,1,Heavy Haligtree Crest Greatshield
+2629,1,Keen Haligtree Crest Greatshield
+2630,1,Quality Haligtree Crest Greatshield
+2631,1,Fire Haligtree Crest Greatshield
+2632,1,Flame Art Haligtree Crest Greatshield
+2633,1,Lightning Haligtree Crest Greatshield
+2634,1,Sacred Haligtree Crest Greatshield
+2635,1,Magic Haligtree Crest Greatshield
+2636,1,Cold Haligtree Crest Greatshield
+2637,1,Poison Haligtree Crest Greatshield
+2638,1,Blood Haligtree Crest Greatshield
+2639,1,Occult Haligtree Crest Greatshield
+2640,1,Wooden Greatshield
+2641,1,Heavy Wooden Greatshield
+2642,1,Keen Wooden Greatshield
+2643,1,Quality Wooden Greatshield
+2644,1,Fire Wooden Greatshield
+2645,1,Flame Art Wooden Greatshield
+2646,1,Lightning Wooden Greatshield
+2647,1,Sacred Wooden Greatshield
+2648,1,Magic Wooden Greatshield
+2649,1,Cold Wooden Greatshield
+2650,1,Poison Wooden Greatshield
+2651,1,Blood Wooden Greatshield
+2652,1,Occult Wooden Greatshield
+2653,1,Lordsworn's Shield
+2654,1,Heavy Lordsworn's Shield
+2655,1,Keen Lordsworn's Shield
+2656,1,Quality Lordsworn's Shield
+2657,1,Fire Lordsworn's Shield
+2658,1,Flame Art Lordsworn's Shield
+2659,1,Lightning Lordsworn's Shield
+2660,1,Sacred Lordsworn's Shield
+2661,1,Magic Lordsworn's Shield
+2662,1,Cold Lordsworn's Shield
+2663,1,Poison Lordsworn's Shield
+2664,1,Blood Lordsworn's Shield
+2665,1,Occult Lordsworn's Shield
+2666,1,Glintstone Staff
+2667,1,Crystal Staff
+2668,1,Gelmir Glintstone Staff
+2669,1,Demi-Human Queen's Staff
+2670,1,Carian Regal Scepter
+2671,1,Digger's Staff
+2672,1,Astrologer's Staff
+2673,1,Carian Glintblade Staff
+2674,1,Prince of Death's Staff
+2675,1,Albinauric Staff
+2676,1,Academy Glintstone Staff
+2677,1,Carian Glintstone Staff
+2678,1,Azur's Glintstone Staff
+2679,1,Lusat's Glintstone Staff
+2680,1,Meteorite Staff
+2681,1,Staff of the Guilty
+2682,1,Rotten Crystal Staff
+2683,1,Staff of Loss
+2684,1,Finger Seal
+2685,1,Godslayer's Seal
+2686,1,Giant's Seal
+2687,1,Gravel Stone Seal
+2688,1,Clawmark Seal
+2689,1,Golden Order Seal
+2690,1,Erdtree Seal
+2691,1,Dragon Communion Seal
+2692,1,Frenzied Flame Seal
+2693,1,Shortbow
+2694,1,Misbegotten Shortbow
+2695,1,Red Branch Shortbow
+2696,1,Harp Bow
+2697,1,Composite Bow
+2698,1,Longbow
+2699,1,Albinauric Bow
+2700,1,Horn Bow
+2701,1,Erdtree Bow
+2702,1,Serpent Bow
+2703,1,Pulley Bow
+2704,1,Black Bow
+2705,1,Lion Greatbow
+2706,1,Golem Greatbow
+2707,1,Erdtree Greatbow
+2708,1,Greatbow
+2709,1,Soldier's Crossbow
+2710,1,Light Crossbow
+2711,1,Heavy Crossbow
+2712,1,Pulley Crossbow
+2713,1,Full Moon Crossbow
+2714,1,Arbalest
+2715,1,Crepus's Black-Key Crossbow
+2716,1,Hand Ballista
+2717,1,Jar Cannon
+2718,2,Albinauric Ashes
+2719,2,Ancestral Follower Ashes
+2720,2,Ancient Dragon Knight Kristoff
+2721,2,Archer Ashes
+2722,2,Avionette Soldier Ashes
+2723,2,Azula Beastman Ashes
+2724,2,Banished Knight Engvall
+2725,2,Banished Knight Oleg
+2726,2,Battlemage Hugues
+2727,2,Black Knife Tiche
+2728,2,Blackflame Monk Amon
+2729,2,Bloodhound Knight Floh
+2730,2,Clayman Ashes
+2731,2,Cleanrot Knight Finlay
+2732,2,Crystalian Ashes
+2733,2,Demi-Human Ashes
+2734,2,Depraved Perfumer Carmaan
+2735,2,Dolores the Sleeping Arrow Puppet
+2736,2,Dung Eater Puppet
+2737,2,Fanged Imp Ashes
+2738,2,Finger Maiden Therolina Puppet
+2739,2,Fire Monk Ashes
+2740,2,Giant Rat Ashes
+2741,2,Glintstone Sorcerer Ashes
+2742,2,Godrick Soldier Ashes
+2743,2,Greatshield Soldier Ashes
+2744,2,Haligtree Soldier Ashes
+2745,2,Jarwight Puppet
+2746,2,Kaiden Sellsword Ashes
+2747,2,Kindred of Rot Ashes
+2748,2,Land Squirt Ashes
+2749,2,Latenna the Albinauric
+2750,2,Leyndell Soldier Ashes
+2751,2,Lhutel the Headless
+2752,2,Lone Wolf Ashes
+2753,2,Mad Pumpkin Head Ashes
+2754,2,Man-Serpent Ashes
+2755,2,Marionette Soldier Ashes
+2756,2,Mausoleum Soldier Ashes
+2757,2,Mimic Tear Ashes
+2758,2,Miranda Sprout Ashes
+2759,2,Nepheli Loux Puppet
+2760,2,Nightmaiden & Swordstress Puppets
+2761,2,Noble Sorcerer Ashes
+2762,2,Nomad Ashes
+2763,2,Omenkiller Rollo
+2764,2,Oracle Envoy Ashes
+2765,2,Page Ashes
+2766,2,Perfumer Tricia
+2767,2,Putrid Corpse Ashes
+2768,2,Radahn Soldier Ashes
+2769,2,Raya Lucaria Soldier Ashes
+2770,2,Redmane Knight Ogha
+2771,2,Rotten Stray Ashes
+2772,2,Skeletal Bandit Ashes
+2773,2,Skeletal Militiaman Ashes
+2774,2,Soldjars of Fortune Ashes
+2775,2,Spirit Jellyfish Ashes
+2776,2,Stormhawk Deenh
+2777,2,Twinsage Sorcerer Ashes
+2778,2,Vulgar Militia Ashes
+2779,2,Wandering Noble Ashes
+2780,2,Warhawk Ashes
+2781,2,Winged Misbegotten Ashes
+2782,3,Agheel's Flame
+2783,3,Ancient Dragons' Lightning Spear
+2784,3,Ancient Dragons' Lightning Strike
+2785,3,Aspects of the Crucible: Breath
+2786,3,Aspects of the Crucible: Horns
+2787,3,Aspects of the Crucible: Tail
+2788,3,Assassin's Approach
+2789,3,Barrier of Gold
+2790,3,Beast Claw
+2791,3,Bestial Constitution
+2792,3,Bestial Sling
+2793,3,Bestial Vitality
+2794,3,Black Blade
+2795,3,Black Flame
+2796,3,Black Flame Blade
+2797,3,Black Flame Ritual
+2798,3,Black Flame's Protection
+2799,3,Blessing of the Erdtree
+2800,3,Blessing's Boon
+2801,3,Bloodboon
+2802,3,Bloodflame Blade
+2803,3,Bloodflame Talons
+2804,3,Borealis's Mist
+2805,3,"Burn, O Flame!"
+2806,3,Catch Flame
+2807,3,Cure Poison
+2808,3,Darkness
+2809,3,Death Lightning
+2810,3,Discus of Light
+2811,3,Divine Fortification
+2812,3,Dragonbolt Blessing
+2813,3,Dragonclaw
+2814,3,Dragonfire
+2815,3,Dragonice
+2816,3,Dragonmaw
+2817,3,Ekzykes's Decay
+2818,3,Elden Stars
+2819,3,Electrify Armament
+2820,3,Erdtree Heal
+2821,3,Fire's Deadly Sin
+2822,3,Flame Fortification
+2823,3,Flame of the Fell God
+2824,3,Flame Sling
+2825,3,"Flame, Cleanse Me"
+2826,3,"Flame, Fall Upon Them"
+2827,3,"Flame, Grant Me Strength"
+2828,3,"Flame, Protect Me"
+2829,3,Fortissax's Lightning Spear
+2830,3,Frenzied Burst
+2831,3,Frozen Lightning Spear
+2832,3,Giantsflame Take Thee
+2833,3,Glintstone Breath
+2834,3,Golden Lightning Fortification
+2835,3,Golden Vow
+2836,3,Great Heal
+2837,3,Greyoll's Roar
+2838,3,Gurranq's Beast Claw
+2839,3,Heal
+2840,3,Honed Bolt
+2841,3,Howl of Shabriri
+2842,3,Immutable Shield
+2843,3,Inescapable Frenzy
+2844,3,Lansseax's Glaive
+2845,3,Law of Causality
+2846,3,Law of Regression
+2847,3,Lightning Fortification
+2848,3,Lightning Spear
+2849,3,Lightning Strike
+2850,3,Litany of Proper Death
+2851,3,Lord's Aid
+2852,3,Lord's Divine Fortification
+2853,3,Lord's Heal
+2854,3,Magic Fortification
+2855,3,Magma Breath
+2856,3,Noble Presence
+2857,3,"O, Flame!"
+2858,3,Order Healing
+2859,3,Order's Blade
+2860,3,Pest Threads
+2861,3,Placidusax's Ruin
+2862,3,Poison Armament
+2863,3,Poison Mist
+2864,3,Protection of the Erdtree
+2865,3,Radagon's Rings of Light
+2866,3,Rejection
+2867,3,Rotten Breath
+2868,3,Scarlet Aeonia
+2869,3,Scouring Black Flame
+2870,3,Shadow Bait
+2871,3,Smarag's Glintstone Breath
+2872,3,Stone of Gurranq
+2873,3,"Surge, O Flame!"
+2874,3,Swarm of Flies
+2875,3,The Flame of Frenzy
+2876,3,Theodorix's Magma
+2877,3,Triple Rings of Light
+2878,3,Unendurable Frenzy
+2879,3,Urgent Heal
+2880,3,Vyke's Dragonbolt
+2881,3,"Whirl, O Flame!"
+2882,3,Wrath of Gold
+2883,3,Adula's Moonblade
+2884,3,Ambush Shard
+2885,3,Ancient Death Rancor
+2886,3,Briars of Punishment
+2887,3,Briars of Sin
+2888,3,Cannon of Haima
+2889,3,Carian Greatsword
+2890,3,Carian Phalanx
+2891,3,Carian Piercer
+2892,3,Carian Retaliation
+2893,3,Carian Slicer
+2894,3,Collapsing Stars
+2895,3,Comet
+2896,3,Comet Azur
+2897,3,Crystal Barrage
+2898,3,Crystal Burst
+2899,3,Crystal Release
+2900,3,Crystal Torrent
+2901,3,Eternal Darkness
+2902,3,Explosive Ghostflame
+2903,3,Fia's Mist
+2904,3,Founding Rain of Stars
+2905,3,Freezing Mist
+2906,3,Frozen Armament
+2907,3,Gavel of Haima
+2908,3,Gelmir's Fury
+2909,3,Glintblade Phalanx
+2910,3,Glintstone Arc
+2911,3,Glintstone Cometshard
+2912,3,Glintstone Icecrag
+2913,3,Glintstone Pebble
+2914,3,Glintstone Stars
+2915,3,Gravity Well
+2916,3,Great Glintstone Shard
+2917,3,Great Oracular Bubble
+2918,3,Greatblade Phalanx
+2919,3,Loretta's Greatbow
+2920,3,Loretta's Mastery
+2921,3,Lucidity
+2922,3,Magic Downpour
+2923,3,Magic Glintblade
+2924,3,Magma Shot
+2925,3,Meteorite
+2926,3,Meteorite of Astel
+2927,3,Night Comet
+2928,3,Night Maiden's Mist
+2929,3,Night Shard
+2930,3,Oracle Bubbles
+2931,3,Rancorcall
+2932,3,Ranni's Dark Moon
+2933,3,Rennala's Full Moon
+2934,3,Rock Blaster
+2935,3,Rock Sling
+2936,3,Roiling Magma
+2937,3,Rykard's Rancor
+2938,3,Scholar's Armament
+2939,3,Scholar's Shield
+2940,3,Shard Spiral
+2941,3,Shatter Earth
+2942,3,Shattering Crystal
+2943,3,Star Shower
+2944,3,Starlight
+2945,3,Stars of Ruin
+2946,3,Swift Glintstone Shard
+2947,3,Terra Magicus
+2948,3,Thops's Barrier
+2949,3,Tibia's Summons
+2950,3,Unseen Blade
+2951,3,Unseen Form
+2952,3,Zamor Ice Storm
+2953,4,Abandoned Merchant's Bell Bearing
+2954,4,Academy Glintstone Key
+2955,4,Academy Scroll
+2956,4,Alexander's Innards
+2957,4,Amber Draught
+2958,4,Amber Starlight
+2959,4,Ancient Dragon Apostle's Cookbook [1]
+2960,4,Ancient Dragon Apostle's Cookbook [2]
+2961,4,Ancient Dragon Apostle's Cookbook [3]
+2962,4,Ancient Dragon Apostle's Cookbook [4]
+2963,4,Ancient Dragon Prayerbook
+2964,4,Armorer's Cookbook [1]
+2965,4,Armorer's Cookbook [2]
+2966,4,Armorer's Cookbook [3]
+2967,4,Armorer's Cookbook [4]
+2968,4,Armorer's Cookbook [5]
+2969,4,Armorer's Cookbook [6]
+2970,4,Armorer's Cookbook [7]
+2971,4,Assassin's Prayerbook
+2972,4,Beast Eye
+2973,4,Bernahl's Bell Bearing
+2974,4,Black Knifeprint
+2975,4,Black Whetblade
+2976,4,Blackguard's Bell Bearing
+2977,4,Bone Peddler's Bell Bearing
+2978,4,Carian Inverted Statue
+2979,4,Celestial Dew
+2980,4,Cerulean Crystal Tear
+2981,4,Cerulean Crystal Tear
+2982,4,Cerulean Hidden Tear
+2983,4,Chrysalids' Memento
+2984,4,Conspectus Scroll
+2985,4,Corhyn's Bell Bearing
+2986,4,Cracked Pot
+2987,4,Crafting Kit
+2988,4,Crimson Bubbletear
+2989,4,Crimson Crystal Tear
+2990,4,Crimson Crystal Tear
+2991,4,Crimsonburst Crystal Tear
+2992,4,Crimsonspill Crystal Tear
+2993,4,Crimsonwhorl Bubbletear
+2994,4,Cursemark of Death
+2995,4,D's Bell Bearing
+2996,4,Dancer's Castanets
+2997,4,Dark Moon Ring
+2998,4,Deathroot
+2999,4,Dectus Medallion (Left)
+3000,4,Dectus Medallion (Right)
+3001,4,Dexterity-knot Crystal Tear
+3002,4,Discarded Palace Key
+3003,4,Dragon Cult Prayerbook
+3004,4,Dragon Heart
+3005,4,Drawing-Room Key
+3006,4,Faith-knot Crystal Tear
+3007,4,Fevor's Cookbook [1]
+3008,4,Fevor's Cookbook [2]
+3009,4,Fevor's Cookbook [3]
+3010,4,Fingerprint Grape
+3011,4,Fingerslayer Blade
+3012,4,Fire Monks' Prayerbook
+3013,4,Flame-Shrouding Cracked Tear
+3014,4,Frenzied's Cookbook [1]
+3015,4,Frenzied's Cookbook [2]
+3016,4,Ghost-Glovewort Picker's Bell Bearing [1]
+3017,4,Ghost-Glovewort Picker's Bell Bearing [2]
+3018,4,Ghost-Glovewort Picker's Bell Bearing [3]
+3019,4,Giant's Prayerbook
+3020,4,Glintstone Craftsman's Cookbook [1]
+3021,4,Glintstone Craftsman's Cookbook [2]
+3022,4,Glintstone Craftsman's Cookbook [3]
+3023,4,Glintstone Craftsman's Cookbook [4]
+3024,4,Glintstone Craftsman's Cookbook [5]
+3025,4,Glintstone Craftsman's Cookbook [6]
+3026,4,Glintstone Craftsman's Cookbook [7]
+3027,4,Glintstone Craftsman's Cookbook [8]
+3028,4,Glintstone Whetblade
+3029,4,Glovewort Picker's Bell Bearing [1]
+3030,4,Glovewort Picker's Bell Bearing [2]
+3031,4,Glovewort Picker's Bell Bearing [3]
+3032,4,Godrick's Great Rune
+3033,4,Godrick's Great Rune
+3034,4,Godskin Prayerbook
+3035,4,Gold Sewing Needle
+3036,4,Golden Order Principia
+3037,4,Golden Tailoring Tools
+3038,4,Gostoc's Bell Bearing
+3039,4,Gowry's Bell Bearing
+3040,4,Gravity Stone Peddler's Bell Bearing
+3041,4,Great Rune of the Unborn
+3042,4,Greenburst Crystal Tear
+3043,4,Greenspill Crystal Tear
+3044,4,Haligtree Secret Medallion (Left)
+3045,4,Haligtree Secret Medallion (Right)
+3046,4,Hermit Merchant's Bell Bearing [1]
+3047,4,Hermit Merchant's Bell Bearing [2]
+3048,4,Hermit Merchant's Bell Bearing [3]
+3049,4,Holy-Shrouding Cracked Tear
+3050,4,Iji's Bell Bearing
+3051,4,Imbued Sword Key
+3052,4,Imprisoned Merchant's Bell Bearing
+3053,4,Intelligence-knot Crystal Tear
+3054,4,Irina's Letter
+3055,4,Iron Whetblade
+3056,4,Isolated Merchant's Bell Bearing [1]
+3057,4,Isolated Merchant's Bell Bearing [2]
+3058,4,Isolated Merchant's Bell Bearing [3]
+3059,4,Kal?'s Bell Bearing
+3060,4,Larval Tear
+3061,4,Leaden Hardtear
+3062,4,Lightning-Shrouding Cracked Tear
+3063,4,Lord of Blood's Favor
+3064,4,Lord of Blood's Favor
+3065,4,Lost Ashes of War
+3066,4,Magic-Shrouding Cracked Tear
+3067,4,Malenia's Great Rune
+3068,4,Malenia's Great Rune
+3069,4,Map: Ainsel River
+3070,4,Map: Altus Plateau
+3071,4,Map: Caelid
+3072,4,Map: Consecrated Snowfield
+3073,4,Map: Deeproot Depths
+3074,4,Map: Dragonbarrow
+3075,4,Map: Lake of Rot
+3076,4,"Map: Leyndell, Royal Capital"
+3077,4,"Map: Limgrave, East"
+3078,4,"Map: Limgrave, West"
+3079,4,"Map: Liurnia, East"
+3080,4,"Map: Liurnia, North"
+3081,4,"Map: Liurnia, West"
+3082,4,Map: Mohgwyn Palace
+3083,4,"Map: Mountaintops of the Giants, East"
+3084,4,"Map: Mountaintops of the Giants, West"
+3085,4,Map: Mt. Gelmir
+3086,4,Map: Siofra River
+3087,4,Map: Weeping Peninsula
+3088,4,Meat Peddler's Bell Bearing
+3089,4,Medicine Peddler's Bell Bearing
+3090,4,Memory Stone
+3091,4,Mending Rune of Perfect Order
+3092,4,Mending Rune of the Death-Prince
+3093,4,Mending Rune of the Fell Curse
+3094,4,Miniature Ranni
+3095,4,Miniature Ranni
+3096,4,Miriel's Bell Bearing
+3097,4,Missionary's Cookbook [1]
+3098,4,Missionary's Cookbook [2]
+3099,4,Missionary's Cookbook [3]
+3100,4,Missionary's Cookbook [4]
+3101,4,Missionary's Cookbook [5]
+3102,4,Missionary's Cookbook [6]
+3103,4,Missionary's Cookbook [7]
+3104,4,Mohg's Great Rune
+3105,4,Mohg's Great Rune
+3106,4,Morgott's Great Rune
+3107,4,Morgott's Great Rune
+3108,4,Nomadic Merchant's Bell Bearing [1]
+3109,4,Nomadic Merchant's Bell Bearing [10]
+3110,4,Nomadic Merchant's Bell Bearing [2]
+3111,4,Nomadic Merchant's Bell Bearing [3]
+3112,4,Nomadic Merchant's Bell Bearing [4]
+3113,4,Nomadic Merchant's Bell Bearing [5]
+3114,4,Nomadic Merchant's Bell Bearing [6]
+3115,4,Nomadic Merchant's Bell Bearing [7]
+3116,4,Nomadic Merchant's Bell Bearing [8]
+3117,4,Nomadic Merchant's Bell Bearing [9]
+3118,4,Nomadic Warrior's Cookbook [1]
+3119,4,Nomadic Warrior's Cookbook [10]
+3120,4,Nomadic Warrior's Cookbook [11]
+3121,4,Nomadic Warrior's Cookbook [12]
+3122,4,Nomadic Warrior's Cookbook [13]
+3123,4,Nomadic Warrior's Cookbook [14]
+3124,4,Nomadic Warrior's Cookbook [15]
+3125,4,Nomadic Warrior's Cookbook [16]
+3126,4,Nomadic Warrior's Cookbook [17]
+3127,4,Nomadic Warrior's Cookbook [18]
+3128,4,Nomadic Warrior's Cookbook [19]
+3129,4,Nomadic Warrior's Cookbook [2]
+3130,4,Nomadic Warrior's Cookbook [20]
+3131,4,Nomadic Warrior's Cookbook [21]
+3132,4,Nomadic Warrior's Cookbook [22]
+3133,4,Nomadic Warrior's Cookbook [23]
+3134,4,Nomadic Warrior's Cookbook [24]
+3135,4,Nomadic Warrior's Cookbook [3]
+3136,4,Nomadic Warrior's Cookbook [4]
+3137,4,Nomadic Warrior's Cookbook [5]
+3138,4,Nomadic Warrior's Cookbook [6]
+3139,4,Nomadic Warrior's Cookbook [7]
+3140,4,Nomadic Warrior's Cookbook [8]
+3141,4,Nomadic Warrior's Cookbook [9]
+3142,4,Opaline Bubbletear
+3143,4,Opaline Hardtear
+3144,4,Patches' Bell Bearing
+3145,4,Perfume Bottle
+3146,4,Perfumer's Cookbook [1]
+3147,4,Perfumer's Cookbook [2]
+3148,4,Perfumer's Cookbook [3]
+3149,4,Perfumer's Cookbook [4]
+3150,4,Pidia's Bell Bearing
+3151,4,Purifying Crystal Tear
+3152,4,Radahn's Great Rune
+3153,4,Radahn's Great Rune
+3154,4,Red-Hot Whetblade
+3155,4,Ritual Pot
+3156,4,Rogier's Bell Bearing
+3157,4,Rold Medallion
+3158,4,Royal House Scroll
+3159,4,Ruptured Crystal Tear
+3160,4,Ruptured Crystal Tear
+3161,4,Rusty Key
+3162,4,Rya's Necklace
+3163,4,Rykard's Great Rune
+3164,4,Rykard's Great Rune
+3165,4,Sanctified Whetblade
+3166,4,Seedbed Curse
+3167,4,Sellen's Bell Bearing
+3168,4,Sellen's Primal Glintstone
+3169,4,Sellian Sealbreaker
+3170,4,Seluvis's Bell Bearing
+3171,4,Seluvis's Introduction
+3172,4,Seluvis's Potion
+3173,4,Serpent's Amnion
+3174,4,Sewer-Gaol Key
+3175,4,Sewing Needle
+3176,4,Shabriri Grape
+3177,4,Smithing-Stone Miner's Bell Bearing [1]
+3178,4,Smithing-Stone Miner's Bell Bearing [2]
+3179,4,Smithing-Stone Miner's Bell Bearing [3]
+3180,4,Smithing-Stone Miner's Bell Bearing [4]
+3181,4,Somberstone Miner's Bell Bearing [1]
+3182,4,Somberstone Miner's Bell Bearing [2]
+3183,4,Somberstone Miner's Bell Bearing [3]
+3184,4,Somberstone Miner's Bell Bearing [4]
+3185,4,Somberstone Miner's Bell Bearing [5]
+3186,4,Speckled Hardtear
+3187,4,Spiked Cracked Tear
+3188,4,Spirit Calling Bell
+3189,4,Stonebarb Cracked Tear
+3190,4,Stonesword Key
+3191,4,Strength-knot Crystal Tear
+3192,4,Tailoring Tools
+3193,4,Talisman Pouch
+3194,4,The Stormhawk King
+3195,4,Thops's Bell Bearing
+3196,4,Thorny Cracked Tear
+3197,4,Tonic of Forgetfulness
+3198,4,Twiggy Cracked Tear
+3199,4,Two Fingers' Prayerbook
+3200,4,Unalloyed Gold Needle
+3201,4,Unalloyed Gold Needle
+3202,4,Unalloyed Gold Needle
+3203,4,Valkyrie's Prosthesis
+3204,4,Weathered Dagger
+3205,4,Whetstone Knife
+3206,4,Windy Crystal Tear
+3207,4,Winged Crystal Tear
+3208,5,Sacred Tear
+3209,5,Golden Seed
+3210,5,Smithing Stone [1]
+3211,5,Smithing Stone [2]
+3212,5,Smithing Stone [3]
+3213,5,Smithing Stone [4]
+3214,5,Smithing Stone [5]
+3215,5,Smithing Stone [6]
+3216,5,Smithing Stone [7]
+3217,5,Smithing Stone [8]
+3218,5,Ancient Dragon Smithing Stone
+3219,5,Somber Smithing Stone [1]
+3220,5,Somber Smithing Stone [2]
+3221,5,Somber Smithing Stone [3]
+3222,5,Somber Smithing Stone [4]
+3223,5,Somber Smithing Stone [5]
+3224,5,Somber Smithing Stone [6]
+3225,5,Somber Smithing Stone [7]
+3226,5,Somber Smithing Stone [8]
+3227,5,Somber Smithing Stone [9]
+3228,5,Somber Ancient Dragon Smithing Stone
+3229,5,Grave Glovewort [1]
+3230,5,Grave Glovewort [2]
+3231,5,Grave Glovewort [3]
+3232,5,Grave Glovewort [4]
+3233,5,Grave Glovewort [5]
+3234,5,Grave Glovewort [6]
+3235,5,Grave Glovewort [7]
+3236,5,Grave Glovewort [8]
+3237,5,Grave Glovewort [9]
+3238,5,Great Grave Glovewort
+3239,5,Ghost Glovewort [1]
+3240,5,Ghost Glovewort [2]
+3241,5,Ghost Glovewort [3]
+3242,5,Ghost Glovewort [4]
+3243,5,Ghost Glovewort [5]
+3244,5,Ghost Glovewort [6]
+3245,5,Ghost Glovewort [7]
+3246,5,Ghost Glovewort [8]
+3247,5,Ghost Glovewort [9]
+3248,5,Great Ghost Glovewort
+3249,6,Ancestral Spirit's Horn
+3250,6,Arrow's Reach Talisman
+3251,6,Arrow's Sting Talisman
+3252,6,Arsenal Charm
+3253,6,Arsenal Charm +1
+3254,6,Assassin's Cerulean Dagger
+3255,6,Assassin's Crimson Dagger
+3256,6,Axe Talisman
+3257,6,Blessed Dew Talisman
+3258,6,Blue Dancer Charm
+3259,6,Blue-Feathered Branchsword
+3260,6,Boltdrake Talisman
+3261,6,Boltdrake Talisman +1
+3262,6,Boltdrake Talisman +2
+3263,6,Bull-Goat's Talisman
+3264,6,Carian Filigreed Crest
+3265,6,Cerulean Amber Medallion
+3266,6,Cerulean Amber Medallion +1
+3267,6,Cerulean Amber Medallion +2
+3268,6,Cerulean Seed Talisman
+3269,6,Clarifying Horn Charm
+3270,6,Clarifying Horn Charm +1
+3271,6,Claw Talisman
+3272,6,Companion Jar
+3273,6,Concealing Veil
+3274,6,Crepus's Vial
+3275,6,Crimson Amber Medallion
+3276,6,Crimson Amber Medallion +1
+3277,6,Crimson Amber Medallion +2
+3278,6,Crimson Seed Talisman
+3279,6,Crucible Feather Talisman
+3280,6,Crucible Knot Talisman
+3281,6,Crucible Scale Talisman
+3282,6,Curved Sword Talisman
+3283,6,Daedicar's Woe
+3284,6,Dagger Talisman
+3285,6,Dragoncrest Greatshield Talisman
+3286,6,Dragoncrest Shield Talisman
+3287,6,Dragoncrest Shield Talisman +1
+3288,6,Dragoncrest Shield Talisman +2
+3289,6,Entwining Umbilical Cord
+3290,6,Erdtree's Favor
+3291,6,Erdtree's Favor +1
+3292,6,Erdtree's Favor +2
+3293,6,Faithful's Canvas Talisman
+3294,6,Fire Scorpion Charm
+3295,6,Flamedrake Talisman
+3296,6,Flamedrake Talisman +1
+3297,6,Flamedrake Talisman +2
+3298,6,Flock's Canvas Talisman
+3299,6,Furled Finger's Trick-Mirror
+3300,6,Godfrey Icon
+3301,6,Godskin Swaddling Cloth
+3302,6,Gold Scarab
+3303,6,Graven-Mass Talisman
+3304,6,Graven-School Talisman
+3305,6,Great-Jar's Arsenal
+3306,6,Greatshield Talisman
+3307,6,Green Turtle Talisman
+3308,6,Haligdrake Talisman
+3309,6,Haligdrake Talisman +1
+3310,6,Haligdrake Talisman +2
+3311,6,Hammer Talisman
+3312,6,Host's Trick-Mirror
+3313,6,Immunizing Horn Charm
+3314,6,Immunizing Horn Charm +1
+3315,6,Kindred of Rot's Exultation
+3316,6,Lance Talisman
+3317,6,Lightning Scorpion Charm
+3318,6,Longtail Cat Talisman
+3319,6,Lord of Blood's Exultation
+3320,6,Magic Scorpion Charm
+3321,6,Marika's Scarseal
+3322,6,Marika's Soreseal
+3323,6,Millicent's Prosthesis
+3324,6,Moon of Nokstella
+3325,6,Mottled Necklace
+3326,6,Mottled Necklace +1
+3327,6,Old Lord's Talisman
+3328,6,Pearldrake Talisman
+3329,6,Pearldrake Talisman +1
+3330,6,Pearldrake Talisman +2
+3331,6,Perfumer's Talisman
+3332,6,Primal Glintstone Blade
+3333,6,Prince of Death's Cyst
+3334,6,Prince of Death's Pustule
+3335,6,Prosthesis-Wearer Heirloom
+3336,6,Radagon Icon
+3337,6,Radagon's Scarseal
+3338,6,Radagon's Soreseal
+3339,6,Red-Feathered Branchsword
+3340,6,Ritual Shield Talisman
+3341,6,Ritual Sword Talisman
+3342,6,Roar Medallion
+3343,6,Rotten Winged Sword Insignia
+3344,6,Sacred Scorpion Charm
+3345,6,Sacrificial Twig
+3346,6,Shabriri's Woe
+3347,6,Shard of Alexander
+3348,6,Silver Scarab
+3349,6,Spear Talisman
+3350,6,Spelldrake Talisman
+3351,6,Spelldrake Talisman +1
+3352,6,Spelldrake Talisman +2
+3353,6,Stalwart Horn Charm
+3354,6,Stalwart Horn Charm +1
+3355,6,Stargazer Heirloom
+3356,6,Starscourge Heirloom
+3357,6,Taker's Cameo
+3358,6,Twinblade Talisman
+3359,6,Two Fingers Heirloom
+3360,6,Viridian Amber Medallion
+3361,6,Viridian Amber Medallion +1
+3362,6,Viridian Amber Medallion +2
+3363,6,Warrior Jar Shard
+3364,6,Winged Sword Insignia
+3365,7,Alberich's Bracers
+3366,7,Alberich's Pointed Hat
+3367,7,Alberich's Pointed Hat (Altered)
+3368,7,Alberich's Robe
+3369,7,Alberich's Robe (Altered)
+3370,7,Alberich's Trousers
+3371,7,Albinauric Mask
+3372,7,All-Knowing Armor
+3373,7,All-Knowing Armor (Altered)
+3374,7,All-Knowing Gauntlets
+3375,7,All-Knowing Greaves
+3376,7,All-Knowing Helm
+3377,7,Aristocrat Boots
+3378,7,Aristocrat Coat
+3379,7,Aristocrat Garb
+3380,7,Aristocrat Garb (Altered)
+3381,7,Aristocrat Hat
+3382,7,Aristocrat Headband
+3383,7,Ash-of-War Scarab
+3384,7,Astrologer Gloves
+3385,7,Astrologer Hood
+3386,7,Astrologer Robe
+3387,7,Astrologer Robe (Altered)
+3388,7,Astrologer Trousers
+3389,7,Azur's Glintstone Crown
+3390,7,Azur's Glintstone Robe
+3391,7,Azur's Manchettes
+3392,7,Bandit Boots
+3393,7,Bandit Garb
+3394,7,Bandit Manchettes
+3395,7,Bandit Mask
+3396,7,Banished Knight Armor
+3397,7,Banished Knight Armor (Altered)
+3398,7,Banished Knight Gauntlets
+3399,7,Banished Knight Greaves
+3400,7,Banished Knight Helm
+3401,7,Banished Knight Helm (Altered)
+3402,7,Battlemage Legwraps
+3403,7,Battlemage Manchettes
+3404,7,Battlemage Robe
+3405,7,Beast Champion Armor
+3406,7,Beast Champion Armor (Altered)
+3407,7,Beast Champion Gauntlets
+3408,7,Beast Champion Greaves
+3409,7,Beast Champion Helm
+3410,7,Black Dumpling
+3411,7,Black Hood
+3412,7,Black Knife Armor
+3413,7,Black Knife Armor (Altered)
+3414,7,Black Knife Gauntlets
+3415,7,Black Knife Greaves
+3416,7,Black Knife Hood
+3417,7,Black Wolf Mask
+3418,7,Blackflame Monk Armor
+3419,7,Blackflame Monk Gauntlets
+3420,7,Blackflame Monk Greaves
+3421,7,Blackflame Monk Hood
+3422,7,Blackguard's Iron Mask
+3423,7,Blaidd's Armor
+3424,7,Blaidd's Armor (Altered)
+3425,7,Blaidd's Gauntlets
+3426,7,Blaidd's Greaves
+3427,7,Bloodhound Knight Armor
+3428,7,Bloodhound Knight Armor (Altered)
+3429,7,Bloodhound Knight Gauntlets
+3430,7,Bloodhound Knight Greaves
+3431,7,Bloodhound Knight Helm
+3432,7,Bloodsoaked Manchettes
+3433,7,Bloodsoaked Mask
+3434,7,Bloodsoaked Tabard
+3435,7,Blue Cloth Cowl
+3436,7,Blue Cloth Vest
+3437,7,Blue Festive Garb
+3438,7,Blue Festive Hood
+3439,7,Blue Silver Bracelets
+3440,7,Blue Silver Mail Armor
+3441,7,Blue Silver Mail Armor (Altered)
+3442,7,Blue Silver Mail Hood
+3443,7,Blue Silver Mail Skirt
+3444,7,Brave's Battlewear
+3445,7,Brave's Battlewear (Altered)
+3446,7,Brave's Bracer
+3447,7,Brave's Cord Circlet
+3448,7,Brave's Leather Helm
+3449,7,Brave's Legwraps
+3450,7,Briar Armor
+3451,7,Briar Armor (Altered)
+3452,7,Briar Gauntlets
+3453,7,Briar Greaves
+3454,7,Briar Helm
+3455,7,Bull-Goat Armor
+3456,7,Bull-Goat Gauntlets
+3457,7,Bull-Goat Greaves
+3458,7,Bull-Goat Helm
+3459,7,Carian Knight Armor
+3460,7,Carian Knight Armor (Altered)
+3461,7,Carian Knight Gauntlets
+3462,7,Carian Knight Greaves
+3463,7,Carian Knight Helm
+3464,7,Cerulean Tear Scarab
+3465,7,Chain Armor
+3466,7,Chain Coif
+3467,7,Chain Leggings
+3468,7,Chain-Draped Tabard
+3469,7,Champion Bracers
+3470,7,Champion Gaiters
+3471,7,Champion Headband
+3472,7,Champion Pauldron
+3473,7,Cleanrot Armor
+3474,7,Cleanrot Armor (Altered)
+3475,7,Cleanrot Gauntlets
+3476,7,Cleanrot Greaves
+3477,7,Cleanrot Helm
+3478,7,Cleanrot Helm (Altered)
+3479,7,Cloth Garb
+3480,7,Cloth Trousers
+3481,7,Commoner's Garb
+3482,7,Commoner's Garb (Altered)
+3483,7,Commoner's Headband
+3484,7,Commoner's Headband (Altered)
+3485,7,Commoner's Shoes
+3486,7,Commoner's Simple Garb
+3487,7,Commoner's Simple Garb (Altered)
+3488,7,Confessor Armor
+3489,7,Confessor Armor (Altered)
+3490,7,Confessor Boots
+3491,7,Confessor Gloves
+3492,7,Confessor Hood
+3493,7,Confessor Hood (Altered)
+3494,7,Consort's Mask
+3495,7,Consort's Robe
+3496,7,Consort's Trousers
+3497,7,Corhyn's Robe
+3498,7,Crimson Hood
+3499,7,Crimson Tear Scarab
+3500,7,Crucible Axe Armor
+3501,7,Crucible Axe Armor (Altered)
+3502,7,Crucible Axe Helm
+3503,7,Crucible Gauntlets
+3504,7,Crucible Greaves
+3505,7,Crucible Tree Armor
+3506,7,Crucible Tree Armor (Altered)
+3507,7,Crucible Tree Helm
+3508,7,Cuckoo Knight Armor
+3509,7,Cuckoo Knight Armor (Altered)
+3510,7,Cuckoo Knight Gauntlets
+3511,7,Cuckoo Knight Greaves
+3512,7,Cuckoo Knight Helm
+3513,7,Cuckoo Surcoat
+3514,7,Deathbed Dress
+3515,7,Deathbed Smalls
+3516,7,Depraved Perfumer Gloves
+3517,7,Depraved Perfumer Headscarf
+3518,7,Depraved Perfumer Robe
+3519,7,Depraved Perfumer Robe (Altered)
+3520,7,Depraved Perfumer Trousers
+3521,7,Diallos's Mask
+3522,7,Dirty Chainmail
+3523,7,Drake Knight Armor
+3524,7,Drake Knight Armor (Altered)
+3525,7,Drake Knight Gauntlets
+3526,7,Drake Knight Greaves
+3527,7,Drake Knight Helm
+3528,7,Drake Knight Helm (Altered)
+3529,7,Duelist Greaves
+3530,7,Duelist Helm
+3531,7,Eccentric's Armor
+3532,7,Eccentric's Breeches
+3533,7,Eccentric's Hood
+3534,7,Eccentric's Hood (Altered)
+3535,7,Eccentric's Manchettes
+3536,7,Elden Lord Armor
+3537,7,Elden Lord Armor (Altered)
+3538,7,Elden Lord Bracers
+3539,7,Elden Lord Crown
+3540,7,Elden Lord Greaves
+3541,7,Envoy Crown
+3542,7,Erdtree Surcoat
+3543,7,Errant Sorcerer Boots
+3544,7,Errant Sorcerer Manchettes
+3545,7,Errant Sorcerer Robe
+3546,7,Errant Sorcerer Robe (Altered)
+3547,7,Exile Armor
+3548,7,Exile Gauntlets
+3549,7,Exile Greaves
+3550,7,Exile Hood
+3551,7,Eye Surcoat
+3552,7,Fell Omen Cloak
+3553,7,Festive Garb
+3554,7,Festive Garb (Altered)
+3555,7,Festive Hood
+3556,7,Festive Hood (Altered)
+3557,7,Fia's Hood
+3558,7,Fia's Robe
+3559,7,Fia's Robe (Altered)
+3560,7,Finger Maiden Fillet
+3561,7,Finger Maiden Robe
+3562,7,Finger Maiden Robe (Altered)
+3563,7,Finger Maiden Shoes
+3564,7,Fingerprint Armor
+3565,7,Fingerprint Armor (Altered)
+3566,7,Fingerprint Gauntlets
+3567,7,Fingerprint Greaves
+3568,7,Fingerprint Helm
+3569,7,Fire Monk Armor
+3570,7,Fire Monk Gauntlets
+3571,7,Fire Monk Greaves
+3572,7,Fire Monk Hood
+3573,7,Fire Prelate Armor
+3574,7,Fire Prelate Armor (Altered)
+3575,7,Fire Prelate Gauntlets
+3576,7,Fire Prelate Greaves
+3577,7,Fire Prelate Helm
+3578,7,Foot Soldier Cap
+3579,7,Foot Soldier Gauntlets
+3580,7,Foot Soldier Greaves
+3581,7,Foot Soldier Helm
+3582,7,Foot Soldier Helmet
+3583,7,Foot Soldier Tabard
+3584,7,Fur Leggings
+3585,7,Fur Raiment
+3586,7,Gauntlets
+3587,7,Gelmir Knight Armor
+3588,7,Gelmir Knight Armor (Altered)
+3589,7,Gelmir Knight Gauntlets
+3590,7,Gelmir Knight Greaves
+3591,7,Gelmir Knight Helm
+3592,7,Gilded Foot Soldier Cap
+3593,7,Glintstone Scarab
+3594,7,Godrick Knight Armor
+3595,7,Godrick Knight Armor (Altered)
+3596,7,Godrick Knight Gauntlets
+3597,7,Godrick Knight Greaves
+3598,7,Godrick Knight Helm
+3599,7,Godrick Soldier Gauntlets
+3600,7,Godrick Soldier Greaves
+3601,7,Godrick Soldier Helm
+3602,7,Godskin Apostle Bracelets
+3603,7,Godskin Apostle Hood
+3604,7,Godskin Apostle Robe
+3605,7,Godskin Apostle Trousers
+3606,7,Godskin Noble Bracelets
+3607,7,Godskin Noble Hood
+3608,7,Godskin Noble Robe
+3609,7,Godskin Noble Trousers
+3610,7,Gold Bracelets
+3611,7,Gold Waistwrap
+3612,7,Golden Prosthetic
+3613,7,Goldmask's Rags
+3614,7,Grass Hair Ornament
+3615,7,Gravekeeper Cloak
+3616,7,Gravekeeper Cloak (Altered)
+3617,7,Great Horned Headband
+3618,7,Greathelm
+3619,7,Greathood
+3620,7,Guardian Bracers
+3621,7,Guardian Garb
+3622,7,Guardian Garb (Full Bloom)
+3623,7,Guardian Greaves
+3624,7,Guardian Mask
+3625,7,Guilty Hood
+3626,7,Haima Glintstone Crown
+3627,7,Haligtree Crest Surcoat
+3628,7,Haligtree Gauntlets
+3629,7,Haligtree Greaves
+3630,7,Haligtree Helm
+3631,7,Haligtree Knight Armor
+3632,7,Haligtree Knight Armor (Altered)
+3633,7,Haligtree Knight Gauntlets
+3634,7,Haligtree Knight Greaves
+3635,7,Haligtree Knight Helm
+3636,7,Hierodas Glintstone Crown
+3637,7,High Page Clothes
+3638,7,High Page Clothes (Altered)
+3639,7,High Page Hood
+3640,7,Highwayman Cloth Armor
+3641,7,Highwayman Gauntlets
+3642,7,Highwayman Hood
+3643,7,Hoslow's Armor
+3644,7,Hoslow's Armor (Altered)
+3645,7,Hoslow's Gauntlets
+3646,7,Hoslow's Greaves
+3647,7,Hoslow's Helm
+3648,7,Iji's Mirrorhelm
+3649,7,Imp Head (Cat)
+3650,7,Imp Head (Corpse)
+3651,7,Imp Head (Elder)
+3652,7,Imp Head (Fanged)
+3653,7,Imp Head (Long-Tongued)
+3654,7,Imp Head (Wolf)
+3655,7,Incantation Scarab
+3656,7,Iron Gauntlets
+3657,7,Iron Helmet
+3658,7,Iron Kasa
+3659,7,Ivory-Draped Tabard
+3660,7,Jar
+3661,7,Juvenile Scholar Cap
+3662,7,Juvenile Scholar Robe
+3663,7,Kaiden Armor
+3664,7,Kaiden Gauntlets
+3665,7,Kaiden Helm
+3666,7,Kaiden Trousers
+3667,7,Karolos Glintstone Crown
+3668,7,Knight Armor
+3669,7,Knight Gauntlets
+3670,7,Knight Greaves
+3671,7,Knight Helm
+3672,7,Land of Reeds Armor
+3673,7,Land of Reeds Armor (Altered)
+3674,7,Land of Reeds Gauntlets
+3675,7,Land of Reeds Greaves
+3676,7,Land of Reeds Helm
+3677,7,Lazuli Glintstone Crown
+3678,7,Lazuli Robe
+3679,7,Leather Armor
+3680,7,Leather Boots
+3681,7,Leather Gloves
+3682,7,Leather Trousers
+3683,7,Leather-Draped Tabard
+3684,7,Leyndell Knight Armor
+3685,7,Leyndell Knight Armor (Altered)
+3686,7,Leyndell Knight Gauntlets
+3687,7,Leyndell Knight Greaves
+3688,7,Leyndell Knight Helm
+3689,7,Leyndell Soldier Gauntlets
+3690,7,Leyndell Soldier Greaves
+3691,7,Leyndell Soldier Helm
+3692,7,Lionel's Armor
+3693,7,Lionel's Armor (Altered)
+3694,7,Lionel's Gauntlets
+3695,7,Lionel's Greaves
+3696,7,Lionel's Helm
+3697,7,Lord of Blood's Robe
+3698,7,Lord of Blood's Robe (Altered)
+3699,7,Lusat's Glintstone Crown
+3700,7,Lusat's Manchettes
+3701,7,Lusat's Robe
+3702,7,Malenia's Armor
+3703,7,Malenia's Armor (Altered)
+3704,7,Malenia's Gauntlet
+3705,7,Malenia's Greaves
+3706,7,Malenia's Winged Helm
+3707,7,Malformed Dragon Armor
+3708,7,Malformed Dragon Gauntlets
+3709,7,Malformed Dragon Greaves
+3710,7,Malformed Dragon Helm
+3711,7,Maliketh's Armor
+3712,7,Maliketh's Armor (Altered)
+3713,7,Maliketh's Gauntlets
+3714,7,Maliketh's Greaves
+3715,7,Maliketh's Helm
+3716,7,Marais Mask
+3717,7,Marais Robe
+3718,7,Marionette Soldier Armor
+3719,7,Marionette Soldier Birdhelm
+3720,7,Marionette Soldier Helm
+3721,7,Mask of Confidence
+3722,7,Mausoleum Gauntlets
+3723,7,Mausoleum Greaves
+3724,7,Mausoleum Knight Armor
+3725,7,Mausoleum Knight Armor (Altered)
+3726,7,Mausoleum Knight Gauntlets
+3727,7,Mausoleum Knight Greaves
+3728,7,Mausoleum Surcoat
+3729,7,Millicent's Boots
+3730,7,Millicent's Gloves
+3731,7,Millicent's Robe
+3732,7,Millicent's Tunic
+3733,7,Mushroom Arms
+3734,7,Mushroom Body
+3735,7,Mushroom Crown
+3736,7,Mushroom Head
+3737,7,Mushroom Legs
+3738,7,Navy Hood
+3739,7,Night Maiden Armor
+3740,7,Night Maiden Twin Crown
+3741,7,Night's Cavalry Armor
+3742,7,Night's Cavalry Armor (Altered)
+3743,7,Night's Cavalry Gauntlets
+3744,7,Night's Cavalry Greaves
+3745,7,Night's Cavalry Helm
+3746,7,Night's Cavalry Helm (Altered)
+3747,7,Noble's Gloves
+3748,7,Noble's Traveling Garb
+3749,7,Noble's Trousers
+3750,7,Nomadic Merchant's Chapeau
+3751,7,Nomadic Merchant's Finery
+3752,7,Nomadic Merchant's Finery (Altered)
+3753,7,Nomadic Merchant's Trousers
+3754,7,Nox Bracelets
+3755,7,Nox Greaves
+3756,7,Nox Mirrorhelm
+3757,7,Nox Monk Armor
+3758,7,Nox Monk Armor (Altered)
+3759,7,Nox Monk Hood
+3760,7,Nox Monk Hood (Altered)
+3761,7,Nox Swordstress Armor
+3762,7,Nox Swordstress Armor (Altered)
+3763,7,Nox Swordstress Crown
+3764,7,Nox Swordstress Crown (Altered)
+3765,7,Octopus Head
+3766,7,Official's Attire
+3767,7,Okina Mask
+3768,7,Old Aristocrat Cowl
+3769,7,Old Aristocrat Gown
+3770,7,Old Aristocrat Shoes
+3771,7,Old Sorcerer's Legwraps
+3772,7,Olivinus Glintstone Crown
+3773,7,Omen Armor
+3774,7,Omen Gauntlets
+3775,7,Omen Greaves
+3776,7,Omen Helm
+3777,7,Omenkiller Boots
+3778,7,Omenkiller Long Gloves
+3779,7,Omenkiller Robe
+3780,7,Omensmirk Mask
+3781,7,Page Garb
+3782,7,Page Garb (Altered)
+3783,7,Page Hood
+3784,7,Page Trousers
+3785,7,Perfumer Gloves
+3786,7,Perfumer Hood
+3787,7,Perfumer Robe
+3788,7,Perfumer Robe (Altered)
+3789,7,Perfumer Sarong
+3790,7,Perfumer's Traveling Garb
+3791,7,Perfumer's Traveling Garb (Altered)
+3792,7,Preceptor's Big Hat
+3793,7,Preceptor's Gloves
+3794,7,Preceptor's Long Gown
+3795,7,Preceptor's Long Gown (Altered)
+3796,7,Preceptor's Trousers
+3797,7,Prisoner Clothing
+3798,7,Prisoner Iron Mask
+3799,7,Prisoner Trousers
+3800,7,Prophet Blindfold
+3801,7,Prophet Robe
+3802,7,Prophet Robe (Altered)
+3803,7,Prophet Trousers
+3804,7,Pumpkin Helm
+3805,7,Queen's Bracelets
+3806,7,Queen's Crescent Crown
+3807,7,Queen's Leggings
+3808,7,Queen's Robe
+3809,7,Radahn Soldier Gauntlets
+3810,7,Radahn Soldier Greaves
+3811,7,Radahn Soldier Helm
+3812,7,Radahn's Gauntlets
+3813,7,Radahn's Greaves
+3814,7,Radahn's Lion Armor
+3815,7,Radahn's Lion Armor (Altered)
+3816,7,Radahn's Redmane Helm
+3817,7,Radiant Gold Mask
+3818,7,Ragged Armor
+3819,7,Ragged Armor (Altered)
+3820,7,Ragged Gloves
+3821,7,Ragged Hat
+3822,7,Ragged Hat (Altered)
+3823,7,Ragged Loincloth
+3824,7,Raging Wolf Armor
+3825,7,Raging Wolf Armor (Altered)
+3826,7,Raging Wolf Gauntlets
+3827,7,Raging Wolf Greaves
+3828,7,Raging Wolf Helm
+3829,7,Raptor's Black Feathers
+3830,7,Raya Lucarian Gauntlets
+3831,7,Raya Lucarian Greaves
+3832,7,Raya Lucarian Helm
+3833,7,Raya Lucarian Robe
+3834,7,Redmane Knight Armor
+3835,7,Redmane Knight Armor (Altered)
+3836,7,Redmane Knight Gauntlets
+3837,7,Redmane Knight Greaves
+3838,7,Redmane Knight Helm
+3839,7,Redmane Surcoat
+3840,7,Ronin's Armor
+3841,7,Ronin's Armor (Altered)
+3842,7,Ronin's Gauntlets
+3843,7,Ronin's Greaves
+3844,7,Rotten Duelist Greaves
+3845,7,Rotten Duelist Helm
+3846,7,Rotten Gravekeeper Cloak
+3847,7,Rotten Gravekeeper Cloak (Altered)
+3848,7,Royal Knight Armor
+3849,7,Royal Knight Armor (Altered)
+3850,7,Royal Knight Gauntlets
+3851,7,Royal Knight Greaves
+3852,7,Royal Knight Helm
+3853,7,Royal Remains Armor
+3854,7,Royal Remains Gauntlets
+3855,7,Royal Remains Greaves
+3856,7,Royal Remains Helm
+3857,7,Ruler's Mask
+3858,7,Ruler's Robe
+3859,7,Sacred Crown Helm
+3860,7,Sage Hood
+3861,7,Sage Robe
+3862,7,Sage Trousers
+3863,7,Sanguine Noble Hood
+3864,7,Sanguine Noble Robe
+3865,7,Sanguine Noble Waistcloth
+3866,7,Scale Armor
+3867,7,Scaled Armor
+3868,7,Scaled Armor (Altered)
+3869,7,Scaled Gauntlets
+3870,7,Scaled Greaves
+3871,7,Scaled Helm
+3872,7,Scarlet Tabard
+3873,7,Shaman Furs
+3874,7,Shaman Leggings
+3875,7,Shining Horned Headband
+3876,7,Silver Tear Mask
+3877,7,Skeletal Mask
+3878,7,Snow Witch Hat
+3879,7,Snow Witch Robe
+3880,7,Snow Witch Robe (Altered)
+3881,7,Snow Witch Skirt
+3882,7,Sorcerer Leggings
+3883,7,Sorcerer Manchettes
+3884,7,Spellblade's Gloves
+3885,7,Spellblade's Pointed Hat
+3886,7,Spellblade's Traveling Attire
+3887,7,Spellblade's Traveling Attire (Altered)
+3888,7,Spellblade's Trousers
+3889,7,Traveler's Boots
+3890,7,Traveler's Clothes
+3891,7,Traveler's Gloves
+3892,7,Traveler's Hat
+3893,7,Traveler's Manchettes
+3894,7,Traveler's Slops
+3895,7,Traveling Maiden Boots
+3896,7,Traveling Maiden Gloves
+3897,7,Traveling Maiden Hood
+3898,7,Traveling Maiden Robe
+3899,7,Traveling Maiden Robe (Altered)
+3900,7,Tree Sentinel Armor
+3901,7,Tree Sentinel Armor (Altered)
+3902,7,Tree Sentinel Gauntlets
+3903,7,Tree Sentinel Greaves
+3904,7,Tree Sentinel Helm
+3905,7,Tree Surcoat
+3906,7,Tree-and-Beast Surcoat
+3907,7,Twinned Armor
+3908,7,Twinned Armor (Altered)
+3909,7,Twinned Gauntlets
+3910,7,Twinned Greaves
+3911,7,Twinned Helm
+3912,7,Twinsage Glintstone Crown
+3913,7,Upper-Class Robe
+3914,7,Vagabond Knight Armor
+3915,7,Vagabond Knight Armor (Altered)
+3916,7,Vagabond Knight Gauntlets
+3917,7,Vagabond Knight Greaves
+3918,7,Vagabond Knight Helm
+3919,7,Veteran's Armor
+3920,7,Veteran's Armor (Altered)
+3921,7,Veteran's Gauntlets
+3922,7,Veteran's Greaves
+3923,7,Veteran's Helm
+3924,7,Vulgar Militia Armor
+3925,7,Vulgar Militia Gauntlets
+3926,7,Vulgar Militia Greaves
+3927,7,Vulgar Militia Helm
+3928,7,War Surgeon Gloves
+3929,7,War Surgeon Gown
+3930,7,War Surgeon Gown (Altered)
+3931,7,War Surgeon Trousers
+3932,7,Warrior Gauntlets
+3933,7,Warrior Greaves
+3934,7,White Mask
+3935,7,White Reed Armor
+3936,7,White Reed Gauntlets
+3937,7,White Reed Greaves
+3938,7,Witch's Glintstone Crown
+3939,7,Zamor Armor
+3940,7,Zamor Bracelets
+3941,7,Zamor Legwraps
+3942,7,Zamor Mask
+3943,8,Ash Of War: Assassin's Gambit
+3944,8,Ash Of War: Barbaric Roar
+3945,8,Ash Of War: Barrage
+3946,8,Ash Of War: Barricade Shield
+3947,8,Ash Of War: Beast's Roar
+3948,8,Ash Of War: Black Flame Tornado
+3949,8,Ash Of War: Blood Blade
+3950,8,Ash Of War: Blood Tax
+3951,8,Ash Of War: Bloodhound's Step
+3952,8,Ash Of War: Bloody Slash
+3953,8,Ash Of War: Braggart's Roar
+3954,8,Ash Of War: Carian Grandeur
+3955,8,Ash Of War: Carian Greatsword
+3956,8,Ash Of War: Carian Retaliation
+3957,8,Ash Of War: Charge Forth
+3958,8,Ash Of War: Chilling Mist
+3959,8,Ash Of War: Cragblade
+3960,8,Ash Of War: Determination
+3961,8,Ash Of War: Double Slash
+3962,8,Ash Of War: Earthshaker
+3963,8,Ash Of War: Enchanted Shot
+3964,8,Ash Of War: Endure
+3965,8,Ash Of War: Eruption
+3966,8,Ash Of War: Flame Of The Redmanes
+3967,8,Ash Of War: Flaming Strike
+3968,8,Ash Of War: Giant Hunt
+3969,8,Ash Of War: Glintblade Phalanx
+3970,8,Ash Of War: Glintstone Pebble
+3971,8,Ash Of War: Golden Land
+3972,8,Ash Of War: Golden Parry
+3973,8,Ash Of War: Golden Slam
+3974,8,Ash Of War: Golden Vow
+3975,8,Ash Of War: Gravitas
+3976,8,Ash Of War: Ground Slam
+3977,8,Ash Of War: Hoarah Loux's Earthshaker
+3978,8,Ash Of War: Hoarfrost Stomp
+3979,8,Ash Of War: Holy Ground
+3980,8,Ash Of War: Ice Spear
+3981,8,Ash Of War: Impaling Thrust
+3982,8,Ash Of War: Kick
+3983,8,Ash Of War: Lifesteal Fist
+3984,8,Ash Of War: Lightning Ram
+3985,8,Ash Of War: Lightning Slash
+3986,8,Ash Of War: Lion's Claw
+3987,8,Ash Of War: Loretta's Slash
+3988,8,Ash Of War: Mighty Shot
+3989,8,Ash Of War: No Skill
+3990,8,Ash Of War: Parry
+3991,8,Ash Of War: Phantom Slash
+3992,8,Ash Of War: Piercing Fang
+3993,8,Ash Of War: Poison Moth Flight
+3994,8,Ash Of War: Poisonous Mist
+3995,8,Ash Of War: Prayerful Strike
+3996,8,Ash Of War: Prelate's Charge
+3997,8,Ash Of War: Quickstep
+3998,8,Ash Of War: Rain Of Arrows
+3999,8,Ash Of War: Raptor Of The Mists
+4000,8,Ash Of War: Repeating Thrust
+4001,8,Ash Of War: Royal Knight's Resolve
+4002,8,Ash Of War: Sacred Blade
+4003,8,Ash Of War: Sacred Order
+4004,8,Ash Of War: Sacred Ring Of Light
+4005,8,Ash Of War: Seppuku
+4006,8,Ash Of War: Shield Bash
+4007,8,Ash Of War: Shield Crash
+4008,8,Ash Of War: Spectral Lance
+4009,8,Ash Of War: Spinning Slash
+4010,8,Ash Of War: Spinning Strikes
+4011,8,Ash Of War: Spinning Weapon
+4012,8,Ash Of War: Square Off
+4013,8,Ash Of War: Stamp (sweep)
+4014,8,Ash Of War: Stamp (upward Cut)
+4015,8,Ash Of War: Storm Assault
+4016,8,Ash Of War: Storm Blade
+4017,8,Ash Of War: Storm Stomp
+4018,8,Ash Of War: Storm Wall
+4019,8,Ash Of War: Stormcaller
+4020,8,Ash Of War: Sword Dance
+4021,8,Ash Of War: Thops's Barrier
+4022,8,Ash Of War: Thunderbolt
+4023,8,Ash Of War: Troll's Roar
+4024,8,Ash Of War: Unsheathe
+4025,8,Ash Of War: Vacuum Slice
+4026,8,Ash Of War: Vow Of The Indomitable
+4027,8,Ash Of War: War Cry
+4028,8,Ash Of War: Waves Of Darkness
+4029,8,Ash Of War: White Shadow's Lure
+4030,8,Ash Of War: Wild Strikes

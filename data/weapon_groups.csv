@@ -1,0 +1,35 @@
+id,name,ph_standard,ph_strike,ph_slash,ph_pierce
+1,Dagger,0,0,1,1
+2,Straight Sword,1,0,0,1
+3,Curved Sword,0,0,1,0
+4,Greatsword,1,0,0,1
+5,Colossal Sword,1,0,0,0
+6,Thrusting Sword,1,0,0,1
+7,Heavy Thrusting Sword,1,0,0,1
+8,Curved Greatsword,0,0,1,0
+9,Katana,0,0,1,1
+10,Twinblade,1,0,0,1
+11,Hammer,0,1,0,0
+12,Great Hammer,0,1,0,0
+13,Flail,0,1,0,0
+14,Axe,1,0,0,0
+15,Greataxe,1,0,0,0
+16,Spear,0,0,0,1
+17,Colossal Weapon,0,1,0,0
+18,Great Spear,0,0,0,1
+19,Halberd,1,0,0,1
+20,Reaper,0,0,1,0
+21,Whip,0,1,0,0
+22,Fist,0,1,0,0
+23,Claw,0,0,1,1
+24,Torch,0,1,0,0
+25,Small Shield,0,1,0,0
+26,Medium Shield,0,1,0,0
+27,Greatshield,0,1,0,0
+28,Glintstone Staff,0,1,0,0
+29,Sacred Seal,0,1,0,0
+30,Light Bow,0,0,0,0
+31,Bow,0,0,0,0
+32,Greatbow,0,0,0,0
+33,Crossbow,0,0,0,0
+34,Ballista,0,0,0,0

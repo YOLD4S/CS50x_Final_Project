@@ -1,0 +1,197 @@
+id,encounter_id,name,hp,human,gear_id,dropped_item_id,image_url
+1,1,Soldier of Godrick,384,0,,,https://eldenring.fanapis.com/images/bosses/17f6982dbf7l0i1v1r3i4p5cy7kvcs.png
+2,2,Mad Pumpkin Head,1328,0,,,https://eldenring.fanapis.com/images/bosses/17f69a078e0l0i1uwdp4xqjq6cpbxl.png
+3,3,Beastman of Farum Azula,1417,0,,3295.0,https://eldenring.fanapis.com/images/bosses/17f69d7fe72l0i1ultk418yedh25s7.png
+4,4,Black Knife Assassin (Limgrave),1668,0,,3255.0,https://eldenring.fanapis.com/images/bosses/17f69bd3c06l0i1ulx2jxbiogta1i.png
+5,5,Grave Warden Duelist (Limgrave),2190,0,,2724.0,
+6,6,Erdtree Burial Watchdog (Stormfoot Catacombs),1200,0,,2761.0,
+7,7,Demi-Human Chief,1218,0,,3175.0,https://eldenring.fanapis.com/images/bosses/17f6961da46l0i1uoh7hemoben3dtg.png
+8,8,Stonedigger Troll (Limgrave),1295,0,,3342.0,
+9,9,Guardian Golem,5974,0,,3258.0,https://eldenring.fanapis.com/images/bosses/17f69cbe6cbl0i1uvgek1x2hoimz99.png
+10,10,Cemetery Shade (Limgrave),781,0,,2751.0,https://eldenring.fanapis.com/images/bosses/17f69b43b78l0i1upyrupf0wna8q7a.png
+11,11,Scaly Misbegotten,1360,0,,1285.0,https://eldenring.fanapis.com/images/bosses/17f698d3cc6l0i1v18wptud2du5ts.png
+12,12,Erdtree Burial Watchdog (Impaler's Catacombs),1347,0,,2733.0,
+13,13,Miranda the Blighted Bloom (Limgrave),2483,0,,3360.0,https://eldenring.fanapis.com/images/bosses/17f699a40dfl0i1ux9v66kv7dyxcqx.png
+14,14,Runebear,3311,0,,3350.0,https://eldenring.fanapis.com/images/bosses/17f699179aal0i1v13n497m1yhps2s.png
+15,15,Bloodhound Knight Darriwil,1450,0,,684.0,https://eldenring.fanapis.com/images/bosses/17f69637e92l0i1um8wqsflgk3i9yr.png
+16,16,Leonine Misbegotten,2199,0,,415.0,https://eldenring.fanapis.com/images/bosses/17f69644c82l0i1uw7sqlk2v4b6bfg.png
+17,17,Crucible Knight (Limgrave),2782,0,,2787.0,https://eldenring.fanapis.com/images/bosses/17f69a6fae3l0i1uq63au7m71cs8mh.png
+18,18,Night's Cavalry (Agheel Lake North),1665,0,,4000.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+19,19,Bell Bearing Hunter (Limgrave),2495,0,,2977.0,https://eldenring.fanapis.com/images/bosses/17f69c4aacel0i1uluegh15idblimv.png
+20,20,Tree Sentinel,2889,0,,1561.0,https://eldenring.fanapis.com/images/bosses/17f6992d42bl0i1v2mmti9t0qkl5yj.png
+21,21,Tibia Mariner (Limgrave),3176,0,,2998.0,https://eldenring.fanapis.com/images/bosses/17f6968dcfal0i1v1y8dnaop27j5qg.png
+22,22,Deathbird (Warmaster's Shack),3442,0,,3259.0,https://eldenring.fanapis.com/images/bosses/17f69e151d8l0i1uo19hl8r6l0snmo.png
+23,23,"Margit, the Fell Omen",4174,0,,3193.0,
+24,24,Night's Cavalry (Weeping Penisula),1823,0,,3946.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+25,25,Ancient Hero of Zamor (Limgrave),2570,0,,3337.0,https://eldenring.fanapis.com/images/bosses/17f69878c4al0i1ul0i7dsfou8igrk.png
+26,26,Erdtree Avatar (Limgrave),3163,0,,2991.0,https://eldenring.fanapis.com/images/bosses/17f6969fb51l0i1ur3o74ppc7h3gl5.png
+27,27,Deathbird (Weeping Penisula),3769,0,,1204.0,https://eldenring.fanapis.com/images/bosses/17f69e151d8l0i1uo19hl8r6l0snmo.png
+28,28,Godrick the Grafted,6080,0,,3032.0,https://eldenring.fanapis.com/images/bosses/17f6953f0d5l0i1uthl5j30bc50wdo.png
+29,29,Flying Dragon Agheel,3200,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f69725115l0i1urx3t47u0gfs43.png
+30,30,Dragonkin Soldier of Nokstella,4372,0,,2831.0,https://eldenring.fanapis.com/images/bosses/17f699200d2l0i1uqbs9w1ijmp2ner.png
+31,31,Cemetery Shade (Liurnia),691,0,,2777.0,https://eldenring.fanapis.com/images/bosses/17f69b43b78l0i1upyrupf0wna8q7a.png
+32,32,Crystalian (Raya Lucaria Crystal Tunnel),1595,0,,3177.0,
+33,33,Spiritcaller Snail (Liurnia),1722,0,,2741.0,
+34,34,Cleanrot Knight,1980,0,,3364.0,https://eldenring.fanapis.com/images/bosses/17f69563d15l0i1umhb4am3xzuib3g.png
+35,35,Bloodhound Knight,1985,0,,3265.0,
+36,36,Royal Revenant,3077,0,,,https://eldenring.fanapis.com/images/bosses/17f69de0562l0i1v105zzs817wea9m.png
+37,37,"Crystalian (Spear, Academy Crystal Cave)",1595,0,,,
+38,37,Crystalian (Staff),1595,0,,2899.0,
+39,38,Black Knife Assassin (Liurnia),3312,0,,3254.0,https://eldenring.fanapis.com/images/bosses/17f69bd3c06l0i1ulx2jxbiogta1i.png
+40,39,Red Wolf of Ragadon,2204,0,,3090.0,
+41,40,Erdtree Burial Watchdog (Liurnia),2383,0,,2746.0,
+42,41,Grafted Scion,2596,0,,178.0,https://eldenring.fanapis.com/images/bosses/17f69bf253bl0i1uuma3733w2zwodm.png
+43,42,Royal Knight Loretta,4214,0,,2919.0,https://eldenring.fanapis.com/images/bosses/17f69b19e80l0i1v0x2eima4yhdbd.png
+44,43,Ancestor Spirit,4393,0,,2719.0,https://eldenring.fanapis.com/images/bosses/17f69590896l0i1ul0hnmor8iyf9xd.png
+45,44,Ulcerated Tree Spirit (Limgrave),6147,0,,3209.0,https://eldenring.fanapis.com/images/bosses/17f69621aadl0i1v2f5fkvee5z6719.png
+46,45,Cemetery Shade (Caelid),1467,0,,2747.0,https://eldenring.fanapis.com/images/bosses/17f69b43b78l0i1upyrupf0wna8q7a.png
+47,46,Nox Swordstress,1631,0,,,
+48,46,Nox Priest,1631,0,,180.0,
+49,47,Cleanrot Knight (Spear),2102,0,,3302.0,https://eldenring.fanapis.com/images/bosses/17f69563d15l0i1umhb4am3xzuib3g.png
+50,47,Cleanrot Knight (Sickle),2102,0,,,https://eldenring.fanapis.com/images/bosses/17f69563d15l0i1umhb4am3xzuib3g.png
+51,48,Mad Pumpkin Head (Hammer),2800,0,,,https://eldenring.fanapis.com/images/bosses/17f69a078e0l0i1uwdp4xqjq6cpbxl.png
+52,48,Mad Pumpkin Head (Flail),2800,0,,,https://eldenring.fanapis.com/images/bosses/17f69a078e0l0i1uwdp4xqjq6cpbxl.png
+53,49,Frenzied Duelist,3079,0,,2767.0,https://eldenring.fanapis.com/images/bosses/17f696b2a70l0i1us26mtvbp7p85.png
+54,50,Fallingstar Beast (Caelid),4554,0,,3224.0,https://eldenring.fanapis.com/images/bosses/17f6969fb51l0i1ur3o74ppc7h3gl5.png
+55,51,Putrid Crystalian (Staff),3358,0,,,
+56,51,Putrid Crystalian (Ringblade),3358,0,,,
+57,51,Putrid Crystalian (Spear),3358,0,,2900.0,
+58,52,Erdtree Burial Watchdog (Scepter),2531,0,,,
+59,52,Erdtree Burial Watchdog (Sword),2531,0,,2753.0,
+60,53,Magma Wyrm (Caelid),7141,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f69bfa759l0i1uwfa0yrdvzcov1i.png
+61,54,Magma Wyrm Makar,7141,0,,685.0,https://eldenring.fanapis.com/images/bosses/17f69d3101al0i1uyefex03ulrqazi.png
+62,55,"Rennala, Queen of the Full Moon",3493,0,,,
+63,55,"Rennala, Queen of the Full Moon",4097,0,,,
+64,56,Omenkiller (Liurnia),2306,0,,3280.0,https://eldenring.fanapis.com/images/bosses/17f69a1be26l0i1uz1kl2dyuibof4d.png
+65,57,Sanguine Noble,3128,0,,,
+66,58,"Crystalian (Spear, Altus Tunnel)",1892,0,,,
+67,58,Crystalian (Ringblade),1892,0,,3182.0,
+68,59,Black Knife Assassin (Sage's Cave),3929,0,,3273.0,https://eldenring.fanapis.com/images/bosses/17f69bd3c06l0i1ulx2jxbiogta1i.png
+69,60,Onyx Lord (Liurnia),4058,0,,2925.0,https://eldenring.fanapis.com/images/bosses/17f69a36cf8l0i1uz6gmzy0dr777k.png
+70,61,Perfumer Tricia,989,0,,,https://eldenring.fanapis.com/images/bosses/17f699438b8l0i1uze1493a9h5ipk3.png
+71,61,Misbegotten Warrior (Altus Plateau),3569,0,,2766.0,
+72,62,Night's Cavalry (Gate Town Bridge),2704,0,,3968.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+73,64,Stonedigger Troll (Altus Plateau),3050,0,,1834.0,
+74,65,Demi-Human Queen Gilika,3284,0,,,
+75,66,Ancient Hero of Zamor (Altus Plateau),3811,0,,2720.0,https://eldenring.fanapis.com/images/bosses/17f69878c4al0i1ul0i7dsfou8igrk.png
+76,67,Misbegotten Warrior (Caelid),3569,0,,,
+77,67,Crucible Knight (Caelid),4515,0,,414.0,https://eldenring.fanapis.com/images/bosses/17f69a6fae3l0i1uq63au7m71cs8mh.png
+78,68,Bell Bearing Hunter (Liurnia),4050,0,,3088.0,https://eldenring.fanapis.com/images/bosses/17f69c4aacel0i1uluegh15idblimv.png
+79,69,Glintstone Dragon Adula (Ranni's Rise),4405,0,,,https://eldenring.fanapis.com/images/bosses/17f695d390el0i1usszzihpctlfb2.png
+80,70,Erdtree Avatar (Mausoleum Compound),4690,0,,3066.0,https://eldenring.fanapis.com/images/bosses/17f6969fb51l0i1ur3o74ppc7h3gl5.png
+81,71,Erdtree Avatar (Revenger's Shack),4690,0,,2981.0,https://eldenring.fanapis.com/images/bosses/17f6969fb51l0i1ur3o74ppc7h3gl5.png
+82,72,"Bols, Carian Knight",5109,0,,2918.0,
+83,73,Tibia Mariner (Liurnia),5155,0,,2998.0,https://eldenring.fanapis.com/images/bosses/17f6968dcfal0i1v1y8dnaop27j5qg.png
+84,74,Deathbird (Liurnia),5588,0,,3339.0,https://eldenring.fanapis.com/images/bosses/17f69e151d8l0i1uo19hl8r6l0snmo.png
+85,75,Omenkiller (Altus Plateau),2306,0,,,https://eldenring.fanapis.com/images/bosses/17f69a1be26l0i1uz1kl2dyuibof4d.png
+86,75,Miranda the Blighted Bloom (Altus Plateau),5212,0,,1245.0,https://eldenring.fanapis.com/images/bosses/17f699a40dfl0i1ux9v66kv7dyxcqx.png
+87,76,Death Rite Bird (Liurnia),6577,0,,2885.0,https://eldenring.fanapis.com/images/bosses/17f69e15137l0i1uu7e0w9qynlhveh.png
+88,77,Abductor Virgin (Wheel),3811,0,,,
+89,77,Abductor Virgin (Swinging Sickle),3811,0,,1435.0,
+90,78,Kindred of Rot #1,2034,0,,3315.0,
+91,78,Kindred of Rot #2,2034,0,,,
+92,79,Battlemage Hugues,4095,0,,2726.0,
+93,80,Onyx Lord (Altus Plateau),4907,0,,670.0,https://eldenring.fanapis.com/images/bosses/17f69a36cf8l0i1uz6gmzy0dr777k.png
+94,81,Grave Warden Duelist,6240,0,,2774.0,
+95,82,Red Wolf of the Champion,3162,0,,2729.0,https://eldenring.fanapis.com/images/bosses/17f69cf967fl0i1v0cmt73nix34p0c.png
+96,83,Night's Cavalry (Southern Aeonia Swamp Bank),3269,0,,3993.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+97,84,Erdtree Burial Watchdog (Altus Plateau),3419,0,,3029.0,
+98,85,Demi-Human Queen Margot,3971,0,,2717.0,
+99,86,Elemer of the Briar,4897,0,,327.0,https://eldenring.fanapis.com/images/bosses/17f695cb903l0i1uqqf40ik8th6wqw.png
+100,87,Crucible Knight (Altus Plateau),5460,0,,,https://eldenring.fanapis.com/images/bosses/17f69a6fae3l0i1uq63au7m71cs8mh.png
+101,87,Crucible Knight Ordovis,5460,0,,308.0,https://eldenring.fanapis.com/images/bosses/17f699b0755l0i1un48m87fngquaw.png
+102,88,Putrid Avatar (Smoldering Church),5671,0,,3042.0,
+103,89,Regal Ancestor Spirit,6301,0,,,https://eldenring.fanapis.com/images/bosses/17f69ae5092l0i1v0k714w3s2jz8tj.png
+104,90,Death Rite Bird (Caelid),7952,0,,356.0,https://eldenring.fanapis.com/images/bosses/17f69e15137l0i1uu7e0w9qynlhveh.png
+105,91,Commander O'Neil,9210,0,,1533.0,
+106,92,Valiant Gargoyle,5671,0,,343.0,https://eldenring.fanapis.com/images/bosses/17f697500cal0i1v2hh14qewvbrwrn.png
+107,92,Valiant Gargoyle (Twinblade),5671,0,,,https://eldenring.fanapis.com/images/bosses/17f697500cal0i1v2hh14qewvbrwrn.png
+108,93,Black Knife Assassin (Sainted Hero's Grave),5413,0,,14.0,https://eldenring.fanapis.com/images/bosses/17f69bd3c06l0i1ulx2jxbiogta1i.png
+109,94,Night's Cavalry (Altus Plateau),3725,0,,,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+110,95,Wormface,5876,0,,3186.0,https://eldenring.fanapis.com/images/bosses/17f697500cal0i1v2hh14qewvbrwrn.png
+111,96,Glintstone Dragon Smarag,6069,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f6953dec4l0i1uso41jlanmo9c4v.png
+112,97,Fallingstar Beast (Altus Plateau),7009,0,,3223.0,https://eldenring.fanapis.com/images/bosses/17f6969fb51l0i1ur3o74ppc7h3gl5.png
+113,98,Godskin Apostle (Altus Plateau),7528,0,,772.0,https://eldenring.fanapis.com/images/bosses/17f69c1bc31l0i1utrgxwhdp1csdis.png
+114,99,Starscourge Radahn,9572,0,,,https://eldenring.fanapis.com/images/bosses/17f69dc74fdl0i1v1wz3qrzn19aps8.png
+115,100,"Tree Sentinel (Altus Plateau, Shield)",6461,0,,,https://eldenring.fanapis.com/images/bosses/17f6992d42bl0i1v2mmti9t0qkl5yj.png
+116,100,"Tree Sentinel (Altus Plateau, Torch)",5384,0,,2478.0,https://eldenring.fanapis.com/images/bosses/17f6992d42bl0i1v2mmti9t0qkl5yj.png
+117,101,Godefroy the Grafted,12419,0,,3300.0,https://eldenring.fanapis.com/images/bosses/17f69c4aefal0i1usvodp9osviy7v.png
+118,102,Demi-Human Queen Maggie,7515,0,,3090.0,
+119,103,Dragonkin Soldier (Siofra River),5758,0,,1602.0,https://eldenring.fanapis.com/images/bosses/17f69de1071l0i1uprrms3umg3rug.png
+120,104,Bell Bearing Hunter (Altus Plateau),6216,0,,3089.0,https://eldenring.fanapis.com/images/bosses/17f69c4aacel0i1uluegh15idblimv.png
+121,105,"Godfrey, First Elden Lord (Leyndell, Royal Capital)",7099,0,,3193.0,
+122,106,Tibia Mariner (Altus Plateau),7911,0,,2998.0,https://eldenring.fanapis.com/images/bosses/17f6968dcfal0i1v1y8dnaop27j5qg.png
+123,107,Draconic Tree Sentinel,8398,0,,1850.0,https://eldenring.fanapis.com/images/bosses/17f69625d6el0i1upqw478c5kvsjv3.png
+124,108,Deathbird (Altus Plateau),8575,0,,2203.0,https://eldenring.fanapis.com/images/bosses/17f69e151d8l0i1uo19hl8r6l0snmo.png
+125,109,Godskin Noble (Mt. Gelmir),10060,0,,497.0,https://eldenring.fanapis.com/images/bosses/17f69814439l0i1uuifby3b0bn9gs.png
+126,110,"Morgott, the Omen King",10399,0,,,
+127,111,"Astel, Naturalborn of the Void",11170,0,,,
+128,112,Ulcerated Tree Spirit (Mt. Gelmir),11191,0,,3061.0,https://eldenring.fanapis.com/images/bosses/17f69621aadl0i1v2f5fkvee5z6719.png
+129,113,Magma Wyrm (Mt. Gelmir),12243,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f69bfa759l0i1uwfa0yrdvzcov1i.png
+130,114,Lichdragon Fortissax,12903,0,,,https://eldenring.fanapis.com/images/bosses/17f699223e7l0i1uwcol7wflmcgajb.png
+131,115,Full-Grown Fallingstar Beast,13010,0,,3224.0,
+132,116,Decaying Ekzykes,23731,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f69bcc1cdl0i1uoai2hm5tcbuhh2.png
+133,117,Ancient Hero of Zamor (Mountaintops of the Giants),6868,0,,686.0,https://eldenring.fanapis.com/images/bosses/17f69878c4al0i1ul0i7dsfou8igrk.png
+134,118,Fell Twin #1,7871,0,,2763.0,
+135,118,Fell Twin #2,6539,0,,,
+136,119,Black Blade Kindred (Forbidden Lands),8452,0,,812.0,https://eldenring.fanapis.com/images/bosses/17f69a61779l0i1ulv0a3ru8iy0zh5.png
+137,121,Ancient Dragon Lansseax (Rampartside Path),9087,0,,2844.0,https://eldenring.fanapis.com/images/bosses/17f69a63610l0i1ukyx7xgx6vf0zoa.png
+138,122,Ulcerated Tree Spirit (Mountaintops of the Giants),13141,0,,3209.0,https://eldenring.fanapis.com/images/bosses/17f69621aadl0i1v2f5fkvee5z6719.png
+139,123,Godskin Apostle (Spiritcaller Cave),9847,0,,,https://eldenring.fanapis.com/images/bosses/17f69c1bc31l0i1utrgxwhdp1csdis.png
+140,123,Godskin Noble (Spiritcaller Cave),11814,0,,,https://eldenring.fanapis.com/images/bosses/17f69814439l0i1uuifby3b0bn9gs.png
+141,123,Spiritcaller Snail (Spiritcaller Cave),1840,0,,3301.0,
+142,124,God-Devouring Serpent,30439,0,,,https://eldenring.fanapis.com/images/bosses/17f699fafc0l0i1usmk2s2oybvx44a.png
+143,124,"Rykard, Lord of Blasphemy",28735,0,,,https://eldenring.fanapis.com/images/bosses/17f696d979al0i1v1775oof02bi8oh.png
+144,125,Crucible Knight Siluria,4606,0,,1464.0,
+145,126,Dragonkin Soldier (Lake of Rot),7655,0,,757.0,https://eldenring.fanapis.com/images/bosses/17f69de1071l0i1uprrms3umg3rug.png
+146,127,"Mohg, the Omen",14000,0,,2803.0,https://eldenring.fanapis.com/images/bosses/17f697f4363l0i1uy2tk9e7g2jqcu.png
+147,128,Commander Niall,15541,0,,1766.0,https://eldenring.fanapis.com/images/bosses/17f698b7d2fl0i1umtkf7cu5a21hdw.png
+148,129,Night's Cavalry (Forbidden Lands),6602,0,,3991.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+149,130,Erdtree Avatar (Snowvalley Ruins Overlook),11452,0,,2981.0,https://eldenring.fanapis.com/images/bosses/17f6969fb51l0i1ur3o74ppc7h3gl5.png
+150,131,Death Rite Bird (Snow Valley Ruins Overlook),16059,0,,1434.0,https://eldenring.fanapis.com/images/bosses/17f69e15137l0i1uu7e0w9qynlhveh.png
+151,132,Godskin Noble (Crumbling Farum Azula),8000,0,,,https://eldenring.fanapis.com/images/bosses/17f69814439l0i1uuifby3b0bn9gs.png
+152,132,Godskin Apostle (Crumbling Farum Azula),6668,0,,,https://eldenring.fanapis.com/images/bosses/17f69c1bc31l0i1utrgxwhdp1csdis.png
+153,132,Godskin Duo (HP),26350,0,,3180.0,https://eldenring.fanapis.com/images/bosses/17f698b6791l0i1uvgjwlxwarfpe7a.png
+154,133,Fire Giant,43263,0,,,https://eldenring.fanapis.com/images/bosses/17f69ba1aa7l0i1us08w3dodkoeju.png
+155,134,Misbegotten Crusader,9130,0,,329.0,
+156,135,Beastman of Farum Azula (Throwing Knife),3344,0,,,https://eldenring.fanapis.com/images/bosses/17f69d7fe72l0i1ultk418yedh25s7.png
+157,135,Beastman of Farum Azula (Cleaver),8306,0,,3297.0,https://eldenring.fanapis.com/images/bosses/17f69d7fe72l0i1ultk418yedh25s7.png
+158,136,"Alecto, Black Knife Ringleader",17482,0,,2727.0,https://eldenring.fanapis.com/images/bosses/17f69b4ba0al0i1uk6s98t1nbtxunt.png
+159,137,Putrid Grave Warden Duelist,8800,0,,3238.0,https://eldenring.fanapis.com/images/bosses/17f699ad704l0i1uzmqfup4jxyto7.png
+160,138,Beast Clergyman,10620,0,,,https://eldenring.fanapis.com/images/bosses/17f697240ecl0i1ul21nevug9wq54e.png
+161,138,"Maliketh, the Black Blade",5841,0,,,https://eldenring.fanapis.com/images/bosses/17f69dbf58cl0i1ux7vft8wsk6ejbb.png
+162,139,Borealis the Freezing Fog,11268,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f69d6ca41l0i1umlxg0j36mhrnzr.png
+163,140,Godskin Apostle (Caelid),13596,0,,3603.0,https://eldenring.fanapis.com/images/bosses/17f69c1bc31l0i1utrgxwhdp1csdis.png
+164,141,Putrid Tree Spirit,18144,0,,2770.0,https://eldenring.fanapis.com/images/bosses/17f69cfaee3l0i1uzongoyxg1dptid.png
+165,142,"Astel, Stars of Darkness",18617,0,,2926.0,https://eldenring.fanapis.com/images/bosses/17f69bcfd7dl0i1ul502rklvi8tx62.png
+166,143,"Godfrey, First Elden Lord (Leyndell, Ashen Capital)",11831,0,,,
+167,143,"Hoarah Loux, Warrior",10072,0,,,https://eldenring.fanapis.com/images/bosses/17f695022a1l0i1uv9aohy5ip9yh9f.png
+168,144,Night's Cavalry (Lenne's Rise),7089,0,,3951.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+169,145,Bell Bearing Hunter (Caelid),10619,0,,3040.0,https://eldenring.fanapis.com/images/bosses/17f69c4aacel0i1uluegh15idblimv.png
+170,146,Flying Dragon Greyll,11550,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f69846e66l0i1us1stxjbqloi1z.png
+171,147,Glintstone Dragon Adula (Village of the Albinaurics),11550,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f695d390el0i1usszzihpctlfb2.png
+172,148,Black Blade Kindred (Caelid),12297,0,,357.0,https://eldenring.fanapis.com/images/bosses/17f69a61779l0i1ulv0a3ru8iy0zh5.png
+173,149,Putrid Avatar (Dragonbarrow Fork),12297,0,,3143.0,
+174,150,Dragonlord Placidusax,26651,0,,,https://eldenring.fanapis.com/images/bosses/17f69bf3366l0i1uqds10qc8exqn1ik.png
+175,151,Radagon of the Golden Order,13339,0,,,https://eldenring.fanapis.com/images/bosses/17f69bc8bd6l0i1v03619u4s9j9ql.png
+176,151,Elden Beast,22127,0,,,https://eldenring.fanapis.com/images/bosses/17f699dadfbl0i1uqmgi50oii11eaj.png
+177,152,"Putrid Avatar (Ordina, Liturgical Town)",12569,0,,3196.0,
+178,153,"Loretta, Knight of the Haligtree",13397,0,,2920.0,
+179,154,Night's Cavalry (Glaive),7246,0,,3218.0,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+180,154,Night's Cavalry (Flail),7246,0,,,https://eldenring.fanapis.com/images/bosses/17f69a6c3fcl0i1uyzw7a7ssn0qlpp.png
+181,155,Death Rite Bird (Apostate Derelict),17625,0,,2902.0,https://eldenring.fanapis.com/images/bosses/17f69e15137l0i1uu7e0w9qynlhveh.png
+182,156,"Mohg, Lord of Blood",18389,0,,,https://eldenring.fanapis.com/images/bosses/17f697f4363l0i1uy2tk9e7g2jqcu.png
+183,157,Great Wyrm Theodorix,25649,0,,3004.0,https://eldenring.fanapis.com/images/bosses/17f695140e9l0i1uuu2pjzqqsbskl.png
+184,158,"Malenia, Blade of Miquella",18473,0,,,https://eldenring.fanapis.com/images/bosses/17f69a48308l0i1ux3rigvv37tx84f.png
+185,158,"Malenia, Goddess of Rot",14778,0,,,
+186,159,Patches,1191,1,1.0,,
+187,160,"Adan, Thief of Fire",1717,1,2.0,2823.0,https://eldenring.fanapis.com/images/bosses/17f69a3ca37l0i1ukd1lq14ctafbk.png
+188,161,Necromancer Garris,3202,1,3.0,1096.0,https://eldenring.fanapis.com/images/bosses/17f69d237f0l0i1uytr06ed4gz92qdj.png
+189,162,"Esgar, Priest of Blood",3511,1,4.0,3319.0,https://eldenring.fanapis.com/images/bosses/17f69579c3dl0i1uqxt6ul73e103ur.png
+190,163,Roundtable Knight Vyke,5366,1,5.0,2880.0,
+191,164,Fia's Champion #1,1216,1,6.0,2903.0,
+192,164,Sorcerer Rogier,2652,1,7.0,,
+193,164,Lionel the Lionhearted,2652,1,8.0,,
+194,164,Fia's Champion #2,1216,1,9.0,2903.0,
+195,164,Fia's Champion #3,833,1,10.0,2903.0,
+196,165,"Sir Gideon Ofnir, the All-Knowing (Default)",6226,1,11.0,919.0,https://eldenring.fanapis.com/images/bosses/17f69ca8b2al0i1v1pg987jdl4cd68.png

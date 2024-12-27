@@ -1,0 +1,564 @@
+id,info,desc,weight,price,image_url
+3249,Restores FP upon defeating enemies,"Item cut from the horns of the Regal Ancestor Spirit.
+
+Restore FP upon defeating enemies.
+
+A number of new growths bud from the antler-like horns of the fallen king, each glowing with light. Thus does new life grow from death, and from death, one obtains power.",1.2,500,https://eldenring.fanapis.com/images/talismans/17f6967466bl0i2swi5et1ibv4rc6r.png
+3250,Increases bow effective range,"A talisman depicting three arrows.
+Carried by hunters of beasts.
+
+Increases the effective range of bows.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69dfff40l0i2soo71h481xlxzx8i.png
+3251,Raises attack power of arrows and bolts,"A talisman depicting three iron arrows.
+Carried by soldiers long ago.
+
+Raises attack power of arrows and bolts.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69f4f7a3l0i2soioqe3qysjxaw.png
+3252,Raises maximum equipment load,"An iron charm that resembles a mass of weaponry.
+Boosts maximum equipment load.
+
+This talisman was derived from an unusual greatsword once wielded by a hero hungry for vengeance.",1.5,100,https://eldenring.fanapis.com/images/talismans/17f69659e33l0i2soj4uhpxf54ncje.png
+3253,Greatly raises maximum equip load,"An iron charm that resembles a mass of weaponry.
+Greatly boosts maximum equipment load.
+
+This talisman was derived from an unusual greatsword once wielded by a hero hungry for vengeance.",1.5,500,
+3254,Critical hits restore FP,"An assassin's dagger, misshapen and stained in cerulean.
+Critical hits restore FP.
+
+This charm is modelled after the darkly gleaming blades used in the Night of Black Knives. Those which gave the demigods their first taste of Death.",0.8,1500,https://eldenring.fanapis.com/images/talismans/17f69d47ea5l0i2sokp40249x3da4f.png
+3255,Critical hits restore HP,"An assassin's dagger, misshapen and stained in crimson.
+Critical hits restore HP.
+
+This charm is modelled after the darkly gleaming blades used in the Night of Black Knives. Those which gave the demigods their first taste of Death.",0.8,1500,https://eldenring.fanapis.com/images/talismans/17f697e45b3l0i2sol3u2c1y0ja11.png
+3256,Enhances charge attacks,"A talisman depicting an axe and a warrior.
+Enhances charge attacks.
+
+The Lord who led the Long March bore an axe, and his loyal warriors honored him by wielding axes of their own, making them very effective at dealing decisive blows.",0.8,500,https://eldenring.fanapis.com/images/talismans/17f69c74ab1l0i2sp8u8ehul0cxenh.png
+3257,Slowly restores HP,"Talisman depicting a drop of the Erdtree's sap, a blessed boon.
+
+Gradually restores HP.
+
+It was once thought that the blessed sap of the Erdtree would drip from its boughs forever—but that age of plenty swiftly came to a close, and with time, the Erdtree became more an object of faith.",0.6,1000,https://eldenring.fanapis.com/images/talismans/17f69977289l0i2spaggtt1hdtxhk4.png
+3258,Raises attack power with lower equipment load,"A cloth doll depicting a dancer garbed in blue.
+An ancient heirloom of some sort.
+
+Raises attack power with lower equipment load.
+
+The dancer in blue represents a fairy, who in legend bestowed a flowing sword upon a blind swordsman. Blade in hand, the swordsman sealed away an ancient god—a god that was Rot itself.",0.9,500,https://eldenring.fanapis.com/images/talismans/17f69811f79l0i2spa5kavq1z95u5i.png
+3259,Raises defense when HP is low,"A talisman adorned with blue feathers, once used in ancient death rituals.
+Raises defense when HP is low.
+
+The heart sings when one draws close to death, and thus does one cling so tenaciously to life—to render up a death worth offering.",1.1,500,
+3260,Boosts lightning damage negation,"Talisman depicting a yellow ancient dragon.
+Boosts lightning damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,100,https://eldenring.fanapis.com/images/talismans/17f697718ffl0i2sp9dowe0oahaam.png
+3261,Greatly boosts lightning damage negation,"Talisman depicting a duo of yellow ancient dragons.
+Greatly boosts lightning damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,500,
+3262,Vastly boosts lightning damage negation,"Talisman depicting a trio of yellow ancient dragons.
+Vastly boosts lightning damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,1000,
+3263,Raises poise,"A talisman depicting the horns of a bull-goat.
+Raises poise.
+
+Bull-goats are associated with the stout and mighty Tragoth, said to be unflinching in combat—now a silent comrade to those who fight.",0.5,1000,
+3264,Lowers FP consumed by skills,"A talisman adorned with the royal crest.
+
+Lowers FP consumed by skills.
+
+An honor said to have once been awarded to Carian knights who served as direct retainers to the kingdom's princesses. Now there is only one princess: Ranni, daughter of Rennala.",0.8,1000,https://eldenring.fanapis.com/images/talismans/17f69e97eaal0i2sq1lvpkd5cfq2q.png
+3265,Raises maximum FP,"A medallion with cerulean amber inlaid.
+Boosts maximum FP.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,100,https://eldenring.fanapis.com/images/talismans/17f69ed62a2l0i2sq0x8kqy5oe9mwn.png
+3266,Greatly raises maximum FP,"A medallion with cerulean amber inlaid.
+Greatly boosts maximum FP.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,500,
+3267,Vastly raises maximum FP,"A medallion with cerulean amber inlaid.
+Vastly boosts maximum FP.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,1000,
+3268,Boosts FP restoration from Flask of Cerulean Tears,"A cerulean-colored talisman patterned after an Erdtree seed.
+Boosts FP restoration from the Flask of Cerulean Tears.
+
+The Erdtree was once perfect and eternal, and thus was it believed that Erdtree seeds could not exist.",0.8,1000,https://eldenring.fanapis.com/images/talismans/17f69dc1892l0i2sq1oh9i2x6tlarj.png
+3269,Raises focus,"An accoutrement worn by the ancestral followers.
+Raises focus.
+(Focus governs resistance to sleep and madness.)
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f69942443l0i2sq2zl2bttnq08hp.png
+3270,Greatly raises focus,"An accoutrement worn by the ancestral followers.
+Greatly raises focus.
+(Focus governs resistance to sleep and madness.)
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.6,1000,
+3271,Enhances jump attacks,"A talisman depicting a claw and an assassin.
+Enhances jump attacks.
+
+The assassins of Ravenmount are killers by trade. They assail their victims while dressed as birds of prey.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69ba1d62l0i2sq92f4o8t2tlzp7.png
+3272,Raises potency of throwing pots,"A talisman given by the jars to their friends.
+Raises potency of thrown jars.
+
+Though the jars are brought to life by human flesh and blood, they are all rather kindly folk. Perhaps they were made to be better than their innards.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f69eaed7fl0i2sz3buubfj570rq.png
+3273,Conceals wearer while crouching away from foes,"Talisman put together from dark cloth with a lustrous sheen.
+
+Completely conceals the wearer's presence while crouching at a distance from foes.
+
+Part of one of the concealing veils used by the assassins on the Night of Black Knives.",0.9,500,https://eldenring.fanapis.com/images/talismans/17f69c9bfc8l0i2sze3h5gawcr577p.png
+3274,Eliminates all sound made by the wearer during movement,"Small mysterious bottle with a dark mist sealed within.
+
+Eliminates all sound made by the wearer during movement.
+
+A ritual implement used by Roundtable Hold assassins. There was a time when Tarnished who had strayed from guidance feared nothing more than utter silence.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69b7aec7l0i2sqw1x7ajlmzguyi.png
+3275,Raises maximum HP,"A medallion with crimson amber inlaid.
+Boosts maximum HP.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,100,https://eldenring.fanapis.com/images/talismans/17f699e5a9dl0i2sqsk8mpabyj9mm4.png
+3276,Greatly raises maximum HP,"A medallion with crimson amber inlaid.
+Greatly boosts maximum HP.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,500,
+3277,Vastly raises maximum HP,"A medallion with crimson amber inlaid.
+Vastly boosts maximum HP.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,1000,
+3278,Boosts HP restoration from Flask of Crimson Tears,"A crimson-colored talisman patterned after an Erdtree seed.
+Boosts HP restoration from the Flask of Crimson Tears.
+
+The Erdtree was once perfect and eternal, and thus was it believed that Erdtree seeds could not exist.",0.8,1000,https://eldenring.fanapis.com/images/talismans/17f699b6e58l0i2svqah8qxabssa6s.png
+3279,Improves dodge rolling but increases damage taken,"A talisman fashioned from feathers that embody the aspects of various creatures.
+Said to have grown on the human body long ago.
+
+Improves the effectiveness of dodge rolls, but increases damage taken at all times.
+
+A vestige of the crucible of primordial life. Born partially of devolution, it was considered a signifier of the divine in ancient times, but is now increasingly disdained as an impurity as civilization has advanced.",0.8,1000,https://eldenring.fanapis.com/images/talismans/17f69d33e2dl0i2szt872otxd3taua.png
+3280,Reduces damage and impact of headshots,"A talisman fashioned from a bony knot that embodies the aspects of various creatures.
+Said to have grown on the human body long ago.
+
+Reduces damage and impact of headshots taken.
+
+A vestige of the crucible of primordial life. Born partially of devolution, it was considered a signifier of the divine in ancient times, but is now increasingly disdained as an impurity as civilization has advanced.",0.5,500,https://eldenring.fanapis.com/images/talismans/17f69d61012l0i2sqr9dmioj7dxngi.png
+3281,Reduces damage taken from critical hits,"A talisman fashioned from a scale that embodies the aspects of various creatures.
+Said to have grown on the human body long ago.
+
+Reduces damage taken from critical hits.
+
+A vestige of the crucible of primordial life. Born partially of devolution, it was considered a signifier of the divine in ancient times, but is now increasingly disdained as an impurity as civilization has advanced.",1.1,500,https://eldenring.fanapis.com/images/talismans/17f6993bc1fl0i2sqt5xscysq45rce.png
+3282,Enhances guard counters,"A talisman depicting a curved sword and a swordsman.
+Enhances guard counters.
+
+It is said that a blind swordsman was the originator of this technique—the art of allowing one's opponent to strike so as to leave them vulnerable to a well-timed reply.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69ed2edfl0i2sqxgpadu0gprbn.png
+3283,Increases damage taken,"Disturbing likeness of a woman whose skin was flayed.
+She smiles with a serene tenderness.
+
+Increases damage taken.
+
+It is said that this woman, named Daedicar, indulged in every form of adultery and wicked pleasure imaginable, giving birth to a myriad of grotesque children.",0.8,500,https://eldenring.fanapis.com/images/talismans/17f699d64d5l0i2szu3wjjkmeqklc.png
+3284,Enhances critical hits,"A talisman depicting a dagger and a surgeon.
+Enhances critical hits.
+
+The white-garbed field surgeons come to the aid of friend and foe alike by dealing a final deadly thrust to spare them from the prolonged agony of a mortal wound. A sense of mercy is a catalyst for bloodlust.",1.1,500,https://eldenring.fanapis.com/images/talismans/17f6991130cl0i2sywsfxyysl6tz7h.png
+3285,Enormously boosts physical damage negation,"Legendary talisman of wrought iron depicting a massive ancient dragon.
+Enormously boosts physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.8,2000,https://eldenring.fanapis.com/images/talismans/17f696b90dbl0i2sws9twxdvi39xzf.png
+3286,Boosts physical damage negation,"Wrought iron talisman depicting an ancient dragon.
+Boosts physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.8,100,https://eldenring.fanapis.com/images/talismans/17f69d584c8l0i2srfem3zhei7qek.png
+3287,Greatly boosts physical damage negation,"Wrought iron talisman depicting a duo of ancient dragons.
+Greatly boosts physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.8,500,
+3288,Vastly boosts physical damage negation,"Wrought iron talisman depicting a trio of ancient dragons.
+Vastly boosts physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.8,1000,
+3289,Changes demeanour of wearer's actions,"Mysterious circular object that's oddly warped.
+Changes the demeanour of the wearer's actions.",0.5,1000,https://eldenring.fanapis.com/images/talismans/17f696c4991l0i2szwm52zrw4bgso4.png
+3290,"Raises maximum HP, stamina and equip load","A talisman depicting a special blessing of the Erdtree.
+Slightly raises maximum HP, stamina, and equip load.
+
+It is said that when the Age of the Erdtree began, such blessings were personally bestowed upon their recipients by Queen Marika herself.",1.5,500,https://eldenring.fanapis.com/images/talismans/17f69f205a0l0i2svmo2djg04dhvj4.png
+3291,"Raises maximum HP, stamina and equip load","A talisman depicting a special blessing of the Erdtree.
+Raises maximum HP, stamina, and equip load.
+
+It is said that when the Age of the Erdtree began, such blessings were personally bestowed upon their recipients by Queen Marika herself.",1.5,1500,
+3292,"Raises maximum HP, stamina and equip load","A legendary talisman depicting the Elden Lord Godfrey.
+Raises charge attack power of sorceries, incantations, and skills.
+
+Godfrey was a ferocious warrior. When he vowed to become a lord, he took the Beast Regent Serosh upon his back to suppress the ceaseless lust for battle that raged within.",1.5,3000,
+3293,Raises potency of incantations,"A talisman bearing an icon that depicts a group of masked figures.
+Raises potency of incantations.
+
+The figures represent the flock at prayer, their firm belief in the intangible inspiring even the solitary founder of their religion.
+
+What is faith if not an affirmation?",0.7,1000,https://eldenring.fanapis.com/images/talismans/17f696b2a8el0i2srkijjgnyeo45ic.png
+3294,"Raises fire attack, but lowers damage negation","A talisman carried by assassins who strike unseen.
+Patterned on a scorpion freshly shed of its exoskeleton, its claws seizing a heart that burns with fire.
+
+Raises fire attack power, but lowers damage negation.",0.8,500,https://eldenring.fanapis.com/images/talismans/17f697b6373l0i2srhja32ffmg9v7s.png
+3295,Boosts fire damage negation,"Talisman depicting a red ancient dragon.
+Boosts fire damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,100,https://eldenring.fanapis.com/images/talismans/17f6969e375l0i2srh8fpkcyede0z.png
+3296,Greatly boosts fire damage negation,"Talisman depicting a duo of red ancient dragons.
+Greatly boosts fire damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,500,
+3297,Vastly boosts fire damage negation,"Talisman depicting a trio of red ancient dragons.
+Vastly boosts fire damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,1000,
+3298,Greatly raises potency of incantations,"A talisman bearing an icon that depicts a mass of masked figures.
+Greatly raises potency of incantations.
+
+The figures represent the flock at prayer, their firm belief in the intangible inspiring even the solitary founder of their religion.
+
+What is faith if not an affirmation?",1.0,2000,https://eldenring.fanapis.com/images/talismans/17f6976f6b0l0i2szav175mw9xww9x.png
+3299,Take on appearance of a Host of Fingers,"A small, clouded mirror that reflects an image of a golden figure.
+
+Makes the bearer take on the appearance of a Host of Fingers.
+
+One of the ritual implements created by the Tarnished to deceive invaders.",0.7,1000,
+3300,Enhances charged spells and skills,"A legendary talisman depicting the Elden Lord Godfrey.
+Raises charge attack power of sorceries, incantations, and skills.
+
+Godfrey was a ferocious warrior. When he vowed to become a lord, he took the Beast Regent Serosh upon on his back to suppress the ceaseless lust for battle that raged within.",0.8,1000,https://eldenring.fanapis.com/images/talismans/17f69c0c973l0i2sw8w6uvbwqiqfmy.png
+3301,Successive attacks restore HP,"Sacred cloth of the Godskin Apostles, made from supple skin sewn together.
+
+Successive attacks restore HP.
+
+The Gloam-Eyed Queen cradles newborn apostles swaddled in this cloth. Soon they will grow to become the death of the gods.",0.9,1000,https://eldenring.fanapis.com/images/talismans/17f69c7f897l0i2srkhjmyvn5rfnva.png
+3302,Increases runes obtained from defeated enemies,"A talisman facsimile of a scarab, the carrier of treasures and precious things.
+
+This golden scarab increases the amount of runes obtained from defeating enemies.",1.2,500,https://eldenring.fanapis.com/images/talismans/17f69d1b2c0l0i2sx1e2ftbrqshztb.png
+3303,Greatly raises potency of sorceries,"A talisman depicting the first school of graven mages—a nightmare that would continue to haunt the academy.
+
+Greatly raises potency of sorceries.
+
+The primeval current is a forbidden tradition of glintstone sorcery. To those who cleave to its teachings, the act of collecting sorcerers to fashion them into the seeds of stars is but another path of scientific inquiry.",1.0,2000,
+3304,Raises potency of sorceries,"A talisman depicting a school of graven mages, the nightmare of the academy.
+
+Raises potency of sorceries.
+
+The primeval current is a forbidden tradition of glintstone sorcery. To those who cleave to its teachings, the act of collecting sorcerers to fashion them into the seeds of stars is but another path of scientific inquiry.",0.7,1000,
+3305,Vastly raises maximum equip load,"A charm that resembles a great jar overflowing with weaponry.
+Vastly boosts maximum equipment load.
+
+The great jar grants this talisman to their warriors.
+Carry as much as you can—grow big and strong.",1.5,1000,
+3306,Boosts guarding ability,"Talisman depicting a knight holding a greatshield.
+Boosts guarding ability.
+
+The knights of Leyndell once modelled themselves after the Tree Sentinels. Their purpose is to protect that which deserves protection, and thus the shield always comes before the sword.",0.9,500,https://eldenring.fanapis.com/images/talismans/17f69ba2ff0l0i2sye3sdb94vc6u6j.png
+3307,Raises stamina recovery speed,"A talisman in the shape of a green turtle.
+Raises stamina recovery speed.
+
+Turtles are known as a nutritious ingredient, symbolic of inexhaustible power.
+
+However, those who hold turtles to be wise creatures consider the practice of eating their meat to be barbarous.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69ecd4bdl0i2ss5cnven5hobw5d.png
+3308,Boosts holy damage negation,"Talisman depicting a golden ancient dragon.
+Boosts holy damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,100,https://eldenring.fanapis.com/images/talismans/17f69854ae6l0i2ss4quq0gikz8cw.png
+3309,Greatly boosts holy damage negation,"Talisman depicting a duo of golden ancient dragons.
+Greatly boosts holy damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,500,
+3310,Vastly boosts holy damage negation,"Talisman depicting a trio of golden ancient dragons.
+Vastly boosts holy damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,1000,
+3311,Enhances stamina-reducing attacks against blockers,"A talisman depicting a hammer and a knight.
+Enhances stamina-reducing attacks against a blocking opponent.
+
+Hammers are highly effective against shield-bearing foes, so much so that they are known as ""knight-killers.""",0.9,500,https://eldenring.fanapis.com/images/talismans/17f696fc245l0i2ss7f2pzn3xdhj6n.png
+3312,Take on appearance of a cooperator,"A small, clouded mirror that reflects a flesh-and-blood figure.
+
+Makes the bearer take on the appearance of a summoned cooperator.
+
+One of the ritual implements created by the Tarnished to deceive invaders.",0.7,1000,
+3313,Raises immunity,"An accoutrement worn by the ancestral followers.
+Raises immunity.
+(Immunity governs resistance to poison and rot.)
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f69a7ec34l0i2ss898co9a2xz8uv.png
+3314,Greatly raises immunity,"An accoutrement worn by the ancestral followers.
+Greatly raises immunity.
+(Immunity governs resistance to poison and rot.)
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.6,1000,
+3315,Poisoning or rot in vicinity increases attack power,"A talisman depicting the exultation of pests.
+
+Raises attack power when poisoning or rot occurs in the vicinity.
+
+""Rot for the scarlet goddess. O scarlet blossoms, flourish in distant lands, and return to us, the unwanted children.""",0.9,500,
+3316,Enhances attacks on horseback,"A talisman depicting a lance and a knight.
+Enhances attacks while on horseback.
+
+Knights on horseback are deadly foes. They see all below from their lofty position, meeting little meaningful resistance as they charge ahead.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f69858252l0i2swaqtyccdf5kihk.png
+3317,"Raises lightning attack, but lowers damage negation","A talisman carried by assassins who strike unseen.
+Patterned on a scorpion freshly shed of its exoskeleton, its claws seizing a heart that sparks with lightning.
+
+Raises lightning attack power, but lowers damage negation.",0.8,500,https://eldenring.fanapis.com/images/talismans/17f69e2a905l0i2ssrfz1ym5wgjvc.png
+3318,"Grants immunity to fall damage, but does not prevent death from a high fall","A brooch depicting Lacrima, the long-tailed cat.
+
+Grants immunity to fall damage, but does not prevent death from a high fall.
+
+Lacrima features in the fables of Raya Lucaria, in which she is described as a faerie cat who was fond of playing in the great bell tower.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f69ca952al0i2ssu6yw9l5kfw6q.png
+3319,Blood loss in vicinity increases attack power,"A talisman depicting the exultation of the Lord of Blood.
+
+Raises attack power when blood loss occurs in the vicinity.
+
+""Render up your offerings of blood to your Lord. Drench my consort's chamber. Slake his cocoon's thirst. His awakening shall herald the dawn of our dynasty.""",0.9,500,
+3320,"Raises magic attack, but lowers damage negation","A talisman carried by assassins who strike unseen.
+Patterned on a scorpion freshly shed of its exoskeleton, its claws seizing a heart that shimmers with magic.
+
+Raises magic attack power, but lowers damage negation.",0.8,500,https://eldenring.fanapis.com/images/talismans/17f69747fbcl0i2sxow29iyn6fm75v.png
+3321,"Raises attributes, but also increases damage taken","An eye engraved with an Elden Rune.
+Said to be the seal of Queen Marika.
+
+Raises mind, intelligence, faith, and arcane, but also increases damage taken.
+
+These seals represent the lifelong duty of those chosen by the gods.",0.8,3000,https://eldenring.fanapis.com/images/talismans/17f69bdcd53l0i2ssvjmuvkx73w1bo.png
+3322,"Greatly raises attributes, but also increases damage taken","This legendary talisman is an eye engraved with an Elden Rune, said to be the seal of Queen Marika.
+
+Greatly raises mind, intelligence, faith, and arcane, but also increases damage taken by a similar measure.
+
+Solemn duty weighs upon the one beholden; not unlike a gnawing curse from which there is no deliverance.",0.8,3000,https://eldenring.fanapis.com/images/talismans/17f69c504f2l0i2swunxt9oun5dn9.png
+3323,"Boosts dexterity, raises attack power with successive attacks","Part of the golden prosthesis used by Millicent.
+The hand is locked into a fist that once raised a sword aloft.
+
+Boosts dexterity and raises attack power with successive attacks.
+
+The despair of sweet betrayal transformed Millicent from a mere bud into a magnificent flower. And one day, she will be reborn—as a beautiful scarlet valkyrie.",1.6,1000,https://eldenring.fanapis.com/images/talismans/17f69afb835l0i2sykg6ynuw6wl9b.png
+3324,Increases memory slots,"This legendary talisman is a treasure of Nokstella, the Eternal City.
+
+Increases memory slots.
+
+This talisman represents the lost black moon.
+The moon of Nokstella was the guide of countless stars.",0.8,2000,
+3325,"Raises robustness, immunity, and focus","A vividly-colored accoutrement precious to the ancestral followers.
+
+Raises immunity, robustness, and focus.
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.9,1000,https://eldenring.fanapis.com/images/talismans/17f69b9af92l0i2st8bt7bg2grdb1h.png
+3326,"Greatly raises robustness, immunity, and focus","A vividly-colored accoutrement precious to the ancestral followers.
+
+Greatly raises immunity, robustness, and focus.
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.9,2000,
+3327,Extends spell effect duration,"A legendary talisman depicting the ancient king whose seat lies at the heart of the storm beyond time.
+
+Extends the duration of sorceries and incantations.
+
+It is said that the ancient royal city of Farum Azula has been slowly crumbling since time immemorial.",0.5,1000,https://eldenring.fanapis.com/images/talismans/17f6967fb2dl0i2ste8y2pomb9gcj9.png
+3328,Boosts non-physical damage negation,"Talisman depicting a pearlescent ancient dragon.
+Boosts non-physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.9,100,https://eldenring.fanapis.com/images/talismans/17f699f5086l0i2stgzl85bqm2vvy.png
+3329,Greatly boosts non-physical damage negation,"Talisman depicting a duo of pearlescent ancient dragons.
+Greatly boosts non-physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.9,500,
+3330,Vastly boosts non-physical damage negation,"Talisman depicting a trio of pearlescent ancient dragons.
+Vastly boosts non-physical damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.9,1000,
+3331,Raises potency of perfume items,"A talisman depicting a set of perfume bottles.
+Raises potency of perfume items.
+
+There are gardens known only to the perfumers. Whether hidden on the fringes of the highlands, or obscured by shadows inside caves, the flowers blossom in secret, waiting to impart their scent.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f69e92d45l0i2sxmogqn2tdfna89.png
+3332,"Spells consume less FP, but maximum HP is reduced","An old glintstone blade that has been stained with blood.
+
+Reduces FP consumption of sorceries and incantations at the cost of maximum HP.
+
+The old sorcerers would slice open their hearts with these blades to imbue a primal glintstone with their soul, and thus did they die.",0.6,2000,https://eldenring.fanapis.com/images/talismans/17f69e4e872l0i2strgtb0bn8sior8.png
+3333,Greatly raises vitality,"A fetid, overgrown cyst taken from facial flesh.
+Greatly raises vitality.
+(Vitality governs resistance to the effects of Death.)
+
+It is said that this cyst came from the corrupted visage of one unable to die a true Death. Indeed, it comes from the Prince of Death, scion of the golden bough and First of the Dead among the demigods.",0.6,1000,
+3334,Raises vitality,"A fetid pustule taken from facial flesh.
+Raises vitality.
+(Vitality governs resistance to the effects of Death.)
+
+It is said that this pustule came from the visage of the Prince of Death, he who used to be called Godwyn. As First Dead of the demigods, it's said he's buried deep under the capital, at the Erdtree's roots.",0.6,500,
+3335,Raises dexterity,"A talisman engraved with a scene from a heroic tale.
+Raises dexterity.
+
+Though born into the accursed rot, when the young girl encountered her mentor and his flowing blade, she gained wings of unparalleled strength.",0.8,1000,
+3336,Shortens spell casting time,"A legendary talisman depicting the Elden Lord Radagon.
+Shortens the casting time of sorceries and incantations.
+
+As the husband of Rennala of Caria, the red-haired Radagon studied sorcery, and as the husband of Queen Marika, he studied incantations. Thus did the hero aspire to be complete.",0.7,1000,https://eldenring.fanapis.com/images/talismans/17f69db3ddfl0i2stxpa5we7cuil2.png
+3337,"Raises attributes, but also increases damage taken","An eye engraved with an Elden Rune.
+Said to be the seal of King Consort Radagon.
+
+Raises vigor, endurance, strength, and dexterity, but also increases damage taken.
+
+These seals represent the lifelong duty of those chosen by the gods.",0.8,3000,https://eldenring.fanapis.com/images/talismans/17f69f6b0d2l0i2su0uxibci7qzsn.png
+3338,"Greatly raises attributes, but also increases damage taken","This legendary talisman is an eye engraved with an Elden Rune, said to be the seal of King Consort Radagon.
+
+Greatly raises vigor, endurance, strength, and dexterity, but also increases damage taken by a similar measure.
+
+Solemn duty weighs upon the one beholden; not unlike a gnawing curse from which there is no deliverance.",0.8,3000,https://eldenring.fanapis.com/images/talismans/17f696a52c1l0i2su2ddt9cbw3bnog.png
+3339,Raises attack power when HP is low,"A talisman adorned with red feathers, once used in ancient death rituals.
+Raises attack power when HP is low.
+
+The heart sings when one draws close to death, and a glorious end awaits those who cling so tenaciously to life.",1.4,500,
+3340,Raises defense when HP is at maximum,"A talisman patterned after shields used in ritual combat held to honor the Erdtree.
+
+Raises defense when HP is at maximum.
+
+The practice had died out by the age of King Consort Radagon, but remains of the arenas where ritual combat took place can still be found in every land.",0.9,500,https://eldenring.fanapis.com/images/talismans/17f699e1a3al0i2sxkv62fi32hab4.png
+3341,Raises attack power when HP is at maximum,"A talisman patterned after swords used in ritual combat held to honor the Erdtree.
+
+Raises attack power when HP is at maximum.
+
+The practice had died out by the age of King Consort Radagon, but remains of the arenas where ritual combat took place can still be found in every land.",0.9,500,https://eldenring.fanapis.com/images/talismans/17f699ae959l0i2sx3bloupcziqiz.png
+3342,Enhances roars and breath attacks,"A bronze medallion depicting a roaring giant.
+Enhances roars and breath attacks.
+
+In ancient times, the giants were mortal enemies of the Erdtree. Their bellowing roars desolated nature, triggered avalanches, and whipped up storms of flame.",0.7,500,
+3343,Greatly raises attack power with successive attacks,"A talisman depicting a raised prosthetic blade.
+An honor bestowed upon the valkyries who serve the Goddess of Rot.
+
+Greatly raises attack power with successive attacks.
+
+The four sisters were born in the Swamp of Aeonia, and came to the Haligtree under the aegis of Gowry. And yet, those buds were doomed to never blossom.",1.4,500,
+3344,"Raises holy attack, but lowers damage negation","A talisman carried by assassins who strike unseen.
+Patterned on a scorpion freshly shed of its exoskeleton, its claws seizing a heart with a blessed glow.
+
+Raises holy attack power, but lowers damage negation.",0.8,500,https://eldenring.fanapis.com/images/talismans/17f69e49085l0i2sudupmymnf7is0e.png
+3345,Will be lost on death in place of runes,"A talisman fashioned from a dried twig, so slender that it might snap at the slightest touch.
+
+Prevents rune loss upon death, but will be lost itself in exchange.
+
+Believed to be a twig pruned from the Erdtree long, long ago.",1.0,1000,https://eldenring.fanapis.com/images/talismans/17f6966d3a9l0i2suh41ayrux3telz.png
+3346,Constantly attracts enemies' aggression,"Disturbing likeness of a man whose eyes have been gouged out.
+The corners of his mouth are upturned in an almost flirtatious manner.
+
+Constantly attracts enemies' aggression.
+
+It is said that the man, named Shabriri, had his eyes gouged out as punishment for the crime of slander, and, with time, the blight of the flame of frenzy came to dwell in the empty sockets.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f697d1dacl0i2sui3ut73lui72f.png
+3347,Greatly boosts the attack power of skills,"Shard of the late Alexander, a shattered warrior jar.
+
+Greatly boosts the attack power of skills.
+
+Scraps of stewed flesh cling to the shard, and tatters of ornaments can be seen mingled within the slime. Relics of a red-haired champion, it would seem.",0.9,1000,
+3348,Raises item discovery,"A talisman facsimile of a scarab, the carrier of treasures and precious things.
+
+This silver scarab enhances item discovery.",1.2,500,
+3349,Enhances counterattacks unique to thrusting weapons,"A talisman depicting a spear and a soldier.
+Enhances the counterattacks that are unique to thrusting weapons.
+
+Spears are standard weapons for soldiers in the Lands Between. They made it possible to respond to a ferocious foe with an equally ferocious counterattack.",0.5,500,https://eldenring.fanapis.com/images/talismans/17f69e13918l0i2syr0vvb0gg1l8xg.png
+3350,Boosts magical damage negation,"Talisman depicting a blue ancient dragon.
+Boosts magic damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,100,https://eldenring.fanapis.com/images/talismans/17f69b80630l0i2sum3q22drl273qe.png
+3351,Greatly boosts magical damage negation,"Talisman depicting a duo of blue ancient dragons.
+Greatly boosts magic damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,500,
+3352,Vastly boosts magical damage negation,"Talisman depicting a trio of blue ancient dragons.
+Vastly boosts magic damage negation.
+
+The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.
+And so it is that the shape of the dragon has become symbolic of all manner of protections.",0.6,1000,
+3353,Raises robustness,"An accoutrement worn by the ancestral followers.
+Raises robustness.
+(Robustness governs resistance to blood loss and frost.)
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.6,500,https://eldenring.fanapis.com/images/talismans/17f69990291l0i2swl19cw8v99d5tk.png
+3354,Greatly raises robustness,"An accoutrement worn by the ancestral followers.
+Greatly raises robustness.
+(Robustness governs resistance to blood loss and frost.)
+
+Said to be a budding horn. The ancestral followers believe that the horns of a long-lived beast continue to bud like antlers, over and over again, until the beast one day becomes an ancestral spirit.",0.6,1000,
+3355,Raises intelligence,"A talisman engraved with the legend of a queen.
+Raises intelligence.
+
+The young astrologer gazed at the night sky as she walked. She had always chased the stars every step of her journey. Then she met the full moon—and, in time, the astrologer became a queen.",0.6,1000,https://eldenring.fanapis.com/images/talismans/17f69726e74l0i2sunvmav2rtqj9e.png
+3356,Raises strength,"A talisman engraved with a scene from a heroic tale.
+Raises strength.
+
+The mightiest hero of the demigods confronted the falling stars alone—and thus did he crush them, his conquest sealing the very fate of the stars.",0.8,1000,https://eldenring.fanapis.com/images/talismans/17f697e6e60l0i2sv6zgblnfuco5k5.png
+3357,Restores HP upon defeating enemies,"A talisman engraved with a stern likeness of Praetor Rykard, master of Volcano Manor.
+
+Restores HP upon defeating enemies.
+
+When Rykard turned to heresy, taking by force became the rule. The gods themselves were no different, after all.",1.0,1000,https://eldenring.fanapis.com/images/talismans/17f69ebbca4l0i2suzy77ydy8c49x.png
+3358,Enhances final hit of chain attacks,"A talisman depicting a twinblade and a confessor.
+Enhances the final hit ending a chain of attacks.
+
+The twinblade technique is a tradition of the confessors, who closely guard the secret of how they preserve the momentum of their attacks. Thus is the final strike of their onslaught all the more deadly.",0.7,500,https://eldenring.fanapis.com/images/talismans/17f6964b6cbl0i2suzpeqzc8p0p31a.png
+3359,Raises faith,"A talisman engraved with the legend of the Two Fingers.
+Raises faith.
+
+Fingers cannot speak, yet these were eloquent.
+Persistently did they wriggle, spelling out mysteries in the air.
+Thus did we gain the words. The words of our faith.",0.6,1000,https://eldenring.fanapis.com/images/talismans/17f69b8ff63l0i2svfsqagao13n1q.png
+3360,Raises maximum stamina,"A medallion with viridian amber inlaid.
+Boosts maximum stamina.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,100,https://eldenring.fanapis.com/images/talismans/17f697609cfl0i2sv7ve0yxa2u67ps.png
+3361,Greatly raises maximum stamina,"A medallion with viridian amber inlaid.
+Greatly boosts maximum stamina.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,500,
+3362,Vastly raises maximum stamina,"A medallion with viridian amber inlaid.
+Vastly boosts maximum stamina.
+
+The Erdtree's old sap becomes amber, treasured as the most precious of jewels in the age of Godfrey, the first Elden Lord.
+
+A primordial life energy resides inside.",0.3,1000,
+3363,Boosts the attack power of skills,"Shard of a shattered warrior jar.
+
+Boosts the attack power of skills.
+
+Scraps of stewed flesh cling to the shard, and tatters of ornaments can be seen mingled within the slime. Relics of ancient royal warriors, perhaps.",0.9,500,https://eldenring.fanapis.com/images/talismans/17f69f4710al0i2sy6gpkd85ki28.png
+3364,Raises attack power with successive attacks,"A talisman depicting a raised prosthetic blade.
+An honor bestowed upon the knights who fought alongside Malenia the Severed.
+
+Raises attack power with successive attacks.
+
+The wings symbolize Malenia and her undefeated prowess. Though she never knew relief from the accursed rot she was born into, her blade was forever beautiful—and relentless.",1.4,500,https://eldenring.fanapis.com/images/talismans/17f69a2445bl0i2svl6l9dei5cxhbd.png

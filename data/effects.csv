@@ -1,0 +1,42 @@
+id,desc
+1,Causes frost buildup ()
+2,Causes poison buildup ()
+3,Causes blood loss buildup ()
+4,Causes scarlet rot buildup ()
+5,Causes sleep buildup ()
+6,Causes slight scarlet rot buildup ()
+7,Causes madness buildup ()
+8,Boosts Crystalian sorcery
+9,Boosts lava sorcery
+10,Boosts full moon sorcery
+11,Boosts Stonedigger sorcery
+12,Boosts Glintblade sorcery
+13,Boosts death sorcery
+14,Boosts Carian sword sorcery
+15,Boosts gravity sorcery
+16,Boosts thorn sorcery
+17,Boosts invisibility sorcery
+18,Boosts godslayer incantations
+19,Boosts Giants' Flame incantations
+20,Boosts Dragon Cult incantations
+21,Boosts bestial incantations
+22,Boosts Fundamentalist incantations
+23,Boosts Dragon Communion incantations
+24,Boosts Frenzied Flame incantations
+25,Causes slight madness buildup ()
+26,Rune Gain on Hit
+27,Boost Incantation Power
+28,Restore HP on Kill
+29,Restore FP on Kill
+30,Restore HP on Hit
+31,Enhance Roar/Breath Attack
+32,Raise Immunity
+33,Boost Absorption
+34,Raise Vitality
+35,Repels Beasts
+36,Raise Focus
+37,Raise Robustness
+38,"Raise Immunity, Robustness and Focus"
+39,Boost Absorption and Damage at Low HP
+40,Boost Stamina Recovery
+41,Grant HP Restoration
