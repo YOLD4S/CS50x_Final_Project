@@ -8,10 +8,10 @@ class Item:
 
 
 class NPC:
-    def __init__(self, name, hp, human, drops, image_path):
+    def __init__(self, name, hp, human, location_id, only_night):
         self.name = name
         self.hp = hp
         self.human = human
-        self.drops = drops
-        self.image_path = image_path
+        self.location_id = location_id
+        self.only_night = only_night
 
