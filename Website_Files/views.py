@@ -1,21 +1,13 @@
-from datetime import datetime
-
 from flask import abort, current_app, render_template
 from db import get_db
 
 
 def home_page():
-    today = datetime.today()
-    day_name = today.strftime("%A")
-    return render_template("home.html", day=day_name)
+    return render_template("home.html")
 
 
 def items_page():
-    db = get_db()
-    cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT id, name FROM items ORDER BY name ASC")
-    items = cursor.fetchall()
-    return render_template("items.html", items=items)
+    return render_template("items.html")
 
 def item_detail_page(item_id):
     db = get_db()
