@@ -1,3 +1,4 @@
+from functools import wraps
 from flask import (
     Flask, 
     render_template,
@@ -13,8 +14,23 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from db import get_db
 
 
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if session.get("user_id") is None:
+            flash("Please log in to access this page.", "error")
+            return redirect(url_for("login_page"))
+        return f(*args, **kwargs)
+    return decorated_function
+
+
+def is_logged_in():
+    return session.get('user_id') is not None
+
+
 def home_page():
-    return render_template("home.html")
+    logged_in = is_logged_in()
+    return render_template("home.html", logged_in=logged_in)
 
 
 
@@ -204,3 +220,4 @@ def keys_page():
 
 def bolstering_page():
     return render_template("bolstering.html")
+

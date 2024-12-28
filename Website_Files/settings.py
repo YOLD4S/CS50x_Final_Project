@@ -13,6 +13,7 @@ MYSQL_USER = os.getenv("MYSQL_USER", "root")
 MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
 MYSQL_DB = os.getenv("MYSQL_DB", "game_database")
 
-SECRET_KEY = 'your-secret-key-here'  # Replace with a secure secret key
+# Secret key is loaded from .env file
+SECRET_KEY = os.getenv('SECRET_KEY', 'c9e225d2a6d53c85f83f595ce2a4f75b6c48e7f40c3b8452')
 SESSION_PERMANENT = False
 SESSION_TYPE = "filesystem"

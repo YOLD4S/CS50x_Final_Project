@@ -12,16 +12,12 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object("settings")
     
-    # Add these session configurations
-    app.config["SESSION_PERMANENT"] = False
-    app.config["SESSION_TYPE"] = "filesystem"
+    # Initialize Flask-Session
     Session(app)
-    
-    # Configure secret key for session management
-    app.secret_key = 'your-secret-key-here'  # Replace with a secure secret key
     
     app.teardown_appcontext(close_db)
 
+    # Routes
     app.add_url_rule("/", view_func=views.home_page)
     app.add_url_rule("/login", view_func=views.login_page, methods=["GET", "POST"])
     app.add_url_rule("/logout", view_func=views.logout_page)
@@ -44,24 +40,21 @@ def create_app():
     app.add_url_rule("/keys", view_func=views.keys_page)
     app.add_url_rule("/bolstering", view_func=views.bolstering_page)
 
-    db_item = ItemDatabase()
-    db_item.add_item(Item("Slaughterhouse-Five", year=1972))
-    db_item.add_item(Item("The Shining"))
-    app.config["db_items"] = db_item
+    # db_item = ItemDatabase()
+    # db_item.add_item(Item("Slaughterhouse-Five", year=1972))
+    # db_item.add_item(Item("The Shining"))
+    # app.config["db_items"] = db_item
 
-    db_npc = NPCDatabase()
-    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, False))
-    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, False))
-    db_npc.add_npc(NPC("AlihaSN", 10, False, 13, True))
-    db_npc.add_npc(NPC("AlihanSN", 100, True, 123, True))
-    app.config["db_npcs"] = db_npc
-
-
+    # db_npc = NPCDatabase()
+    # db_npc.add_npc(NPC("AlihaSN", 10, False, 13, False))
+    # db_npc.add_npc(NPC("AlihanSN", 100, True, 123, False))
+    # db_npc.add_npc(NPC("AlihaSN", 10, False, 13, True))
+    # db_npc.add_npc(NPC("AlihanSN", 100, True, 123, True))
+    # app.config["db_npcs"] = db_npc
 
     return app
 
 
 if __name__ == "__main__":
     app = create_app()
-    port = app.config.get("PORT", 5000)
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=app.config["PORT"])
