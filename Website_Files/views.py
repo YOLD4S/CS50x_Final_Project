@@ -239,9 +239,73 @@ def weapon_detail_page(weapon_id):
 def armors_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT id, name FROM armors ORDER BY name ASC")
+    
+    # Get filter parameters
+    set_id = request.args.get('set_id')
+    slot_id = request.args.get('slot_id')
+    weight_order = request.args.get('weight_order')
+    page = request.args.get('page', 1, type=int)
+    per_page = 9  # Number of armors per page
+    
+    # Base query
+    query = """
+        SELECT a.*, s.name as set_name, e.equip_slot 
+        FROM armors a 
+        LEFT JOIN armor_sets s ON a.set_id = s.id 
+        LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id 
+        WHERE 1=1
+    """
+    count_query = "SELECT COUNT(*) as total FROM armors WHERE 1=1"
+    params = []
+    
+    # Add filters
+    if set_id:
+        query += " AND a.set_id = %s"
+        count_query += " AND set_id = %s"
+        params.append(set_id)
+    if slot_id:
+        query += " AND a.equip_slot_id = %s"
+        count_query += " AND equip_slot_id = %s"
+        params.append(slot_id)
+    
+    # Add ordering
+    if weight_order == 'asc':
+        query += " ORDER BY a.weight ASC"
+    elif weight_order == 'desc':
+        query += " ORDER BY a.weight DESC"
+    else:
+        query += " ORDER BY s.name, e.equip_slot"
+    
+    # Get total count for pagination
+    cursor.execute(count_query, params)
+    total = cursor.fetchone()['total']
+    total_pages = (total + per_page - 1) // per_page
+    
+    # Add pagination
+    query += " LIMIT %s OFFSET %s"
+    offset = (page - 1) * per_page
+    params.extend([per_page, offset])
+    
+    # Execute main query
+    cursor.execute(query, params)
     armors = cursor.fetchall()
-    return render_template("armors.html", armors=armors)
+    
+    # Get filter dropdowns
+    cursor.execute("SELECT id, name FROM armor_sets ORDER BY name")
+    sets = cursor.fetchall()
+    
+    cursor.execute("SELECT id, equip_slot FROM armor_equip_slots ORDER BY id")
+    slots = cursor.fetchall()
+    
+    return render_template("armors.html", 
+                         armors=armors,
+                         sets=sets,
+                         slots=slots,
+                         selected_set=set_id,
+                         selected_slot=slot_id,
+                         weight_order=weight_order,
+                         current_page=page,
+                         total_pages=total_pages)
 
 def armor_detail_page(armor_id):
     db = get_db()

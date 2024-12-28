@@ -517,3 +517,127 @@ table tr:hover {
     grid-column: 1 / -1;
     padding: 2rem;
 }
+
+/* Armors Grid */
+.armors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.armor-card {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #8B7355;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.armor-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
+
+.armor-content {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.583), rgba(0, 0, 0, 0.292));
+    padding: 1.5rem;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.armor-card h2 {
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.armor-details {
+    color: #D4C5A1;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.armor-details p {
+    margin-bottom: 0.5rem;
+}
+
+.armor-details span {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.armor-details .alterable {
+    color: #90EE90;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.armor-card .view-details {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    background: rgba(139, 115, 85, 0.2);
+    color: #D4AF37;
+    text-decoration: none;
+    border: 1px solid #8B7355;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.armor-card .view-details:hover {
+    background: rgba(139, 115, 85, 0.4);
+    color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-link {
+    padding: 0.5rem 0.8rem;
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.page-link:hover,
+.page-link.active {
+    background: rgba(139, 115, 85, 0.4);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+.page-link.active {
+    background: rgba(212, 175, 55, 0.2);
+    pointer-events: none;
+}
+
+.page-ellipsis {
+    color: #D4C5A1;
+    padding: 0 0.3rem;
+}

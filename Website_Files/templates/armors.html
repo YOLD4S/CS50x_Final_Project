@@ -1,12 +1,113 @@
 {% extends "layout.html" %}
+
 {% block title %}Armors{% endblock %}
+
 {% block content %}
-<h1 class="title">Armors</h1>
-<ul>
-    {% for armor in armors %}
-    <li>
-        <a href="{{ url_for('armor_detail_page', armor_id=armor.id) }}">{{ armor.name }}</a>
-    </li>
-    {% endfor %}
-</ul>
+<div class="armors-container">
+    <h1 class="page-title">Armors of the Lands Between</h1>
+
+    <!-- Filters -->
+    <div class="filters-section">
+        <form method="GET" class="filters-form">
+            <div class="filter-group">
+                <label for="set_id">Armor Set:</label>
+                <select name="set_id" id="set_id">
+                    <option value="">All Sets</option>
+                    {% for set in sets %}
+                        <option value="{{ set.id }}" {% if selected_set|string == set.id|string %}selected{% endif %}>
+                            {{ set.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="slot_id">Equipment Slot:</label>
+                <select name="slot_id" id="slot_id">
+                    <option value="">All Slots</option>
+                    {% for slot in slots %}
+                        <option value="{{ slot.id }}" {% if selected_slot|string == slot.id|string %}selected{% endif %}>
+                            {{ slot.equip_slot }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="weight_order">Weight Order:</label>
+                <select name="weight_order" id="weight_order">
+                    <option value="">Default</option>
+                    <option value="asc" {% if weight_order == 'asc' %}selected{% endif %}>Lightest First</option>
+                    <option value="desc" {% if weight_order == 'desc' %}selected{% endif %}>Heaviest First</option>
+                </select>
+            </div>
+
+            <button type="submit" class="filter-button">Apply Filters</button>
+        </form>
+    </div>
+
+    <!-- Armors Grid -->
+    <div class="armors-grid">
+        {% for armor in armors %}
+        <div class="armor-card" {% if armor.image_url %}style="background-image: url('{{ armor.image_url }}')"{% endif %}>
+            <div class="armor-content">
+                <h2>{{ armor.name }}</h2>
+                <div class="armor-details">
+                    <p><span>Set:</span> {{ armor.set_name }}</p>
+                    <p><span>Slot:</span> {{ armor.equip_slot }}</p>
+                    <p><span>Weight:</span> {{ "%.1f"|format(armor.weight) }}</p>
+                    {% if armor.can_alter %}
+                        <p class="alterable">Can be altered</p>
+                    {% endif %}
+                </div>
+                <a href="{{ url_for('armor_detail_page', armor_id=armor.id) }}" class="view-details">View Details</a>
+            </div>
+        </div>
+        {% else %}
+        <p class="no-results">No armors found matching the selected filters.</p>
+        {% endfor %}
+    </div>
+
+    <!-- After the armors grid -->
+    {% if total_pages > 1 %}
+    <div class="pagination">
+        {% if current_page > 1 %}
+            <a href="{{ url_for('armors_page', page=current_page-1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+               class="page-link">&laquo;</a>
+        {% endif %}
+        
+        {% set start = [current_page - 2, 1] | max %}
+        {% set end = [start + 4, total_pages] | min %}
+        {% set start = [end - 4, 1] | max %}
+        
+        {% if start > 1 %}
+            <a href="{{ url_for('armors_page', page=1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+               class="page-link">1</a>
+            {% if start > 2 %}
+                <span class="page-ellipsis">...</span>
+            {% endif %}
+        {% endif %}
+        
+        {% for p in range(start, end + 1) %}
+            <a href="{{ url_for('armors_page', page=p, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+               class="page-link {% if p == current_page %}active{% endif %}">
+                {{ p }}
+            </a>
+        {% endfor %}
+        
+        {% if end < total_pages %}
+            {% if end < total_pages - 1 %}
+                <span class="page-ellipsis">...</span>
+            {% endif %}
+            <a href="{{ url_for('armors_page', page=total_pages, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+               class="page-link">{{ total_pages }}</a>
+        {% endif %}
+        
+        {% if current_page < total_pages %}
+            <a href="{{ url_for('armors_page', page=current_page+1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+               class="page-link">&raquo;</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
 {% endblock %}
