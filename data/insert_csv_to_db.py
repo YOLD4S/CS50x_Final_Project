@@ -4,7 +4,6 @@ import csv
 import mysql.connector
 from mysql.connector import Error
 
-# 1. Define the corrected order of table loading to respect foreign-key dependencies.
 TABLE_LOAD_ORDER = [
     # Level 1: No references
     "users",
