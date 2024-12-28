@@ -1,14 +1,14 @@
 CREATE TABLE IF NOT EXISTS `affinities` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
-	`affinity_passive_id` int,
+	`affinity_passive_id` int NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE IF NOT EXISTS `weapons_w_affinities` (
 	`id` int NOT NULL,
 	`main_weapon_id` int NOT NULL,
-	`affinity_id` int,
+	`affinity_id` int NULL,
 	`str_scaling` smallint NOT NULL DEFAULT '0',
 	`dex_scaling` smallint NOT NULL DEFAULT '0',
 	`int_scaling` smallint NOT NULL DEFAULT '0',
@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS `weapons` (
 	`group_id` int NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`desc` text,
-	`weapon_passive_id` int,
-	`hidden_effect_id` int,
-	`default_skill_id` int,
+	`weapon_passive_id` int NULL,
+	`hidden_effect_id` int NULL,
+	`default_skill_id` int NULL,
 	`weight` float NOT NULL,
 	`req_str` smallint NOT NULL DEFAULT '0',
 	`req_dex` smallint NOT NULL DEFAULT '0',
@@ -90,8 +90,8 @@ CREATE TABLE IF NOT EXISTS `npcs` (
 	`name` varchar(255) NOT NULL,
 	`hp` int NOT NULL,
 	`human` bool NOT NULL,
-	`gear_id` int,
-	`dropped_item_id` int,
+	`gear_id` int NULL,
+	`dropped_item_id` int NULL,
 	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
@@ -113,21 +113,21 @@ CREATE TABLE IF NOT EXISTS `npc_encounters` (
 	`name` varchar(255) NOT NULL,
 	`hp` int NOT NULL,
 	`runes` int NOT NULL,
-	`location_id` int,
+	`location_id` int NULL,
 	`only_night` bool NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE IF NOT EXISTS `gear` (
 	`id` int NOT NULL,
-	`right_weapon_id` int,
-	`right_weapon_skill_id` int,
-	`left_weapon_id` int,
-	`left_weapon_skill_id` int,
-	`armor_head_id` int,
-	`armor_body_id` int,
-	`armor_arms_id` int,
-	`armor_legs_id` int,
+	`right_weapon_id` int NULL,
+	`right_weapon_skill_id` int NULL,
+	`left_weapon_id` int NULL,
+	`left_weapon_skill_id` int NULL,
+	`armor_head_id` int NULL,
+	`armor_body_id` int NULL,
+	`armor_arms_id` int NULL,
+	`armor_legs_id` int NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`creator_id` int NOT NULL,
-	`gear_id` int,
+	`gear_id` int NULL,
 	PRIMARY KEY (`id`)
 );
 
