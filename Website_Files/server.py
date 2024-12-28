@@ -38,6 +38,11 @@ def create_app():
     app.add_url_rule("/items/<int:item_id>", view_func=views.item_detail_page)
     app.add_url_rule("/weapons/<int:weapon_id>", view_func=views.weapon_detail_page)
     app.add_url_rule("/armors/<int:armor_id>", view_func=views.armor_detail_page)
+    app.add_url_rule("/talismans", view_func=views.talismans_page)
+    app.add_url_rule("/magic", view_func=views.magic_page)
+    app.add_url_rule("/spirits", view_func=views.spirits_page)
+    app.add_url_rule("/keys", view_func=views.keys_page)
+    app.add_url_rule("/bolstering", view_func=views.bolstering_page)
 
     db_item = ItemDatabase()
     db_item.add_item(Item("Slaughterhouse-Five", year=1972))

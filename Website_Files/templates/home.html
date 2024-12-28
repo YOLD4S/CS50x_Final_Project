@@ -1,11 +1,70 @@
 {% extends "layout.html" %}
+
 {% block title %}Home{% endblock %}
+
 {% block content %}
-<div class="hero-body">
-  <div class="container has-text-centered"
-    style="display: inline-block; padding: 1px; color: rgba(207, 206, 206, 0.899);">
-    <h1 style="font-size: 3em; text-align: center; display: block; margin: 0 auto;">Welcome home warrior</h1>
-    <p>Login to proceed</p>
-  </div>
+<div class="home-container">
+    <div class="welcome-section">
+        <h1 class="title">Welcome to Elden Ring Wiki</h1>
+        <p class="subtitle">Explore the Lands Between</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/npcs.png') }}" alt="NPCs">
+            <h2>NPCs</h2>
+            <p>Meet the inhabitants of the Lands Between</p>
+            <a href="{{ url_for('npcs_page') }}" class="feature-link">View NPCs</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/weapons.png') }}" alt="Weapons">
+            <h2>Weapons</h2>
+            <p>Discover powerful weapons to aid your journey</p>
+            <a href="{{ url_for('weapons_page') }}" class="feature-link">View Weapons</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/armor.png') }}" alt="Armor">
+            <h2>Armor</h2>
+            <p>Browse protective gear and equipment</p>
+            <a href="{{ url_for('armors_page') }}" class="feature-link">View Armor</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/talisman.png') }}" alt="Talismans">
+            <h2>Talismans</h2>
+            <p>Enhance your abilities with powerful talismans</p>
+            <a href="{{ url_for('talismans_page') }}" class="feature-link">View Talismans</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/magic.png') }}" alt="Magic">
+            <h2>Magic</h2>
+            <p>Master sorceries and incantations</p>
+            <a href="{{ url_for('magic_page') }}" class="feature-link">View Magic</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/spirit.png') }}" alt="Spirit Ashes">
+            <h2>Spirit Ashes</h2>
+            <p>Summon spirits to fight alongside you</p>
+            <a href="{{ url_for('spirits_page') }}" class="feature-link">View Spirit Ashes</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/key.png') }}" alt="Key Items">
+            <h2>Key Items</h2>
+            <p>Essential items for your journey</p>
+            <a href="{{ url_for('keys_page') }}" class="feature-link">View Key Items</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='icons/bolster.png') }}" alt="Bolstering Materials">
+            <h2>Bolstering</h2>
+            <p>Materials to strengthen your equipment</p>
+            <a href="{{ url_for('bolstering_page') }}" class="feature-link">View Materials</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

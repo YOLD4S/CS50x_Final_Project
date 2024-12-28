@@ -1,0 +1,245 @@
+/* General Body Style */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    max-width: 80%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(90deg, #1f1f1f, #343434);
+    color: #e5c07b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Links */
+  a {
+    color: #e5c07b;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #d19a66;
+    text-decoration: underline;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #343434;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  nav a {
+    color: #f0f0f0;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #444;
+    color: #e5c07b;
+  }
+  
+  main {
+    max-width: calc(80% + 40px);
+    margin-inline: auto;
+  }
+  
+  /* Content Section */
+  section {
+    padding: 20px;
+    margin: auto;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #2b2b2b;
+  }
+  
+  table th, table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #3b3b3b;
+    color: #e5c07b;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #252525;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #1f1f1f;
+    color: #888;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    margin: 0 5px;
+  }
+
+
+.login-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.home-container {
+    padding: 2rem;
+    color: #D4C5A1;  /* Changed from #E6D5AC to more muted tone */
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-section .title {
+    font-size: 3rem;
+    color: #D4AF37;  /* Changed from #FFD700 to more muted gold */
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+}
+
+.welcome-section .subtitle {
+    font-size: 1.5rem;
+    color: #D4C5A1;  /* Changed from #E6D5AC to more muted tone */
+    font-style: italic;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.7);  /* Semi-transparent dark background */
+    border: 1px solid #8B7355;  /* Bronze border */
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);  /* Bronze shadow */
+}
+
+.feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    filter: brightness(0.9) sepia(0.2);  /* Gives a slightly aged look */
+}
+
+.feature-card h2 {
+    color: #C5B358;  /* Changed from #FFD700 to antique gold */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+}
+
+.feature-card p {
+    color: #D4C5A1;  /* Changed from #E6D5AC to more muted tone */
+    margin-bottom: 1.5rem;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 115, 85, 0.3);
+    color: #C5B358;  /* Changed from #FFD700 to antique gold */
+    text-decoration: none;
+    border: 1px solid #8B7355;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.feature-link:hover {
+    background: rgba(139, 115, 85, 0.5);
+    color: #FFFFFF;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .welcome-section .title {
+        font-size: 2rem;
+    }
+    
+    .welcome-section .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+} 

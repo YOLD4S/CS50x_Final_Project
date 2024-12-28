@@ -189,3 +189,18 @@ def armor_detail_page(armor_id):
     if not armor:
         abort(404)
     return render_template("armor_detail.html", armor=armor)
+
+def talismans_page():
+    return render_template("talismans.html")
+
+def magic_page():
+    return render_template("magic.html")
+
+def spirits_page():
+    return render_template("spirits.html")
+
+def keys_page():
+    return render_template("keys.html")
+
+def bolstering_page():
+    return render_template("bolstering.html")
