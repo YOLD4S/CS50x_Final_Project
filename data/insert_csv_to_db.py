@@ -93,7 +93,8 @@ def main():
         try:
             for table_name in TABLE_LOAD_ORDER:
                 csv_file_name = f"{table_name}.csv"
-                csv_file_path = os.path.join(os.getcwd(), csv_file_name)
+                cwd = os.getcwd()
+                csv_file_path = os.path.join(cwd+"/data", csv_file_name)
                 print(f"\n[INFO] Loading data for table '{table_name}' from '{csv_file_path}'...")
                 load_csv_into_table(cursor, table_name, csv_file_path)
 
