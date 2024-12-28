@@ -1,4 +1,4 @@
-id,set_id,equip_slot_id,desc,weight,price,can_alter,image_url
+id,set_id,equip_slot_id,description,weight,price,can_alter,image_url
 3365,1,3,"Mad Tongue Alberich's bracers.
 
 Set with red glintstones, said to be formed by the blood of sacrifices. Strengthen thorn sorcery.
@@ -13,7 +13,7 @@ Alberich was an aloof yet disturbed heretical sorcerer said to have been driven 
 
 Set with red glintstones, said to be formed by the blood of sacrifices. Strengthens thorn sorcery.
 
-Alberich was an aloof yet disturbed heretical sorcerer said to have been driven mad by jeering tongues during his service to the Roundtable Hold long ago.",1.0,500,1,https://eldenring.fanapis.com/images/armors/17f694c1311l0i0ol1qo5xm03vrgok.png
+Alberich was an aloof yet disturbed heretical sorcerer said to have been driven mad by jeering tongues during his service to the Roundtable Hold long ago.",1,500,1,https://eldenring.fanapis.com/images/armors/17f694c1311l0i0ol1qo5xm03vrgok.png
 3368,1,2,"Mad Tongue Alberich's robe.
 
 Set with red glintstones, said to be formed by the blood of sacrifices. Strengthens thorn sorcery.
@@ -79,7 +79,7 @@ Abandoning their birthplace after the Shattering, these undead wanderers are the
 3381,5,1,"Leather hat decorated with a withered feather.
 Travel attire worn by nobles in the capital, and the belonging of a family which claims a knight as an ancestor.
 
-Abandoning their birthplace after the Shattering, these undead wanderers are the pitiful product of unending life.",3.0,3000,0,https://eldenring.fanapis.com/images/armors/17f693eea6bl0i0okx2njnrl2iildc.png
+Abandoning their birthplace after the Shattering, these undead wanderers are the pitiful product of unending life.",3,3000,0,https://eldenring.fanapis.com/images/armors/17f693eea6bl0i0okx2njnrl2iildc.png
 3382,4,1,"Valuable headband featuring fine goldwork.
 Travel attire worn by nobles in the capital.
 
@@ -139,7 +139,7 @@ Light for ease of movement, and supple for masking sound. In trade, they offer l
 Worn by bandits.",1.7,500,0,https://eldenring.fanapis.com/images/armors/17f695f7dfcl0i0o5xe2kug0vg0iiz.png
 3395,10,1,"Mask of black cloth that covers the mouth.
 
-Favored by bandits for hiding their faces, it also provides some protection against poison.",3.0,10,0,https://eldenring.fanapis.com/images/armors/17f69600328l0i0on3l3z1z6jv0lrt.png
+Favored by bandits for hiding their faces, it also provides some protection against poison.",3,10,0,https://eldenring.fanapis.com/images/armors/17f69600328l0i0on3l3z1z6jv0lrt.png
 3396,11,2,"Thick, full set of armor covering the entire body.
 This armor was worn by knights who, whether by misfortune or misdeed, were forced to abandon their homes.
 
@@ -206,7 +206,7 @@ Raises attack power when the wearer suffers from madness.
 When the Black Dumpling goes on, the torturer no longer seeks answers; only to inflict suffering without hope of relief.",2.7,100,0,https://eldenring.fanapis.com/images/armors/17f695d037el0i0on3psdxvuouz67s.png
 3411,10,1,"Hood of lusterless black fabric that conceals its wearer's identity.
 
-In this world, there is very little that must necessarily be known.",3.0,200,0,https://eldenring.fanapis.com/images/armors/17f69c20d31l0i0on75g02np9ldmub.png
+In this world, there is very little that must necessarily be known.",3,200,0,https://eldenring.fanapis.com/images/armors/17f69c20d31l0i0on75g02np9ldmub.png
 3412,15,2,"Scale armor used by the Black Knife Assassins, forged to make no sound.
 
 Traces of power yet remain in its concealing veil, which muffles the sound of footsteps.
@@ -215,7 +215,7 @@ The assassins that carried out the deeds of the Night of the Black Knives were a
 3413,15,2,"Armor used by the Black Knife Assassins.
 Crafted with scale armor that makes no sound.
 
-The assassins that carried out the deeds of the Night of the Black Knives were all women, and rumored to be Numen who had close ties with Marika herself.",9.0,2000,1,https://eldenring.fanapis.com/images/armors/17f6937143al0i0neejcyw9x5dlcff.png
+The assassins that carried out the deeds of the Night of the Black Knives were all women, and rumored to be Numen who had close ties with Marika herself.",9,2000,1,https://eldenring.fanapis.com/images/armors/17f6937143al0i0neejcyw9x5dlcff.png
 3414,15,3,"Gauntlets used by the Black Knife Assassins.
 Crafted with scale armor that makes no sound.
 
@@ -245,7 +245,7 @@ The Blackflame Monks, enthralled by the god-slaying black flame, became traitors
 3421,17,1,"Mail hood of iron links covering a headband
 engraved with flames. Attire of the Blackflame Monks.
 
-The Blackflame Monks, enthralled by the god-slaying black flame, became traitors, abandoning their posts as guardians. The seduction of a taboo is never easily spurned.",4.0,200,0,https://eldenring.fanapis.com/images/armors/17f695e29e2l0i0op3yqenk2g551h9.png
+The Blackflame Monks, enthralled by the god-slaying black flame, became traitors, abandoning their posts as guardians. The seduction of a taboo is never easily spurned.",4,200,0,https://eldenring.fanapis.com/images/armors/17f695e29e2l0i0op3yqenk2g551h9.png
 3422,18,1,"Iron mask forced on convicted prisoners.
 Worn by the blackguard Big Boggart.
 
@@ -364,7 +364,7 @@ often found hung from these headbands are
 prayers of farewell from the people of their home.
 In bidding farewell to warriors departing on
 a journey from which they aren't like to return,
-this small act offers only meager relief.",1.0,1000,0,https://eldenring.fanapis.com/images/armors/17f69477d43l0i0oqqtcyx0gj0km2q.png
+this small act offers only meager relief.",1,1000,0,https://eldenring.fanapis.com/images/armors/17f69477d43l0i0oqqtcyx0gj0km2q.png
 3448,25,1,"Battlewear wrapped in thick leather.
 Garb worn by warriors of the frigid uplands.",3.8,500,0,https://eldenring.fanapis.com/images/armors/17f69b13128l0i0or2eokpqdvdmv2b.png
 3449,25,4,"Greaves wrapped in thick leather.
@@ -464,13 +464,13 @@ Proof that the wearer has slaughtered countless foes.
 Following the example of their chieftain Hoarah Loux, the brave warriors of the badlands shun excess adornment.",5.1,500,0,https://eldenring.fanapis.com/images/armors/17f69aac7del0i0nhkvop92drjzgq.png
 3473,33,2,"Armor of the Cleanrot Knights, celebrated for their undefeated campaign in the Shattering.
 
-The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",15.0,500,1,https://eldenring.fanapis.com/images/armors/17f69574f29l0i0nj8lj0vaeprdgq.png
+The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",15,500,1,https://eldenring.fanapis.com/images/armors/17f69574f29l0i0nj8lj0vaeprdgq.png
 3474,33,2,"Armor of the Cleanrot Knights, celebrated for their undefeated campaign in the Shattering.
 
 The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",13.7,200,1,https://eldenring.fanapis.com/images/armors/17f69aaa630l0i0nj3bpfc2hdtz6bd.png
 3475,33,3,"Gauntlets of the Cleanrot Knights, celebrated for their undefeated campaign in the Shattering.
 
-The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",5.0,200,0,https://eldenring.fanapis.com/images/armors/17f69aed2ffl0i0o9a404fc0nm7z59o.png
+The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",5,200,0,https://eldenring.fanapis.com/images/armors/17f69aed2ffl0i0o9a404fc0nm7z59o.png
 3476,33,4,"Greaves of the Cleanrot Knights, celebrated for their undefeated campaign in the Shattering.
 
 The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",9.3,200,0,
@@ -481,7 +481,7 @@ The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, i
 
 The Cleanrot Knights vowed to fight alongside Malenia, despite the inevitable, if gradual, putrefaction of their flesh. Their acceptance of their fate made these battles the fiercest of all.",5.5,500,1,https://eldenring.fanapis.com/images/armors/17f69b50692l0i0ors8nfgenfh7k6r.png
 3479,34,2,"Clothing made of coarse material, commonly worn in the Lands Between.",3.2,100,0,https://eldenring.fanapis.com/images/armors/17f69be686fl0i0nizg2fcjv8u31em.png
-3480,34,4,"Trousers made of coarse material, commonly worn in the Lands Between.",2.0,100,0,https://eldenring.fanapis.com/images/armors/17f69b52568l0i0pgs8kizirn11qd.png
+3480,34,4,"Trousers made of coarse material, commonly worn in the Lands Between.",2,100,0,https://eldenring.fanapis.com/images/armors/17f69b52568l0i0pgs8kizirn11qd.png
 3481,35,2,"Garb with a thick embroidered cape attached.
 Standard wear for commoners of the Lands Between.
 
@@ -501,7 +501,7 @@ Only, there are no commoners remaining with their wits about them.",0.7,100,0,ht
 3485,35,4,"Modest shoes made of cloth.
 Standard wear for commoners of the Lands Between.
 
-Only, there are no commoners remaining with their wits about them.",2.0,1000,0,https://eldenring.fanapis.com/images/armors/17f692f026el0i0pgqn9h69g38vkus.png
+Only, there are no commoners remaining with their wits about them.",2,1000,0,https://eldenring.fanapis.com/images/armors/17f692f026el0i0pgqn9h69g38vkus.png
 3486,35,2,"Garb with a modest cloth cape attached.
 Standard wear for commoners of the Lands Between.
 
@@ -633,21 +633,21 @@ To a glintstone sorcerer, the body is a transient thing. The Cuckoo alone knows 
 Slowly replenishes the HP of nearby allies, but not that of the wearer.
 
 The touch of the fabric is exceedingly soft, so as not to harm even the most withered corpse, while still sharing her warmth.",3.2,2000,0,https://eldenring.fanapis.com/images/armors/17f693e9142l0i0nlr04j56c87ebi7.png
-3515,43,4,"Skirt worn by Phia, the Deathbed Companion.",2.0,1000,0,https://eldenring.fanapis.com/images/armors/17f6946190el0i0pi558gumllwjgl3.png
+3515,43,4,"Skirt worn by Phia, the Deathbed Companion.",2,1000,0,https://eldenring.fanapis.com/images/armors/17f6946190el0i0pi558gumllwjgl3.png
 3516,44,3,"Gloves worn by depraved perfumers.
 
-These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",2.0,500,0,https://eldenring.fanapis.com/images/armors/17f69c157acl0i0o9atkpuufsohrii.png
+These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",2,500,0,https://eldenring.fanapis.com/images/armors/17f69c157acl0i0o9atkpuufsohrii.png
 3517,44,1,"Headscarf worn by depraved perfumers.
 
 These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",2.1,2000,0,https://eldenring.fanapis.com/images/armors/17f6968948fl0i0ou27cfw87kk5qq.png
 3518,44,2,"Robe worn by depraved perfumers.
 The embroidery on the apron is itself a curse upon the Erdtree.
 
-These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",5.0,500,1,https://eldenring.fanapis.com/images/armors/17f69862df3l0i0nlxyv0dkfqf5tj.png
+These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",5,500,1,https://eldenring.fanapis.com/images/armors/17f69862df3l0i0nlxyv0dkfqf5tj.png
 3519,44,2,"Robe worn by depraved perfumers.
 The embroidery on the apron is itself a curse upon the Erdtree.
 
-These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",4.0,500,1,https://eldenring.fanapis.com/images/armors/17f69909573l0i0nn85bvv7mliw69r.png
+These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",4,500,1,https://eldenring.fanapis.com/images/armors/17f69909573l0i0nn85bvv7mliw69r.png
 3520,44,4,"Trousers worn by depraved perfumers.
 
 These heresy-inclined perfumers imbibe their own spices to alter body and mind. Their slow descent into self-destruction is what earned them their name.",4.3,500,0,https://eldenring.fanapis.com/images/armors/17f6955c5eal0i0piah1du5rhvge9q.png
@@ -677,7 +677,7 @@ From birth, drake knights speak not a word. They spend their lives pursuing the 
 3527,46,1,"Black iron helm worn by drake knights.
 Features the spoils of a dragon catch as an emblem of pride as both dragon hunter and partaker of communion.
 
-From birth, drake knights speak not a word. They spend their lives pursuing the strength of dragons, for its sublime beauty and inspiration of awe.",4.0,100,1,https://eldenring.fanapis.com/images/armors/17f699cce1al0i0ouctgvb37626x24.png
+From birth, drake knights speak not a word. They spend their lives pursuing the strength of dragons, for its sublime beauty and inspiration of awe.",4,100,1,https://eldenring.fanapis.com/images/armors/17f699cce1al0i0ouctgvb37626x24.png
 3528,46,1,"Black iron helm worn by drake knights.
 Features the spoils of a dragon catch as an emblem of pride as both dragon hunter and partaker of communion.
 
@@ -706,13 +706,13 @@ Worn by the knight Jerren.
 
 The hood hides an aged, bearded mask.
 
-Jerren served General Radahn as a guest commander, and they are said to have sworn an oath of honorable death to one another. ",4.0,1000,1,https://eldenring.fanapis.com/images/armors/17f697b6acal0i0oubruczgxdx9ikq.png
+Jerren served General Radahn as a guest commander, and they are said to have sworn an oath of honorable death to one another. ",4,1000,1,https://eldenring.fanapis.com/images/armors/17f697b6acal0i0oubruczgxdx9ikq.png
 3534,48,1,"A pointy, ragged hood.
 Worn by the knight Jerren.
 
 The hood hides an aged, bearded mask.
 
-Jerren served General Radahn as a guest commander, and they are said to have sworn an oath of honorable death to one another. ",4.0,1000,1,https://eldenring.fanapis.com/images/armors/17f69c4cdd0l0i0oucw3g2vwat2x2.png
+Jerren served General Radahn as a guest commander, and they are said to have sworn an oath of honorable death to one another. ",4,1000,1,https://eldenring.fanapis.com/images/armors/17f69c4cdd0l0i0oucw3g2vwat2x2.png
 3535,48,3,"The knight Jerren's manchettes.
 
 Jerren preferred a nomadic existence, but after spending time as a guest of the Carian royals, he became the guest commander for General Radahn.
@@ -771,7 +771,7 @@ Worn by soldiers sent to the penal colonies.",2.9,200,0,https://eldenring.fanapi
 Worn by soldiers sent to the penal colonies.",5.7,200,0,https://eldenring.fanapis.com/images/armors/17f699f6cc4l0i0pje4benasznz9h.png
 3550,53,1,"Deep red hood that covers the whole head.
 
-Worn by soldiers sent to the penal colonies, who were required to keep their faces hidden.",4.0,500,0,https://eldenring.fanapis.com/images/armors/17f69906ec7l0i0ov1phhpwvgvqev6.png
+Worn by soldiers sent to the penal colonies, who were required to keep their faces hidden.",4,500,0,https://eldenring.fanapis.com/images/armors/17f69906ec7l0i0ov1phhpwvgvqev6.png
 3551,30,2,"Brown surcoat draped over chainmail.
 
 The insignia emblazoned on the front marks out the wearer as the eyes and ears of Sir Gideon the All-Knowing.",9.2,200,0,https://eldenring.fanapis.com/images/armors/17f69b81b0fl0i0nox6k1sywembhx8.png
@@ -789,7 +789,7 @@ Faintly bloodstained.",3.2,100,0,https://eldenring.fanapis.com/images/armors/17f
 Decorated with many-colored flowers.",1.7,1000,1,https://eldenring.fanapis.com/images/armors/17f69855a34l0i0ovty8rhwq2rl4i.png
 3556,23,1,"Hood worn by dancers at the festivities in Dominula, the village of windmills.
 
-Decorated with a stunning array of flowers.",1.0,100,1,https://eldenring.fanapis.com/images/armors/17f692d0fbcl0i0ovsczesu9l4suj.png
+Decorated with a stunning array of flowers.",1,100,1,https://eldenring.fanapis.com/images/armors/17f692d0fbcl0i0ovsczesu9l4suj.png
 3557,55,1,"Hood of black cloth that covers the whole head.
 Worn by Fia, the Deathbed Companion, on her journey after being exiled from her home.
 
@@ -833,7 +833,7 @@ Worn by Vyke, knight of the Roundtable Hold.
 
 No other Tarnished was closer to the throne of the Elden Lord than Vyke. But without announcement, Vyke traveled far below the capital, and was scorched by the flame of frenzy.
 
-Did he make his choice for his maiden, or did some other force lure him with suggestion?",10.0,200,1,https://eldenring.fanapis.com/images/armors/17f692e48a9l0i0nq4invtcj4xoxg.png
+Did he make his choice for his maiden, or did some other force lure him with suggestion?",10,200,1,https://eldenring.fanapis.com/images/armors/17f692e48a9l0i0nq4invtcj4xoxg.png
 3566,57,3,"Iron gauntlets singed and blistered by fingers.
 Worn by Vyke, knight of the Roundtable Hold.
 
@@ -868,7 +868,7 @@ The Fire Monks are guardians of the flame of ruin, forbidden by the Erdtree and 
 3572,17,1,"Mail hood of iron links covering a headband
 engraved with flames. Attire of the Fire Monks.
 
-The Fire Monks are guardians of the flame of ruin, forbidden by the Erdtree and said to be kept high in the Mountaintops of the Giants.",4.0,200,0,https://eldenring.fanapis.com/images/armors/17f697cb110l0i0ovwk6xur5qnwbhk.png
+The Fire Monks are guardians of the flame of ruin, forbidden by the Erdtree and said to be kept high in the Mountaintops of the Giants.",4,200,0,https://eldenring.fanapis.com/images/armors/17f697cb110l0i0ovwk6xur5qnwbhk.png
 3573,58,2,"Black iron armor adorned with a red cloth.
 Attire of the Fire Prelates, commanders of the Fire Monks.
 
@@ -950,7 +950,7 @@ Rust-worn and stained through unending conflict.",3.5,500,0,https://eldenring.fa
 3600,65,4,"Greaves worn by soldiers loyal to Godrick the Grafted.
 Rust-worn and stained through unending conflict.",6.6,100,0,https://eldenring.fanapis.com/images/armors/17f69403682l0i0pjpag5hfhptfu1v.png
 3601,65,1,"Helm worn by soldiers loyal to Godrick the Grafted.
-Made from durable iron, layered with a chainmail coif beneath.",4.0,100,0,https://eldenring.fanapis.com/images/armors/17f699c6f57l0i0ox8b667wvx9611w.png
+Made from durable iron, layered with a chainmail coif beneath.",4,100,0,https://eldenring.fanapis.com/images/armors/17f699c6f57l0i0ox8b667wvx9611w.png
 3602,66,3,"Black bracelets of the Godskin Apostles.
 
 The apostles, once said to serve Destined Death, are wielders of the god-slaying black flame. But after their defeat by Maliketh, the Black Blade, the source of their power was sealed away.",2.1,1000,0,https://eldenring.fanapis.com/images/armors/17f69552966l0i0oazfa77xdvanncu.png
@@ -1060,7 +1060,7 @@ Rust-worn and stained through unending conflict.",6.6,200,0,https://eldenring.fa
 3630,73,1,"Helm worn by soldiers sworn to the Haligtree.
 An iron helm graced by a crown of unalloyed gold.
 
-Increases faith.",4.0,1000,0,https://eldenring.fanapis.com/images/armors/17f69481b1fl0i0oyflmw1g4d5g0uo.png
+Increases faith.",4,1000,0,https://eldenring.fanapis.com/images/armors/17f69481b1fl0i0oyflmw1g4d5g0uo.png
 3631,74,2,"Armor worn by knights sworn to the Haligtree.
 
 Its left breast is emblazoned with the crest of the Haligtree.
@@ -1081,7 +1081,7 @@ Increases faith.",5.1,10,0,https://eldenring.fanapis.com/images/armors/17f69586b
 
 Increases intelligence and endurance to the detriment of FP.
 
-The crown of Hierodas was granted to scholars who engaged in nomadic study away from the academy.",3.0,500,0,https://eldenring.fanapis.com/images/armors/17f69a2b719l0i0oyglty948pj2eli.png
+The crown of Hierodas was granted to scholars who engaged in nomadic study away from the academy.",3,500,0,https://eldenring.fanapis.com/images/armors/17f69a2b719l0i0oyglty948pj2eli.png
 3637,75,2,"Clothes of a page selected for special privileges by the noble they serve.
 
 Traveling wear tailored with exquisite precision, to avoid any undue shame for the page's master.",5.3,500,1,https://eldenring.fanapis.com/images/armors/17f697006efl0i0nsgci74miib1qwe.png
@@ -1193,7 +1193,7 @@ Kaiden is the name of their home settlement.",2.9,200,0,
 3665,84,1,"Helm worn by Kaiden sellswords.
 
 These hulking, fearless mercenaries, said to hail from the mountaintops of the wintry north, are adept at fighting on horseback.
-Kaiden is the name of their home settlement.",4.0,10,0,https://eldenring.fanapis.com/images/armors/17f69841f31l0i0p19rg3lex25o0oi.png
+Kaiden is the name of their home settlement.",4,10,0,https://eldenring.fanapis.com/images/armors/17f69841f31l0i0p19rg3lex25o0oi.png
 3666,84,4,"Trousers worn by Kaiden sellswords.
 
 These hulking, fearless mercenaries, said to hail from the mountaintops of the wintry north, are adept at fighting on horseback.
@@ -1278,7 +1278,7 @@ Rust-worn and stained through unending conflict.",3.5,100,0,https://eldenring.fa
 3690,51,4,"Greaves worn by soldiers sworn to defend the royal capital of Leyndell.
 Rust-worn and stained through unending conflict.",6.6,500,0,https://eldenring.fanapis.com/images/armors/17f6941c186l0i0pm1lnb643gzk7eh.png
 3691,51,1,"Helm worn by soldiers sworn to defend the royal capital of Leyndell.
-Made from durable iron, layered with a chainmail coif beneath.",4.0,2000,0,https://eldenring.fanapis.com/images/armors/17f69aa6dfdl0i0p31z2jv5am2erqc.png
+Made from durable iron, layered with a chainmail coif beneath.",4,2000,0,https://eldenring.fanapis.com/images/armors/17f69aa6dfdl0i0p31z2jv5am2erqc.png
 3692,90,2,"Round iron armor with a banner extending from its back.
 Worn by Lionel the Lionhearted.
 
@@ -1345,11 +1345,11 @@ Worn by Malenia, Blade of Miquella.
 
 Malenia awaited Miquella at the foot of the husk.
 
-""My brother will keep his promise. He possesses the wisdom, the allure, of a god—he is the most fearsome Empyrean of all.""",4.0,10,0,https://eldenring.fanapis.com/images/armors/17f69570454l0i0p2run60av8ymo9k.png
+""My brother will keep his promise. He possesses the wisdom, the allure, of a god—he is the most fearsome Empyrean of all.""",4,10,0,https://eldenring.fanapis.com/images/armors/17f69570454l0i0p2run60av8ymo9k.png
 3707,93,2,"Malformed golden armor.
 Adorned with various dragon imagery and worn by the misshapen Tree Sentinels.
 
-After the great ancient dragon Gransax attacked, the sentinels had an epiphany. The only way to truly protect the Erdtree was to become dragons themselves.",16.0,200,0,https://eldenring.fanapis.com/images/armors/17f69a9d818l0i0nvqxy32740gd00f.png
+After the great ancient dragon Gransax attacked, the sentinels had an epiphany. The only way to truly protect the Erdtree was to become dragons themselves.",16,200,0,https://eldenring.fanapis.com/images/armors/17f69a9d818l0i0nvqxy32740gd00f.png
 3708,93,3,"Malformed golden gauntlets.
 Adorned with various dragon imagery and worn by the misshapen Tree Sentinels.
 
@@ -1446,7 +1446,7 @@ Time has yet to dull their luster.",7.3,10,0,https://eldenring.fanapis.com/image
 3728,98,2,"Armor worn by headless soldiers who endlessly guard the Wandering Mausoleum.
 
 The surcoat depicts the mausoleum bell, which rings in constant mourning for the soulless demigods.",10.6,100,0,https://eldenring.fanapis.com/images/armors/17f6972fc30l0i0nvu6k4m9fl8hyqq.png
-3729,100,4,Boots worn by Millicent the Rotting,2.0,100,0,
+3729,100,4,Boots worn by Millicent the Rotting,2,100,0,
 3730,100,3,Gloves worn by Millicent the Rotting,1.1,100,0,https://eldenring.fanapis.com/images/armors/17f69a7eb92l0i0ofelpljitl8hw9s.png
 3731,100,2,Robe worn by Millicent the Rotting,3.2,500,0,
 3732,69,2,Tunic worn by Millicent the Rotting,8.3,100,0,
@@ -1525,7 +1525,7 @@ Decorated with tiny gems in a wide spectrum of colors.
 
 These merchants once thrived as the Great Caravan, but after being accused of heretical beliefs, their entire clan was rounded up and buried alive far underground.
 
-Then, they chanted a curse of despair, and summoned the flame of frenzy.",3.0,200,0,https://eldenring.fanapis.com/images/armors/17f69b12523l0i0p57kxo84ihb8tfk.png
+Then, they chanted a curse of despair, and summoned the flame of frenzy.",3,200,0,https://eldenring.fanapis.com/images/armors/17f69b12523l0i0p57kxo84ihb8tfk.png
 3751,105,2,"Finery of the nomadic merchants.
 Decorated with tiny gems in a wide spectrum of colors.
 
@@ -1562,7 +1562,7 @@ Long ago, the Nox invoked the ire of the Greater Will, and were banished deep un
 Long ago, the Nox invoked the ire of the Greater Will, and were banished deep underground. Now they live under a false night sky, in eternal anticipation of their liege. Of the coming age of the stars. And their Lord of Night.",7.4,100,1,https://eldenring.fanapis.com/images/armors/17f69a509bbl0i0nx3vmcxam3krt3o.png
 3759,103,1,"Silk hood worn by the monks of the Eternal City.
 
-Long ago, the Nox invoked the ire of the Greater Will, and were banished deep underground. Now they live under a false night sky, in eternal anticipation of their liege. Of the coming age of the stars. And their Lord of Night.",3.0,500,1,https://eldenring.fanapis.com/images/armors/17f697ae674l0i0p5eukmqyrfgsn7r.png
+Long ago, the Nox invoked the ire of the Greater Will, and were banished deep underground. Now they live under a false night sky, in eternal anticipation of their liege. Of the coming age of the stars. And their Lord of Night.",3,500,1,https://eldenring.fanapis.com/images/armors/17f697ae674l0i0p5eukmqyrfgsn7r.png
 3760,103,1,"Hood worn by the monks of the Eternal City.
 
 Long ago, the Nox invoked the ire of the Greater Will, and were banished deep underground. Now they live under a false night sky, in eternal anticipation of their liege. Of the coming age of the stars. And their Lord of Night.",2.7,100,1,https://eldenring.fanapis.com/images/armors/17f695ae069l0i0p6evp28kjw7adz.png
@@ -1606,7 +1606,7 @@ Abandoning their birthplace after the Shattering, these undead wanderers are the
 3770,107,4,"Hard-wearing shoes made of leather.
 Travel attire worn by nobles in the capital. Garb favored by the aged.
 
-Abandoning their birthplace after the Shattering, these undead wanderers are the pitiful product of unending life.",2.0,500,0,https://eldenring.fanapis.com/images/armors/17f69506269l0i0pnj7c4upe39du29.png
+Abandoning their birthplace after the Shattering, these undead wanderers are the pitiful product of unending life.",2,500,0,https://eldenring.fanapis.com/images/armors/17f69506269l0i0pnj7c4upe39du29.png
 3771,8,4,"Ragged waistcloth that extends to the thighs.
 Common amongst old-fashioned sorcerers.",2.5,1000,0,
 3772,85,1,"One of the glintstone crowns bestowed upon Raya Lucaria scholars whose pursuits were deemed worthy.
@@ -1646,7 +1646,7 @@ Increases strength.
 
 Bears the smirking face of an elder, twisted in wicked delight.
 
-This visage is carved in the image of the evil spirits that haunt the Omen in their nightmares.",3.0,100,0,https://eldenring.fanapis.com/images/armors/17f692dcfb1l0i0p7mw9kqxmqm7c0q.png
+This visage is carved in the image of the evil spirits that haunt the Omen in their nightmares.",3,100,0,https://eldenring.fanapis.com/images/armors/17f692dcfb1l0i0p7mw9kqxmqm7c0q.png
 3781,110,2,"Garb worn by pages who serve the nobility and are mindful to keep them out of harm's way.
 
 Traveling wear tailored with exquisite precision, to avoid any undue shame for the page's master.",5.1,100,1,https://eldenring.fanapis.com/images/armors/17f698ea992l0i0ny4wcf7fv7vla87.png
@@ -1707,10 +1707,10 @@ A foul creation designed to torment the wearer, either slowly fermenting hatred 
 Worn by a prisoner convicted of an appalling crime.
 
 Never once washed, every fiber is filthy.
-The smell is beyond belief.",2.0,2000,0,https://eldenring.fanapis.com/images/armors/17f69734256l0i0pop4lrxhhalyism.png
+The smell is beyond belief.",2,2000,0,https://eldenring.fanapis.com/images/armors/17f69734256l0i0pop4lrxhhalyism.png
 3800,37,1,"Blindfold of exiled prophets who foretold misfortune—and were persecuted and driven from their homes as a result.
 
-Why hesitate, if the path leading to the future is clear? Just close your eyes, and walk.",1.0,100,0,https://eldenring.fanapis.com/images/armors/17f697a0522l0i0p88qkwigrnfp6v.png
+Why hesitate, if the path leading to the future is clear? Just close your eyes, and walk.",1,100,0,https://eldenring.fanapis.com/images/armors/17f697a0522l0i0p88qkwigrnfp6v.png
 3801,37,2,"Robe of exiled prophets who foretold misfortune—and were persecuted and driven from their homes as a result.
 
 The shackles around the neck warn passersby not to lend an ear to their sermons.",6.3,10,1,https://eldenring.fanapis.com/images/armors/17f6974c239l0i0nzd27sxin7m9wgs.png
@@ -1744,7 +1744,7 @@ Worn by Rennala, Queen of the Full Moon.
 
 When Rennala, head of both the Academy of Raya Lucaria and the Carian royal family, lost her husband Radagon, her heart went along with him.
 
-And then, those at the academy realized. That Rennala was no champion, after all.",2.0,200,0,https://eldenring.fanapis.com/images/armors/17f69467bb4l0i0pon23cmftuh3stj.png
+And then, those at the academy realized. That Rennala was no champion, after all.",2,200,0,https://eldenring.fanapis.com/images/armors/17f69467bb4l0i0pon23cmftuh3stj.png
 3808,114,2,"Robe indicating the highest order of sorcerer.
 Worn by Rennala, Queen of the Full Moon.
 
@@ -1756,7 +1756,7 @@ Rust-worn and stained through unending conflict.",3.5,200,0,https://eldenring.fa
 3810,115,4,"Greaves worn by soldiers who fought by General Radahn's side.
 Rust-worn and stained through unending conflict.",6.6,200,0,https://eldenring.fanapis.com/images/armors/17f694275f3l0i0poxfwbsjqcjmsq.png
 3811,115,1,"Helm worn by soldiers who fought by General Radahn's side.
-Its visor is fashioned after a lion's fangs.",4.0,500,0,https://eldenring.fanapis.com/images/armors/17f698aba13l0i0p87xbw6nlaxenn9.png
+Its visor is fashioned after a lion's fangs.",4,500,0,https://eldenring.fanapis.com/images/armors/17f698aba13l0i0p87xbw6nlaxenn9.png
 3812,116,3,"Gauntlets depicting the golden lion.
 Worn by General Radahn.
 
@@ -1791,14 +1791,14 @@ Its striking design represents both the brilliant inspiration that once shone up
 3819,117,2,Armor pieced together from scavenged metal.,8.5,100,0,https://eldenring.fanapis.com/images/armors/17f69305b9cl0i0nzfe5sbcydcuoq.png
 3820,117,3,Gauntlets pieced together from scavenged metal.,2.9,200,0,https://eldenring.fanapis.com/images/armors/17f6935b153l0i0ogyoj212pfkjsqo.png
 3821,117,1,Helm pieced together from scavenged metal.,3.3,500,0,https://eldenring.fanapis.com/images/armors/17f69b3596el0i0p9nbylvjd00fim.png
-3822,117,1,Helm pieced together from scavenged metal.,3.0,100,0,https://eldenring.fanapis.com/images/armors/17f697a6871l0i0p9i0hdjvwr1ebxh.png
+3822,117,1,Helm pieced together from scavenged metal.,3,100,0,https://eldenring.fanapis.com/images/armors/17f697a6871l0i0p9i0hdjvwr1ebxh.png
 3823,117,4,Greaves pieced together from scavenged metal.,3.1,200,0,https://eldenring.fanapis.com/images/armors/17f696a85bal0i0poje1hl0kjcvy48.png
 3824,118,2,"Armor worn by Vargram the Raging Wolf, one of the first Tarnished to visit the Roundtable Hold.
 
 According to the old legends, wolves are the shadows of the Empyrean, and this is what Vargram aspired to be.",10.1,200,1,https://eldenring.fanapis.com/images/armors/17f69394e18l0i0o0j6thxia007h2q.png
 3825,118,2,"Armor worn by Vargram the Raging Wolf, one of the first Tarnished to visit the Roundtable Hold.
 
-According to the old legends, wolves are the shadows of the Empyrean, and this is what Vargram aspired to be.",9.0,200,1,https://eldenring.fanapis.com/images/armors/17f693ea468l0i0o0hcm10o39gutsk.png
+According to the old legends, wolves are the shadows of the Empyrean, and this is what Vargram aspired to be.",9,200,1,https://eldenring.fanapis.com/images/armors/17f693ea468l0i0o0hcm10o39gutsk.png
 3826,118,3,"Gauntlets worn by Vargram the Raging Wolf, one of the first Tarnished to visit the Roundtable Hold.
 
 According to the old legends, wolves are the shadows of the Empyrean, and this is what Vargram aspired to be.",3.4,200,0,
@@ -1820,7 +1820,7 @@ Rust-worn and stained through unending conflict.",3.5,500,0,https://eldenring.fa
 3831,42,4,"Greaves worn by Raya Lucaria Academy soldiers.
 Rust-worn and stained through unending conflict.",6.6,2000,0,https://eldenring.fanapis.com/images/armors/17f695916ael0i0poomo5zw8rgcb.png
 3832,42,1,"Helm worn by Raya Lucaria Academy soldiers.
-Its brow is adorned with a single cuckoo's feather.",4.0,100,0,https://eldenring.fanapis.com/images/armors/17f69c1bdafl0i0p9ocg2s870qbrq.png
+Its brow is adorned with a single cuckoo's feather.",4,100,0,https://eldenring.fanapis.com/images/armors/17f69c1bdafl0i0p9ocg2s870qbrq.png
 3833,85,2,"Robe worn by Raya Lucaria's scholars of sorcery.
 
 Those who dedicate themselves to the study of glintstones formed from starry amber receive this modest yet elegant deep navy garb after making their vows of virtue and austerity.
@@ -1880,7 +1880,7 @@ The wearer becomes a slightly easier target for foes.",5.1,500,1,https://eldenri
 Loretta was once a royal Carian knight, and her lapis-lazuli blue cape is the emblem of the knightly pride that continues to guide her.",15.5,100,1,https://eldenring.fanapis.com/images/armors/17f696062dbl0i0o1vjw0pszkp8o3.png
 3849,121,2,"Silver armor of Loretta, a knight who served Miquella's Haligtree.
 
-Loretta, once a royal Carian knight, went on a journey in search of a haven for Albinaurics, and determined that the Haligtree was their best chance for eventual salvation.",15.0,200,1,https://eldenring.fanapis.com/images/armors/17f6985d49bl0i0o1vs0ag273l395x.png
+Loretta, once a royal Carian knight, went on a journey in search of a haven for Albinaurics, and determined that the Haligtree was their best chance for eventual salvation.",15,200,1,https://eldenring.fanapis.com/images/armors/17f6985d49bl0i0o1vs0ag273l395x.png
 3850,121,3,"Silver gauntlets of Loretta, a knight who served Miquella's Haligtree.
 
 Loretta, once a royal Carian knight, went on a journey in search of a haven for Albinaurics, and determined that the Haligtree was their best chance for eventual salvation.",5.2,100,0,https://eldenring.fanapis.com/images/armors/17f69c1e97bl0i0oh39wplhaw02cqa.png
@@ -1958,11 +1958,11 @@ The cape covering the shoulders is made with treated rock lizard skin, and provi
 3867,125,2,"Armor worn by Old Knight Istvan.
 The corroded metal is reinforced with rock-hard scales, making it highly effective against non-physical attacks.
 
-Istvan is one of a few wizened Tarnished who survive to this day.",16.0,10,1,https://eldenring.fanapis.com/images/armors/17f694b4a42l0i0o1wscyguflco4ib.png
+Istvan is one of a few wizened Tarnished who survive to this day.",16,10,1,https://eldenring.fanapis.com/images/armors/17f694b4a42l0i0o1wscyguflco4ib.png
 3868,125,2,"Armor worn by Old Knight Istvan.
 The corroded metal is reinforced with rock-hard scales, making it highly effective against non-physical attacks.
 
-Istvan is one of a few wizened Tarnished who survive to this day.",15.0,100,1,https://eldenring.fanapis.com/images/armors/17f694a40a4l0i0o1yzkmzkj7qtz1g.png
+Istvan is one of a few wizened Tarnished who survive to this day.",15,100,1,https://eldenring.fanapis.com/images/armors/17f694a40a4l0i0o1yzkmzkj7qtz1g.png
 3869,125,3,"Gauntlets worn by Old Knight Istvan.
 The corroded metal is reinforced with rock-hard scales, making it highly effective against non-physical attacks.
 
@@ -1998,7 +1998,7 @@ To imitate the imitator is a cunning play indeed.",4.6,200,0,https://eldenring.f
 3877,9,1,"Skeletal mask that tightly grips the face.
 Worn by the assassins of Ravenmount.
 
-This ritual implement relentlessly digs into the wearer's face, preserving one's human instincts while dressed in imitation of the Deathbirds.",3.0,500,0,https://eldenring.fanapis.com/images/armors/17f6959d0a8l0i0pbk3c7c2xgt23gn.png
+This ritual implement relentlessly digs into the wearer's face, preserving one's human instincts while dressed in imitation of the Deathbirds.",3,500,0,https://eldenring.fanapis.com/images/armors/17f6959d0a8l0i0pbk3c7c2xgt23gn.png
 3878,127,1,"Witch's pointed hat, frigid and frozen through.
 Of a style associated with practitioners of heretical sorcery.
 Strengthens cold sorcery.
@@ -2026,7 +2026,7 @@ It is said that the doll that houses Ranni's soul was modeled after her.
 
 That old witch was Ranni's secret mentor.",3.1,500,0,https://eldenring.fanapis.com/images/armors/17f698e65e9l0i0pq2pl5205ajnfq8.png
 3882,85,4,"Leggings worn by Raya Lucaria's scholars of sorcery.
-Made by wrapping a simple cloth around the legs.",2.0,100,0,https://eldenring.fanapis.com/images/armors/17f6937579el0i0pq4dn4l0mcnf8of.png
+Made by wrapping a simple cloth around the legs.",2,100,0,https://eldenring.fanapis.com/images/armors/17f6937579el0i0pq4dn4l0mcnf8of.png
 3883,85,3,"Manchettes worn by Raya Lucaria's scholars of sorcery.
 Made by wrapping a simple cloth around the forearms.",1.1,100,0,https://eldenring.fanapis.com/images/armors/17f69b2e1f0l0i0oivw4at5v3v4x2z.png
 3884,128,3,"Glintstone sorcerer Rogier's gloves, graced with an intricate, aristocratic decoration. Strengthen glintstone sorcery skills.
@@ -2161,7 +2161,7 @@ Dirty and battered after enduring a lengthy vagabond journey.
 
 The visor is broken and can no longer be lowered.
 
-Metal armor is heavy, but also sturdy, offering significant damage negation.",4.0,500,0,https://eldenring.fanapis.com/images/armors/17f698fd2a7l0i0pdfklx6dladeexc.png
+Metal armor is heavy, but also sturdy, offering significant damage negation.",4,500,0,https://eldenring.fanapis.com/images/armors/17f698fd2a7l0i0pdfklx6dladeexc.png
 3919,133,2,"Old armor that has seen many battles.
 Worn by Niall, the veteran general of Sol.
 

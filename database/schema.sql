@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `weapons_w_affinities` (
 
 CREATE TABLE IF NOT EXISTS `effects` (
 	`id` int AUTO_INCREMENT NOT NULL,
-	`desc` text NOT NULL,
+	`description` text NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `weapons` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`group_id` int NOT NULL,
 	`name` varchar(255) NOT NULL,
-	`desc` text,
+	`description` text,
 	`weapon_passive_id` int NULL,
 	`hidden_effect_id` int NULL,
 	`default_skill_id` int NULL,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `ashes_of_war` (
 	`id` int NOT NULL,
 	`affinity_id` int NOT NULL,
 	`skill_id` int NOT NULL,
-	`desc` text,
+	`description` text,
 	`fp_cost` int NOT NULL DEFAULT '0',
 	`fp_cost_light` int,
 	`fp_cost_heavy` int,
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `locations` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
 	`region_id` int NOT NULL,
-	`desc` text,
+	`description` text,
 	`image_url` varchar(255),
 	PRIMARY KEY (`id`)
 );
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `armors` (
 	`id` int NOT NULL,
 	`set_id` int NOT NULL,
 	`equip_slot_id` int NOT NULL,
-	`desc` text,
+	`description` text,
 	`weight` float NOT NULL,
 	`price` int,
 	`can_alter` bool NOT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `armor_sets` (
 CREATE TABLE IF NOT EXISTS `talismans` (
 	`id` int NOT NULL,
 	`info` text,
-	`desc` text,
+	`description` text,
 	`weight` float NOT NULL,
 	`price` int,
 	`image_url` varchar(255),
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `magic` (
 	`id` int NOT NULL,
 	`type_id` int NOT NULL,
 	`info` text,
-	`desc` text,
+	`description` text,
 	`fp_cost` int NOT NULL,
 	`fp_cost_continuous` int,
 	`stamina_cost` int NOT NULL,
@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `magic` (
 CREATE TABLE IF NOT EXISTS `spirit_ashes` (
 	`id` int NOT NULL,
 	`info` text,
-	`desc` text,
+	`description` text,
 	`fp_cost` int,
 	`hp_cost` int,
 	`hp` int NOT NULL,
@@ -184,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `items` (
 CREATE TABLE IF NOT EXISTS `bolsters` (
 	`id` int NOT NULL,
 	`info` text,
-	`desc` text,
+	`description` text,
 	`max_held` int NOT NULL,
 	`max_storage` int NOT NULL,
 	`price` int,
@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `bolsters` (
 CREATE TABLE IF NOT EXISTS `key_items` (
 	`id` int NOT NULL,
 	`info` text,
-	`desc` text,
+	`description` text,
 	`type_id` int NOT NULL,
 	`image_url` varchar(255),
 	PRIMARY KEY (`id`)

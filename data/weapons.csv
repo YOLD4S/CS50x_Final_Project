@@ -1,10 +1,10 @@
-id,group_id,name,desc,weapon_passive_id,hidden_effect_id,default_skill_id,weight,req_str,req_dex,req_int,req_fai,req_arc,image_url
+id,group_id,name,description,weapon_passive_id,hidden_effect_id,default_skill_id,weight,req_str,req_dex,req_int,req_fai,req_arc,image_url
 1,1,Dagger,"A standard dagger with a straight blade.
 
 Though modest in reach and capacity for harm, this weapon is light enough to jab in rapid succession and delivers devastating critical hits.",,,1,1.5,5,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699693fbl0i1otqw0glcy3u6fp0k.png
 2,1,Black Knife,"Dagger once belonging to one of the assassins who murdered Godwyn the Golden on the Night of the Black Knives.
 
-A ritual performed on the oddly misshapen blade imbued it with the power of the stolen Rune of Death.",,,2,2.0,8,12,0,18,0,https://eldenring.fanapis.com/images/weapons/17f69bb7d32l0i1ou85ft99zwecdel.png
+A ritual performed on the oddly misshapen blade imbued it with the power of the stolen Rune of Death.",,,2,2,8,12,0,18,0,https://eldenring.fanapis.com/images/weapons/17f69bb7d32l0i1ou85ft99zwecdel.png
 3,1,Parrying Dagger,"A knife with curved handguards.
 Designed to parry, turning foes' attacks against them.
 
@@ -12,47 +12,47 @@ For masters of combat who anticipate every enemy strike and counter accordingly,
 4,1,Miséricorde,"Dagger favored by military physicians in white.
 The pointed blade is hard and sharp, making critical hits especially potent.
 
-Medicine is mercy, and mercy upon the battlefield is ruthless. Beware the killers clothed as men of compassion.",,,1,2.0,7,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aa066dl0i1ouek4e8nmlybotp.png
+Medicine is mercy, and mercy upon the battlefield is ruthless. Beware the killers clothed as men of compassion.",,,1,2,7,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aa066dl0i1ouek4e8nmlybotp.png
 5,1,Reduvia,"Jagged dagger with a distinctive curved blade.
 Used by the noble servants of the Lord of Blood.
 
-This dagger rips the flesh as it enters, inflicting blood loss with sickening efficacy. A proud testament to the success of its vicious design, this weapon is perpetually coated in blood. ",3.0,,4,2.5,5,13,0,0,13,https://eldenring.fanapis.com/images/weapons/17f69d42419l0i1oujp0m1csaaqdanf.png
+This dagger rips the flesh as it enters, inflicting blood loss with sickening efficacy. A proud testament to the success of its vicious design, this weapon is perpetually coated in blood. ",3,,4,2.5,5,13,0,0,13,https://eldenring.fanapis.com/images/weapons/17f69d42419l0i1oujp0m1csaaqdanf.png
 6,1,Crystal Knife,"A knife made by sharpening hard crystal.
 Signature weapon of glintstone miners.
 
-Used as tool to extract glintstone from broken rock, and as such a faint magic enwreathes the blade.",,,1,2.0,8,12,9,0,0,https://eldenring.fanapis.com/images/weapons/17f695c23a5l0i1ourjc45t3ot8y0r.png
+Used as tool to extract glintstone from broken rock, and as such a faint magic enwreathes the blade.",,,1,2,8,12,9,0,0,https://eldenring.fanapis.com/images/weapons/17f695c23a5l0i1ourjc45t3ot8y0r.png
 7,1,Celebrant's Sickle,"Sickle decorated with flowers and many-colored fabrics. Ceremonial tool used by dancers during the festivities of Dominula. Its attacks can slip through an enemy's guard.
 
 Crafted from human bone.
-Grants trace amounts of runes on landing attacks.",,26.0,1,1.5,6,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69538376l0i1ouzstk2t2dod57i.png
+Grants trace amounts of runes on landing attacks.",,26,1,1.5,6,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69538376l0i1ouzstk2t2dod57i.png
 8,1,Glintstone Kris,"Ritual blade once presented to Leyndell by the Academy of Raya Lucaria to celebrate their newfound peace. Though the weapon is embedded with precious glintstones and features Erdtree ornamentation, the undulating blade is symbolic of an ancient ritual.",,,5,1.5,5,12,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69756a35l0i1ov1vi3cb4201sxa.png
 9,1,Scorpion's Stinger,"Dagger fashioned from a great scorpion's tail, glistening with scarlet rot.
 
-A ceremonial tool used by heretics, crafted from the relic of a sealed outer god.",4.0,,6,2.5,6,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d58e08l0i1ovazqw2hxmxgdc.png
+A ceremonial tool used by heretics, crafted from the relic of a sealed outer god.",4,,6,2.5,6,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d58e08l0i1ovazqw2hxmxgdc.png
 10,1,Great Knife,"Large knife with a broad, curved blade.
 
-This weapon is designed to slash and rend, inflicting blood loss upon the recipient.",3.0,,1,1.5,6,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6994d16cl0i1ovl2w2asf8hogd.png
+This weapon is designed to slash and rend, inflicting blood loss upon the recipient.",3,,1,1.5,6,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6994d16cl0i1ovl2w2asf8hogd.png
 11,1,Wakizashi,"Short sword with a tempering pattern on the blade.
 A weapon unique to warriors of the Land of Reeds.
 Afflicts targets with blood loss.
 These swords are considered auxiliary weapons.
-Yet, one man is known to wield this weapon in his left hand while using a full-sized katana in his right. A demonic swordsman known only as Okina.",3.0,,1,3.0,9,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a01b63l0i1ovq80hzuqcz211pn.png
+Yet, one man is known to wield this weapon in his left hand while using a full-sized katana in his right. A demonic swordsman known only as Okina.",3,,1,3,9,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a01b63l0i1ovq80hzuqcz211pn.png
 12,1,Cinquedea,"Short sword given to high ranking clergymen of Farum Azula.
 Raises potency of bestial incantations.
 
-The design celebrates a beast's five fingers, symbolic of the intelligence once granted upon their kind.",,27.0,1,3.5,10,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6986cfc4l0i1ovvz1l7bcfxqjc9.png
+The design celebrates a beast's five fingers, symbolic of the intelligence once granted upon their kind.",,27,1,3.5,10,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6986cfc4l0i1ovvz1l7bcfxqjc9.png
 13,1,Ivory Sickle,"Sickle fashioned from ivory.
 Weapon carried by aged Albinaurics.
 
-These weapons are evidence of their dedication to the Haligtree, despite never having entered its presence.",,,1,2.0,6,11,13,0,0,https://eldenring.fanapis.com/images/weapons/17f69dba532l0i1ow5zn175dgtjn5d.png
+These weapons are evidence of their dedication to the Haligtree, despite never having entered its presence.",,,1,2,6,11,13,0,0,https://eldenring.fanapis.com/images/weapons/17f69dba532l0i1ow5zn175dgtjn5d.png
 14,1,Bloodstained Dagger,"Dagger with a bloodstained blade.
 Afflicts targets with blood loss.
 
-As blood darkened the dagger through repeated slashing and stabbing, its blade only grew sharper and harder.",3.0,,1,2.0,9,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69568512l0i1owirx8rozwu94e.png
+As blood darkened the dagger through repeated slashing and stabbing, its blade only grew sharper and harder.",3,,1,2,9,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69568512l0i1owirx8rozwu94e.png
 15,1,Erdsteel Dagger,"An erdsteel dagger with a grass crest engraved upon its blade. Carried by the Erdtree royalty for self-defense in times of peace.
 
 Though forged to a high standard, the weapon is difficult to wield.
-Attack power also scales with faith.",,,1,2.0,7,12,0,14,0,https://eldenring.fanapis.com/images/weapons/17f69c27224l0i1owfsl4rcc4fgbpe.png
+Attack power also scales with faith.",,,1,2,7,12,0,14,0,https://eldenring.fanapis.com/images/weapons/17f69c27224l0i1owfsl4rcc4fgbpe.png
 16,1,Blade of Calling,"Dagger given to one who set out on a journey to fulfill her duty long ago. The power of its former owner, the kindling maiden, is still apparent.
 
 The one who walks alongside flame,
@@ -64,10 +64,10 @@ In addition to its reliable standard damage, this weapon also boasts powerful pi
 18,2,Short Sword,"A short straight sword with a short blade.
 In addition to its reliable standard damage, this weapon also boasts powerful piercing attacks.
 
-Lightweight amongst straight swords, this weapon is easy to wield, requiring only humble attributes.",,,9,3.0,8,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699b4949l0i1plb5z4sznm17g7p.png
+Lightweight amongst straight swords, this weapon is easy to wield, requiring only humble attributes.",,,9,3,8,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699b4949l0i1plb5z4sznm17g7p.png
 19,2,Broadsword,"A straight sword with a wide blade, suited to slashing attacks.
 
-Horizontal swings boast wide attack range, making it easier to connect with foes.",,,8,4.0,10,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696356b4l0i1pljd3dmbyei0rzd.png
+Horizontal swings boast wide attack range, making it easier to connect with foes.",,,8,4,10,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696356b4l0i1pljd3dmbyei0rzd.png
 20,2,Lordsworn's Straight Sword,"Well-crafted straight sword with an illustrious
 design, wielded by regulars of a lord's army.
 
@@ -78,11 +78,11 @@ long since lost their minds.",,,8,3.5,10,10,0,0,0,https://eldenring.fanapis.com/
 21,2,Weathered Straight Sword,"Straight sword with a rather short but wide blade.
 Simple to wield, it was known as the sword of the people.
 
-Though the Erdtree styling is still visible, time has not been kind to this sword, now merely a shadow of its former self.",,,8,3.0,7,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6953c2f2l0i1pltkmb7nxuvfxgo.png
+Though the Erdtree styling is still visible, time has not been kind to this sword, now merely a shadow of its former self.",,,8,3,7,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6953c2f2l0i1pltkmb7nxuvfxgo.png
 22,2,Ornamental Straight Sword,"Slender straight sword patterned after an antique ornament.
 Superior swordsmen prefer to wield one in each hand.
 
-After falling from grace, the dregs of the golden lineage sought power and purpose in the past.",,,10,3.0,10,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69523142l0i1pm7iurzr5rt7vpb.png
+After falling from grace, the dregs of the golden lineage sought power and purpose in the past.",,,10,3,10,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69523142l0i1pm7iurzr5rt7vpb.png
 23,2,Golden Epitaph,"A sword made to commemorate the death of Godwyn the Golden, first of the demigods to die.
 
 Infused with the humble prayer of a young boy; ""O brother, lord brother, please die a true death.""",,,11,3.5,12,10,0,14,0,https://eldenring.fanapis.com/images/weapons/17f697020ddl0i1pm0mkycj3pyzli7.png
@@ -93,21 +93,21 @@ Forged from the liquid metal of a Silver Tear, it is thoroughly tempered until h
 A sacred weapon to hunt Those Who Live in Death.
 Deals holy damage. 
 
-The inseparable twins found solace in the Golden Order, the only institution not to revile them as accursed beings.",,,13,10.0,18,18,0,20,0,
+The inseparable twins found solace in the Golden Order, the only institution not to revile them as accursed beings.",,,13,10,18,18,0,20,0,
 26,2,Coded Sword,"Hidden sword once granted to the Tarnished of the Roundtable by the Two Fingers. A formless cipher comprises its blade, which deals holy damage no shield can repel. Champions would gather at the Roundtable Hold in days long past, when the Two Fingers were masters of oration, their flesh yet full of vigor.",,,14,2.5,0,0,0,20,0,https://eldenring.fanapis.com/images/weapons/17f69d1c283l0i1pm7km9k4n9hesqp.png
 27,2,Sword of Night and Flame,"Storied sword and treasure of Caria Manor.
 One of the legendary armaments.
 
-Astrologers, who preceded the sorcerers, established themselves in mountaintops that nearly touched the sky, and considered the Fire Giants their neighbors.",,,15,4.0,12,12,24,24,0,https://eldenring.fanapis.com/images/weapons/17f69dcdeb9l0i1pmay6pw29q0kz9j.png
+Astrologers, who preceded the sorcerers, established themselves in mountaintops that nearly touched the sky, and considered the Fire Giants their neighbors.",,,15,4,12,12,24,24,0,https://eldenring.fanapis.com/images/weapons/17f69dcdeb9l0i1pmay6pw29q0kz9j.png
 28,2,Crystal Sword,"Sword fashioned from pure crystal; a deed impossible for a human. Enwreathed with powerful magic, its attack scales with intelligence. The inscrutable Crystalians have but one clear purpose; to safeguard their crystals unto the end. One theory posits that they yearn for the return of their creator who will carve for them new brethren.",,,16,4.5,13,10,15,0,0,https://eldenring.fanapis.com/images/weapons/17f69b32328l0i1pmuqj0u81mxsett.png
 29,2,Carian Knight's Sword,"Straight sword embedded with a blue glintstone.
 Weapon of knights sworn to Carian royalty.
 
-These knights' swords could serve as catalysts, letting them wield sorcerous battle skills. Despite numbering fewer than twenty, this power made them a match for even the champions of gold in battle.",,,17,4.0,10,10,18,0,0,https://eldenring.fanapis.com/images/weapons/17f69b44345l0i1pmq6va882h9uvf.png
+These knights' swords could serve as catalysts, letting them wield sorcerous battle skills. Despite numbering fewer than twenty, this power made them a match for even the champions of gold in battle.",,,17,4,10,10,18,0,0,https://eldenring.fanapis.com/images/weapons/17f69b44345l0i1pmq6va882h9uvf.png
 30,2,Sword of St. Trina,"Silver sword carried by clerics of St. Trina.
 Inflicts sleep ailment upon foes.
 
-St. Trina is an enigmatic figure. Some say she is a comely young girl, others are sure he is a boy. The only certainty is that their appearance was as sudden as their disappearance.",5.0,,18,3.0,10,12,14,0,0,
+St. Trina is an enigmatic figure. Some say she is a comely young girl, others are sure he is a boy. The only certainty is that their appearance was as sudden as their disappearance.",5,,18,3,10,12,14,0,0,
 31,2,Miquellan Knight's Sword,"Sword forged by servants of Miquella of the Haligtree, with a design modeled after those carried by Carian knights. Instead of glintstone however, amber from the Haligtree is embedded in the blade.
 
 A sumptuous piece, yet it has never been offered to any knight—an ill-starred sword with no master.",,,13,3.5,11,11,0,16,0,https://eldenring.fanapis.com/images/weapons/17f69aa244al0i1pmyf54x5qm8xb1r.png
@@ -124,7 +124,7 @@ Made to be easy to wield.
 Daubed with gold from tip to tail, it should fetch a good sum.",,,8,3.5,8,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6976fa7el0i1pnla0wdjcpf4iqvm.png
 35,2,Warhawk's Talon,"Talon-swords are affixed to the legs of Stormveil's warhawks, but this one has been repurposed for human use.
 
-The blade is thin and lightweight so as not to obstruct the hawk's mobility.",,,16,3.0,10,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b005b3l0i1pnmcmlgow749t19.png
+The blade is thin and lightweight so as not to obstruct the hawk's mobility.",,,16,3,10,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b005b3l0i1pnmcmlgow749t19.png
 36,2,Lazuli Glintstone Sword,"A sword with a glintstone in its handguards. Wielded by scholars of the Lazuli Conspectus who seek to master Carian sorcery.
 Deals magic damage.
 
@@ -132,48 +132,48 @@ Apparently once used as a staff of sorcery, this sword is made of wood.",,,20,3.
 37,2,Rotten Crystal Sword,"Sword fashioned from pure crystal; a deed impossible for a human.
 It festers with scarlet rot.
 
-Enwreathed with powerful magic, its attack scales with intelligence.",6.0,,16,4.5,13,10,15,0,0,https://eldenring.fanapis.com/images/weapons/17f69d445cel0i1pnsmtteechmemmd.png
+Enwreathed with powerful magic, its attack scales with intelligence.",6,,16,4.5,13,10,15,0,0,https://eldenring.fanapis.com/images/weapons/17f69d445cel0i1pnsmtteechmemmd.png
 38,4,Bastard Sword,"A large sword with a straight blade. This heavy sword is usually wielded with two hands, but for those with enough strength, one is sufficient.
 
 The hefty blade can be swung into multiple foes
 at once thanks to the broad, sweeping attack,
-making fending off crowds all the easier.",,,21,9.0,16,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a8d915l0i1p4kqv889wy4d4vc.png
+making fending off crowds all the easier.",,,21,9,16,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a8d915l0i1p4kqv889wy4d4vc.png
 39,4,Forked Greatsword,"Oddly shaped greatsword wielded by imps.
 
-The gently undulating forked blade is known as an ""imp's tongue"" and causes blood loss.",3.0,,21,9.0,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6995269el0i1p4oqujogklpkccd.png
+The gently undulating forked blade is known as an ""imp's tongue"" and causes blood loss.",3,,21,9,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6995269el0i1p4oqujogklpkccd.png
 40,4,Iron Greatsword,"Greatsword with a blade of unusually thick steel.
 A coarse weapon to which polishing is a foreign concept.
 
-Weighty even among others of its class, the impact of each strike is sure to be felt.",,,21,12.0,18,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698d80fal0i1p4tl3fnkays6xcs.png
+Weighty even among others of its class, the impact of each strike is sure to be felt.",,,21,12,18,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698d80fal0i1p4tl3fnkays6xcs.png
 41,4,Lordsworn's Greatsword,"Well-crafted straight sword with an illustrious
 design, wielded by regulars of a lord's army.
 
-Though blackened and damaged by years of use, it appears to have otherwise been kept in a serviceable condition, despite the soldiers having long since lost their minds.",,,21,9.0,16,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c84a0fl0i1p53njeg78jpm83g.png
+Though blackened and damaged by years of use, it appears to have otherwise been kept in a serviceable condition, despite the soldiers having long since lost their minds.",,,21,9,16,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c84a0fl0i1p53njeg78jpm83g.png
 42,4,Knight's Greatsword,"Greatsword bestowed upon skilled swordsmen in the demigods' service, and yet had no rank or title.
 
-Featuring a long grip enabling dual-handed use, this weapon was designed to dispatch larger foes. Being charged with such a duty was undoubtedly a great honor.",,,21,10.0,16,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696c3869l0i1p57ui4dkke1j2lb.png
+Featuring a long grip enabling dual-handed use, this weapon was designed to dispatch larger foes. Being charged with such a duty was undoubtedly a great honor.",,,21,10,16,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696c3869l0i1p57ui4dkke1j2lb.png
 43,4,Flamberge,"Greatsword featuring a flame-like undulation.
 Shreds enemy flesh, inducing blood loss.
 
-Scarlet rot is kept at bay with flame at Redmane Castle, and as such, this beloved sword of Jerren's eventually became the symbol of the castle itself.",3.0,,21,10.0,15,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69958ad2l0i1p5cvrojl4ty52zs.png
+Scarlet rot is kept at bay with flame at Redmane Castle, and as such, this beloved sword of Jerren's eventually became the symbol of the castle itself.",3,,21,10,15,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69958ad2l0i1p5cvrojl4ty52zs.png
 44,4,Ordovis's Greatsword,"Greatsword of Ordovis, one of the two honored as foremost among the Crucible Knights.
 
 This sword is imbued with an ancient holy essence.
-Its red tint exemplifies the nature of primordial gold, said to be close in nature to life itself.",,,22,12.0,25,13,0,15,0,https://eldenring.fanapis.com/images/weapons/17f69914456l0i1p5gc8d6bi642ubp.png
+Its red tint exemplifies the nature of primordial gold, said to be close in nature to life itself.",,,22,12,25,13,0,15,0,https://eldenring.fanapis.com/images/weapons/17f69914456l0i1p5gc8d6bi642ubp.png
 45,4,Alabaster Lord's Sword,"Greatsword forged from a blue-white meteoric ore.
 The blade conceals gravity-manipulating magic.
 
-A weapon unique to the Alabaster Lords, a race of ancients with skin of stone who were said to have risen to life when a meteor struck long ago.",,,23,8.0,16,12,18,0,0,https://eldenring.fanapis.com/images/weapons/17f69a3766al0i1p5jn27ea0xazje3.png
+A weapon unique to the Alabaster Lords, a race of ancients with skin of stone who were said to have risen to life when a meteor struck long ago.",,,23,8,16,12,18,0,0,https://eldenring.fanapis.com/images/weapons/17f69a3766al0i1p5jn27ea0xazje3.png
 46,4,Banished Knight's Greatsword,"A finely-crafted greatsword intricately engraved with an ancient motif.
 Given to knights who, whether by misfortune or misdeed, were forced to abandon their homes.
-Most of these knights were sent to the fringes, where they were forced to start anew with only despair for company.",,,21,10.0,17,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6961c7efl0i1p5tbamvedpnmzx4.png
+Most of these knights were sent to the fringes, where they were forced to start anew with only despair for company.",,,21,10,17,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6961c7efl0i1p5tbamvedpnmzx4.png
 47,4,Dark Moon Greatsword,"A Moon Greatsword, bestowed by a Carian queen upon her spouse to honor long-standing tradition.
 One of the legendary armaments.
 
-Ranni's sigil is a full moon, cold and leaden, and this sword is but a beam of its light.",1.0,,24,10.0,16,11,38,0,0,https://eldenring.fanapis.com/images/weapons/17f69aa76b3l0i1p5w4xa7tbhq0qit.png
+Ranni's sigil is a full moon, cold and leaden, and this sword is but a beam of its light.",1,,24,10,16,11,38,0,0,https://eldenring.fanapis.com/images/weapons/17f69aa76b3l0i1p5w4xa7tbhq0qit.png
 48,4,Sacred Relic Sword,"Sword wrought from the remains of a god who should have lived a life eternal.
 
-Thoughts on what the weapon portends are many and varied. Some consider it the mark of a great sin, or a sign of great devastation. Some think it as the end of an age, while others; the beginning.",,,25,11.0,14,24,0,22,0,https://eldenring.fanapis.com/images/weapons/17f6971ad09l0i1p698i6hg5fqq3ir.png
+Thoughts on what the weapon portends are many and varied. Some consider it the mark of a great sin, or a sign of great devastation. Some think it as the end of an age, while others; the beginning.",,,25,11,14,24,0,22,0,https://eldenring.fanapis.com/images/weapons/17f6971ad09l0i1p698i6hg5fqq3ir.png
 49,4,Helphen's Steeple,"Greatsword patterned after the black steeple of the Helphen, the lampwood which guides the dead of the spirit world.
 
 The lamplight is similar to grace in appearance, only it is said that it can only be seen by those who met their death in battle.",,,26,11.5,19,10,22,0,0,https://eldenring.fanapis.com/images/weapons/17f69a34499l0i1p69mtmqzfrxa7b.png
@@ -181,7 +181,7 @@ The lamplight is similar to grace in appearance, only it is said that it can onl
 Remains of the countless heroes he has devoured writhe upon the surface of this blade.
 
 Now they share the same blood, bound together as family.
-Some HP is restored upon defeating an enemy.",,28.0,27,13.5,22,15,0,21,0,https://eldenring.fanapis.com/images/weapons/17f69a18c12l0i1p6irjv6m8ue2f5.png
+Some HP is restored upon defeating an enemy.",,28,27,13.5,22,15,0,21,0,https://eldenring.fanapis.com/images/weapons/17f69a18c12l0i1p6irjv6m8ue2f5.png
 51,4,Marais Executioner's Sword,"Storied sword of House Marais, the family of executioners who presided over the Shaded Castle.
 One of the legendary armaments.
 
@@ -189,21 +189,21 @@ Elemer of the Briar, the Bell Bearing Hunter, snatched the sword from the site o
 52,4,Sword of Milos,"Sinister greatsword fashioned from a giant's backbone.
 Metes out wounds like a lopsided saw-blade, and restores some FP upon defeating an enemy.
 
-Milos was undersized for a giant, and was viewed as sullied and terribly grotesque.",3.0,29.0,28,10.0,15,19,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6998ff30l0i1p6uu73zw546f13u.png
+Milos was undersized for a giant, and was viewed as sullied and terribly grotesque.",3,29,28,10,15,19,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6998ff30l0i1p6uu73zw546f13u.png
 53,4,Golden Order Greatsword,"Greatsword made of light, modeled after the Elden Ring itself. Forged by King Consort Radagon to proudly
 symbolize the tenets of the Golden Order.
 One of the legendary armaments.
 
-Telltale signs betray that this was once the greatsword bequeathed to him by his first wife, Rennala.",,,29,10.0,16,21,0,28,0,https://eldenring.fanapis.com/images/weapons/17f69c19b1al0i1p77ig6czaoxosd.png
+Telltale signs betray that this was once the greatsword bequeathed to him by his first wife, Rennala.",,,29,10,16,21,0,28,0,https://eldenring.fanapis.com/images/weapons/17f69c19b1al0i1p77ig6czaoxosd.png
 54,4,Claymore,"A large sword with a long, straight blade. This heavy sword is usually wielded with two hands, but for those with enough strength, one is sufficient.
 
-In addition to the heavy sweeping attacks, it can also make a heavy piercing thrust, making this a versatile weapon.",,,30,9.0,16,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d938dal0i1p7cva71qgpwuo6w.png
+In addition to the heavy sweeping attacks, it can also make a heavy piercing thrust, making this a versatile weapon.",,,30,9,16,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d938dal0i1p7cva71qgpwuo6w.png
 55,4,Gargoyle's Greatsword,"Bronze greatsword wielded by Valiant Gargoyles.
 
 Just like the wielder, the missing parts have been mended with corpse wax; a patchwork of champions.",,,31,11.5,18,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d64ed7l0i1p7jmmtge0ag3i4.png
 56,4,Death's Poker,"Barbed rod carried by Deathbirds.
 
-The birds are graveyard fire keepers; it is said they rake out the ashen remains of the dead from their kilns.",1.0,,32,8.5,15,17,11,0,0,https://eldenring.fanapis.com/images/weapons/17f69d8a812l0i1p7s9xmq3zqql69.png
+The birds are graveyard fire keepers; it is said they rake out the ashen remains of the dead from their kilns.",1,,32,8.5,15,17,11,0,0,https://eldenring.fanapis.com/images/weapons/17f69d8a812l0i1p7s9xmq3zqql69.png
 57,4,Gargoyle's Blackblade,"Bronze greatsword wielded by Valiant Gargoyles, mended with blackened corpse wax.
 Deals holy damage.
 
@@ -211,16 +211,16 @@ Such is the mark of those who serve Maliketh, the Black Blade.",,,33,11.5,18,10,
 58,5,Greatsword,"A coarse iron lump of an ultra greatsword.
 Mows down foes by utilizing its incredible weight.
 
-Though handling it likely requires the wielder to have surpassed the realm of the merely human, it is precisely for this reason the weapon is used to slaughter even inhuman foes.",,,21,23.0,31,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6974feb9l0i1olnp61dvex8ugut.png
+Though handling it likely requires the wielder to have surpassed the realm of the merely human, it is precisely for this reason the weapon is used to slaughter even inhuman foes.",,,21,23,31,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6974feb9l0i1olnp61dvex8ugut.png
 59,5,Watchdog's Greatsword,"Stone greatsword wielded by Erdtree Burial Watchdogs.
 
-Though decorated with the watchman's eye, the pupil was taken by graverobbers and is now hollow, leaving this sword a mere lump of stone.",,,21,22.0,30,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c91071l0i1olmq0iokptn3hftg.png
+Though decorated with the watchman's eye, the pupil was taken by graverobbers and is now hollow, leaving this sword a mere lump of stone.",,,21,22,30,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c91071l0i1olmq0iokptn3hftg.png
 60,5,Maliketh's Black Blade,"Maliketh's black blade which once harbored the power of the Rune of Death. A sad shadow of its former glory.
 
-After a fragment of Death was stolen on that fateful night, Maliketh bound the blade within his own flesh, such that none might ever rob Death again.",,,34,22.0,34,12,0,20,0,https://eldenring.fanapis.com/images/weapons/17f6946481al0i1olr8v9h8hxdx439.png
+After a fragment of Death was stolen on that fateful night, Maliketh bound the blade within his own flesh, such that none might ever rob Death again.",,,34,22,34,12,0,20,0,https://eldenring.fanapis.com/images/weapons/17f6946481al0i1olr8v9h8hxdx439.png
 61,5,Troll's Golden Sword,"Sword given to the lesser giants who fought for the Erdtree during the War against the Giants long ago.
 
-Though they have lost their minds, they stay inseparable from their swords that are in sad shape—such that the gold plating had flaked away.",,,35,19.0,29,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d62fd0l0i1olqu110xlsqhiuo.png
+Though they have lost their minds, they stay inseparable from their swords that are in sad shape—such that the gold plating had flaked away.",,,35,19,29,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d62fd0l0i1olqu110xlsqhiuo.png
 62,5,Zweihander,"Just about the largest sword a mere man is capable of swinging.
 True to its name, it is designed to be wielded in both hands, but those of merely ordinary strength will still struggle to do so.
 
@@ -228,30 +228,30 @@ The long blade is heavy and sharp, sending foes reeling back with its broader st
 63,5,Starscourge Greatsword,"Curved greatswords of black steel wielded by General Radahn.
 A pair of weapons decorated with a lion mane motif.
 
-Radahn earned considerable renown as the Starscourge in his youth, and it is said that it was during this time he engraved the gravity crest upon these blades.",,,36,20.0,38,12,15,0,0,https://eldenring.fanapis.com/images/weapons/17f69d917e2l0i1omllp8sfqfor6g.png
+Radahn earned considerable renown as the Starscourge in his youth, and it is said that it was during this time he engraved the gravity crest upon these blades.",,,36,20,38,12,15,0,0,https://eldenring.fanapis.com/images/weapons/17f69d917e2l0i1omllp8sfqfor6g.png
 64,5,Royal Greatsword,"Greatsword decorated in royal Carian style.
 Favored weapon of Blaidd the Half-Wolf.
 
-In defiance of the fate he was born to, Blaidd swore to serve no master but Ranni. As proof, the sword was imbued with a cold magic at the moment the oath was sworn.",,,37,20.0,26,18,22,0,0,https://eldenring.fanapis.com/images/weapons/17f695e24bel0i1omb3kpapbx2zhn.png
+In defiance of the fate he was born to, Blaidd swore to serve no master but Ranni. As proof, the sword was imbued with a cold magic at the moment the oath was sworn.",,,37,20,26,18,22,0,0,https://eldenring.fanapis.com/images/weapons/17f695e24bel0i1omb3kpapbx2zhn.png
 65,5,Godslayer's Greatsword,"Sacred sword of the Gloam-Eyed Queen who controlled the Godskin Apostles before her defeat at the hands of Maliketh.
 
 The black flames wielded by the apostles are channeled from this sword.",,,38,17.5,20,22,0,20,0,https://eldenring.fanapis.com/images/weapons/17f69814033l0i1omfg9fbsxwonld.png
 66,5,Ruins Greatsword,"Originally rubble from a ruin which fell from the sky, this surviving fragment was honed into a weapon.
 One of the legendary armaments.
 
-The ruin it came from crumbled when struck by a meteorite, as such this weapon harbors its destructive power.",,,39,23.0,50,0,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69695544l0i1omj4kim8sh6j5xh.png
+The ruin it came from crumbled when struck by a meteorite, as such this weapon harbors its destructive power.",,,39,23,50,0,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69695544l0i1omj4kim8sh6j5xh.png
 67,5,Grafted Blade Greatsword,"The storied sword of Castle Morne. A revenger's weapon, it is burdened with oceans of anger and regret.
 One of the legendary armaments.
 
-A lone surviving champion from a country now vanished was so determined to continue fighting that he claimed the swords of an entire clan of warriors.",,,40,21.0,40,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69ba4b74l0i1omi90yu0wdq7oxu.png
+A lone surviving champion from a country now vanished was so determined to continue fighting that he claimed the swords of an entire clan of warriors.",,,40,21,40,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69ba4b74l0i1omi90yu0wdq7oxu.png
 68,5,Troll Knight's Sword,"Greatsword embedded with a blue glintstone.
-Weapon of the trolls in service to the royal family of Caria. Called into service when the Queen invoked an oath they swore, the trolls are treated as true knights of Caria, and fight arm in arm with their human comrades.",,,35,18.0,20,14,18,0,0,https://eldenring.fanapis.com/images/weapons/17f694bf77bl0i1on5kwkodf1d6fkp.png
+Weapon of the trolls in service to the royal family of Caria. Called into service when the Queen invoked an oath they swore, the trolls are treated as true knights of Caria, and fight arm in arm with their human comrades.",,,35,18,20,14,18,0,0,https://eldenring.fanapis.com/images/weapons/17f694bf77bl0i1on5kwkodf1d6fkp.png
 69,6,Estoc,"Large piercing sword with a long, hard bladed edge which is also capable of slashing attacks.
 
 For its large size, it can be wielded rather nimbly, leaving little opportunity for the enemy to counter.",,,41,4.5,11,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69747395l0i1po2ze4jsp35ms3t.png
 70,6,Cleanrot Knight's Sword,"Piercing sword of the Cleanrot Knights who fought alongside Malenia, Blade of Miquella.
 
-Mainly used as a backup weapon, in combination with a long-handled armament.",,,41,4.0,11,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6990b8f9l0i1poeub82lv32r18o.png
+Mainly used as a backup weapon, in combination with a long-handled armament.",,,41,4,11,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6990b8f9l0i1poeub82lv32r18o.png
 71,6,Rapier,"A piercing sword with a sharp, slender blade.
 In addition to this weapon's thrusting attack prowess, it also boasts the ability to be used while guarding with a shield.
 
@@ -262,11 +262,11 @@ Signature weapon of the sorcerer Rogier.
 High dexterity is required to wield the blade to its full potential, but mastery is a sight to behold, characterized by a flowing style which excels in successive attacks.",,,6,3.5,8,17,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d58854l0i1pom1ferfthsgsd.png
 73,6,Antspur Rapier,"Spur of a giant ant which has been fashioned into a rapier. The blade drips with scarlet rot.
 
-Scarlet rot is an old legend, of which Maleigh Marais of the Shaded Castle was a private believer. And indeed, he eventually found his own personal goddess.",4.0,,41,3.0,10,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697b4c08l0i1pomqr1pxcel70uf.png
+Scarlet rot is an old legend, of which Maleigh Marais of the Shaded Castle was a private believer. And indeed, he eventually found his own personal goddess.",4,,41,3,10,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697b4c08l0i1pomqr1pxcel70uf.png
 74,6,Frozen Needle,"A razor-thin piercing blade of ice.
 Forged by Iji, the Carian Royal Blacksmith.
 
-Can inflict frost upon enemies, and launch its blade with a strong attack. The blade immediately regenerates.",1.0,,41,2.5,11,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a8a231l0i1potleffsoj8ycfb.png
+Can inflict frost upon enemies, and launch its blade with a strong attack. The blade immediately regenerates.",1,,41,2.5,11,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a8a231l0i1potleffsoj8ycfb.png
 75,6,Noble's Estoc,"Estoc carried by wandering nobles.
 Made to be easy to wield.
 
@@ -274,10 +274,10 @@ Daubed with gold from tip to tail, it should fetch a good sum.",,,41,3.5,9,10,0,
 76,7,Bloody Helice,"Ominous piercing sword with a winding blade.
 Carried by the noble servants of the Lord of Blood.
 
-Designed to bore into flesh, causing severe blood loss at the wound. The extracted blood trickles gracefully down the length of the blade.",3.0,,42,8.0,16,19,0,0,17,https://eldenring.fanapis.com/images/weapons/17f69987c03l0i1pdyutp139wmu1sh.png
+Designed to bore into flesh, causing severe blood loss at the wound. The extracted blood trickles gracefully down the length of the blade.",3,,42,8,16,19,0,0,17,https://eldenring.fanapis.com/images/weapons/17f69987c03l0i1pdyutp139wmu1sh.png
 77,7,Godskin Stitcher,"Elegant piercing sword with a celadon colored blade wielded by Godskin Nobles.
 
-The nobles possess skill with the sword unmatched by any lowborn. Despite its size, successive attacks from this weapon are swifter than the eye can follow.",,,41,7.0,14,17,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6969f10el0i1pecne5vzed6lx56.png
+The nobles possess skill with the sword unmatched by any lowborn. Despite its size, successive attacks from this weapon are swifter than the eye can follow.",,,41,7,14,17,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6969f10el0i1pecne5vzed6lx56.png
 78,7,Great Épée,"Large rapier featuring a thin, sharp blade.
 Commonly used in life or death duels.
 
@@ -285,17 +285,17 @@ Like its smaller counterparts, it is made for thrusting attacks, and can be used
 79,7,Dragon King's Cragblade,"Piercing Gravel Stone sword containing primeval lightning.
 A portion of the Dragonlord's power, gained from a remembrance.
 
-This weapon commands great power over the paltry, mortal dragons of today.",,,43,8.0,18,37,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699a14b1l0i1pekzisiwkpul53i.png
+This weapon commands great power over the paltry, mortal dragons of today.",,,43,8,18,37,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699a14b1l0i1pekzisiwkpul53i.png
 80,3,Falchion,"A curved sword with a single-sided blade.
 Delivers slashing attacks with its sharp blade, but is ineffective against thick armor and hides covered in tough scales.
 
 Wielders of the weapon employ a unique style that enhances attacks with spinning motions.",,,16,3.5,9,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69ccaa4al0i1orhsuhv0ll0uko.png
 81,3,Beastman's Curved Sword,"Curved sword forged of dull iron wielded by the beastmen of Farum Azula.
 
-The blade is heavy but well-balanced. Comparatively easy to wield for the damage it delivers.",,,16,4.0,13,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d22df5l0i1os1vzj7jka683f.png
+The blade is heavy but well-balanced. Comparatively easy to wield for the damage it delivers.",,,16,4,13,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d22df5l0i1os1vzj7jka683f.png
 82,3,Shotel,"Curved sword with a severely hooked blade. Its attacks can slip through an enemy's guard.
 
-Made to hunt down humans, this weapon requires high dexterity to wield effectively.",,,16,2.0,9,19,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69498ae3l0i1os4m19u5e478yu2.png
+Made to hunt down humans, this weapon requires high dexterity to wield effectively.",,,16,2,9,19,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69498ae3l0i1os4m19u5e478yu2.png
 83,3,Shamshir,"Curved sword with a thin blade of ample length.
 Light of weight despite its larger size, its slicing attacks come in rapid succession.
 
@@ -303,11 +303,11 @@ A devastatingly powerful weapon in the hands of a skilled swordsman.",,,16,3.5,7
 84,3,Bandit's Curved Sword,"Curved sword with a light, crescent-shaped blade.
 Used by the bandits who ran rampant in the wake of the Shattering.
 
-Most of the blade is now darkened and covered in rust, but with enough dexterity this weapon may still stand up to some use.",,,16,5.0,11,13,0,0,0,
+Most of the blade is now darkened and covered in rust, but with enough dexterity this weapon may still stand up to some use.",,,16,5,11,13,0,0,0,
 85,3,Magma Blade,"Curved sword with a blade fashioned from the lava of Mt. Gelmir.
 An armament of the man-serpents, impossible for a human to have made.
 
-Deals fire damage.",,,44,4.0,9,15,0,16,0,https://eldenring.fanapis.com/images/weapons/17f69908917l0i1os577fp2a0c8n8w.png
+Deals fire damage.",,,44,4,9,15,0,16,0,https://eldenring.fanapis.com/images/weapons/17f69908917l0i1os577fp2a0c8n8w.png
 86,3,Flowing Curved Sword,"Legends speak of a master of the sword garbed in blue, and his curved blade that was patterned after flowing water.
 
 Strong attack unleashes a series of strikes akin to a dance, offering a glimpse into the legend.",,,16,3.5,9,17,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694e2077l0i1osqjan4fnttniyc.png
@@ -318,21 +318,21 @@ Crafted from a relic of the Naturalborn of the Void who is said to have assailed
 88,3,Scavenger's Curved Sword,"Unique curved sword, notched like shark's teeth.
 Weapon carried by corpse pillagers who prowl the sites of old battles.
 
-The blade is tacky with blood and covered in hefty nicks, making it totally uneven. Life can be sinister indeed.",3.0,,16,3.5,9,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d7cf23l0i1osx8dg6r5dybhck.png
+The blade is tacky with blood and covered in hefty nicks, making it totally uneven. Life can be sinister indeed.",3,,16,3.5,9,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d7cf23l0i1osx8dg6r5dybhck.png
 89,3,Eclipse Shotel,"Storied sword and treasure of Castle Sol that depicts an eclipsed sun drained of color.
 One of the legendary armaments.
 
-In Sol, the sight of an eclipse inspires a dreadful awe, preventing an onlooker from averting his gaze.",,,46,3.0,10,25,0,30,0,https://eldenring.fanapis.com/images/weapons/17f695e8a95l0i1osvuh2s392bslgf.png
+In Sol, the sight of an eclipse inspires a dreadful awe, preventing an onlooker from averting his gaze.",,,46,3,10,25,0,30,0,https://eldenring.fanapis.com/images/weapons/17f695e8a95l0i1osvuh2s392bslgf.png
 90,3,Serpent-God's Curved Sword,"Curved sword fashioned in the image of an ancient serpent deity and tool of a forgotten religion practiced on Mt. Gelmir.
 
-Formerly used to offer up sacrifices, this sword restores HP upon slaying an enemy.",,28.0,16,4.0,13,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6977fc1al0i1oswu20i8xjh9liqj.png
+Formerly used to offer up sacrifices, this sword restores HP upon slaying an enemy.",,28,16,4,13,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6977fc1al0i1oswu20i8xjh9liqj.png
 91,3,Mantis Blade,"A curved sword with a blade at both ends wielded by the Cemetery Shades, the insect-ridden grave keepers.
 
-The blade is thin and sharp, and strong attack unleashes a far-reaching slash.",,,16,4.0,10,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a28357l0i1otefec4u3qjtjve.png
+The blade is thin and sharp, and strong attack unleashes a far-reaching slash.",,,16,4,10,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a28357l0i1otefec4u3qjtjve.png
 92,3,Scimitar,"A curved sword with a single-sided blade.
 Delivers slashing attacks with its sharp blade, but is ineffective against thick armor and hides covered in tough scales.
 
-Smaller in size than most curved swords, it carves into enemies with quick, sharp cuts.",,,16,3.0,7,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695c221bl0i1oti2aqelikacuj6.png
+Smaller in size than most curved swords, it carves into enemies with quick, sharp cuts.",,,16,3,7,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695c221bl0i1oti2aqelikacuj6.png
 93,3,Grossmesser,"Curved sword boasting a large blade.
 This weapon is designed to make use of its weight in combination with its sharp cutting edge.
 
@@ -343,74 +343,74 @@ The blade conceals gravity-manipulating magic.
 A weapon unique to the Onyx Lords, a race of ancients with skin of stone who were said to have risen to life when a meteor struck long ago.",,,47,11.5,20,16,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69d4ff4fl0i1oq3u3wuk37p9n8y.png
 95,8,Dismounter,"This curved greatsword wielded by the brawny sellswords of Kaiden combines the blade of a scimitar with the heft of a hatchet.
 
-A difficult to handle weapon that demands much of the wielder's strength and dexterity, but with practice and ability, it can serve as a versatile weapon even on horseback.",,,16,10.0,19,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c95aedl0i1oqkej3b4sanu0ho.png
+A difficult to handle weapon that demands much of the wielder's strength and dexterity, but with practice and ability, it can serve as a versatile weapon even on horseback.",,,16,10,19,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c95aedl0i1oqkej3b4sanu0ho.png
 96,8,Bloodhound's Fang,"Curved greatsword with a gently undulating blade wielded by Bloodhound Knights.
 
-A fearsome blade capable of brutal airborne attacks.",3.0,,48,11.5,18,17,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697d9a68l0i1oqeay5e8bb4oc3g.png
+A fearsome blade capable of brutal airborne attacks.",3,,48,11.5,18,17,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697d9a68l0i1oqeay5e8bb4oc3g.png
 97,8,Magma Wyrm's Scalesword,"Curved greatsword wielded by Magma Wyrms. The shape resembles a dragon's jaw and is covered in hard scales.
 
-It's said these land-bound dragons were once human heroes who partook in dragon communion, a grave transgression for which they were cursed to crawl the earth upon their bellies, shadows of their former selves.",,,49,15.0,24,15,0,18,0,https://eldenring.fanapis.com/images/weapons/17f6959a5afl0i1oqpihevj06l1n6f.png
+It's said these land-bound dragons were once human heroes who partook in dragon communion, a grave transgression for which they were cursed to crawl the earth upon their bellies, shadows of their former selves.",,,49,15,24,15,0,18,0,https://eldenring.fanapis.com/images/weapons/17f6959a5afl0i1oqpihevj06l1n6f.png
 98,8,Zamor Curved Sword,"Weapon wielded by the knights of Zamor who earned great renown during the War against the Giants.
 
-In apparent devotion to winter, the curved blade is styled after an icy wind and imbued with a powerful frost effect.",1.0,,50,9.0,16,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6951db06l0i1or16gi01imzlv6v.png
+In apparent devotion to winter, the curved blade is styled after an icy wind and imbued with a powerful frost effect.",1,,50,9,16,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6951db06l0i1or16gi01imzlv6v.png
 99,8,Omen Cleaver,"Heavy-bladed curved sword of colossal size awarded to Omen as a tool of war. This weapon is made to take advantage of brute strength.
 
 The pattern etched upon the blade is the remnant of a deteriorative malediction. Indeed, when bestowing a weapon, preparations must be made for taking it away.",,,16,11.5,19,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699cd816l0i1oqxnpfv24k6jntj.png
 100,8,Monk's Flameblade,"Curved sword with a flickering flame motif.
 Wielded by the Fire Monks who came from the Mountaintops of the Giants.
 
-The monks came to the land of Liurnia in pursuit of a fugitive who stole their fire.",,,16,9.0,18,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d7bd32l0i1or3zgprsj3kycze.png
+The monks came to the land of Liurnia in pursuit of a fugitive who stole their fire.",,,16,9,18,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d7bd32l0i1or3zgprsj3kycze.png
 101,8,Beastman's Cleaver,"Curved greatsword of colossal size forged of dull iron and wielded by the beastmen of Farum Azula.
 
 The blade is incredibly heavy, but well-balanced. Comparatively easy to wield for the damage it delivers. It's clear the beastmen possess knowledge beyond human ken.",,,16,16.5,25,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695a31bbl0i1orafp8agcajnhoq.png
 102,8,Morgott's Cursed Sword,"Warped blade of shifting hue used by Morgott, the Omen King.
 
-The accursed blood that Morgott recanted and sealed away reformed into this blade.",3.0,,51,7.5,14,35,0,0,17,https://eldenring.fanapis.com/images/weapons/17f695e77b1l0i1orcoyco0l9fpi6j.png
+The accursed blood that Morgott recanted and sealed away reformed into this blade.",3,,51,7.5,14,35,0,0,17,https://eldenring.fanapis.com/images/weapons/17f695e77b1l0i1orcoyco0l9fpi6j.png
 103,9,Uchigatana,"A katana with a long single-edged curved blade.
 A unique weapon wielded by the samurai from the Land of Reeds.
 
-The blade, with its undulating design, boasts extraordinary sharpness, and its slash attacks cause blood loss.",3.0,,52,5.5,11,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69cd8a23l0i1peugvwepjdkaqh.png
+The blade, with its undulating design, boasts extraordinary sharpness, and its slash attacks cause blood loss.",3,,52,5.5,11,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69cd8a23l0i1peugvwepjdkaqh.png
 104,9,Nagakiba,"Katana with a ferociously long blade.
 Signature weapon of Yura, hunter of Bloody Fingers.
 
-Reminiscent of a reinforced spear, its imposing length can be put to good use with powerful thrusting attacks.",3.0,,52,7.0,18,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69728e6al0i1peyh4scwxfhl357.png
+Reminiscent of a reinforced spear, its imposing length can be put to good use with powerful thrusting attacks.",3,,52,7,18,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69728e6al0i1peyh4scwxfhl357.png
 105,9,Hand of Malenia,"Blade built into Malenia's prosthetic arm.
 Through consecration it is resistant to rot.
 
 Malenia's war prosthesis symbolized her victories.
-Some claim to have seen wings when the weapon was raised aloft; wings of fierce determination that have never known defeat.",3.0,,53,7.0,16,48,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69667faal0i1pezui5k6y6r0fin.png
+Some claim to have seen wings when the weapon was raised aloft; wings of fierce determination that have never known defeat.",3,,53,7,16,48,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69667faal0i1pezui5k6y6r0fin.png
 106,9,Meteoric Ore Blade,"Katana forged from meteoric ore to dispatch lifeforms born of falling stars.
 Deals magic damage.
 
-The blade is weighty, known to deliver slashes of such ferocity that the impact is said to resemble the crash of a falling meteor.",3.0,,54,7.5,15,14,18,0,0,https://eldenring.fanapis.com/images/weapons/17f69513a8al0i1pf3ozolljjevfk.png
+The blade is weighty, known to deliver slashes of such ferocity that the impact is said to resemble the crash of a falling meteor.",3,,54,7.5,15,14,18,0,0,https://eldenring.fanapis.com/images/weapons/17f69513a8al0i1pf3ozolljjevfk.png
 107,9,Rivers of Blood,"Weapon of Okina, swordsman from the Land of Reeds.
 A cursed weapon that has felled countless men.
 
-When Mohg, the Lord of Blood, first felt Okina's sword, and madness, upon his flesh, he had a proposal, to offer Okina the life of a demon, whose thirst would never go unsated.",3.0,,55,6.5,12,18,0,0,20,https://eldenring.fanapis.com/images/weapons/17f6946d08bl0i1pfb4sevs913hvu.png
+When Mohg, the Lord of Blood, first felt Okina's sword, and madness, upon his flesh, he had a proposal, to offer Okina the life of a demon, whose thirst would never go unsated.",3,,55,6.5,12,18,0,0,20,https://eldenring.fanapis.com/images/weapons/17f6946d08bl0i1pfb4sevs913hvu.png
 108,9,Moonveil,"Katana forged of glintstone.
 Masterpiece of a Sellian swordsmith.
 
-Light enwreathes the blade when sheathed, explaining its Moonveil moniker.",3.0,,56,6.5,12,18,23,0,0,https://eldenring.fanapis.com/images/weapons/17f69a10accl0i1pfj7uwvc9kzei7d.png
+Light enwreathes the blade when sheathed, explaining its Moonveil moniker.",3,,56,6.5,12,18,23,0,0,https://eldenring.fanapis.com/images/weapons/17f69a10accl0i1pfj7uwvc9kzei7d.png
 109,9,Dragonscale Blade,"A weapon made by sharpening a Gravel Stone scale, thought to be the source of ancient dragon immortality, into an unclouded blade.
 
 Alas, the Dragonkin Soldiers never attained immortality, and perished as decrepit, pale imitations of their skyborn kin.",,,57,5.5,12,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c558e4l0i1pfn93tt9wcpo0di.png
 110,9,Serpentbone Blade,"Sinister katana modeled after a serpent bone.
 
-The densely packed row of spines that jut away from the cutting edge are coated in a lethal poison.",2.0,,58,6.0,11,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d611efl0i1pfqtebu0oq2b2w4.png
+The densely packed row of spines that jut away from the cutting edge are coated in a lethal poison.",2,,58,6,11,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d611efl0i1pfqtebu0oq2b2w4.png
 111,10,Twinblade,"A sword with blades on both sides of the hilt.
 This weapon is difficult to wield and demands high dexterity.
 
-Can be wielded with a single hand, but its true strength is unlocked with dual-handed spinning attacks.",,,16,7.0,10,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69afb6c2l0i1ps6dducecpwa4m.png
+Can be wielded with a single hand, but its true strength is unlocked with dual-handed spinning attacks.",,,16,7,10,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69afb6c2l0i1ps6dducecpwa4m.png
 112,10,Godskin Peeler,"Unique twinblade wielded by Godskin Apostles characterized by its disturbing design. One end features a sickle for slicing attacks while the other boasts a winding spike for boring into flesh.
 
-Much skill is required to wield this weapon due to its asymmetric nature.",,,59,8.0,17,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69528e34l0i1pq5pn4dg3bbkmj.png
+Much skill is required to wield this weapon due to its asymmetric nature.",,,59,8,17,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69528e34l0i1pq5pn4dg3bbkmj.png
 113,10,Twinned Knight Swords,"An attractive twinblade of fine make that prizes the chivalric way.
 
-Can be wielded with a single hand, but its true strength is unlocked with dual-handed spinning attacks.",,,16,8.0,16,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a2b9c8l0i1pqbpbbyiylafnx.png
+Can be wielded with a single hand, but its true strength is unlocked with dual-handed spinning attacks.",,,16,8,16,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a2b9c8l0i1pqbpbbyiylafnx.png
 114,10,Eleonora's Poleblade,"Twinned naginata forged in the Land of Reeds.
 Chosen weapon of Eleonora, Violet Bloody Finger.
 
-Her mastery of the sword was such that her onslaught was likened to a whirlwind, but now her legacy is stained by accursed blood.",3.0,,60,6.0,12,21,0,0,19,https://eldenring.fanapis.com/images/weapons/17f69d7ad55l0i1pqhdj20wzeg63ts.png
+Her mastery of the sword was such that her onslaught was likened to a whirlwind, but now her legacy is stained by accursed blood.",3,,60,6,12,21,0,0,19,https://eldenring.fanapis.com/images/weapons/17f69d7ad55l0i1pqhdj20wzeg63ts.png
 115,10,Gargoyle's Twinblade,"Bronze twinblade wielded by Valiant Gargoyles.
 
 Just like the wielder, the missing parts have been mended with corpse wax; a patchwork of champions.",,,16,8.5,18,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695e037bl0i1pqkyetqd7zbu8l.png
@@ -427,29 +427,29 @@ Wielding this striking weapon requires no skill.
 A simple, primitive weapon that requires only brute strength and persistence to hammer your foe into the ground.",,,61,3.5,10,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694bb057l0i1pc726b2jy8z22n.png
 119,11,Curved Club,"Hard, curved club, shaped like a crescent moon.
 
-Wielded instead of a curved sword by Albinaurics lacking dexterity. The only point of similarity between the two is the shape.",,,61,5.0,11,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696774f3l0i1pbvceygv4mkw0d7.png
+Wielded instead of a curved sword by Albinaurics lacking dexterity. The only point of similarity between the two is the shape.",,,61,5,11,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696774f3l0i1pbvceygv4mkw0d7.png
 120,11,Warpick,"Battle hammer with a hard protruding beak.
 A pickaxe designed for combat, in essence.
 
 A simple but highly effective weapon, the weighty piercing attack casually rips through metal armor.",,,9,2.5,11,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694ca651l0i1pbx2gimykg3587g.png
 121,11,Morning Star,"Battle hammer comprised of a globe attached to a handle. Though a bludgeon dealing strike damage, the appellative star is covered in spikes which cause blood loss.
 
-Ironic given its graceful name, this weapon often reeks of blood.",3.0,,9,5.0,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d6e6e0l0i1pctcpzxxaoxt1wc.png
+Ironic given its graceful name, this weapon often reeks of blood.",3,,9,5,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d6e6e0l0i1pctcpzxxaoxt1wc.png
 122,11,Varré's Bouquet,"A steel mace resembling a charming bouquet of roses. Each petal has a sharpened edge, leaving the roses perpetually colored with blood.
 
-This weapon reflects White Mask Varré's manner of speech rather well, enticing in its splendor, but full of deadly consequence.",3.0,,62,2.0,8,16,0,0,24,https://eldenring.fanapis.com/images/weapons/17f69aced5el0i1pcsbypcz3lxclfq.png
+This weapon reflects White Mask Varré's manner of speech rather well, enticing in its splendor, but full of deadly consequence.",3,,62,2,8,16,0,0,24,https://eldenring.fanapis.com/images/weapons/17f69aced5el0i1pcsbypcz3lxclfq.png
 123,11,Spiked Club,"A club with beast fangs wrapped around the striking end. The uneven spread of fangs causes blood loss.
 
-Given only to the toughest of demi-humans, this weapon is a badge of honor. Or so the demi-humans believe.",3.0,,61,5.0,12,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699d1084l0i1pcmssd76cdlcjqk.png
+Given only to the toughest of demi-humans, this weapon is a badge of honor. Or so the demi-humans believe.",3,,61,5,12,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699d1084l0i1pcmssd76cdlcjqk.png
 124,11,Hammer,"Hammer comprised of a large stone affixed to a metal handle. Originally a blacksmith's tool.
 
 The art of smithing is said to have originated among the giants. This weapon's striking attacks boast ample weight behind them.",,,9,6.5,14,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a22461l0i1pcneoqys4gxbav.png
 125,11,Monk's Flamemace,"Battle hammer made to resemble flickering flames. Signature weapon of the Fire Monks, who hail from the Mountaintops of the Giants.
 
-The unique strong attack rouses fiery combative spirit.",,,9,6.0,13,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b676c4l0i1pcy677icvt5r8m9.png
+The unique strong attack rouses fiery combative spirit.",,,9,6,13,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b676c4l0i1pcy677icvt5r8m9.png
 126,11,Envoy's Horn,"Golden horn of the Oracle Envoys. Profoundly weighty, its blows are sure to be felt.
 
-Originally an instrument, but one that cannot be sounded by a mere human. Or perhaps it is too early to sound the call.",,,63,4.0,10,12,0,16,0,https://eldenring.fanapis.com/images/weapons/17f695571bbl0i1pdcktfpfya20p2.png
+Originally an instrument, but one that cannot be sounded by a mere human. Or perhaps it is too early to sound the call.",,,63,4,10,12,0,16,0,https://eldenring.fanapis.com/images/weapons/17f695571bbl0i1pdcktfpfya20p2.png
 127,11,Scepter of the All-Knowing,"Scepter in the form of a hand grasping a pearl. Signature weapon of Sir Gideon Ofnir, the All-Knowing. The pearl stands for the world, the heavens, and an eye, representing the many forms of knowledge, never fully attainable. Even knowing that, the All-Knowing's hand grasps for it.",,,64,4.5,12,18,21,0,0,https://eldenring.fanapis.com/images/weapons/17f6980f9d0l0i1pdddh1p7a12vqnc.png
 128,11,Nox Flowing Hammer,"Mace shaped like a suspended metal droplet wielded by monks of the Eternal City.
 
@@ -459,44 +459,44 @@ Forged from liquid metal from a Silver Tear, it is thoroughly tempered until har
 Some life yet remains in this legacy of an ancient act of blasphemy, as evidenced by the barely perceptible warmth it still exudes.",,,65,4.5,15,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b7f413l0i1pdlfnyqleuyg0fm.png
 130,11,Stone Club,"Signature weapon of battlemages, hewn from hard glintstone. This club is much heavier than its size suggests, but has no magic power.
 
-So that they not lose sight of the true essence of combat, battlemages prefer to feel the impact of their blows, fighting their opponents hand to hand.",,,9,7.0,16,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6984dcccl0i1pdm4f6od648mce.png
+So that they not lose sight of the true essence of combat, battlemages prefer to feel the impact of their blows, fighting their opponents hand to hand.",,,9,7,16,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6984dcccl0i1pdm4f6od648mce.png
 131,11,Marika's Hammer,"Stone hammer made in the lands of the Numen, outside the Lands Between. The tool with which Queen Marika shattered the Elden Ring and Radagon attempted to repair it.
 
-The hammer partially broke upon shattering the Ring, becoming splintered with rune fragments.",,,66,6.0,20,12,0,19,0,https://eldenring.fanapis.com/images/weapons/17f6976dccbl0i1pdxa3y1gcjkryhw.png
+The hammer partially broke upon shattering the Ring, becoming splintered with rune fragments.",,,66,6,20,12,0,19,0,https://eldenring.fanapis.com/images/weapons/17f6976dccbl0i1pdxa3y1gcjkryhw.png
 132,12,Large Club,"A thick, solid lump of wood.
 Wielding this striking weapon requires no skill.
 
 A simple, primitive weapon that requires only brute strength to swing about.",,,61,8.5,22,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698bc778l0i1pqyr7r7agoq3o5d.png
 133,12,Greathorn Hammer,"Huge thick horn carved with tree ring-like markings adapted into a bludgeoning weapon. Wielded by ancestral follower warriors.
 
-The ancient horn is imbued with the power of ancestral spirits. A small amount of HP is restored upon defeating an enemy.",,28.0,61,10.0,22,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696c1ee3l0i1pr4ayhpbcwld3pn.png
+The ancient horn is imbued with the power of ancestral spirits. A small amount of HP is restored upon defeating an enemy.",,28,61,10,22,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696c1ee3l0i1pr4ayhpbcwld3pn.png
 134,12,Battle Hammer,"Large iron great hammer designed for gladiatorial combat. Used by duelists who were exiled from the colosseum.
 
-Weighty enough to crush armor and its wearer alike.",,,67,10.0,26,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b42027l0i1prapddaur3pdili.png
+Weighty enough to crush armor and its wearer alike.",,,67,10,26,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b42027l0i1prapddaur3pdili.png
 135,12,Great Mace,"Huge bludgeon with sharp protrusions. An enlarged version of its smaller cousin.
 
 Maintains all the advantages of smaller bludgeons, boasting few deficiencies while being very capable at breaking enemy guards and stances. A shrewd choice for simple slugging matches.",,,68,11.5,28,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a1045al0i1prfggf7geafalun.png
 136,12,Curved Great Club,"Large curved club of hard wood, shaped like a crescent moon.
 
-Wielded by Albinaurics lacking the dexterity demanded by a curved sword, and who prefer the added weight and destructive force.",,,61,10.0,24,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aaf476l0i1prkfafl8jets7wh.png
+Wielded by Albinaurics lacking the dexterity demanded by a curved sword, and who prefer the added weight and destructive force.",,,61,10,24,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aaf476l0i1prkfafl8jets7wh.png
 137,12,Celebrant's Skull,"Large bludgeon decorated with flowers and many-colored fabrics. Ceremonial tool used by dancers during the festivities of Dominula, Windmill Village.
 
 The striking end is a skull too large in size to be human.
-Grants trace amounts of runes on landing attacks.",,26.0,61,8.5,18,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69ace310l0i1proreclwz3grgz.png
+Grants trace amounts of runes on landing attacks.",,26,61,8.5,18,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69ace310l0i1proreclwz3grgz.png
 138,12,Pickaxe,"Large pickaxe designed to crack thick bedrock. Tool of sturdy miners.
 
 Not originally designed as a weapon, but very adept at piercing armor.
-""Little wretches, do you think your armor harder than stone?""",,,68,10.0,22,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aa2722l0i1ps9o8lwz4rprn29.png
+""Little wretches, do you think your armor harder than stone?""",,,68,10,22,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aa2722l0i1ps9o8lwz4rprn29.png
 139,12,Beastclaw Greathammer,"Great hammer with a striking end modelled to resemble five beastly claws.
 
-The black nails protruding from golden fur are said to represent Serosh, Lord of Beasts, who went on to become King Godfrey's Regent.",,,69,9.0,20,10,0,18,0,https://eldenring.fanapis.com/images/weapons/17f69aff56dl0i1przmnvkw34pmvm.png
+The black nails protruding from golden fur are said to represent Serosh, Lord of Beasts, who went on to become King Godfrey's Regent.",,,69,9,20,10,0,18,0,https://eldenring.fanapis.com/images/weapons/17f69aff56dl0i1przmnvkw34pmvm.png
 140,12,Envoy's Long Horn,"Long golden horn of the Oracle Envoys. Profoundly weighty, its blows are sure to be felt.
 
 Originally an instrument, but one that cannot be sounded by a mere human. Or perhaps it is too early to sound the call.",,,70,9.5,23,11,0,18,0,https://eldenring.fanapis.com/images/weapons/17f69c5e336l0i1ps8m2w27as1vumo.png
 141,12,Cranial Vessel Candlestand,"Candlestand used in worship of Birac, the most hallowed Monk Prelate of the Giants' Flame. Concerned over the lazy arrogance with which the monks treated the Flame, Birac severed his own head as a lesson to the others, intending it be used as a candlestand. His faith yet smolders from within the cranial vessel.",,,71,12.5,26,8,0,22,0,https://eldenring.fanapis.com/images/weapons/17f69657dc0l0i1psc1sw2ehitb9m.png
 142,12,Great Stars,"Huge bludgeon with three stars at the striking end. Though primarily a striking weapon, the stars' spikes cause blood loss.
 
-A blood-stained star is an ill omen, a fact not lost upon those against whom this weapon is brought to bear. Landing attacks slightly restores HP.",3.0,30.0,68,10.0,22,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69dc134al0i1psnm7v5asqrwh7g.png
+A blood-stained star is an ill omen, a fact not lost upon those against whom this weapon is brought to bear. Landing attacks slightly restores HP.",3,30,68,10,22,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69dc134al0i1psnm7v5asqrwh7g.png
 143,12,Brick Hammer,"Weapon made from an ordinary stone brick. Wielded by a laborer who lead a rebellion, and later become a champion himself.
 
 Even among other bludgeons of its size, this weapon is especially weighty. The strength of a giant is required to wield it.",,,61,12.5,31,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c5bf40l0i1pszirywq0wqy1l.png
@@ -506,14 +506,14 @@ One of the legendary armaments.
 A vision of the future briefly seen by Rykard in his final moments before being devoured by the great serpent.",,,72,11.5,24,20,0,25,0,https://eldenring.fanapis.com/images/weapons/17f69b4d221l0i1psy7bxk9acqs5xv.png
 145,12,Rotten Battle Hammer,"Large iron great hammer designed for gladiatorial combat, now festering with scarlet rot.
 
-Weighty enough to crush armor and its wearer alike.",4.0,,67,10.0,26,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699989edl0i1pt44dx2gkj49me6.png
+Weighty enough to crush armor and its wearer alike.",4,,67,10,26,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699989edl0i1pt44dx2gkj49me6.png
 146,13,Nightrider Flail,"A flail with two additional bludgeoning heads.
 Weapon of the Night's Cavalry who ride funeral steeds.
 
-The large spikes make it highly effective at inducing blood loss, but also demand higher dexterity to wield.",3.0,,73,6.0,10,24,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d96e43l0i1oy4z04zq0mvzanru.png
+The large spikes make it highly effective at inducing blood loss, but also demand higher dexterity to wield.",3,,73,6,10,24,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d96e43l0i1oy4z04zq0mvzanru.png
 147,13,Flail,"Weapon consisting of a bludgeoning head attached to a handle by a chain. The iron ball is spiked and induces blood loss.
 
-Blows from this weapon cannot be parried. The charge attack whirls the iron ball around for increased force before striking.",3.0,,73,5.0,10,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69552774l0i1oyd6lwf3vlq0nhn.png
+Blows from this weapon cannot be parried. The charge attack whirls the iron ball around for increased force before striking.",3,,73,5,10,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69552774l0i1oyd6lwf3vlq0nhn.png
 148,13,Family Heads,"Three bludgeoning copper heads attached to a handle by chains. Signature weapon of Necromancer Garris, the heretical sage.
 
 The heads were made to resemble those of his wife and two children.",,,74,5.5,8,18,16,0,0,https://eldenring.fanapis.com/images/weapons/17f695341ecl0i1oyf1mscsd2tuuid.png
@@ -522,13 +522,13 @@ The heads were made to resemble those of his wife and two children.",,,74,5.5,8,
 Formed of the same many-colored star debris that comprised the form of the Naturalborn of the Void.",,,45,5.5,8,22,22,0,0,https://eldenring.fanapis.com/images/weapons/17f6992e218l0i1oykgr0udpp09p3.png
 150,13,Chainlink Flail,"A spiked iron tube attached by a chain wielded by Mad Pumpkin Heads.
 
-Especially large for a flail, wielding it requires more strength than it does dexterity.",3.0,,73,8.0,18,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c119f0l0i1oz3m7cwvc1jqa6w.png
+Especially large for a flail, wielding it requires more strength than it does dexterity.",3,,73,8,18,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c119f0l0i1oz3m7cwvc1jqa6w.png
 151,14,Battle Axe,"A thick, heavy blade attached to a handle. A versatile, standard weapon
 
 Capable of powerful attacks thanks to the weighty blade, these weapons are also regarded for their powerful charge attacks.",,,75,4.5,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699dbb9dl0i1ohfs2g1wqxwja74.png
 152,14,Forked Hatchet,"Peculiar hatchet wielded by imps.
 
-The gently undulating forked blade is known as an ""imp's tongue"" and causes blood loss.",3.0,,1,2.5,9,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695c42f0l0i1ohb4cao0qxackpu.png
+The gently undulating forked blade is known as an ""imp's tongue"" and causes blood loss.",3,,1,2.5,9,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695c42f0l0i1ohb4cao0qxackpu.png
 153,14,Hand Axe,"Commonly known as a hatchet, this smaller variety of axe is an everyday work tool.
 
 Despite its short reach, it is easy to handle, exceling in successive attacks.",,,1,3.5,9,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c35d2cl0i1oh7zuqfb3mdvsj.png
@@ -537,23 +537,23 @@ Despite its short reach, it is easy to handle, exceling in successive attacks.",
 This axe is more of a bludgeon; it forgoes a bladed edge, instead using the beast's molar teeth to buffet foes, dealing strike damage.",,,75,5.5,14,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69667224l0i1ohar280aeoxkl6z.png
 155,14,Iron Cleaver,"Fairly large iron cleaver, commonly used by the maltreated Misbegotten.
 
-Steeped in resentment, these weapons are swung wildly and relentlessly, often after rushing up to foes. ",,,75,6.0,15,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c6388cl0i1ohcb8denrbpuhqs.png
+Steeped in resentment, these weapons are swung wildly and relentlessly, often after rushing up to foes. ",,,75,6,15,7,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c6388cl0i1ohcb8denrbpuhqs.png
 156,14,Ripple Blade,"Unique weapon wielded by young Albinaurics, this sword is modelled after the ripples that are thought to be the origin of their species.
 
 Its attack power is greatly enhanced with one's arcane attribute.",,,75,4.5,11,11,0,0,20,https://eldenring.fanapis.com/images/weapons/17f694ef2f2l0i1ohsk3qoao9ds943.png
 157,14,Celebrant's Cleaver,"Cleaver decorated with many-colored fabrics. Ceremonial tool used by dancers during the festivities of Dominula, Windmill Village.
 
 Crafted from human bone.
-Grants trace amounts of runes upon landing attacks.",,26.0,75,4.5,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6980f4d4l0i1oi72p2skbsycy5.png
+Grants trace amounts of runes upon landing attacks.",,26,75,4.5,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6980f4d4l0i1oi72p2skbsycy5.png
 158,14,Icerind Hatchet,"A hatchet with a frost-coated blade. One of several gifts given by Castle Sol in the distant north.
 
-Known as ""freezing fog,"" the blade is thought to be a dragon's scale. Inflicts a powerful frost effect.",1.0,,76,3.0,11,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699235c3l0i1ohvv1u6vgzp6gxv.png
+Known as ""freezing fog,"" the blade is thought to be a dragon's scale. Inflicts a powerful frost effect.",1,,76,3,11,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699235c3l0i1ohvv1u6vgzp6gxv.png
 159,14,Highland Axe,"Single-sided axe used by the warriors of the highlands.
 
-Brave combatants begin battle by crying out their names. Roars are enhanced by this weapon.",,31.0,77,4.5,12,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aeb629l0i1oifaza9fgo5b598.png
+Brave combatants begin battle by crying out their names. Roars are enhanced by this weapon.",,31,77,4.5,12,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aeb629l0i1oifaza9fgo5b598.png
 160,14,Sacrificial Axe,"Hatchet used in ancient sacrificial rite. A Deathbird is depicted as a malevolent deity.
 
-The power of the rite yet lingers. A small amount of FP is restored upon slaying a foe.",,31.0,75,5.5,16,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b32182l0i1oi3uyg5fkssmhje.png
+The power of the rite yet lingers. A small amount of FP is restored upon slaying a foe.",,31,75,5.5,16,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b32182l0i1oi3uyg5fkssmhje.png
 161,14,Rosus' Axe,"Usher of Death, Rosus, who shows the path to the catacombs throughout the Lands Between, is depicted on this ritual axe.
 
 The dead easily lose their way, and have always been in sore need of a guiding hand.",,,78,5.5,18,10,18,0,0,https://eldenring.fanapis.com/images/weapons/17f6963aeael0i1oiez2moleac31tm.png
@@ -562,19 +562,19 @@ The dead easily lose their way, and have always been in sore need of a guiding h
 Their hearts are proud, and thereby easily undone.",,,79,5.5,19,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b8f9edl0i1oitj4z0mizqfmf7.png
 163,15,Greataxe,"Greataxe akin to a huge lump of iron. Recognized as the weapon of choice of badland chieftains.
 
-Too heavy to be wielded by those of merely ordinary strength, blows from this axe will flatten enemies, and the force of its charged attack is a sight to behold.",,,61,13.0,30,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69932567l0i1p1g57mgpbxaj4hw.png
+Too heavy to be wielded by those of merely ordinary strength, blows from this axe will flatten enemies, and the force of its charged attack is a sight to behold.",,,61,13,30,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69932567l0i1p1g57mgpbxaj4hw.png
 164,14,Warped Axe,"Oversized double-headed axe with a bizarre, almost melted appearance.
 
 Brute strength is the only thing required to wield this weapon, which appears to have taken quite the beating itself.",,,77,7.5,24,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6959fcafl0i1oinkyocipl7tiwk.png
 165,15,Great Omenkiller Cleaver,"The blade of this huge, loathsome cleaver comprises a row of amputated Omen horns. Weapon of slaughter wielded by Omenkillers. 
 
-The hideous horns cause blood loss, adding vibrant colors to the ongoing mayhem.",3.0,,75,11.0,23,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c517f3l0i1p1j5gib5p31b06c.png
+The hideous horns cause blood loss, adding vibrant colors to the ongoing mayhem.",3,,75,11,23,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c517f3l0i1p1j5gib5p31b06c.png
 166,15,Crescent Moon Axe,"Greataxe with a large, arcing blade and long handle. The ""Crescent Moon"" of its name is said to have been spurred by nostalgia.
 
 Specializes in sweeping through foes by making use of its long handle.",,,77,12.5,25,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6962ddb3l0i1p1wgacx8m0mpy3c.png
 167,15,Axe of Godrick,"Greataxe wielded by Godrick the Grafted. This golden battleaxe is emblazoned with the figure of a beast, representing the strength of Godfrey, First Elden Lord and patriarch of the golden lineage.
 
-""I command thee kneel! For I am the lord of all that is golden!""",,,80,11.0,34,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a0a0del0i1p1ze2uhbxr6enmw.png
+""I command thee kneel! For I am the lord of all that is golden!""",,,80,11,34,22,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a0a0del0i1p1ze2uhbxr6enmw.png
 168,15,Longhaft Axe,"Large iron axe with a long handle. Weapon of the maltreated Misbegotten.
 
 Making use of the force generated by its length, this weapon's resentment-charged blows are difficult to stop.",,,77,12.5,24,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69822237l0i1p270w3dlqvx3kil.png
@@ -583,13 +583,13 @@ Making use of the force generated by its length, this weapon's resentment-charge
 When the Tarnished left the Lands Between with their Lord, one boat alone was said to have been left behind.",,,61,12.5,26,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696240e3l0i1p2l8nsbm1tuf3kq.png
 170,15,Executioner's Greataxe,"Bulky cleaver welded to a long haft. Said to have been used to dispatch the remnants of defeated armies, felling them like timber.
 
-Perhaps that is the reason it excels at critical hits.",,,77,15.0,34,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bd922al0i1p2frazvyrv41tge.png
+Perhaps that is the reason it excels at critical hits.",,,77,15,34,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bd922al0i1p2frazvyrv41tge.png
 171,15,Winged Greathorn,"Distinctive horn suffused with the power of ancestral spirits. This large, wing-shaped specimen is wielded as a weapon of spirit worship.
 
-In the ancestral spirit-worshipping faith, these are considered envoys' wings, made to reap the lives of beings which experience no sprouting.",,,81,11.0,30,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699a5bafl0i1p2louzpgjcml2zi.png
+In the ancestral spirit-worshipping faith, these are considered envoys' wings, made to reap the lives of beings which experience no sprouting.",,,81,11,30,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699a5bafl0i1p2louzpgjcml2zi.png
 172,15,Butchering Knife,"Huge carving knife made to cleanly butcher the human body. Signature weapon of the Ogress Anastasia, known to have eaten countless Tarnished while disguised as a Finger Maiden.
 
-Restores a very small amount of HP when it squarely strikes an enemy.",,30.0,61,8.5,16,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698a1aa2l0i1p2ttzr3kqvtkrqo.png
+Restores a very small amount of HP when it squarely strikes an enemy.",,30,61,8.5,16,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698a1aa2l0i1p2ttzr3kqvtkrqo.png
 173,15,Gargoyle's Great Axe,"Bronze greataxe wielded by Valiant Gargoyles.
 
 Just like the wielder, the missing parts have been mended with corpse wax; a patchwork of champions.",,,77,8.5,24,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69aff1efl0i1p2xlel2i8mhvc2o.png
@@ -600,7 +600,7 @@ Such is the mark of those who serve Maliketh, the Black Blade.",,,77,8.5,24,8,0,
 175,16,Short Spear,"An exceedingly plain spear of modest weight.
 
 Simple to wield compared to many of its peers, its strong attack unleashes a series of successive piercing thrusts.
-",,,41,4.0,10,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bba35dl0i1pilsvl3r9ub4cf9.png
+",,,41,4,10,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bba35dl0i1pilsvl3r9ub4cf9.png
 176,16,Spear,"Weapon comprised of a blade attached to a long haft.
 
 A far-reaching piercing weapon, it can be wielded from behind the safety of a raised shield. Very effective against mounted foes.",,,41,4.5,12,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697047a0l0i1pik0le4bp23xal.png
@@ -610,143 +610,143 @@ A far-reaching piercing weapon, it can be wielded from behind the safety of a ra
 The blade emits a faint light and deals magic damage.",,,41,5.5,12,10,12,0,0,https://eldenring.fanapis.com/images/weapons/17f69b1e4cfl0i1piuurxtzf8019c.png
 179,16,Cleanrot Spear,"Spear of the Cleanrot Knights who fought alongside Malenia, Blade of Miquella.
 
-The winged golden blade deals holy damage. The diminutive shield is blessed with an incantation that wards off rot.",,32.0,82,5.5,16,16,0,14,0,https://eldenring.fanapis.com/images/weapons/17f698acb69l0i1pjffhe1kjzha5v.png
+The winged golden blade deals holy damage. The diminutive shield is blessed with an incantation that wards off rot.",,32,82,5.5,16,16,0,14,0,https://eldenring.fanapis.com/images/weapons/17f698acb69l0i1pjffhe1kjzha5v.png
 180,16,Partisan,"Spear with a wide tip.
 
 In addition to its thrusting attacks, this highly versatile weapon can be swung to sweep through foes.",,,41,6.5,15,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698971dfl0i1pja9443dg722bb3.png
 181,16,Celebrant's Rib-Rake,"Rake decorated with many-colored fabrics. Ceremonial tool used by dancers during the festivities of Dominula, Windmill Village.
 
 Crafted from human bone.
-Grants trace amounts of runes upon landing attacks.",,26.0,61,5.0,8,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694b74eel0i1pjc1y7lp7e97wy.png
-182,17,Great Club,"An enormous club of hard wood. Wildly hammering foes with this striking weapon requires no dexterity; only brute force. While it may seem sacrilegious, this weapon is said to be a withered branch of the Erdtree. Imbued with holy power, this weapon will never snap.",,,83,17.0,35,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697c039cl0i1onh4jupgan4exzn.png
+Grants trace amounts of runes upon landing attacks.",,26,61,5,8,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694b74eel0i1pjc1y7lp7e97wy.png
+182,17,Great Club,"An enormous club of hard wood. Wildly hammering foes with this striking weapon requires no dexterity; only brute force. While it may seem sacrilegious, this weapon is said to be a withered branch of the Erdtree. Imbued with holy power, this weapon will never snap.",,,83,17,35,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697c039cl0i1onh4jupgan4exzn.png
 183,16,Pike,"A longspear featuring an especially lengthy handle.
 
 Specialized for use from long distances, it boasts the longest reach of any melee weapon. Incredibly useful even against foes on horseback, but hard to wield in cramped spaces.",,,84,7.5,20,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6975ef77l0i1pjgwds05239gwag.png
 184,16,Torchpole,"Torch fastened to a long pole. Lights up dark areas, but cannot be raised overhead.
 
-Used by soldiers on watch, its attacks set foes aflame.",,,84,6.0,14,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d10518l0i1pjt3166nis69mk9.png
+Used by soldiers on watch, its attacks set foes aflame.",,,84,6,14,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d10518l0i1pjt3166nis69mk9.png
 185,16,Bolt of Gransax,"Spear whittled from the weapon wielded by Gransax.
 One of the legendary armaments.
 
 A great ancient dragon, Gransax once rained calamity upon the Royal Capital—the only time in historical record that Leyndell's walls have fallen. This marked the dawn of the war against the ancient dragons.",,,85,8.5,20,40,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6993e936l0i1pjyhfk7vfpgc8ce.png
 186,16,Cross-Naginata,"Weapon consisting of a three-pronged blade affixed to a long pole. The long central blade closely resembles a katana.
 
-A weapon of the Land of Reeds, known for its ability to be wielded as a spear while still being capable of performing slashing attacks.",3.0,,41,8.0,16,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b7874el0i1pk0zpdda5qgjzi.png
+A weapon of the Land of Reeds, known for its ability to be wielded as a spear while still being capable of performing slashing attacks.",3,,41,8,16,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b7874el0i1pk0zpdda5qgjzi.png
 187,16,Death Ritual Spear,"Ritual spear used by priests of old who were permitted to come among the Deathbirds.
 
 The priests became guardians of the birds through the rite of Death, which also serves as an oath sworn to their distant resurrection.",,,86,6.5,14,20,18,0,0,https://eldenring.fanapis.com/images/weapons/17f6963cc83l0i1pk36gu3e5f8fpxm.png
 188,16,Inquisitor's Girandole,"Instrument of torture used on nobles behind the curtain at the Volcano Manor of Mt. Gelmir.
 
-Its numerous spikes pierce the flesh, then singe the wounds with flame. The smell of burnt blood induces despair in the victim. A candlestick conceived by a thorough mind.",3.0,,84,7.5,18,15,0,16,0,https://eldenring.fanapis.com/images/weapons/17f69ac78dcl0i1pke5of594dboffh.png
+Its numerous spikes pierce the flesh, then singe the wounds with flame. The smell of burnt blood induces despair in the victim. A candlestick conceived by a thorough mind.",3,,84,7.5,18,15,0,16,0,https://eldenring.fanapis.com/images/weapons/17f69ac78dcl0i1pke5of594dboffh.png
 189,16,Spiked Spear,"Weapon comprised of a spiked cylinder attached to a long pole. Capable of dealing strike damage when swung. The spikes induce blood loss.
 
-Weapon of the Marionette Soldiers employed by sorcerers.",3.0,,41,6.0,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6975dd97l0i1pkiw33ipbj1wu2d.png
+Weapon of the Marionette Soldiers employed by sorcerers.",3,,41,6,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6975dd97l0i1pkiw33ipbj1wu2d.png
 190,16,Iron Spear,"Commonly used iron spear with no notable traits.
 The blade is severely rusted.",,,84,4.5,13,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698a34afl0i1pku2sj7lswv0zy.png
 191,16,Rotten Crystal Spear,"Spear fashioned from pure crystal; a deed impossible for a human.
 It festers with scarlet rot.
 
-Enwreathed with powerful magic, its attack scales with intelligence.",4.0,,84,5.5,10,16,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69c12977l0i1pkr6s0g1o7v5kz.png
+Enwreathed with powerful magic, its attack scales with intelligence.",4,,84,5.5,10,16,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69c12977l0i1pkr6s0g1o7v5kz.png
 192,18,Mohgwyn's Spear,"Trident of Mohg, Lord of Blood. A sacred spear that will come to symbolize his dynasty.
 
-As well as serving as a weapon, it is an instrument of communion with an outer god who bestows power upon accursed blood. The mother of truth desires a wound.",3.0,,87,10.0,24,14,0,0,27,
+As well as serving as a weapon, it is an instrument of communion with an outer god who bestows power upon accursed blood. The mother of truth desires a wound.",3,,87,10,24,14,0,0,27,
 193,18,Siluria's Tree,"Siluria's Tree, weapon of one of the two honored as foremost among the Crucible Knights.
 
-The primordial form of the Erdtree is close in nature to life itself, and this spear, modeled on its crucible, is imbued with ancient holy essence. ",,,88,10.0,27,13,0,20,0,https://eldenring.fanapis.com/images/weapons/17f6948ce42l0i1p3rnqwtrftgh5gg.png
-194,18,Serpent-Hunter,"Weapon that serves as both greatsword and spear. Thought to have been used to hunt an immortal great serpent in the distant past, it manifests a long blade of light when facing such a creature. When their master's heroic aspirations degenerated into mere greed, his men searched for a weapon with which they might halt their lord.",,,89,12.0,0,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b0a1dcl0i1p3zvfkgywidwr2.png
+The primordial form of the Erdtree is close in nature to life itself, and this spear, modeled on its crucible, is imbued with ancient holy essence. ",,,88,10,27,13,0,20,0,https://eldenring.fanapis.com/images/weapons/17f6948ce42l0i1p3rnqwtrftgh5gg.png
+194,18,Serpent-Hunter,"Weapon that serves as both greatsword and spear. Thought to have been used to hunt an immortal great serpent in the distant past, it manifests a long blade of light when facing such a creature. When their master's heroic aspirations degenerated into mere greed, his men searched for a weapon with which they might halt their lord.",,,89,12,0,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b0a1dcl0i1p3zvfkgywidwr2.png
 195,18,Vyke's War Spear,"War spear singed and blistered by fingers, used by Vyke, Knight of the Roundtable Hold.
 
-Like Vyke himself, it has been tormented by the yellow flame of frenzy from within.",7.0,,90,8.0,16,20,0,18,0,https://eldenring.fanapis.com/images/weapons/17f6949e9bbl0i1p3z882yhinlaqxj.png
+Like Vyke himself, it has been tormented by the yellow flame of frenzy from within.",7,,90,8,16,20,0,18,0,https://eldenring.fanapis.com/images/weapons/17f6949e9bbl0i1p3z882yhinlaqxj.png
 196,18,Lance,"Considered a type of greatspear, this weapon has no blade, but instead features a long, conical body designed to pierce.
 
-Though heavy and hard to wield, this weapon displays its worth in horseback combat whether mounted or even on foot.",,,84,9.0,20,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6965c8c7l0i1p4ca48460ednlrf.png
+Though heavy and hard to wield, this weapon displays its worth in horseback combat whether mounted or even on foot.",,,84,9,20,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6965c8c7l0i1p4ca48460ednlrf.png
 197,18,Treespear,,,,91,9.5,15,22,0,18,0,https://eldenring.fanapis.com/images/weapons/17f6995c642l0i1p4de8g3enadtufs.png
 198,19,Halberd,"A long-handled polearm that combines the functions of both axe and spear.
 
-Can be used to press a single enemy with continuous thrusting attacks, or swept at groups, taking advantage of its great reach and cleaving blade. A versatile weapon for any situation.",,,84,8.0,14,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696b2b4al0i1p8ly2eaf2vbepd6.png
+Can be used to press a single enemy with continuous thrusting attacks, or swept at groups, taking advantage of its great reach and cleaving blade. A versatile weapon for any situation.",,,84,8,14,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696b2b4al0i1p8ly2eaf2vbepd6.png
 199,19,Pest's Glaive,"Glaive made from a hard, sharpened shell. Wielded by the pests who emerged from the Swamp of Aeonia.
 Slightly increases non-physical damage negation.
 
-Though men might recognize the keen intellect of the pests evidenced by this spear's uncanny design, it will never be understood by them.",,33.0,16,7.0,13,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6998e2a7l0i1p8fxd6bbyw83nts.png
+Though men might recognize the keen intellect of the pests evidenced by this spear's uncanny design, it will never be understood by them.",,33,16,7,13,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6998e2a7l0i1p8fxd6bbyw83nts.png
 200,19,Lucerne,"This polearm features a hard, sharpened beak-like spike attached to its head, designed to pierce armor.
 
-Though designed mainly as a thrusting weapon, its long handle can be utilized to get around an enemy's guard with a sideward sweeping attack.",,,84,7.0,15,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a4b70bl0i1p8n5ha1qpziq1xg.png
+Though designed mainly as a thrusting weapon, its long handle can be utilized to get around an enemy's guard with a sideward sweeping attack.",,,84,7,15,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a4b70bl0i1p8n5ha1qpziq1xg.png
 201,19,Banished Knight's Halberd,"A finely-crafted halberd intricately engraved with an ancient motif.
 Given to knights who, whether by misfortune or misdeed, were forced to abandon their homes.
 
-Most of these knights were sent to the fringes, where they were forced to start anew with only despair for company.",,,84,8.0,14,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698a6131l0i1p8u3hufx2lc7nr.png
+Most of these knights were sent to the fringes, where they were forced to start anew with only despair for company.",,,84,8,14,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698a6131l0i1p8u3hufx2lc7nr.png
 202,19,Commander's Standard,"A beaten red battle standard is furled around this time-worn halberd.
 
 Even after his lord was fled, Commander O'Neil continued to brandish this flag in the devastation of the rot-eaten field of battle, the sole veteran who remembers this battle with pride.",,,93,11.5,24,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6991e5c5l0i1p8vp4fgo45r89ky.png
 203,19,Nightrider Glaive,"A jet-black glaive with a blade as weighty as a bludgeon. Weapon of the Night's Cavalry who ride funeral steeds.
 
-This glaive excels at weighty slash attacks that crash into foes, making it a powerful weapon even on horseback.",,,16,12.0,26,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6962a77bl0i1p9nswfravtg3kil.png
+This glaive excels at weighty slash attacks that crash into foes, making it a powerful weapon even on horseback.",,,16,12,26,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6962a77bl0i1p9nswfravtg3kil.png
 204,19,Ripple Crescent Halberd,"Weapon wielded by young Albinaurics.
 
 The blade is said to resemble a partial image of a ripple, and its attack power scales with one's arcane attribute.",,,16,8.5,12,12,0,0,20,https://eldenring.fanapis.com/images/weapons/17f694ee743l0i1p9ku7l29fh314nu.png
-205,19,Vulgar Militia Saw,"A weapon comprised of a saw blade attached to a long grip. Brandished by the vulgar militia, its serrated edge is very effective at inflicting blood loss. The saw is said to also be used to cut up bodies to feed the militia, but there are no firsthand witnesses to confirm the dire rumor.",3.0,,16,8.0,15,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6959d46el0i1p9thpf3fa8syut.png
+205,19,Vulgar Militia Saw,"A weapon comprised of a saw blade attached to a long grip. Brandished by the vulgar militia, its serrated edge is very effective at inflicting blood loss. The saw is said to also be used to cut up bodies to feed the militia, but there are no firsthand witnesses to confirm the dire rumor.",3,,16,8,15,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6959d46el0i1p9thpf3fa8syut.png
 206,19,Golden Halberd,"Weighty halberd forged of gold. Wielded by the Order of Tree Sentinels, heavily equipped knights.
 Deals holy damage.
 
 A masterfully crafted weapon that lives up to its heft, but is difficult for one of mere human strength to wield.",,,94,13.5,30,14,0,12,0,https://eldenring.fanapis.com/images/weapons/17f6973b001l0i1p9v6qffivf6eh3.png
 207,19,Glaive,"Weapon comprised of a sharp blade affixed to a long grip. It is in fact a sickle repurposed to be a tool of war.
 
-This far-reaching weapon excels at slashing attacks.",,,16,10.0,18,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69afd8dcl0i1p9y9s33uzxd9fek.png
+This far-reaching weapon excels at slashing attacks.",,,16,10,18,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69afd8dcl0i1p9y9s33uzxd9fek.png
 208,19,Loretta's War Sickle,"Intricately crafted silver war sickle wielded by Loretta, Knight of the Haligtree.
 
-Originally given for service as a personal guard to Carian royalty, the weapon's blue glintstone has been replaced with unalloyed gold.",,,95,10.0,20,15,20,0,0,https://eldenring.fanapis.com/images/weapons/17f69869f89l0i1panhih63470rmve.png
+Originally given for service as a personal guard to Carian royalty, the weapon's blue glintstone has been replaced with unalloyed gold.",,,95,10,20,15,20,0,0,https://eldenring.fanapis.com/images/weapons/17f69869f89l0i1panhih63470rmve.png
 209,19,Guardian's Swordspear,"Weapon comprising a long handle and broad blade sharpened from the hard wood of old trees.
 
-Wielded by guardians of the Minor Erdtrees, known as experts in the arts of combat. The power of this weapon scales greatly with dexterity.",,,16,9.0,17,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6984431bl0i1papfl53ticoff4p.png
+Wielded by guardians of the Minor Erdtrees, known as experts in the arts of combat. The power of this weapon scales greatly with dexterity.",,,16,9,17,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6984431bl0i1papfl53ticoff4p.png
 210,19,Vulgar Militia Shotel,"A hooked blade attached to a long handle. Wielded by the vulgar militia, its attacks can slip through an enemy's guard.
 
-The vulgar militia are the undecorated stewards of rancid, scorched battlefields that none dare approach, and forbidden domains better forgotten by the rest of the world.",,,16,8.0,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69884882l0i1pawmnlwtwvbmm8.png
+The vulgar militia are the undecorated stewards of rancid, scorched battlefields that none dare approach, and forbidden domains better forgotten by the rest of the world.",,,16,8,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69884882l0i1pawmnlwtwvbmm8.png
 211,19,Dragon Halberd,"Halberd shaped like a dragon, enwreathed with both ice and lightning.
 
 Alas, the Dragonkin Soldiers never attained immortality, and perished as decrepit, pale imitations of their skyborn kin.",,,16,10.5,22,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c95d75l0i1paugymrcjquua4q.png
 212,19,Gargoyle's Halberd,"Bronze halberd wielded by Valiant Gargoyles.
 
-Just like the wielder, the missing parts have been mended with corpse wax; a patchwork of champions.",,,16,12.0,26,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c725a8l0i1pay72k5pcw8pvc6.png
+Just like the wielder, the missing parts have been mended with corpse wax; a patchwork of champions.",,,16,12,26,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c725a8l0i1pay72k5pcw8pvc6.png
 213,19,Gargoyle's Black Halberd,"Bronze halberd wielded by Valiant Gargoyles, mended with blackened corpse wax.
 Deals holy damage.
 
-Such is the mark of those who serve Maliketh, the Black Blade.",,,16,12.0,26,10,0,22,0,https://eldenring.fanapis.com/images/weapons/17f69a5df3cl0i1pboo1un3fj711tg.png
+Such is the mark of those who serve Maliketh, the Black Blade.",,,16,12,26,10,0,22,0,https://eldenring.fanapis.com/images/weapons/17f69a5df3cl0i1pboo1un3fj711tg.png
 214,20,Scythe,"Large scythe featuring a long, slender blade. Designed to reap, this weapon is capable of rapidly inflicting blood loss while also slipping through an enemy's guard.
 
-In the hands of a highly dexterous wielder it is capable of striking fear into the heart of any foe.",3.0,,16,7.5,14,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69502a09l0i1pgjcmg5igz1j0mr.png
+In the hands of a highly dexterous wielder it is capable of striking fear into the heart of any foe.",3,,16,7.5,14,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69502a09l0i1pgjcmg5igz1j0mr.png
 215,20,Grave Scythe,"Greatscythe comprised of a large blade affixed to a crooked stick. Weapon wielded by the aged grave keepers who tend the forgotten graveyards throughout the Lands Between.
 
-This weapon is said to have served as a charm against evil spirits in times of old.",3.0,34.0,16,9.5,17,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69920f78l0i1pgs2yaxn0jafxk.png
+This weapon is said to have served as a charm against evil spirits in times of old.",3,34,16,9.5,17,13,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69920f78l0i1pgs2yaxn0jafxk.png
 216,20,Halo Scythe,"War scythe of the Cleanrot Knights who fought alongside Malenia, Blade of Miquella.
 
-This was the weapon of commanders in Malenia's army, and the half-halo blade deals holy damage.",3.0,,96,8.5,13,16,0,15,0,https://eldenring.fanapis.com/images/weapons/17f697b3423l0i1pgz84q3gg342rvu.png
+This was the weapon of commanders in Malenia's army, and the half-halo blade deals holy damage.",3,,96,8.5,13,16,0,15,0,https://eldenring.fanapis.com/images/weapons/17f697b3423l0i1pgz84q3gg342rvu.png
 217,20,Winged Scythe,"Sacred scythe resembling a pair of white wings. Deals holy damage.
 
-According to pagan belief, white-winged maidens are said to be Death's gentle envoys.",3.0,,97,7.5,16,16,0,24,0,https://eldenring.fanapis.com/images/weapons/17f69abddefl0i1ph323xr196zcpc.png
+According to pagan belief, white-winged maidens are said to be Death's gentle envoys.",3,,97,7.5,16,16,0,24,0,https://eldenring.fanapis.com/images/weapons/17f69abddefl0i1ph323xr196zcpc.png
 218,21,Whip,"A leather whip. Not originally used for combat, but as an instrument of pain.
 
-Though its supple attacks cannot be thwarted by parrying or even guarding, it is incapable of dealing critical hits.",,,9,2.0,8,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d7e396l0i1pt3tuf213zcu8u.png
+Though its supple attacks cannot be thwarted by parrying or even guarding, it is incapable of dealing critical hits.",,,9,2,8,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d7e396l0i1pt3tuf213zcu8u.png
 219,21,Thorned Whip,"Hefty whip covered in crimson thorns. Weapon of the Prelates who lead the Fire Monks. A device of fearsome religious encouragement, it is fashioned in the image of the briars of sin.
 
-Very effective at inflicting blood loss.",3.0,,9,2.5,8,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69571714l0i1ptc8s1fsagr8zf.png
+Very effective at inflicting blood loss.",3,,9,2.5,8,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69571714l0i1ptc8s1fsagr8zf.png
 220,21,Magma Whip Candlestick,"This ritual implement is a three pronged candlestick with solid flames formed of the magma of Mt. Gelmir.
 
 When wielded as a weapon, the flames become supple whips of lava.",,,98,2.5,8,16,0,18,0,https://eldenring.fanapis.com/images/weapons/17f69c5c0bfl0i1ptlhsrovoc8dx07.png
 221,21,Hoslow's Petal Whip,"Metal whip formed of razor-sharp chain-link blades that have the appearance of flower petals. This work of art is handed down through the generations of the illustrious House Hoslow.
 High dexterity is required to wield this weapon, but it excels at inflicting devastating blood loss.
-""The tale of House Hoslow is told in blood.""",3.0,,9,3.5,10,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694eefe9l0i1pto8dn7ezy61a99.png
+""The tale of House Hoslow is told in blood.""",3,,9,3.5,10,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694eefe9l0i1pto8dn7ezy61a99.png
 222,21,Giant's Red Braid,"Hefty whip woven from the flame-red hair of a Fire Giant.
 
 Every giant is red of hair, and Radagon was said to have despised his own red locks. Perhaps that was a curse of their kind.",,,99,2.5,18,12,0,21,0,https://eldenring.fanapis.com/images/weapons/17f696af19bl0i1ptpv0fdawl72o4yq.png
 223,21,Urumi,"This weapon made of extremely thin, flexible blades of metal is wielded like a whip by Nightfolk warriors.
 
-Though in essence a whip with a cutting edge, it can also be used as a spear to pierce foes.",,,9,3.0,10,19,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69691044l0i1ptyliubsc1c29o9.png
+Though in essence a whip with a cutting edge, it can also be used as a spear to pierce foes.",,,9,3,10,19,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69691044l0i1ptyliubsc1c29o9.png
 224,22,Caestus,"A weapon built for striking with the fists, made of tough leather inlaid with iron rivets.
 
 Fist weapons come in pairs, and two-handing this weapon will equip it to both hands.",,,68,1.5,8,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6961de5dl0i1ox1mrfqv4sj0p5.png
 225,22,Spiked Caestus,"A caestus with the rivets replaced by blood loss-inducing spikes.
 
-Fist weapons come in pairs, and two-handing this weapon will equip it to both hands.",3.0,,68,2.0,8,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69822bd8l0i1owzfs8dkv6m0tk.png
+Fist weapons come in pairs, and two-handing this weapon will equip it to both hands.",3,,68,2,8,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69822bd8l0i1owzfs8dkv6m0tk.png
 226,22,Grafted Dragon,"The embodiment of the power that still remained in the dragon's head that was grafted to Godrick's left arm.
 
 The wielder's arm will take the form of a small dragon, sprouting sharp dragon fangs at the fist.
@@ -756,64 +756,64 @@ This weapon cannot be two-handed.",,,100,2.5,20,14,0,16,0,https://eldenring.fana
 Not a weapon to be taken lightly, as its weighty blows shatter bones with ease.",,,68,2.5,11,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bdc512l0i1ox8z0tvmo6500lc.png
 228,22,Star Fist,"Spherical iron manifer covered in spikes which induce blood loss.
 
-Used in brutal games of pugilism.",3.0,,68,3.0,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6958d2a1l0i1oxak1ho6m56edgwi.png
+Used in brutal games of pugilism.",3,,68,3,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6958d2a1l0i1oxak1ho6m56edgwi.png
 229,22,Katar,Imported dagger design with a rather unique handle. The blade can be swung about as the extension of one's fist.,,,41,2.5,8,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f699730a1l0i1oxo8gfllal3rur.png
 230,22,Clinging Bone,"Horrific weapon made of a hardened skeletal arm. Wielded by Ensha of the Royal Remains.
 
 Fitted by placing one's hands into the fists' grips until they dig in.
-""O clinging creature. A king relinquishes not the hand.""",,,101,3.0,8,22,0,0,16,https://eldenring.fanapis.com/images/weapons/17f695cc915l0i1oxrft0i2enqepoe.png
-231,22,Veteran's Prosthesis,"Bladed prosthetic leg enwreathed with the power of lightning, instead attached to the fist. Commander Niall, veteran of Castle Sol, offered this prosthesis in exchange for the lives of defeated knights held prisoner. He went on to lead these men as an army of no nation.",,,102,4.0,15,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69912ed2l0i1oxzumweqnzkb2tl.png
+""O clinging creature. A king relinquishes not the hand.""",,,101,3,8,22,0,0,16,https://eldenring.fanapis.com/images/weapons/17f695cc915l0i1oxrft0i2enqepoe.png
+231,22,Veteran's Prosthesis,"Bladed prosthetic leg enwreathed with the power of lightning, instead attached to the fist. Commander Niall, veteran of Castle Sol, offered this prosthesis in exchange for the lives of defeated knights held prisoner. He went on to lead these men as an army of no nation.",,,102,4,15,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69912ed2l0i1oxzumweqnzkb2tl.png
 232,22,Cipher Pata,"One of the weapons originating from the Two Fingers. A formless sequence of ciphers comprise its blade, and as such no shield can repel it. Deals holy damage.
 
-The furtive inscription appears to hang in the air; the language of light spoken by the Two Fingers.",,,14,0.0,0,0,0,30,0,https://eldenring.fanapis.com/images/weapons/17f69de7e01l0i1oxypr2s4rzvhwnj.png
+The furtive inscription appears to hang in the air; the language of light spoken by the Two Fingers.",,,14,0,0,0,0,30,0,https://eldenring.fanapis.com/images/weapons/17f69de7e01l0i1oxypr2s4rzvhwnj.png
 233,23,Hookclaws,"Weapon worn on the fist comprised of sharp parallel blades favored by those who lurk in the dark. Lacerations cause blood loss with great effect.
 
-Claw weapons come in pairs, and two-handing this weapon will equip it to both hands.",3.0,,1,2.0,8,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bb71a6l0i1okvek92tqjqy5w.png
+Claw weapons come in pairs, and two-handing this weapon will equip it to both hands.",3,,1,2,8,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bb71a6l0i1okvek92tqjqy5w.png
 234,23,Venomous Fang,"One of the weapons designed for gladiatorial combat. Used by duelists who were exiled from the colosseum.
 
-The black fang protruding from the bronze snake head is coated in deadly poison.",2.0,,1,2.5,9,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695a80d4l0i1okukv5xwwhqcvn.png
+The black fang protruding from the bronze snake head is coated in deadly poison.",2,,1,2.5,9,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695a80d4l0i1okukv5xwwhqcvn.png
 235,23,Bloodhound Claws,"Large curved claws used by Bloodhound Knights.
 
-The curve allows the weapon to slip through an enemy's guard.",3.0,,103,3.0,10,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69575d35l0i1oktqg9vbv6v8jk.png
+The curve allows the weapon to slip through an enemy's guard.",3,,103,3,10,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69575d35l0i1oktqg9vbv6v8jk.png
 236,23,Raptor Talons,"Claw comprised of two sharp, thin blades. Wielded by the assassins of ravenmount, this weapon allows them to imitate the attacks of Deathbirds.
 
-Besides excelling at airborne attacks, its charge attack mimics the vicious swoop of a bird of prey. ",3.0,,1,1.5,6,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694a2cc3l0i1okx1gdd6e5ser2.png
+Besides excelling at airborne attacks, its charge attack mimics the vicious swoop of a bird of prey. ",3,,1,1.5,6,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694a2cc3l0i1okx1gdd6e5ser2.png
 237,17,Prelate's Inferno Crozier,"Colossal hammer with the appearance of roiling flames. Weapon of the Prelates who lead the Fire Monks. Its heft represents the weight of their guardianship.
 
 The hammer's head is unusually substantial, and strong attacks will fling foes into the air.",,,104,23.5,45,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a7dcc1l0i1oniofe8yzb14ixf.png
 238,17,Watchdog's Staff,"Large stone staff embedded with glintstone. Wielded by Erdtree Burial Watchdogs who protect catacombs.
 
-The Watchdogs, battered and broken over their lengthy tenure, rule the catacombs and are even said to command the imps.",,,105,19.0,34,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69573764l0i1ondtdlwail0224s.png
+The Watchdogs, battered and broken over their lengthy tenure, rule the catacombs and are even said to command the imps.",,,105,19,34,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69573764l0i1ondtdlwail0224s.png
 239,17,Envoy's Greathorn,"Fanned golden horn of the Oracle Envoys. Profoundly weighty, its blows are sure to be felt.
 
 Originally an instrument, but one that cannot be sounded by a mere human. Or perhaps it is too early to sound the call.",,,106,19.5,28,12,0,24,0,https://eldenring.fanapis.com/images/weapons/17f69b35d86l0i1ongc5nz2ucwimp3.png
 240,17,Duelist Greataxe,"Greataxe designed for gladiatorial combat. Used by duelists who were exiled from the colosseum.
 
-A weapon reserved for duelist champions, the charge attack is particularly ferocious.",,,68,20.0,30,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a33564l0i1ons3nh18t7o8nt.png
-241,17,Axe of Godfrey,"Weapon of Godfrey, Elden Lord. It was broken in a battle fought as leader of the Tarnished during the Long March. This weapon is symbolic of Godfrey's vow to conduct himself as a lord, later becoming an emblem of the golden lineage. In the days of the past, a crown was warranted with strength.",,,107,18.0,42,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698fbfe3l0i1onysor0mpgg5yes.png
+A weapon reserved for duelist champions, the charge attack is particularly ferocious.",,,68,20,30,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a33564l0i1ons3nh18t7o8nt.png
+241,17,Axe of Godfrey,"Weapon of Godfrey, Elden Lord. It was broken in a battle fought as leader of the Tarnished during the Long March. This weapon is symbolic of Godfrey's vow to conduct himself as a lord, later becoming an emblem of the golden lineage. In the days of the past, a crown was warranted with strength.",,,107,18,42,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698fbfe3l0i1onysor0mpgg5yes.png
 242,17,Dragon Greatclaw,"Weapon said to have been whittled from the claw of a great, ancient dragon, wielded by grotesque Tree Sentinels who yet serve the Erdtree.
 
-The claw is enwreathed with lightning, and tears through the dragons' feeble descendants with ease.",,,68,16.0,30,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69469b4bl0i1oo41w96vla79ii.png
+The claw is enwreathed with lightning, and tears through the dragons' feeble descendants with ease.",,,68,16,30,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69469b4bl0i1oo41w96vla79ii.png
 243,17,Staff of the Avatar,"Ceremonial staff depicting the Erdtree in its historic radiance. Wielded by the avatars who protect the Minor Erdtrees.
 
-The avatars, emerging in the wake of the Elden Ring's shattering, were determined to protect the withering Erdtree's offspring.",,,108,20.0,34,8,0,24,0,https://eldenring.fanapis.com/images/weapons/17f69dc1749l0i1ooc0npawnyrf3d.png
+The avatars, emerging in the wake of the Elden Ring's shattering, were determined to protect the withering Erdtree's offspring.",,,108,20,34,8,0,24,0,https://eldenring.fanapis.com/images/weapons/17f69dc1749l0i1ooc0npawnyrf3d.png
 244,17,Fallingstar Beast Jaw,"Part of a Fallingstar Beast's jaw, hard and shining black, fashioned into a weapon.
 
 With its sharp point, this colossal weapon can skewer foes.",,,109,21.5,34,12,20,0,0,https://eldenring.fanapis.com/images/weapons/17f6955e72fl0i1oo4m9kmv2xl4xyk.png
 245,17,Ghiza's Wheel,"Great iron wheel lined with flesh-flaying blades. Device of torture used by Inquisitor Ghiza. As the wheel spins it causes severe pain and blood loss.
 
-The design was adopted for use as the iconic weapon wielded by Iron Virgins.",3.0,,110,19.0,28,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696bf334l0i1oog74vy08h3bq4g.png
+The design was adopted for use as the iconic weapon wielded by Iron Virgins.",3,,110,19,28,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f696bf334l0i1oog74vy08h3bq4g.png
 246,17,Giant-Crusher,"A hammer made from a boulder, used in the War against the Giants. One of the heftiest weapons in the entire Lands Between. After the giants were quelled, and man turned against man in violence, this weapon was all but forgotten. Man has grown feeble in comparison to his forebears.",,,68,26.5,60,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698d50ael0i1ooor7m3e3wm1ksn.png
 247,17,Golem's Halberd,A great halberd of black stone crafted by a civilization now gone to ruin. Wielded by the Guardian Golem.,,,84,21.5,36,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69bd8124l0i1oouetnbxq1rzht.png
 248,17,Troll's Hammer,"Mining tool of stonedigger trolls used to crack bedrock.
 
-Trolls are descended from the giants, and these were supposedly once used as ceremonial smithing tools. In the distant past, smithing was considered divine.",,,35,16.0,28,8,0,10,0,https://eldenring.fanapis.com/images/weapons/17f699e1bc7l0i1oov82brr35n1ie4.png
+Trolls are descended from the giants, and these were supposedly once used as ceremonial smithing tools. In the distant past, smithing was considered divine.",,,35,16,28,8,0,10,0,https://eldenring.fanapis.com/images/weapons/17f699e1bc7l0i1oov82brr35n1ie4.png
 249,17,Rotten Staff,"Ceremonial staff depicting the Erdtree in its historic radiance. It festers with scarlet rot.
 
-Wielded by the avatars who protect the Minor Erdtrees.",4.0,,108,18.0,34,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695f2cdal0i1oozpti2yx0wz51.png
+Wielded by the avatars who protect the Minor Erdtrees.",4,,108,18,34,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695f2cdal0i1oozpti2yx0wz51.png
 250,17,Rotten Greataxe,"Greataxe designed for gladiatorial combat, now festering with scarlet rot.
 
-Used by duelists who were exiled from the colosseum.",4.0,,68,20.0,30,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698e7e0dl0i1op5tj0nigfcedar.png
+Used by duelists who were exiled from the colosseum.",4,,68,20,30,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698e7e0dl0i1op5tj0nigfcedar.png
 251,24,Torch,"This torch's tip is wrapped in oil-soaked rags and set on fire.
 The flame can illuminate dark locales, or be used to attack enemies.
 
@@ -821,33 +821,33 @@ Can be raised up when equipped in the left hand,
 illuminating more of the surrounding area.",,,111,1.5,5,5,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a2e19cl0i1pp06n0kd7rxesjl.png
 252,24,Steel-Wire Torch,"Torch wound with metal wire. The flame can illuminate dark locales, or be used to attack enemies.
 
-Heavier than a normal torch, but the heated filament boosts fire damage dealt.",,,112,3.0,10,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c23d73l0i1ppcoi0x9lzm1frn.png
+Heavier than a normal torch, but the heated filament boosts fire damage dealt.",,,112,3,10,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69c23d73l0i1ppcoi0x9lzm1frn.png
 253,24,St. Trina's Torch,"Candlestand torch that burns with a light-purple flame. The carvings depict St. Trina, but in adult form, somewhat unnervingly.
 
-The light-purple flame induces sleep.",5.0,,113,3.0,10,10,0,14,0,https://eldenring.fanapis.com/images/weapons/17f69762fd7l0i1ppfr1nudb4uz853.png
-254,24,Ghostflame Torch,"Metal torch that burns with cold ghostflame. Tool of the Fallen Hawks who prowl the underground rivers. When the band's last embers were used up in their long search, they began to burn the bones of their fellows, acquiring the cold ghostflame, but sealing their fate as dwellers of the underground for all eternity.",1.0,,111,2.5,10,10,14,0,0,https://eldenring.fanapis.com/images/weapons/17f69ca18e3l0i1pplg1qd5hx85vfgj.png
+The light-purple flame induces sleep.",5,,113,3,10,10,0,14,0,https://eldenring.fanapis.com/images/weapons/17f69762fd7l0i1ppfr1nudb4uz853.png
+254,24,Ghostflame Torch,"Metal torch that burns with cold ghostflame. Tool of the Fallen Hawks who prowl the underground rivers. When the band's last embers were used up in their long search, they began to burn the bones of their fellows, acquiring the cold ghostflame, but sealing their fate as dwellers of the underground for all eternity.",1,,111,2.5,10,10,14,0,0,https://eldenring.fanapis.com/images/weapons/17f69ca18e3l0i1pplg1qd5hx85vfgj.png
 255,24,Beast-Repellent Torch,"A torch which burns oil infused with a special incense. The aroma pacifies wild beasts.
 
-Torches such as these were used to keep unwelcome beasts away from treasure troves hidden in caves.",,35.0,111,2.5,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694a60fal0i1pprpdod0sn0veh.png
-256,24,Sentry's Torch,Torch given to protectors of the Erdtree. Its flames are bestowed with a special incantation which allows the bearer to see assassins cloaked in veils. Furnished on behalf of the Erdtree and the Grace-Given Lord such that a Night of Black Knives will never come again.,,,111,5.0,15,8,0,15,0,https://eldenring.fanapis.com/images/weapons/17f69cf8934l0i1ppuzogdnseu6l7f.png
+Torches such as these were used to keep unwelcome beasts away from treasure troves hidden in caves.",,35,111,2.5,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694a60fal0i1pprpdod0sn0veh.png
+256,24,Sentry's Torch,Torch given to protectors of the Erdtree. Its flames are bestowed with a special incantation which allows the bearer to see assassins cloaked in veils. Furnished on behalf of the Erdtree and the Grace-Given Lord such that a Night of Black Knives will never come again.,,,111,5,15,8,0,15,0,https://eldenring.fanapis.com/images/weapons/17f69cf8934l0i1ppuzogdnseu6l7f.png
 257,25,Buckler,"A small metal roundshield. The bump in the center is designed to parry.
 
 A well-timed parry deflects an enemy's attack, breaking their stance and leaving them open to a critical hit. Though risk is inherent, this shield favors aggression.",,,114,1.5,8,13,0,0,0,https://eldenring.fanapis.com/images/shields/17f69c62fe8l0i124u8fi4nc7dbfbf.png
 258,25,Perfumer's Shield,"Golden shield used by the perfumers of Leyndell during military service.
 
-Made to be thin and light of weight, even those lacking strength can employ this immunity-boosting shield.",,32.0,3,1.5,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f694b8615l0i124uyj41jnmpvitp.png
+Made to be thin and light of weight, even those lacking strength can employ this immunity-boosting shield.",,32,3,1.5,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f694b8615l0i124uyj41jnmpvitp.png
 259,25,Man-Serpent's Shield,"Small copper dome-shaped roundshield carried by the man-serpents of Mt. Gelmir.
 
-Said to have been tempered in lava, it boasts great resistance to fire.",,,115,2.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b5141al0i124v8pxr1ks1ekij.png
+Said to have been tempered in lava, it boasts great resistance to fire.",,,115,2,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b5141al0i124v8pxr1ks1ekij.png
 260,25,Rickety Shield,"A creaky old wooden shield, circular in shape. Roughly reinforced with vines.
 
-There are countless other shields available of better make. This piece of scrap isn't worth the effort of equipping.",,,3,1.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6976985el0i124znputjytfizsr.png
+There are countless other shields available of better make. This piece of scrap isn't worth the effort of equipping.",,,3,1,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6976985el0i124znputjytfizsr.png
 261,25,Pillory Shield,"Pillory made to punish serious felons, used as a shield. Though made of good, sturdy wood, it is only a makeshift tool and performs as such.
 
-Perhaps due to its use as a device with which the guilty were made to endure prolonged suffering, it raises vitality.",,34.0,115,3.5,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69a7085fl0i124y1772hsc2fore.png
+Perhaps due to its use as a device with which the guilty were made to endure prolonged suffering, it raises vitality.",,34,115,3.5,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69a7085fl0i124y1772hsc2fore.png
 262,26,Beastman's Jar-Shield,"Shield fashioned from a tall broken jar carried by the beastmen of Farum Azula. There is a particular knack to wielding it.
 
-The beastmen have always fired earthenware jars for the express purpose of making shields. Such are their ways, strange though they are.",,,115,5.0,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f693d58ael0i125pgfsn2zo4078i.png
+The beastmen have always fired earthenware jars for the express purpose of making shields. Such are their ways, strange though they are.",,,115,5,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f693d58ael0i125pgfsn2zo4078i.png
 263,25,Red Thorn Roundshield,"A small, wooden roundshield. It is light and easy to handle, but cannot offer the damage negation of a metal shield.
 
 Its emblem is an ancient thorn design. Though it isn't much, it boosts fire damage negation.",,,3,1.5,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69c6b08dl0i125phehezloe6mgp.png
@@ -856,41 +856,41 @@ Its emblem is an ancient thorn design. Though it isn't much, it boosts fire dama
 An ancient cipher engraving lines the circumference. Though it isn't much, it boosts holy damage negation.",,,3,1.5,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69cbb4afl0i125s3vg05tmg3h9.png
 265,25,Riveted Wooden Shield,"Small wooden roundshield that has been reinforced with metal. It is light and easy to handle, but cannot offer the damage negation of a true metal shield.
 
-The design riveted to the center represents both sword and tree.",,,3,2.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6976f39fl0i125rvey7g31uyix.png
+The design riveted to the center represents both sword and tree.",,,3,2,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6976f39fl0i125rvey7g31uyix.png
 266,25,Blue-White Wooden Shield,"Small wooden roundshield that has been reinforced with metal. It is light and easy to handle, but cannot offer the damage negation of a true metal shield.
 
-The design is said to represent the stars of the night sky, portending fate.",,,115,2.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69652424l0i125urgh9o09mhavm.png
+The design is said to represent the stars of the night sky, portending fate.",,,115,2,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69652424l0i125urgh9o09mhavm.png
 267,25,Rift Shield,"Small metal roundshield depicting a sinister rift.
 
-An antiquated charm that glares back at an enemy, it boosts focus.",,36.0,3,2.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69c01371l0i126fsrmmhmt78m7.png
+An antiquated charm that glares back at an enemy, it boosts focus.",,36,3,2,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69c01371l0i126fsrmmhmt78m7.png
 268,25,Iron Roundshield,"An ordinary small roundshield made of metal. Heavier than a wooden shield, but boasts higher damage negation.
 
-Finely balanced, this shield is easy to use.",,,115,3.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b10c2el0i126k1rlvenfih79r.png
+Finely balanced, this shield is easy to use.",,,115,3,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b10c2el0i126k1rlvenfih79r.png
 269,25,Gilded Iron Shield,"Small metal roundshield. Heavier than a wooden shield, but boasts higher damage negation.
 
-Though the gold leaf is peeling and the effect is slight, it still boosts holy damage negation.",,,3,3.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698a4b7bl0i126nb4s0xsp2lnfw.png
+Though the gold leaf is peeling and the effect is slight, it still boosts holy damage negation.",,,3,3,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698a4b7bl0i126nb4s0xsp2lnfw.png
 270,25,Ice Crest Shield,"Small metal roundshield. Heavier than a wooden shield, but boasts higher damage negation.
 
-The ice crest originates from a Carian princess. Though the effect is slight, it boosts magic damage negation and resistance to frost.",,37.0,115,3.0,9,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b12e1bl0i126nysn2v09nsd3.png
+The ice crest originates from a Carian princess. Though the effect is slight, it boosts magic damage negation and resistance to frost.",,37,115,3,9,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b12e1bl0i126nysn2v09nsd3.png
 271,25,Smoldering Shield,"Small shield made upon Mt. Gelmir forged from uncooling lava.
 
-Resists frost with its heat, and can even be used to deal fire damage if wielded as a weapon.",,37.0,116,3.0,10,9,0,12,0,https://eldenring.fanapis.com/images/shields/17f69bd6428l0i126mo49q97n1both.png
-272,25,Spiralhorn Shield,"Small shield of antlers arranged in an eddy-like pattern. If used to attack a foe, the shield's antlers inflict blood loss. Once given to a Tarnished warrior who cultivated close ties to the ancestral followers. Though the effect is only slight, it boosts immunity, robustness, and focus.",3.0,38.0,3,2.0,8,10,0,0,0,https://eldenring.fanapis.com/images/shields/17f6942deffl0i1271bdbp91snfovh.png
+Resists frost with its heat, and can even be used to deal fire damage if wielded as a weapon.",,37,116,3,10,9,0,12,0,https://eldenring.fanapis.com/images/shields/17f69bd6428l0i126mo49q97n1both.png
+272,25,Spiralhorn Shield,"Small shield of antlers arranged in an eddy-like pattern. If used to attack a foe, the shield's antlers inflict blood loss. Once given to a Tarnished warrior who cultivated close ties to the ancestral followers. Though the effect is only slight, it boosts immunity, robustness, and focus.",3,38,3,2,8,10,0,0,0,https://eldenring.fanapis.com/images/shields/17f6942deffl0i1271bdbp91snfovh.png
 273,25,Coil Shield,"Armament designed for gladiatorial combat. Rises above its peers as a particularly showy specimen.
 
-The sculpted bronze snake is a poisonous breed, boosting the wielder's resistance to poison.",2.0,32.0,117,1.5,10,10,0,0,0,https://eldenring.fanapis.com/images/shields/17f694927d7l0i127ng35ra4v5k4gn.png
+The sculpted bronze snake is a poisonous breed, boosting the wielder's resistance to poison.",2,32,117,1.5,10,10,0,0,0,https://eldenring.fanapis.com/images/shields/17f694927d7l0i127ng35ra4v5k4gn.png
 274,26,Kite Shield,"A standard medium-sized metal shield.
 
 Metal shields reliably negate physical damage when guarding, a trait which made them highly trusted on the battlefield.",,,115,4.5,12,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6967bb2bl0i127q8x98oklbecj.png
 275,26,Marred Leather Shield,"Leather shield of Stormveil soldiers. Much like the castle, it is marred by mottling and thorns.
 
-Some say it is the curse of grafting which causes such affliction, while others talk of its root being something altogether more sinister hidden deep within the castle.",3.0,,115,3.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6985902bl0i127b1nqhoj9b4nhl.png
+Some say it is the curse of grafting which causes such affliction, while others talk of its root being something altogether more sinister hidden deep within the castle.",3,,115,3,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6985902bl0i127b1nqhoj9b4nhl.png
 276,26,Marred Wooden Shield,"Wooden shield of Stormveil soldiers. Much like the castle, it is marred by mottling and thorns.
 
-Some say it is the curse of grafting which causes such affliction, while others talk of its root being something altogether more sinister hidden deep within the castle.",3.0,,115,4.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f696cb3bal0i127cn7tiavj7t1u.png
+Some say it is the curse of grafting which causes such affliction, while others talk of its root being something altogether more sinister hidden deep within the castle.",3,,115,4,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f696cb3bal0i127cn7tiavj7t1u.png
 277,26,Banished Knight's Shield,"A tall medium-sized metal shield. Given to knights who, whether by misfortune or misdeed, were forced to abandon their homes.
 
-Most of these knights were sent to the fringes, where they were forced to start anew with only despair for company.",,,115,6.0,14,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698ac740l0i127wziv2s11fd2c.png
+Most of these knights were sent to the fringes, where they were forced to start anew with only despair for company.",,,115,6,14,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698ac740l0i127wziv2s11fd2c.png
 278,26,Albinauric Shield,"Tall oval shield made of metal carried by young Albinaurics. The ornamentation represents the primordial drop of dew from which they are said to have been created.
 Boasts exceptional magic damage negation. The Albinaurics' most formidable foes were sorcerers, after all.",,,3,4.5,11,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ce5e4cl0i128b0nivmu8x7jg.png
 279,26,Sun Realm Shield,"Shield of honor depicting a city crowned by the sun. It has seen better days.
@@ -901,33 +901,33 @@ Much like the wear upon the shield, the Seat of the Sun is long faded away.",,,3
 The shape is said to imitate that of a sacred drop of dew, which inspired the absurd rumor that Loretta herself was an Albinauric.",,,115,3.5,12,10,10,0,0,https://eldenring.fanapis.com/images/shields/17f6970052fl0i128q30d2avtlnbrrf.png
 281,26,Round Shield,"A wooden roundshield that has been reinforced with metal.
 
-Comparatively light for its size, this shield is easy to handle but lacks a true metal shield's ability to negate damage.",,,3,4.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6988b72dl0i128vmcj5b7a5j1e9.png
+Comparatively light for its size, this shield is easy to handle but lacks a true metal shield's ability to negate damage.",,,3,4,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6988b72dl0i128vmcj5b7a5j1e9.png
 282,26,Scorpion Kite Shield,"A standard medium-sized metal shield. Highly reputed for its solid build and reliability.
 
 Emblazoned with a yellow scorpion, a warning of surprise attacks and sudden strikes.",,,3,4.5,12,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6948dfb1l0i1298n92tg7459mbg.png
 283,26,Twinbird Kite Shield,"Shield featuring a vividly painted twinbird.
 The twinbird is said to be the envoy of an outer god, and mother of the Deathbirds.
 
-At dwindling levels of HP, this shield slightly boosts both attack and defense.",,39.0,115,4.5,12,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698aad3fl0i129kcpcnkgwlznm.png
+At dwindling levels of HP, this shield slightly boosts both attack and defense.",,39,115,4.5,12,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698aad3fl0i129kcpcnkgwlznm.png
 284,26,Blue-Gold Kite Shield,"A standard medium-sized metal shield. Highly reputed for its solid build and reliability.
 
-The design represents the Erdtree foregrounded against a blue sky.",,,3,5.0,12,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6966bef4l0i129o1blgktqip69s.png
+The design represents the Erdtree foregrounded against a blue sky.",,,3,5,12,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6966bef4l0i129o1blgktqip69s.png
 285,26,Brass Shield,"On the larger side for a medium-sized shield, the face has been covered in brass.
 
-Commonly employed in the Shattering.",,,115,7.0,16,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69beaf5al0i12ae69s49g5aaaea.png
+Commonly employed in the Shattering.",,,115,7,16,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69beaf5al0i12ae69s49g5aaaea.png
 286,26,Great Turtle Shell,"Shield fashioned from a great turtle shell. The natural curve helps it contend with foes' attacks.
 
-The turtle is a symbol of tirelessness, and this shield boosts stamina recovery speed.",,40.0,118,5.5,14,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f699d7257l0i12ai52ozxwx6ewwi.png
+The turtle is a symbol of tirelessness, and this shield boosts stamina recovery speed.",,40,118,5.5,14,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f699d7257l0i12ai52ozxwx6ewwi.png
 287,25,Shield of the Guilty,"Shield made to venerate a maiden whose eyes were crushed by Briars of Sin before being reborn in these lands.
 
-Venerating the repose of the soul, this shield boosts focus. The briars can be used to attack foes.",3.0,36.0,116,2.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6996caf5l0i12afnpkuzhuzo9o.png
+Venerating the repose of the soul, this shield boosts focus. The briars can be used to attack foes.",3,36,116,2,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6996caf5l0i12afnpkuzhuzo9o.png
 288,26,Carian Knight's Shield,"A teardrop-shaped, medium-sized shield embedded with blue glintstones.
 Carried by knights who served the Carian royal family.
 
 Excels when facing magic or holy attacks. Just who were these knights preparing to fight?",,,115,4.5,10,10,15,0,0,https://eldenring.fanapis.com/images/shields/17f6942eeabl0i12apjrp14m98cxmg.png
 289,26,Large Leather Shield,"A roundshield covered in leather. On the larger side for a medium-sized shield.
 
-Though its damage negation may be lacking compared to a metal shield, it can handle a wider range of attack affinities.",,,3,3.0,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b8ad9fl0i12bhsus3gi193fg.png
+Though its damage negation may be lacking compared to a metal shield, it can handle a wider range of attack affinities.",,,3,3,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b8ad9fl0i12bhsus3gi193fg.png
 290,26,Horse Crest Wooden Shield,"A tall, medium-sized wooden shield. Light for its size, and easy to handle.
 
 The circular horsehead design evokes a swift gallop.",,,115,3.5,8,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f699a214fl0i12beelfraiymmf7.png
@@ -960,13 +960,13 @@ The inverted hawk is the emblem of the company of slaves ordered to explore the 
 Metal shields reliably negate physical damage when guarding, a trait which made them highly trusted on the battlefield.",,,3,3.5,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f694b8cc1l0i12d7wmnsvn9wams.png
 300,26,Black Leather Shield,"Roundshield covered in black leather. On the larger side for a medium-sized shield.
 
-From the north, this shield depicts the polar star in rivets of gold. The inside is lined with fur, protecting the carrier from frost.",,,115,3.0,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698cf256l0i12dbf0mgqicx93p.png
+From the north, this shield depicts the polar star in rivets of gold. The inside is lined with fur, protecting the carrier from frost.",,,115,3,10,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698cf256l0i12dbf0mgqicx93p.png
 301,27,Dragon Towershield,"Tower shield engraved with a dragon, symbol of protection. Heavy even among greatshields, it possesses exceptional guarding ability.
 
 The ancient dragons, who ruled in the prehistoric era before the Erdtree, would protect their lord as a wall of living rock.",,,116,17.5,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f693c793el0i12deqfa24mgi3ik7.png
 302,27,Distinguished Greatshield,"Greatshield featuring sumptuous ornamentation used by the scions of great families.
 
-Due to their excessive size, these shields were at times seen as the hallmark of little lordlings who were too timid to earn a few nicks and scratches.",,,115,17.0,32,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6998f8b8l0i12dhelzp1oi1uyv.png
+Due to their excessive size, these shields were at times seen as the hallmark of little lordlings who were too timid to earn a few nicks and scratches.",,,115,17,32,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6998f8b8l0i12dhelzp1oi1uyv.png
 303,27,Crucible Hornshield,"Greatshield of red-tinged gold carried by Crucible Knights. Features a great horn.
 
 An ancient holiness dwells within. The crucible horn skewers foes when performing shield bashes.",,,116,11.5,26,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f695a9c70l0i12dg13mf7v9clac.png
@@ -975,7 +975,7 @@ An ancient holiness dwells within. The crucible horn skewers foes when performin
 Imbued with lightning.",,,116,13.5,28,12,0,0,0,https://eldenring.fanapis.com/images/shields/17f69872931l0i12dy19gq5ij75yoe.png
 305,27,Briar Greatshield,"Greatshield from a foreign land, used by Elemer of the Briar. Attacks with this armament utilize the iron thorns that have been wound around its frame.
 
-Originates from Eochaid, a land of proudly solitary ascetics.",3.0,,116,9.5,21,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ac13ecl0i12e68qij6rgf53vp.png
+Originates from Eochaid, a land of proudly solitary ascetics.",3,,116,9.5,21,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ac13ecl0i12e68qij6rgf53vp.png
 306,27,Erdtree Greatshield,"Weighty greatshield forged of gold carried by the order of Tree Sentinels, heavily equipped knights. Blessed by an old incantation of protection.
 
 The living rampart of the Erdtree, the Tree Sentinels are the standard to which all defenders of the Erdtree aspire.",,,119,13.5,30,0,0,12,0,https://eldenring.fanapis.com/images/shields/17f694b1b61l0i12e5nf59cb5qk7vu.png
@@ -984,155 +984,155 @@ The living rampart of the Erdtree, the Tree Sentinels are the standard to which 
 The beast depicted is Serosh, aged counselor who guides the golden lineage.",,,115,12.5,24,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6989b386l0i12e4lob57bdw1rqq.png
 308,27,Jellyfish Shield,"The head of a spirit jellyfish, commonly found floating above sacred ground throughout the Lands Between, wielded without modification as a shield.
 
-The see-through head is extremely light, but its flesh is supple, providing absolutely no protection from piercing attacks.",,,120,8.0,20,14,0,0,0,https://eldenring.fanapis.com/images/shields/17f699569f2l0i12e91gm212p52kz4.png
-309,27,Fingerprint Stone Shield,"A great stone shield with an intricately carved fingerprint design. One of the heaviest of all greatshields. Part of the tomb of an ancient god, the Readerless Fingers relayed their message through these imprints, said to be the very seeds from which frenzy first sprouted.",7.0,,116,29.0,48,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ac7946l0i12emsgkbeuohu93n.png
+The see-through head is extremely light, but its flesh is supple, providing absolutely no protection from piercing attacks.",,,120,8,20,14,0,0,0,https://eldenring.fanapis.com/images/shields/17f699569f2l0i12e91gm212p52kz4.png
+309,27,Fingerprint Stone Shield,"A great stone shield with an intricately carved fingerprint design. One of the heaviest of all greatshields. Part of the tomb of an ancient god, the Readerless Fingers relayed their message through these imprints, said to be the very seeds from which frenzy first sprouted.",7,,116,29,48,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ac7946l0i12emsgkbeuohu93n.png
 310,27,Icon Shield,"Greatshield painted with a divine scene; the recipience of a blessed tear from the Erdtree. An item that looks back fondly on the age of plenty.
 
-The divine scene acts in and of itself as a sacred invocation; gradually restoring the carrier's HP.",,41.0,115,11.5,22,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f693ca65dl0i12eu7yz6cf3nexe.png
+The divine scene acts in and of itself as a sacred invocation; gradually restoring the carrier's HP.",,41,115,11.5,22,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f693ca65dl0i12eu7yz6cf3nexe.png
 311,27,One-Eyed Shield,"Tricksome shield made from white stone depicting a malformed one-eyed god. The barrel of a firearm pokes through the open mouth.
 
 Once worshipped by the giants, this evil deity is believed to have been slain by Queen Marika.",,,121,20.5,36,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69378e1dl0i12exgnluqgflkbi.png
 312,27,Visage Shield,"Tricksome bronze shield depicting the face of a Fire Giant. Several tongues leap from its open mouth.
 
-The dreadful visage and burning flames are designed to remind one of the horror of facing a Fire Giant. In other words, this shield has an instructional function.",,,122,24.0,44,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69797ac7l0i12ew4eqk33suyj17.png
+The dreadful visage and burning flames are designed to remind one of the horror of facing a Fire Giant. In other words, this shield has an instructional function.",,,122,24,44,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69797ac7l0i12ew4eqk33suyj17.png
 313,27,Spiked Palisade Shield,"A large wooden shield covered with spikes. Though relatively light, it lacks in damage negation.
 
-Designed to perform shield bashes, these attacks riddle the enemy with holes, earning it the nickname of ""pard shield.""",3.0,,116,11.5,20,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69c7916el0i12ey2p0l7xj09nis.png
+Designed to perform shield bashes, these attacks riddle the enemy with holes, earning it the nickname of ""pard shield.""",3,,116,11.5,20,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69c7916el0i12ey2p0l7xj09nis.png
 314,27,Manor Towershield,"An iron greatshield large enough to cover the entire body. Depicts the Roundtable Hold, gathering place of champions.
 
-Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,16.0,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f695ce77cl0i12fbgg8t0smpvg3n.png
+Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,16,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f695ce77cl0i12fbgg8t0smpvg3n.png
 315,27,Crossed-Tree Towershield,"An iron greatshield large enough to cover the entire body. Emblazoned with an old, interleaving tree.
 
-Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,16.0,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6981fc6cl0i12fkq4jfcsautbiv.png
+Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,16,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f6981fc6cl0i12fkq4jfcsautbiv.png
 316,27,Inverted Hawk Towershield,"An iron greatshield large enough to cover the entire body. Features an inverted hawk crest.
 
-Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,16.0,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69bfaff2l0i12frzztam4cpn7d.png
+Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,16,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69bfaff2l0i12frzztam4cpn7d.png
 317,27,Ant's Skull Plate,"Huge head of one of the giant ants which inhabit the two underground rivers, used without modification as a shield. Excels at repelling enemy attacks.
 
-Giant ants are venomous creatures, granting a boost to immunity when wielding this shield.",2.0,32.0,116,13.5,28,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b33aafl0i12fqkwzuaznegji.png
-318,27,Redmane Greatshield,"Greatshield shaped like a fang, featuring the crest of red-maned lion. Carried by the Redmane Knights who fought alongside Radahn.",,,115,14.0,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69a1afefl0i12fozrc1tnhg20is.png
+Giant ants are venomous creatures, granting a boost to immunity when wielding this shield.",2,32,116,13.5,28,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b33aafl0i12fqkwzuaznegji.png
+318,27,Redmane Greatshield,"Greatshield shaped like a fang, featuring the crest of red-maned lion. Carried by the Redmane Knights who fought alongside Radahn.",,,115,14,30,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69a1afefl0i12fozrc1tnhg20is.png
 319,27,Eclipse Crest Greatshield,"Metal greatshield painted with a sun in eclipse. Carried by the headless mausoleum knights.
 
-The eclipsed sun, drained of color, is the protective star of soulless demigods. It aids the mausoleum knights by keeping Destined Death at bay.",,38.0,115,15.0,32,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ae9ee5l0i12fyuk6a06fvdcq.png
+The eclipsed sun, drained of color, is the protective star of soulless demigods. It aids the mausoleum knights by keeping Destined Death at bay.",,38,115,15,32,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69ae9ee5l0i12fyuk6a06fvdcq.png
 320,27,Cuckoo Greatshield,"Metal greatshield painted with a peering cuckoo. Carried by the enchanted knights sworn to the academy.
 
 Boasting high magic damage negation, this shield is used to hunt down mages.
-""Our enemy is none other than Caria itself.""",,,115,15.0,32,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69aba9d3l0i12ga56obpyqthd0a.png
+""Our enemy is none other than Caria itself.""",,,115,15,32,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69aba9d3l0i12ga56obpyqthd0a.png
 321,27,Golden Greatshield,"Oval greatshield made of gold, carried by knights who protect the Royal Capital of Leyndell.
 
-Knights of Leyndell are reputed for their sturdiness, exemplified by this shield's exceptional guard capacity.",,,115,17.0,34,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698cf6d3l0i12gnjnwa5wdqlqj.png
+Knights of Leyndell are reputed for their sturdiness, exemplified by this shield's exceptional guard capacity.",,,115,17,34,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698cf6d3l0i12gnjnwa5wdqlqj.png
 322,27,Gilded Greatshield,"Metal greatshield coated with gold. Carried by knights loyal to Godrick.
 
 The red tinge in the gold coat mirrors the primordial matter that became the Erdtree. The color of homeward yearning.",,,115,17.5,36,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f695ae9edl0i12glt4xotvobrl0m.png
 323,27,Haligtree Crest Greatshield,"Metal greatshield depicting the Haligtree with unalloyed gold. Carried by knights who have vowed to serve Miquella's Haligtree. Possesses high holy damage negation. Yet now, with the Haligtree misshapen, this wondrous rendition is a fleeting fantasy.",,,115,18.5,36,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f698f9c1fl0i12go9pgbh4sdw0zs.png
 324,27,Wooden Greatshield,"Wooden greatshield reinforced with a metal ornamentation.
 
-Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,115,8.0,14,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f699949b2l0i12gqzulu6fgih91o.png
+Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,115,8,14,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f699949b2l0i12gqzulu6fgih91o.png
 325,27,Lordsworn's Shield,"Wooden tower shield. Lightweight for a greatshield and easy to handle.
 Commonly used in the Shattering.
 
-Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,10.0,16,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b9df0bl0i12h4ss3ka8zvpcoc.png
+Greatshields boast high damage negation and guard capacity, making enemy attacks easy to repel.",,,116,10,16,0,0,0,0,https://eldenring.fanapis.com/images/shields/17f69b9df0bl0i12h4ss3ka8zvpcoc.png
 326,28,Glintstone Staff,"Staff with a glintstone embedded at the tip. A catalyst for casting sorceries.
 
-Sorceries must be memorized first at a site of lost grace, and a staff must be equipped to cast them.",,,115,3.0,6,0,10,0,0,https://eldenring.fanapis.com/images/weapons/17f69930219l0i1oytgbre6o33dti.png
+Sorceries must be memorized first at a site of lost grace, and a staff must be equipped to cast them.",,,115,3,6,0,10,0,0,https://eldenring.fanapis.com/images/weapons/17f69930219l0i1oytgbre6o33dti.png
 327,28,Crystal Staff,"Staff fashioned from pure crystal; a deed impossible for a human. Enhances Crystalian sorceries.
 
-The Crystalian's faint cogitation is known as the ""wisdom of stone."" This staff can only be wielded by those of intellect high enough to grasp such wisdom.",8.0,,115,4.5,8,0,48,0,0,https://eldenring.fanapis.com/images/weapons/17f699946f4l0i1oz2nopkhsi7qz5p.png
+The Crystalian's faint cogitation is known as the ""wisdom of stone."" This staff can only be wielded by those of intellect high enough to grasp such wisdom.",8,,115,4.5,8,0,48,0,0,https://eldenring.fanapis.com/images/weapons/17f699946f4l0i1oz2nopkhsi7qz5p.png
 328,28,Gelmir Glintstone Staff,"Staff with a forked tip, embedded with red glintstones. Enhances lava sorceries.
 
-The Man-Serpents of Mt. Gelmir draw from faith in addition to intelligence to enhance the potency of their sorcery.",9.0,,115,2.5,6,0,14,14,0,https://eldenring.fanapis.com/images/weapons/17f69d7a8dcl0i1oz4x85o3hhhl069.png
+The Man-Serpents of Mt. Gelmir draw from faith in addition to intelligence to enhance the potency of their sorcery.",9,,115,2.5,6,0,14,14,0,https://eldenring.fanapis.com/images/weapons/17f69d7a8dcl0i1oz4x85o3hhhl069.png
 329,28,Demi-Human Queen's Staff,"Glintstone staff styled as a scepter. A gift once given to the demi-humans to foster peace, it can be wielded even by those of low intelligence.
 
-Sneered at by fools in the academy.",,,115,3.0,6,0,10,0,0,https://eldenring.fanapis.com/images/weapons/17f6960232el0i1oz9tjni3i1ghuy.png
+Sneered at by fools in the academy.",,,115,3,6,0,10,0,0,https://eldenring.fanapis.com/images/weapons/17f6960232el0i1oz9tjni3i1ghuy.png
 330,28,Carian Regal Scepter,"Magic scepter of Rennala, Queen of the Full Moon. The glintstone is known as a Carian Blue, enhancing full moon sorceries.
 
-Only those of the highest intelligence may wield this, the finest of all glintstone staves.",10.0,,123,3.0,8,10,60,0,0,https://eldenring.fanapis.com/images/weapons/17f6953c900l0i1ozjupz92p99yzi.png
+Only those of the highest intelligence may wield this, the finest of all glintstone staves.",10,,123,3,8,10,60,0,0,https://eldenring.fanapis.com/images/weapons/17f6953c900l0i1ozjupz92p99yzi.png
 331,28,Digger's Staff,"Staff of a sorcerer-miner who extracts glintstone from crystal tunnels. The staff itself is a tool used to mine, and the ferrule is also embedded with a glintstone.
 
-Boosts the power of Stonedigger sorceries.",11.0,,115,4.5,8,0,12,0,0,https://eldenring.fanapis.com/images/weapons/17f6960a2b7l0i1ozuak6b667gyiqq.png
+Boosts the power of Stonedigger sorceries.",11,,115,4.5,8,0,12,0,0,https://eldenring.fanapis.com/images/weapons/17f6960a2b7l0i1ozuak6b667gyiqq.png
 332,28,Astrologer's Staff,"Staff of the astrologers. A glintstone is embedded in the tip, enabling it to be used as a catalyst for sorceries.
 
-Sorceries must be memorized first at a site of lost grace, and a staff must be equipped to cast them.",,,115,3.0,7,0,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69b2786dl0i1ozt246l3i5ng1n3.png
+Sorceries must be memorized first at a site of lost grace, and a staff must be equipped to cast them.",,,115,3,7,0,16,0,0,https://eldenring.fanapis.com/images/weapons/17f69b2786dl0i1ozt246l3i5ng1n3.png
 333,28,Carian Glintblade Staff,"Staff embedded with a blue glintstone. One of two types of Carian staff.
 
-Gifted to enchanted knights, it enhances Glintblade sorceries.",12.0,,115,2.5,6,12,22,0,0,https://eldenring.fanapis.com/images/weapons/17f69bfdbcdl0i1ozxotkx767c6z5e.png
+Gifted to enchanted knights, it enhances Glintblade sorceries.",12,,115,2.5,6,12,22,0,0,https://eldenring.fanapis.com/images/weapons/17f69bfdbcdl0i1ozxotkx767c6z5e.png
 334,28,Prince of Death's Staff,"Staff embedded with sullied amber, said to be a very part of the Prince of Death. Enhances death sorceries.
 
-One of the staves deemed heretical by the academy for its ability to allow sorceries to be augmented through faith in addition to intelligence.",13.0,,115,3.0,6,0,18,18,0,
+One of the staves deemed heretical by the academy for its ability to allow sorceries to be augmented through faith in addition to intelligence.",13,,115,3,6,0,18,18,0,
 335,28,Albinauric Staff,"Short staff with a blue glintstone embedded. Wielded by the Albinaurics of old.
 
 The Albinaurics harbor a secret; they cast sorcery using their innate arcaneness.",,,115,2.5,6,0,10,0,12,https://eldenring.fanapis.com/images/weapons/17f69d0ae08l0i1p06vghydco2o29u.png
 336,28,Academy Glintstone Staff,"Staff of the Academy of Raya Lucaria, embedded with a turquoise glintstone.
 
-Only a recognized sorcerer is permitted to wield this staff.",,,115,3.0,6,0,28,0,0,https://eldenring.fanapis.com/images/weapons/17f69dea799l0i1p0jj1dc7gc9ooad.png
+Only a recognized sorcerer is permitted to wield this staff.",,,115,3,6,0,28,0,0,https://eldenring.fanapis.com/images/weapons/17f69dea799l0i1p0jj1dc7gc9ooad.png
 337,28,Carian Glintstone Staff,"Staff embedded with a blue glintstone. One of two types of Carian staff.
 
-Given to sorcerers that they might enact the role of knight. Enhances Carian sword sorceries.",14.0,,115,3.0,6,8,24,0,0,https://eldenring.fanapis.com/images/weapons/17f6967c49cl0i1p0mowlnjq4ufrl.png
+Given to sorcerers that they might enact the role of knight. Enhances Carian sword sorceries.",14,,115,3,6,8,24,0,0,https://eldenring.fanapis.com/images/weapons/17f6967c49cl0i1p0mowlnjq4ufrl.png
 338,28,Azur's Glintstone Staff,"Staff of the primeval glintstone sorcerer Azur. Only those who have glimpsed what lies beyond the wisdom of stone may wield it.
 
-Reduces casting time of all sorceries, but consumes additional FP.",,,115,4.0,10,0,52,0,0,https://eldenring.fanapis.com/images/weapons/17f695d9e5dl0i1p0otrlfxvt1g9n9.png
+Reduces casting time of all sorceries, but consumes additional FP.",,,115,4,10,0,52,0,0,https://eldenring.fanapis.com/images/weapons/17f695d9e5dl0i1p0otrlfxvt1g9n9.png
 339,28,Lusat's Glintstone Staff,"Staff of the primeval glintstone sorcerer Lusat. Only those who have glimpsed what lies beyond the wisdom of stone may wield it.
 
-Enhances power of all sorceries, but consumes additional FP.",,,115,4.0,10,0,52,0,0,https://eldenring.fanapis.com/images/weapons/17f695a0063l0i1p0qdogpnbjb7xnf.png
+Enhances power of all sorceries, but consumes additional FP.",,,115,4,10,0,52,0,0,https://eldenring.fanapis.com/images/weapons/17f695a0063l0i1p0qdogpnbjb7xnf.png
 340,28,Meteorite Staff,"Staff embedded with a dark purple glintstone, said to be the fragment of a meteorite. Boasts high sorcery scaling and boosts gravity sorceries as well.
 
-However, this staff cannot be strengthened in any way.",15.0,,115,4.5,6,0,18,0,0,https://eldenring.fanapis.com/images/weapons/17f6995e6eel0i1p0ujryl4uvjkiji.png
+However, this staff cannot be strengthened in any way.",15,,115,4.5,6,0,18,0,0,https://eldenring.fanapis.com/images/weapons/17f6995e6eel0i1p0ujryl4uvjkiji.png
 341,28,Staff of the Guilty,"A heretical staff fashioned from a smoldering, withered sapling that turns the blood of sacrifices pierced by it into glintstone. Similar to hex magic.
 
-Sorceries are scaled with faith rather than intelligence when wielding this staff which enhances thorn sorceries in particular.",16.0,,115,4.5,8,0,0,12,0,https://eldenring.fanapis.com/images/weapons/17f698cdcd5l0i1p17cuvrv89tk1t.png
+Sorceries are scaled with faith rather than intelligence when wielding this staff which enhances thorn sorceries in particular.",16,,115,4.5,8,0,0,12,0,https://eldenring.fanapis.com/images/weapons/17f698cdcd5l0i1p17cuvrv89tk1t.png
 342,28,Rotten Crystal Staff,"Staff fashioned from pure crystal; a deed impossible for a human. It festers with scarlet rot.
 
-Enhances Crystalian sorceries.",8.0,,115,4.5,8,0,48,0,0,https://eldenring.fanapis.com/images/weapons/17f69594fd1l0i1p1ad5rxu1z3y9xt.png
+Enhances Crystalian sorceries.",8,,115,4.5,8,0,48,0,0,https://eldenring.fanapis.com/images/weapons/17f69594fd1l0i1p1ad5rxu1z3y9xt.png
 343,28,Staff of Loss,"Staff missing its glintstone. Wielded by sorcerers who believe that discovery comes through acts of asceticism.
 
-This staff only distinguishes itself when casting invisibility sorceries, but that is reason enough for some to wield it.",17.0,,115,2.5,6,12,14,0,0,https://eldenring.fanapis.com/images/weapons/17f69c940f6l0i1p1noaxeazv2s6xo.png
+This staff only distinguishes itself when casting invisibility sorceries, but that is reason enough for some to wield it.",17,,115,2.5,6,12,14,0,0,https://eldenring.fanapis.com/images/weapons/17f69c940f6l0i1p1noaxeazv2s6xo.png
 344,29,Finger Seal,"A sacred seal bestowed by a Finger Maiden which serves as a catalyst for casting sacred incantations.
 
 Incantations must be memorized first at a site of grace, and a sacred seal must be equipped to cast them.",,,115,1.5,4,0,0,10,0,https://eldenring.fanapis.com/images/weapons/17f699368ccl0i1ph45qf42ty540od.png
 345,29,Godslayer's Seal,"Sacred seal of the Godskin Apostles, inlaid with obsidian.
 
-Said to represent the manipulation of black flame, this catalyst enhances godslayer incantations.",18.0,,115,1.5,4,0,0,27,0,https://eldenring.fanapis.com/images/weapons/17f69bbd392l0i1ph9qxgols7hl7qc.png
+Said to represent the manipulation of black flame, this catalyst enhances godslayer incantations.",18,,115,1.5,4,0,0,27,0,https://eldenring.fanapis.com/images/weapons/17f69bbd392l0i1ph9qxgols7hl7qc.png
 346,29,Giant's Seal,"Sacred seal depicting the one-eyed god of the Fire Giants, adorned with braids of red hair.
 
-Sacred seal wielded by Fire Monks and Prelates, this catalyst enhances Giants' Flame incantations.",19.0,,115,1.5,4,0,0,14,0,https://eldenring.fanapis.com/images/weapons/17f6995ccbfl0i1phh558cbgycwuo.png
+Sacred seal wielded by Fire Monks and Prelates, this catalyst enhances Giants' Flame incantations.",19,,115,1.5,4,0,0,14,0,https://eldenring.fanapis.com/images/weapons/17f6995ccbfl0i1phh558cbgycwuo.png
 347,29,Gravel Stone Seal,"Sacred seal made from Gravel Stone thought to be an ancient dragon scale. Enhances Dragon Cult incantations of the Royal Capital.
 
-The worship of the ancient dragons does not conflict with belief in the Erdtree. After all, this seal, and lightning itself, are both imbued with gold.",20.0,,115,1.5,4,0,0,18,0,
+The worship of the ancient dragons does not conflict with belief in the Erdtree. After all, this seal, and lightning itself, are both imbued with gold.",20,,115,1.5,4,0,0,18,0,
 348,29,Clawmark Seal,"Sacred seal granted by Gurranq, the Beast Clergyman. A rare trinket which allows incantations to be scaled with strength.
 
-The claw mark represents Gurranq's wrath. Enhances bestial incantations learned from Gurranq.",21.0,,115,1.5,4,0,0,10,0,https://eldenring.fanapis.com/images/weapons/17f697c0b2dl0i1phqrezjlqqlunoa.png
+The claw mark represents Gurranq's wrath. Enhances bestial incantations learned from Gurranq.",21,,115,1.5,4,0,0,10,0,https://eldenring.fanapis.com/images/weapons/17f697c0b2dl0i1phqrezjlqqlunoa.png
 349,29,Golden Order Seal,"A formless sacred seal depicting the ceremonial observation of Order. Enhances Golden Order Fundamentalist incantations.
 
-Fundamentalism is scholarship in all but name. Scales incantations using both intelligence and faith.",22.0,,115,0.0,0,0,17,17,0,https://eldenring.fanapis.com/images/weapons/17f69d76aa8l0i1phsgjq5azzb5g1.png
+Fundamentalism is scholarship in all but name. Scales incantations using both intelligence and faith.",22,,115,0,0,0,17,17,0,https://eldenring.fanapis.com/images/weapons/17f69d76aa8l0i1phsgjq5azzb5g1.png
 350,29,Erdtree Seal,"A formless sacred seal decorated with an Erdtree crest, once the focus of religion in the Lands Between.
 
-Even though the Elden Ring is shattered, and the Erdtree has dulled from its former radiance, earnest faith continues to hold the answers.",,,115,0.0,0,0,0,40,0,https://eldenring.fanapis.com/images/weapons/17f698bacafl0i1phz3om56qt5bqof.png
+Even though the Elden Ring is shattered, and the Erdtree has dulled from its former radiance, earnest faith continues to hold the answers.",,,115,0,0,0,0,40,0,https://eldenring.fanapis.com/images/weapons/17f698bacafl0i1phz3om56qt5bqof.png
 351,29,Dragon Communion Seal,"Formless drakeblood seal with a dragon communion crest. Enhances Dragon Communion incantations.
 
 The sacrificial devouring of the heart gives power.
 Indeed, Dragon Communion is too primal in nature for the term ""incantation"" to be appropriate.
-This seal scales incantations with one's arcane attribute.",23.0,,115,0.0,0,0,0,10,10,https://eldenring.fanapis.com/images/weapons/17f697307d1l0i1pi6qvgmp5wuhmk.png
+This seal scales incantations with one's arcane attribute.",23,,115,0,0,0,0,10,10,https://eldenring.fanapis.com/images/weapons/17f697307d1l0i1pi6qvgmp5wuhmk.png
 352,29,Frenzied Flame Seal,"Formless sacred seal bestowed by the maiden of the Three Fingers. Enhances incantations of the frenzied flame.
 
-This seal is the mark of the Lord of Frenzied Flame. Scales incantations using strength, dexterity, intelligence, and faith all together.",24.0,,115,0.0,0,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69885c93l0i1pihpfc550piu1x.png
+This seal is the mark of the Lord of Frenzied Flame. Scales incantations using strength, dexterity, intelligence, and faith all together.",24,,115,0,0,0,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69885c93l0i1pihpfc550piu1x.png
 353,30,Shortbow,"Small bow made to fire arrows over great distances. Other than its ability to fire off arrows in rapid succession, it is also well-suited for use on horseback.
 
 To use a bow, arrows must also be equipped.",,,124,2.5,8,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6994d14el0i1pfsvoe12uhfhqnc.png
 354,30,Misbegotten Shortbow,"Shortbow wielded by Winged Misbegotten. Fine fur clings to it.
 
-Designed to inflict additional damage by sacrificing range.",,,124,3.0,16,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b492f2l0i1pg02g5smf5kummp.png
+Designed to inflict additional damage by sacrificing range.",,,124,3,16,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b492f2l0i1pg02g5smf5kummp.png
 355,30,Red Branch Shortbow,"Shortbow of polished red wood. Fashioned by a master craftsman and wielded by pages.
 
 A bow which requires dexterity rather than strength to master.",,,124,2.5,8,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6971cafal0i1pg8ls91ef3yrf8r.png
 356,30,Harp Bow,"Bow fashioned from a minstrel's harp. Sonorous tones still resound when firing arrows.
 
-Troubadours sing tales of champions, both in the honorable service of the Erdtree, and the one who spurns honor for blasphemy.",,,124,2.0,9,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69491311l0i1pgceffu5ll8sovn.png
+Troubadours sing tales of champions, both in the honorable service of the Erdtree, and the one who spurns honor for blasphemy.",,,124,2,9,9,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69491311l0i1pgceffu5ll8sovn.png
 357,30,Composite Bow,"Bow composited from a mix of materials.
 
-Demands high attributes, and is tricky to wield, but is a fearsome tool when mastered.",,,125,3.0,15,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6976f477l0i1pgfgwmdenvupj5.png
+Demands high attributes, and is tricky to wield, but is a fearsome tool when mastered.",,,125,3,15,15,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6976f477l0i1pgfgwmdenvupj5.png
 358,31,Longbow,"Longbow made to fire arrows over great distances. Compared to a shortbow, arrows fired reach further and deal more damage.
 
-To use a bow, arrows must also be equipped.",,,125,4.0,9,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d12746l0i1ojbzxzgz6gfjsi.png
+To use a bow, arrows must also be equipped.",,,125,4,9,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d12746l0i1ojbzxzgz6gfjsi.png
 359,31,Albinauric Bow,"Longbow featuring delicate silverwork. Wielded by Albinauric wolfback archers.
 
 This bow requires dexterity over strength to master.",,,125,4.5,7,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f695afa44l0i1ojioyvh48q16qul.png
@@ -1142,16 +1142,16 @@ Imbues arrows fired with magic damage.
 Reveals its true worth when used with magic-infused arrows.",,,125,4.5,10,14,12,0,0,https://eldenring.fanapis.com/images/weapons/17f69dcccffl0i1ojske3hc4ernauj.png
 361,31,Erdtree Bow,"Longbow featuring Erdtree styling. In times of old, when faith and battle went hand in hand, this weapon was created in tandem with the Golden Arrow.
 
-Scales all arrow damage with faith, revealing its true worth when used with holy-infused arrows.",,,125,4.0,8,12,0,14,0,https://eldenring.fanapis.com/images/weapons/17f6968148cl0i1ojrunt1o8v6y34f.png
+Scales all arrow damage with faith, revealing its true worth when used with holy-infused arrows.",,,125,4,8,12,0,14,0,https://eldenring.fanapis.com/images/weapons/17f6968148cl0i1ojrunt1o8v6y34f.png
 362,31,Serpent Bow,"Malformed bow in the shape of a pair of poisonous snakes. Imbues arrows with poison through pagan magic, revealing its true worth when used with poison-infused arrows.
 
 Used by assassins known as the Formless Serpents.",,,125,3.5,8,15,0,0,11,https://eldenring.fanapis.com/images/weapons/17f694c87afl0i1ojvhpi9w9ttf21.png
 363,31,Pulley Bow,"Longbow which utilizes a series of pulleys and springs. The complex mechanism, which required advanced mathematical and mechanical understanding to craft, was likely made by a certain genius who learned Golden Order fundamentalism.
 
-Enhances precision while shooting, enabling arrows to fly much further distances.",,,125,5.0,11,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694cf960l0i1ojybdeac0ffxf5.png
+Enhances precision while shooting, enabling arrows to fly much further distances.",,,125,5,11,11,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694cf960l0i1ojybdeac0ffxf5.png
 364,31,Black Bow,"Longbow carved from black wood to resemble a blade. One of the most difficult bows to master.
 
-The blade-like body of the bow is light and cuts through the air. Though a longbow, it can be wielded similarly to a shortbow.",,,124,4.0,9,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694bf0a0l0i1okt1ao6xjlqrmq9.png
+The blade-like body of the bow is light and cuts through the air. Though a longbow, it can be wielded similarly to a shortbow.",,,124,4,9,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694bf0a0l0i1okt1ao6xjlqrmq9.png
 365,32,Lion Greatbow,"Greatbow of black iron wielded by General Radahn. Decorated with a lion mane motif.
 
 Imbued with gravitational power of the Starscourge, when used along with Radahn's Spear, it becomes a true weapon of a champion.",,,126,9.5,22,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f694ec20bl0i1p34h48fycewmkr1.png
@@ -1160,31 +1160,31 @@ Imbued with gravitational power of the Starscourge, when used along with Radahn'
 Extremely heavy, this greatbow requires enormous strength just to draw, suggesting it was not designed for human use.",,,127,14.5,24,18,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69ba8511l0i1p3aular3j6um6ed.png
 367,32,Erdtree Greatbow,"Greatbow featuring Erdtree styling. In times of old, when faith and battle went hand in hand, this weapon was created in tandem with the Golden Great Arrow.
 
-Scales all arrow damage with faith, revealing its true worth when used with holy-infused arrows.",,,127,11.0,20,14,0,14,0,https://eldenring.fanapis.com/images/weapons/17f69727d35l0i1p3af7vawzb2qx4v.png
+Scales all arrow damage with faith, revealing its true worth when used with holy-infused arrows.",,,127,11,20,14,0,14,0,https://eldenring.fanapis.com/images/weapons/17f69727d35l0i1p3af7vawzb2qx4v.png
 368,32,Greatbow,"Enormous greatbow larger than any man. Can not be drawn with any ordinary level of strength, but the force of its shots is extraordinary.
 
-A greatbow can only fire great arrows.",,,127,10.0,20,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6967c4f3l0i1p3l1xull5qamw2.png
+A greatbow can only fire great arrows.",,,127,10,20,20,0,0,0,https://eldenring.fanapis.com/images/weapons/17f6967c4f3l0i1p3l1xull5qamw2.png
 369,33,Soldier's Crossbow,"A crossbow of simple make, usable by anyone, but lacking in both power and accuracy.
 
 Bolts must be equipped to use a crossbow.",,,9,3.5,10,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69a1d79cl0i1opcz0k9omitov0n.png
 370,33,Light Crossbow,"Ranged weapon made from a bow fixed to a stock. Deals good damage and is simple to use, but requires reloading after firing.
 
-Bolts must be equipped to use a crossbow.",,,9,4.0,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69832d19l0i1opiocf2s1b0z8f8.png
+Bolts must be equipped to use a crossbow.",,,9,4,12,8,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69832d19l0i1opiocf2s1b0z8f8.png
 371,33,Heavy Crossbow,"Heavy crossbow with iron limbs, increasing damage dealt.
 
 Commonly employed in the Shattering.",,,9,5.5,14,10,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69b95f86l0i1opjf3ra8xpdsovo.png
 372,33,Pulley Crossbow,"Crossbow made with pulleys and power springs. The complex mechanism, which required advanced mathematical and mechanical understanding to craft, was likely made by a certain genius who learned Golden Order fundamentalism.
-One touch fires a volley of bolts. Be warned; large stores of bolts can be quickly spent.",,,9,4.0,16,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69744d27l0i1opnrem0400k2gsd.png
-373,33,Full Moon Crossbow,"One-of-a-kind enchanted crossbow of exquisitely detailed craftsmanship. Made to celebrate the matrimonial union, and reconciliation, between the houses of the Erdtree and the Full Moon, Leyndell and Raya Lucaria. The two rings dance when reloading the weapon. Reveals true worth when used with holy-infused bolts.",,,9,4.0,10,10,14,0,0,https://eldenring.fanapis.com/images/weapons/17f69ac9f84l0i1opqor2ybht92g9q.png
+One touch fires a volley of bolts. Be warned; large stores of bolts can be quickly spent.",,,9,4,16,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69744d27l0i1opnrem0400k2gsd.png
+373,33,Full Moon Crossbow,"One-of-a-kind enchanted crossbow of exquisitely detailed craftsmanship. Made to celebrate the matrimonial union, and reconciliation, between the houses of the Erdtree and the Full Moon, Leyndell and Raya Lucaria. The two rings dance when reloading the weapon. Reveals true worth when used with holy-infused bolts.",,,9,4,10,10,14,0,0,https://eldenring.fanapis.com/images/weapons/17f69ac9f84l0i1opqor2ybht92g9q.png
 374,33,Arbalest,"Large crossbow made from composite materials. One of the largest of all bolt-firing devices.
 
-Its limbs are more pliable than metallic ones, allowing bolts fired from this weapon to pierce even helms forged of steel.",,,9,6.0,18,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d24aefl0i1oq9249e558exazo.png
+Its limbs are more pliable than metallic ones, allowing bolts fired from this weapon to pierce even helms forged of steel.",,,9,6,18,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69d24aefl0i1oq9249e558exazo.png
 375,33,Crepus's Black-Key Crossbow,"Black crossbow featuring a long stock. Used for sniping, it has a very long range.
 
-Weapon of Crepus, who served the Two Fingers from the shadows of the Roundtable as the head confessor.",,,9,5.0,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697ea1a4l0i1oq4te6lr8su01zs.png
+Weapon of Crepus, who served the Two Fingers from the shadows of the Roundtable as the head confessor.",,,9,5,14,16,0,0,0,https://eldenring.fanapis.com/images/weapons/17f697ea1a4l0i1oq4te6lr8su01zs.png
 376,34,Hand Ballista,"An unconventional ballistic device modelled on a weapon used to besiege castles. Only capable of firing greatbolts.
 
-Perfect for reckless acts such as storming a castle or facing an entire army alone.",,,9,10.0,30,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698da62dl0i1oj2p6wyeh8vo0to.png
+Perfect for reckless acts such as storming a castle or facing an entire army alone.",,,9,10,30,14,0,0,0,https://eldenring.fanapis.com/images/weapons/17f698da62dl0i1oj2p6wyeh8vo0to.png
 377,34,Jar Cannon,"Jar cannon which uses explosives to fire greatbolts. Deals great damage but is slow to reload.
 
-Experimental firearm brought to the assault on Volcano Manor, where it was discovered that no one knew how to use it.",,,9,15.0,34,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69dd8093l0i1oj6x6qo6tg76q8.png
+Experimental firearm brought to the assault on Volcano Manor, where it was discovered that no one knew how to use it.",,,9,15,34,12,0,0,0,https://eldenring.fanapis.com/images/weapons/17f69dd8093l0i1oj6x6qo6tg76q8.png
