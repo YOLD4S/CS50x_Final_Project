@@ -1,16 +1,63 @@
 {% extends "layout.html" %}
+
 {% block title %}NPCs{% endblock %}
+
 {% block content %}
-<h1 class="title">NPCs</h1>
-<!-- Add NPC Button -->
-<a href="add_npc" class="button is-primary">Add NPC</a>
+<div class="npcs-container">
+    <h1 class="page-title">NPCs of the Lands Between</h1>
 
+    <!-- Filters -->
+    <div class="filters-section">
+        <form method="GET" class="filters-form">
+            <div class="filter-group">
+                <label for="location">Location:</label>
+                <select name="location" id="location">
+                    <option value="">All Locations</option>
+                    {% for location in locations %}
+                        <option value="{{ location.id }}" {% if selected_location == location.id %}selected{% endif %}>
+                            {{ location.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
 
-<ul>
-    {% for npc in npcs %}
-    <li>
-        <a href="{{ url_for('npc_detail_page', npc_id=npc.id) }}">{{ npc.name }}</a>
-    </li>
-    {% endfor %}
-</ul>
+            <div class="filter-group">
+                <label for="only_night">Time of Day:</label>
+                <select name="only_night" id="only_night">
+                    <option value="">Any Time</option>
+                    <option value="0" {% if only_night == '0' %}selected{% endif %}>Day Only</option>
+                    <option value="1" {% if only_night == '1' %}selected{% endif %}>Night Only</option>
+                </select>
+            </div>
+
+            <button type="submit" class="filter-button">Apply Filters</button>
+        </form>
+    </div>
+
+    <!-- NPCs List -->
+    <div class="npcs-grid">
+        {% for npc in npcs %}
+        <div class="npc-card">
+            <h2>{{ npc.name }}</h2>
+            <div class="npc-details">
+                <p>HP: {{ npc.hp }}</p>
+                <p>Runes: {{ npc.runes }}</p>
+                {% if npc.location_name %}
+                    <p>Location: {{ npc.location_name }}</p>
+                {% endif %}
+                <p>Appears: {{ 'Night Only' if npc.only_night else 'Day & Night' }}</p>
+            </div>
+            <a href="{{ url_for('npc_detail_page', npc_id=npc.id) }}" class="view-details">View Details</a>
+        </div>
+        {% else %}
+        <p class="no-results">No NPCs found matching the selected filters.</p>
+        {% endfor %}
+    </div>
+
+    {% if logged_in %}
+    <div class="add-npc-section">
+        <a href="{{ url_for('add_npc') }}" class="add-npc-button">Add New NPC</a>
+    </div>
+    {% endif %}
+</div>
 {% endblock %}

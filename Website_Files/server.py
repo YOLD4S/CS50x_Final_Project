@@ -40,18 +40,6 @@ def create_app():
     app.add_url_rule("/keys", view_func=views.keys_page)
     app.add_url_rule("/bolstering", view_func=views.bolstering_page)
 
-    # db_item = ItemDatabase()
-    # db_item.add_item(Item("Slaughterhouse-Five", year=1972))
-    # db_item.add_item(Item("The Shining"))
-    # app.config["db_items"] = db_item
-
-    # db_npc = NPCDatabase()
-    # db_npc.add_npc(NPC("AlihaSN", 10, False, 13, False))
-    # db_npc.add_npc(NPC("AlihanSN", 100, True, 123, False))
-    # db_npc.add_npc(NPC("AlihaSN", 10, False, 13, True))
-    # db_npc.add_npc(NPC("AlihanSN", 100, True, 123, True))
-    # app.config["db_npcs"] = db_npc
-
     return app
 
 

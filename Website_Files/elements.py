@@ -8,12 +8,15 @@ class Item:
 
 
 class NPC:
-    def __init__(self, name, hp, human, location_id, only_night):
+    def __init__(self, id, encounter_id, name, hp, human, gear_id, dropped_item_id, image_url):
+        self.id = id
+        self.encounter_id = encounter_id
         self.name = name
         self.hp = hp
         self.human = human
-        self.location_id = location_id
-        self.only_night = only_night
+        self.gear_id = gear_id
+        self.dropped_item_id = dropped_item_id
+        self.image_url = image_url
 
 class Talisman:
     def __init__(self, id, info, description, weight, price, image_url):

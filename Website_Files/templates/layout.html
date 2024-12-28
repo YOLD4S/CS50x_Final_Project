@@ -27,19 +27,19 @@
           <img src="{{ url_for('static', filename='icons/elden-ring-wiki-game.webp') }}" alt="Home" />
         </a>
         <div class="navbar-buttons">
-          {% if logged_in %}
-              <span class="username">Welcome, {{ session.username }}</span>
-              <a class="button is-link" href="{{ url_for('logout_page') }}">Logout</a>
+          {% if 'username' in session %}
+          <span class="username">Welcome, {{ session['username'] }}</span>
+          <a class="button is-link" href="{{ url_for('logout_page') }}">Logout</a>
           {% else %}
-              <a class="button is-link" href="{{ url_for('login_page') }}">Login</a>
-              <a class="button is-link register-button" href="{{ url_for('register_page') }}">Register</a>
+          <a class="button is-link" href="{{ url_for('login_page') }}">Login</a>
+          <a class="button is-link register-button" href="{{ url_for('register_page') }}">Register</a>
           {% endif %}
         </div>
       </div>
     </nav>
   </header>
 
-  
+
   <main>
     <section class="section">
       <div class="content">
