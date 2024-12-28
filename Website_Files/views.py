@@ -210,9 +210,21 @@ def npc_page(npc_key): # may remove this later
 def weapons_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT id, name FROM weapons ORDER BY name ASC")
+
+    # Fetch weapon groups
+    cursor.execute("SELECT id, name FROM weapon_groups")
+    groups = cursor.fetchall()
+
+    # Fetch weapons, sorted alphabetically, with group association
+    cursor.execute("SELECT id, name, image_url, group_id FROM weapons ORDER BY name ASC")
     weapons = cursor.fetchall()
-    return render_template("weapons.html", weapons=weapons)
+
+    # Organize weapons by group
+    weapons_by_group = {group['id']: [] for group in groups}
+    for weapon in weapons:
+        weapons_by_group[weapon['group_id']].append(weapon)
+
+    return render_template("weapons.html", groups=groups, weapons_by_group=weapons_by_group)
 
 def weapon_detail_page(weapon_id):
     db = get_db()

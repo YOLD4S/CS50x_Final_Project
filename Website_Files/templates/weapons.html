@@ -2,11 +2,176 @@
 {% block title %}Weapons{% endblock %}
 {% block content %}
 <h1 class="title">Weapons</h1>
-<ul>
-    {% for weapon in weapons %}
-    <li>
-        <a href="{{ url_for('weapon_detail_page', weapon_id=weapon.id) }}">{{ weapon.name }}</a>
-    </li>
+
+<div class="filter-section">
+    <button id="filter-toggle-button">Filter Groups</button>
+    <div id="filter-menu" class="hidden">
+        <form id="filter-form">
+            <label class="select-all-label">
+                <input type="checkbox" id="select-all" checked /> <strong>Select All</strong>
+            </label>
+            <div class="group-filters">
+                {% for group in groups %}
+                <label class="group-filter-label">
+                    <input type="checkbox" class="group-checkbox" data-group-id="{{ group.id }}" checked /> {{ group.name }}
+                </label>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="weapon-groups">
+    {% for group in groups %}
+    <div class="weapon-group" data-group-id="{{ group.id }}">
+        <h2 class="group-title">{{ group.name }}</h2>
+        <div class="weapon-grid">
+            {% for weapon in weapons_by_group[group.id] %}
+            <div class="weapon-box">
+                <a href="{{ url_for('weapon_detail_page', weapon_id=weapon.id) }}">
+                    <img src="{{ weapon.image_url if weapon.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ weapon.name }}" class="weapon-image">
+                    <p class="weapon-name">{{ weapon.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</div>
+
+<style>
+.weapon-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.weapon-group {
+    border: 1px solid #8B7355; /* Similar to text color */
+    padding: 1rem;
+    border-radius: 5px;
+}
+.group-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.weapon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.weapon-box {
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    border-radius: 10px; /* Softer corners */
+}
+.weapon-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(212, 197, 161, 0.1); /* Slightly brighter background on hover */
+}
+.weapon-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Match box corners */
+}
+.weapon-name {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+.filter-section {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #8B7355;
+    border-radius: 8px;
+}
+#filter-toggle-button {
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-family: 'Cinzel', serif;
+}
+#filter-toggle-button:hover {
+    background: rgba(139, 115, 85, 0.4);
+}
+#filter-menu {
+    margin-top: 1rem;
+    display: none;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #8B7355;
+    border-radius: 8px;
+    padding: 1rem;
+}
+#filter-menu.visible {
+    display: block;
+}
+.group-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+.select-all-label {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.group-filter-label {
+    font-family: 'Cinzel', serif;
+    color: #D4C5A1;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const filterToggleButton = document.getElementById('filter-toggle-button');
+    const filterMenu = document.getElementById('filter-menu');
+    const selectAllCheckbox = document.getElementById('select-all');
+    const groupCheckboxes = document.querySelectorAll('.group-checkbox');
+    const weaponGroups = document.querySelectorAll('.weapon-group');
+
+    // Toggle visibility of filter menu
+    filterToggleButton.addEventListener('click', () => {
+        filterMenu.classList.toggle('visible');
+    });
+
+    // Toggle all checkboxes when 'Select All' is clicked
+    selectAllCheckbox.addEventListener('change', () => {
+        const isChecked = selectAllCheckbox.checked;
+        groupCheckboxes.forEach(checkbox => {
+            checkbox.checked = isChecked;
+        });
+        toggleGroupsVisibility();
+    });
+
+    // Update Select All based on individual checkbox changes
+    groupCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const allChecked = [...groupCheckboxes].every(cb => cb.checked);
+            const someChecked = [...groupCheckboxes].some(cb => cb.checked);
+            selectAllCheckbox.checked = allChecked;
+            selectAllCheckbox.indeterminate = !allChecked && someChecked;
+            toggleGroupsVisibility();
+        });
+    });
+
+    function toggleGroupsVisibility() {
+        groupCheckboxes.forEach(checkbox => {
+            const groupId = checkbox.dataset.groupId;
+            const groupElement = document.querySelector(`.weapon-group[data-group-id='${groupId}']`);
+            if (checkbox.checked) {
+                groupElement.style.display = '';
+            } else {
+                groupElement.style.display = 'none';
+            }
+        });
+    }
+});
+</script>
 {% endblock %}
