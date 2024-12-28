@@ -287,7 +287,33 @@ table tr:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: 250px;  /* Fixed height for uniformity */
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card[style*="background-image"] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Add a dark overlay for better text readability */
+.feature-card[style*="background-image"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Make sure content stays on top of the background */
+.feature-card > * {
+    position: relative;
+    z-index: 2;
 }
 
 .feature-card:hover {
