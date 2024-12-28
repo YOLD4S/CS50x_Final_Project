@@ -1,1 +1,1 @@
-id,username,name,email,password,steam_url,profile_picture,created_at,last_login
+id,username,name,email,password,steam_url,profile_picture,admin,created_at,last_login

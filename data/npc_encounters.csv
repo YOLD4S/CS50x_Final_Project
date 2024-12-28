@@ -1,166 +1,166 @@
 id,name,hp,runes,location_id,only_night
 1,Soldier of Godrick,384,400,,0
-2,Mad Pumpkin Head,"1,328","1,100",31,0
-3,Beastman of Farum Azula,"1,417","1,000",13,0
-4,Black Knife Assassin (Limgrave),"1,668","1,600",3,0
-5,Grave Warden Duelist (Limgrave),"2,190","1,700",18,0
-6,Erdtree Burial Watchdog (Stormfoot Catacombs),"1,200","1,300",23,0
-7,Demi-Human Chief Duo,"2,436","1,200",5,0
-8,Stonedigger Troll (Limgrave),"1,295","1,800",12,0
-9,Guardian Golem,"5,974","1,700",15,0
-10,Cemetery Shade (Limgrave),781,"2,200",48,0
-11,Scaly Misbegotten,"1,360","2,000",45,0
-12,Erdtree Burial Watchdog (Impaler's Catacombs),"1,347","2,400",40,0
-13,Miranda the Blighted Bloom (Limgrave),"2,483","2,100",46,0
-14,Runebear,"3,311","2,600",38,0
-15,Bloodhound Knight Darriwil,"1,450","1,900",7,0
-16,Leonine Misbegotten,"2,199","3,800",36,0
-17,Crucible Knight (Limgrave),"2,782","2,100",25,0
-18,Night's Cavalry (Agheel Lake North),"1,665","2,400",178,1
-19,Bell Bearing Hunter (Limgrave),"2,495","2,700",178,1
-20,Tree Sentinel,"2,889","3,200",178,0
-21,Tibia Mariner (Limgrave),"3,176","2,400",28,0
-22,Deathbird (Warmaster's Shack),"3,442","2,800",178,1
-23,"Margit, the Fell Omen","4,174","12,000",,0
-24,Night's Cavalry (Weeping Penisula),"1,823","3,400",180,1
-25,Ancient Hero of Zamor (Limgrave),"2,570","5,400",50,0
-26,Erdtree Avatar (Limgrave),"3,163","3,600",180,0
-27,Deathbird (Weeping Penisula),"3,769","3,900",180,1
-28,Godrick the Grafted,"6,080","20,000",,0
-29,Flying Dragon Agheel,"3,200","5,000",178,0
-30,Dragonkin Soldier of Nokstella,"4,372","12,000",54,0
-31,Cemetery Shade (Liurnia),691,"3,500",58,0
-32,Crystalian (Raya Lucaria Crystal Tunnel),"1,595","3,000",86,0
-33,Spiritcaller Snail (Liurnia),"1,722","3,000",90,0
-34,Cleanrot Knight,"1,980","3,300",96,0
-35,Bloodhound Knight,"1,985","3,600",78,0
-36,Royal Revenant,"3,077","3,100",77,0
-37,Crystalian Duo (Liurnia),"3,190","3,300",52,0
-38,Black Knife Assassin (Liurnia),"3,312","4,200",58,0
-39,Red Wolf of Radagon,"2,204","14,000",,0
-40,Erdtree Burial Watchdog (Liurnia),"2,383","3,200",,0
-41,Grafted Scion,"2,596","3,200",,0
-42,Royal Knight Loretta,"4,214","10,000",59,0
-43,Ancestor Spirit,"4,393","13,000",20,0
-44,Ulcerated Tree Spirit (Limgrave),"6,147","15,000",8,0
-45,Cemetery Shade (Caelid),"1,467","6,800",103,0
-46,Nox Swordstress and Nox Priest,"3,262","6,400",,0
-47,Cleanrot Knight Duo,"4,204","7,000",101,0
-48,Mad Pumpkin Head Duo,"5,600","6,300",102,0
-49,Frenzied Duelist,"3,079","6,700",111,0
-50,Fallingstar Beast (Caelid),"4,554","7,600",116,0
-51,Putrid Crystalian Trio,"10,074","7,100",,0
-52,Erdtree Burial Watchdog Duo,"5,062","7,400",113,0
-53,Magma Wyrm (Caelid),"7,141","7,500",109,0
-54,Magma Wyrm Makar,"7,141","24,000",,0
-55,"Rennala, Queen of the Full Moon","7,590","40,000",,0
-56,Omenkiller (Liurnia),"2,306","4,900",,0
-57,Sanguine Noble,"3,128","8,800",183,0
-58,Crystalian Duo (Altus Plateau),"3,784","9,000",130,0
-59,Black Knife Assassin (Sage's Cave),"1,964","9,000",147,0
-60,Onyx Lord (Liurnia),"4,058","3,600",92,0
-61,Perfumer Tricia and Misbegotten Warrior,"4,558","9,400",149,0
-62,Night's Cavalry (Gate Town Bridge),"2,704","5,600",181,1
-63,Night's Cavalry (Bellum Church),"2,704","5,600",181,1
-64,Stonedigger Troll (Altus Plateau),"3,050","9,600",133,0
-65,Demi-Human Queen Gilika,"3,284","8,500",183,0
-66,Ancient Hero of Zamor (Altus Plateau),"3,811","20,000",,0
-67,Misbegotten Warrior and Crucible Knight,"8,084","16,000",114,0
-68,Bell Bearing Hunter (Liurnia),"4,050","6,000",181,1
-69,Glintstone Dragon Adula (Ranni's Rise),"4,405",0,181,0
-70,Erdtree Avatar (Mausoleum Compound),"4,690","5,800",181,0
-71,Erdtree Avatar (Revenger's Shack),"4,690","5,800",181,0
-72,"Bols, Carian Knight","5,109","4,600",70,0
-73,Tibia Mariner (Liurnia),"5,155","4,700",181,0
-74,Deathbird (Liurnia),"5,588","6,600",181,1
-75,Omenkiller and Miranda the Blighted Bloom,"7,518","8,400",,0
-76,Death Rite Bird (Liurnia),"6,577","7,800",181,1
-77,Abductor Virgin Duo,"7,622","10,000",,0
-78,Kindred of Rot Duo,"4,068","10,000",150,0
-79,Battlemage Hugues,"4,095","7,800",117,0
-80,Onyx Lord (Altus Plateau),"4,907","16,000",135,0
-81,Grave Warden Duelist,"6,240","1,700",,0
-82,Red Wolf of the Champion,"3,162","21,000",142,0
-83,Night's Cavalry (Southern Aeonia Swamp Bank),"3,269","8,500",179,1
-84,Erdtree Burial Watchdog (Altus Plateau),"3,419","12,000",151,0
-85,Demi-Human Queen Margot,"3,971","11,000",152,0
-86,Elemer of the Briar,"4,897","24,000",,0
-87,Crucible Knight and Crucible Knight Ordovis,"10,920","28,000",,0
-88,Putrid Avatar (Smoldering Church),"5,671","9,600",179,0
-89,Regal Ancestor Spirit,"6,301","24,000",20,0
-90,Death Rite Bird (Caelid),"7,952","15,000",179,1
-91,Commander O'Neil,"9,210","12,000",179,0
-92,Valiant Gargoyle Duo,"11,342","30,000",20,0
-93,Black Knife Assassin (Sainted Hero's Grave),"5,413","10,800",183,0
-94,Night's Cavalry (Altus Plateau),"3,725","10,000",183,1
-95,Wormface,"5,876","10,000",183,0
-96,Glintstone Dragon Smarag,"6,069","14,000",181,0
-97,Fallingstar Beast (Altus Plateau),"7,009","11,000",183,0
-98,Godskin Apostle (Altus Plateau),"7,528","14,000",183,0
-99,Starscourge Radahn,"9,572","70,000",179,0
-100,Tree Sentinel Duo,"11,845","20,000",183,0
-101,Godefroy the Grafted,"12,419","26,000",128,0
-102,Demi-Human Queen Maggie,"7,515","13,000",,0
-103,Dragonkin Soldier (Siofra River),"5,758","16,000",20,0
-104,Bell Bearing Hunter (Altus Plateau),"6,216","20,000",183,1
-105,"Godfrey, First Elden Lord (Leyndell, Royal Capital)","7,099","80,000",131,0
-106,Tibia Mariner (Altus Plateau),"7,911","14,000",183,0
-107,Draconic Tree Sentinel,"8,398","50,000",183,0
-108,Deathbird (Altus Plateau),"8,575","29,000",183,1
-109,Godskin Noble (Mt. Gelmir),"10,060","50,000",,0
-110,"Morgott, the Omen King","10,399","120,000",131,0
-111,"Astel, Naturalborn of the Void","11,170","80,000",54,0
-112,Ulcerated Tree Spirit (Mt. Gelmir),"11,191","18,000",,0
-113,Magma Wyrm (Mt. Gelmir),"12,243","19,000",,0
-114,Lichdragon Fortissax,"12,903","90,000",,0
-115,Full-Grown Fallingstar Beast,"13,010","21,000",,0
-116,Decaying Ekzykes,"23,731","38,000",179,0
-117,Ancient Hero of Zamor (Mountaintops of the Giants),"6,868","83,000",,0
-118,Fell Twin Duo,"14,410","29,000",,0
-119,Black Blade Kindred (Forbidden Lands),"8,452","60,000",,0
-120,Ancient Dragon Lansseax (Abandoned Coffin),"9,087",0,183,0
-121,Ancient Dragon Lansseax (Rampartside Path),"9,087","60,000",183,0
-122,Ulcerated Tree Spirit (Mountaintops of the Giants),"13,141","48,000",,0
-123,"Godskin Apostle, Godskin Noble, and Spiritcaller Snail","23,501","70,000",,0
-124,God-Devouring Serpent,"59,174","130,000",,0
-125,Crucible Knight Siluria,"4,606","25,000",,0
-126,Dragonkin Soldier (Lake of Rot),"7,655","58,000",,0
-127,"Mohg, the Omen","14,000","100,000",,0
-128,Commander Niall,"15,541","90,000",161,0
-129,Night's Cavalry (Forbidden Lands),"6,602","36,000",,0
-130,Erdtree Avatar (Snowvalley Ruins Overlook),"11,452","70,000",184,0
-131,Death Rite Bird (Snow Valley Ruins Overlook),"16,059","77,000",184,1
-132,Godskin Duo,"26,350","170,000",,0
-133,Fire Giant,"43,263","180,000",184,0
-134,Misbegotten Crusader,"9,130","93,000",,0
-135,Beastman of Farum Azula Duo,"11,650","65,000",155,0
-136,"Alecto, Black Knife Ringleader","17,482","80,000",89,0
-137,Putrid Grave Warden Duelist,"8,800","78,000",171,0
-138,Beast Clergyman,"10,620","220,000",,0
-139,Borealis the Freezing Fog,"11,268","100,000",184,0
-140,Godskin Apostle (Caelid),"13,596","94,000",,0
-141,Putrid Tree Spirit,"18,144","64,000",,0
-142,"Astel, Stars of Darkness","18,617","120,000",177,0
-143,"Godfrey, First Elden Lord (Leyndell, Ashen Capital)","21,903","300,000",,0
-144,Night's Cavalry (Lenne's Rise),"7,089","42,000",179,1
-145,Bell Bearing Hunter (Caelid),"10,619","50,000",179,0
-146,Flying Dragon Greyll,"11,550","80,000",179,0
-147,Glintstone Dragon Adula (Village of the Albinaurics),"11,550","120,000",181,0
-148,Black Blade Kindred (Caelid),"12,297","88,000",179,0
-149,Putrid Avatar (Dragonbarrow Fork),"12,297","91,000",179,0
-150,Dragonlord Placidusax,"26,651","280,000",,0
-151,Radagon of the Golden Order,"35,466","500,000",,0
-152,"Putrid Avatar (Ordina, Liturgical Town)","12,569","160,000",184,0
-153,"Loretta, Knight of the Haligtree","13,397","200,000",,0
-154,Night's Cavalry Duo,"14,492","84,000",,1
-155,Death Rite Bird (Apostate Derelict),"17,625","220,000",184,1
-156,"Mohg, Lord of Blood","18,389","420,000",,0
-157,Great Wyrm Theodorix,"25,649","180,000",184,0
-158,"Malenia, Blade of Miquella","33,251","480,000",,0
-159,Patches,"1,191",800,19,0
-160,"Adan, Thief of Fire","1,717","3,800",81,0
-161,Necromancer Garris,"3,202","9,000",147,0
-162,"Esgar, Priest of Blood","3,511","30,000",,0
-163,Roundtable Knight Vyke,"5,366","75,000",,0
-164,Fia's Champion,"8,569","40,000",,0
-165,"Sir Gideon Ofnir, the All-Knowing (Default)","6,226","150,000",,0
+2,Mad Pumpkin Head,1328,1100,31.0,0
+3,Beastman of Farum Azula,1417,1000,13.0,0
+4,Black Knife Assassin (Limgrave),1668,1600,3.0,0
+5,Grave Warden Duelist (Limgrave),2190,1700,18.0,0
+6,Erdtree Burial Watchdog (Stormfoot Catacombs),1200,1300,23.0,0
+7,Demi-Human Chief Duo,2436,1200,5.0,0
+8,Stonedigger Troll (Limgrave),1295,1800,12.0,0
+9,Guardian Golem,5974,1700,15.0,0
+10,Cemetery Shade (Limgrave),781,2200,48.0,0
+11,Scaly Misbegotten,1360,2000,45.0,0
+12,Erdtree Burial Watchdog (Impaler's Catacombs),1347,2400,40.0,0
+13,Miranda the Blighted Bloom (Limgrave),2483,2100,46.0,0
+14,Runebear,3311,2600,38.0,0
+15,Bloodhound Knight Darriwil,1450,1900,7.0,0
+16,Leonine Misbegotten,2199,3800,36.0,0
+17,Crucible Knight (Limgrave),2782,2100,25.0,0
+18,Night's Cavalry (Agheel Lake North),1665,2400,178.0,1
+19,Bell Bearing Hunter (Limgrave),2495,2700,178.0,1
+20,Tree Sentinel,2889,3200,178.0,0
+21,Tibia Mariner (Limgrave),3176,2400,28.0,0
+22,Deathbird (Warmaster's Shack),3442,2800,178.0,1
+23,"Margit, the Fell Omen",4174,12000,,0
+24,Night's Cavalry (Weeping Penisula),1823,3400,180.0,1
+25,Ancient Hero of Zamor (Limgrave),2570,5400,50.0,0
+26,Erdtree Avatar (Limgrave),3163,3600,180.0,0
+27,Deathbird (Weeping Penisula),3769,3900,180.0,1
+28,Godrick the Grafted,6080,20000,,0
+29,Flying Dragon Agheel,3200,5000,178.0,0
+30,Dragonkin Soldier of Nokstella,4372,12000,54.0,0
+31,Cemetery Shade (Liurnia),691,3500,58.0,0
+32,Crystalian (Raya Lucaria Crystal Tunnel),1595,3000,86.0,0
+33,Spiritcaller Snail (Liurnia),1722,3000,90.0,0
+34,Cleanrot Knight,1980,3300,96.0,0
+35,Bloodhound Knight,1985,3600,78.0,0
+36,Royal Revenant,3077,3100,77.0,0
+37,Crystalian Duo (Liurnia),3190,3300,52.0,0
+38,Black Knife Assassin (Liurnia),3312,4200,58.0,0
+39,Red Wolf of Radagon,2204,14000,,0
+40,Erdtree Burial Watchdog (Liurnia),2383,3200,,0
+41,Grafted Scion,2596,3200,,0
+42,Royal Knight Loretta,4214,10000,59.0,0
+43,Ancestor Spirit,4393,13000,20.0,0
+44,Ulcerated Tree Spirit (Limgrave),6147,15000,8.0,0
+45,Cemetery Shade (Caelid),1467,6800,103.0,0
+46,Nox Swordstress and Nox Priest,3262,6400,,0
+47,Cleanrot Knight Duo,4204,7000,101.0,0
+48,Mad Pumpkin Head Duo,5600,6300,102.0,0
+49,Frenzied Duelist,3079,6700,111.0,0
+50,Fallingstar Beast (Caelid),4554,7600,116.0,0
+51,Putrid Crystalian Trio,10074,7100,,0
+52,Erdtree Burial Watchdog Duo,5062,7400,113.0,0
+53,Magma Wyrm (Caelid),7141,7500,109.0,0
+54,Magma Wyrm Makar,7141,24000,,0
+55,"Rennala, Queen of the Full Moon",7590,40000,,0
+56,Omenkiller (Liurnia),2306,4900,,0
+57,Sanguine Noble,3128,8800,183.0,0
+58,Crystalian Duo (Altus Plateau),3784,9000,130.0,0
+59,Black Knife Assassin (Sage's Cave),1964,9000,147.0,0
+60,Onyx Lord (Liurnia),4058,3600,92.0,0
+61,Perfumer Tricia and Misbegotten Warrior,4558,9400,149.0,0
+62,Night's Cavalry (Gate Town Bridge),2704,5600,181.0,1
+63,Night's Cavalry (Bellum Church),2704,5600,181.0,1
+64,Stonedigger Troll (Altus Plateau),3050,9600,133.0,0
+65,Demi-Human Queen Gilika,3284,8500,183.0,0
+66,Ancient Hero of Zamor (Altus Plateau),3811,20000,,0
+67,Misbegotten Warrior and Crucible Knight,8084,16000,114.0,0
+68,Bell Bearing Hunter (Liurnia),4050,6000,181.0,1
+69,Glintstone Dragon Adula (Ranni's Rise),4405,0,181.0,0
+70,Erdtree Avatar (Mausoleum Compound),4690,5800,181.0,0
+71,Erdtree Avatar (Revenger's Shack),4690,5800,181.0,0
+72,"Bols, Carian Knight",5109,4600,70.0,0
+73,Tibia Mariner (Liurnia),5155,4700,181.0,0
+74,Deathbird (Liurnia),5588,6600,181.0,1
+75,Omenkiller and Miranda the Blighted Bloom,7518,8400,,0
+76,Death Rite Bird (Liurnia),6577,7800,181.0,1
+77,Abductor Virgin Duo,7622,10000,,0
+78,Kindred of Rot Duo,4068,10000,150.0,0
+79,Battlemage Hugues,4095,7800,117.0,0
+80,Onyx Lord (Altus Plateau),4907,16000,135.0,0
+81,Grave Warden Duelist,6240,1700,,0
+82,Red Wolf of the Champion,3162,21000,142.0,0
+83,Night's Cavalry (Southern Aeonia Swamp Bank),3269,8500,179.0,1
+84,Erdtree Burial Watchdog (Altus Plateau),3419,12000,151.0,0
+85,Demi-Human Queen Margot,3971,11000,152.0,0
+86,Elemer of the Briar,4897,24000,,0
+87,Crucible Knight and Crucible Knight Ordovis,10920,28000,,0
+88,Putrid Avatar (Smoldering Church),5671,9600,179.0,0
+89,Regal Ancestor Spirit,6301,24000,20.0,0
+90,Death Rite Bird (Caelid),7952,15000,179.0,1
+91,Commander O'Neil,9210,12000,179.0,0
+92,Valiant Gargoyle Duo,11342,30000,20.0,0
+93,Black Knife Assassin (Sainted Hero's Grave),5413,10800,183.0,0
+94,Night's Cavalry (Altus Plateau),3725,10000,183.0,1
+95,Wormface,5876,10000,183.0,0
+96,Glintstone Dragon Smarag,6069,14000,181.0,0
+97,Fallingstar Beast (Altus Plateau),7009,11000,183.0,0
+98,Godskin Apostle (Altus Plateau),7528,14000,183.0,0
+99,Starscourge Radahn,9572,70000,179.0,0
+100,Tree Sentinel Duo,11845,20000,183.0,0
+101,Godefroy the Grafted,12419,26000,128.0,0
+102,Demi-Human Queen Maggie,7515,13000,,0
+103,Dragonkin Soldier (Siofra River),5758,16000,20.0,0
+104,Bell Bearing Hunter (Altus Plateau),6216,20000,183.0,1
+105,"Godfrey, First Elden Lord (Leyndell, Royal Capital)",7099,80000,131.0,0
+106,Tibia Mariner (Altus Plateau),7911,14000,183.0,0
+107,Draconic Tree Sentinel,8398,50000,183.0,0
+108,Deathbird (Altus Plateau),8575,29000,183.0,1
+109,Godskin Noble (Mt. Gelmir),10060,50000,,0
+110,"Morgott, the Omen King",10399,120000,131.0,0
+111,"Astel, Naturalborn of the Void",11170,80000,54.0,0
+112,Ulcerated Tree Spirit (Mt. Gelmir),11191,18000,,0
+113,Magma Wyrm (Mt. Gelmir),12243,19000,,0
+114,Lichdragon Fortissax,12903,90000,,0
+115,Full-Grown Fallingstar Beast,13010,21000,,0
+116,Decaying Ekzykes,23731,38000,179.0,0
+117,Ancient Hero of Zamor (Mountaintops of the Giants),6868,83000,,0
+118,Fell Twin Duo,14410,29000,,0
+119,Black Blade Kindred (Forbidden Lands),8452,60000,,0
+120,Ancient Dragon Lansseax (Abandoned Coffin),9087,0,183.0,0
+121,Ancient Dragon Lansseax (Rampartside Path),9087,60000,183.0,0
+122,Ulcerated Tree Spirit (Mountaintops of the Giants),13141,48000,,0
+123,"Godskin Apostle, Godskin Noble, and Spiritcaller Snail",23501,70000,,0
+124,God-Devouring Serpent,59174,130000,,0
+125,Crucible Knight Siluria,4606,25000,,0
+126,Dragonkin Soldier (Lake of Rot),7655,58000,,0
+127,"Mohg, the Omen",14000,100000,,0
+128,Commander Niall,15541,90000,161.0,0
+129,Night's Cavalry (Forbidden Lands),6602,36000,,0
+130,Erdtree Avatar (Snowvalley Ruins Overlook),11452,70000,184.0,0
+131,Death Rite Bird (Snow Valley Ruins Overlook),16059,77000,184.0,1
+132,Godskin Duo,26350,170000,,0
+133,Fire Giant,43263,180000,184.0,0
+134,Misbegotten Crusader,9130,93000,,0
+135,Beastman of Farum Azula Duo,11650,65000,155.0,0
+136,"Alecto, Black Knife Ringleader",17482,80000,89.0,0
+137,Putrid Grave Warden Duelist,8800,78000,171.0,0
+138,Beast Clergyman,10620,220000,,0
+139,Borealis the Freezing Fog,11268,100000,184.0,0
+140,Godskin Apostle (Caelid),13596,94000,,0
+141,Putrid Tree Spirit,18144,64000,,0
+142,"Astel, Stars of Darkness",18617,120000,177.0,0
+143,"Godfrey, First Elden Lord (Leyndell, Ashen Capital)",21903,300000,,0
+144,Night's Cavalry (Lenne's Rise),7089,42000,179.0,1
+145,Bell Bearing Hunter (Caelid),10619,50000,179.0,0
+146,Flying Dragon Greyll,11550,80000,179.0,0
+147,Glintstone Dragon Adula (Village of the Albinaurics),11550,120000,181.0,0
+148,Black Blade Kindred (Caelid),12297,88000,179.0,0
+149,Putrid Avatar (Dragonbarrow Fork),12297,91000,179.0,0
+150,Dragonlord Placidusax,26651,280000,,0
+151,Radagon of the Golden Order,35466,500000,,0
+152,"Putrid Avatar (Ordina, Liturgical Town)",12569,160000,184.0,0
+153,"Loretta, Knight of the Haligtree",13397,200000,,0
+154,Night's Cavalry Duo,14492,84000,,1
+155,Death Rite Bird (Apostate Derelict),17625,220000,184.0,1
+156,"Mohg, Lord of Blood",18389,420000,,0
+157,Great Wyrm Theodorix,25649,180000,184.0,0
+158,"Malenia, Blade of Miquella",33251,480000,,0
+159,Patches,1191,800,19.0,0
+160,"Adan, Thief of Fire",1717,3800,81.0,0
+161,Necromancer Garris,3202,9000,147.0,0
+162,"Esgar, Priest of Blood",3511,30000,,0
+163,Roundtable Knight Vyke,5366,75000,,0
+164,Fia's Champion,8569,40000,,0
+165,"Sir Gideon Ofnir, the All-Knowing (Default)",6226,150000,,0

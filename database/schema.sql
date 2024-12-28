@@ -209,6 +209,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 	`password` varchar(255) NOT NULL,
 	`steam_url` varchar(255),
 	`profile_picture` varchar(255),
+    `admin` bool NOT NULL,
 	`created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	`last_login` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id`)
