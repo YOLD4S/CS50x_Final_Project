@@ -6,36 +6,56 @@
 <div class="filter-section">
     <button id="filter-toggle-button">Filter Groups</button>
     <div id="filter-menu" class="hidden">
-        <form id="filter-form">
+        <form id="filter-form" method="GET" action="{{ url_for('weapons_page') }}">
             <label class="select-all-label">
-                <input type="checkbox" id="select-all" checked /> <strong>Select All</strong>
+                <input
+                    type="checkbox"
+                    id="select-all"
+                    name="select_all"
+                    {% if not selected_groups or selected_groups|length == groups|length %}checked{% endif %}
+                />
+                <strong>Select All</strong>
             </label>
             <div class="group-filters">
                 {% for group in groups %}
                 <label class="group-filter-label">
-                    <input type="checkbox" class="group-checkbox" data-group-id="{{ group.id }}" checked /> {{ group.name }}
+                    <input
+                        type="checkbox"
+                        class="group-checkbox"
+                        name="group_id"
+                        value="{{ group.id }}"
+                        {% if group.id|string in selected_groups %}checked{% endif %}
+                    />
+                    {{ group.name }}
                 </label>
                 {% endfor %}
             </div>
+            <button type="submit" class="apply-button">Apply</button>
         </form>
     </div>
 </div>
 
 <div class="weapon-groups">
     {% for group in groups %}
+    {% if not selected_groups or group.id|string in selected_groups %}
     <div class="weapon-group" data-group-id="{{ group.id }}">
         <h2 class="group-title">{{ group.name }}</h2>
         <div class="weapon-grid">
             {% for weapon in weapons_by_group[group.id] %}
             <div class="weapon-box">
                 <a href="{{ url_for('weapon_detail_page', weapon_id=weapon.id) }}">
-                    <img src="{{ weapon.image_url if weapon.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ weapon.name }}" class="weapon-image">
+                    <img
+                        src="{{ weapon.image_url if weapon.image_url else url_for('static', filename='images/no_image.png') }}"
+                        alt="{{ weapon.name }}"
+                        class="weapon-image"
+                    />
                     <p class="weapon-name">{{ weapon.name }}</p>
                 </a>
             </div>
             {% endfor %}
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
@@ -46,7 +66,7 @@
     gap: 2rem;
 }
 .weapon-group {
-    border: 1px solid #8B7355; /* Similar to text color */
+    border: 1px solid #8B7355;
     padding: 1rem;
     border-radius: 5px;
 }
@@ -66,17 +86,17 @@
     width: 150px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-    border-radius: 10px; /* Softer corners */
+    border-radius: 10px;
 }
 .weapon-box:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgba(212, 197, 161, 0.1); /* Slightly brighter background on hover */
+    background-color: rgba(212, 197, 161, 0.1);
 }
 .weapon-image {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Match box corners */
+    border-radius: 10px;
 }
 .weapon-name {
     margin-top: 0.5rem;
@@ -126,6 +146,18 @@
     font-family: 'Cinzel', serif;
     color: #D4C5A1;
 }
+.apply-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #8B7355;
+    color: #D4AF37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.apply-button:hover {
+    background: #A6896E;
+}
 </style>
 
 <script>
@@ -134,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterMenu = document.getElementById('filter-menu');
     const selectAllCheckbox = document.getElementById('select-all');
     const groupCheckboxes = document.querySelectorAll('.group-checkbox');
-    const weaponGroups = document.querySelectorAll('.weapon-group');
 
     // Toggle visibility of filter menu
     filterToggleButton.addEventListener('click', () => {
@@ -147,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
         groupCheckboxes.forEach(checkbox => {
             checkbox.checked = isChecked;
         });
-        toggleGroupsVisibility();
     });
 
     // Update Select All based on individual checkbox changes
@@ -157,21 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const someChecked = [...groupCheckboxes].some(cb => cb.checked);
             selectAllCheckbox.checked = allChecked;
             selectAllCheckbox.indeterminate = !allChecked && someChecked;
-            toggleGroupsVisibility();
         });
     });
-
-    function toggleGroupsVisibility() {
-        groupCheckboxes.forEach(checkbox => {
-            const groupId = checkbox.dataset.groupId;
-            const groupElement = document.querySelector(`.weapon-group[data-group-id='${groupId}']`);
-            if (checkbox.checked) {
-                groupElement.style.display = '';
-            } else {
-                groupElement.style.display = 'none';
-            }
-        });
-    }
 });
 </script>
 {% endblock %}

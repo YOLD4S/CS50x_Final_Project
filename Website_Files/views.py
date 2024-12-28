@@ -215,8 +215,25 @@ def weapons_page():
     cursor.execute("SELECT id, name FROM weapon_groups")
     groups = cursor.fetchall()
 
-    # Fetch weapons, sorted alphabetically, with group association
-    cursor.execute("SELECT id, name, image_url, group_id FROM weapons ORDER BY name ASC")
+    # Get filter parameters from the request
+    selected_groups = request.args.getlist("group_id")
+
+    # Base query for weapons
+    query = """
+            SELECT id, name, image_url, group_id 
+            FROM weapons
+        """
+    params = []
+
+    # Add filtering conditions
+    if selected_groups:
+        query += " WHERE group_id IN (%s)" % ",".join(["%s"] * len(selected_groups))
+        params.extend(selected_groups)
+
+    query += " ORDER BY name ASC"
+
+    # Fetch weapons based on filters
+    cursor.execute(query, params)
     weapons = cursor.fetchall()
 
     # Organize weapons by group
@@ -224,7 +241,12 @@ def weapons_page():
     for weapon in weapons:
         weapons_by_group[weapon['group_id']].append(weapon)
 
-    return render_template("weapons.html", groups=groups, weapons_by_group=weapons_by_group)
+    return render_template(
+        "weapons.html",
+        groups=groups,
+        weapons_by_group=weapons_by_group,
+        selected_groups=selected_groups
+    )
 
 def weapon_detail_page(weapon_id):
     db = get_db()
