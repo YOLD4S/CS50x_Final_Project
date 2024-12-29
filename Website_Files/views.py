@@ -279,9 +279,18 @@ def npcs_page():
     
     # Base query
     query = """
-        SELECT n.*, l.name as location_name 
-        FROM npc_encounters n 
-        LEFT JOIN locations l ON n.location_id = l.id 
+        SELECT 
+            npcs.id,
+            npcs.name,
+            n.name AS encounter_name,
+            l.name AS location_name,
+            n.only_night
+        FROM 
+            npcs
+        LEFT JOIN 
+            npc_encounters n ON npcs.encounter_id = n.id
+        LEFT JOIN 
+            locations l ON n.location_id = l.id
         WHERE 1=1
     """
     params = []
@@ -294,7 +303,7 @@ def npcs_page():
         query += " AND n.only_night = %s"
         params.append(only_night == '1')
     
-    query += " ORDER BY n.name ASC"
+    query += " ORDER BY npcs.name ASC"
     
     # Execute main query
     cursor.execute(query, params)
@@ -304,11 +313,14 @@ def npcs_page():
     cursor.execute("SELECT id, name FROM locations ORDER BY name ASC")
     locations = cursor.fetchall()
     
-    return render_template("npcs.html", 
-                         npcs=npcs,
-                         locations=locations,
-                         selected_location=location_id,
-                         only_night=only_night)
+    return render_template(
+        "npcs.html", 
+        npcs=npcs,
+        locations=locations,
+        selected_location=location_id,
+        only_night=only_night
+    )
+
 
 
 def npc_detail_page(npc_id):
