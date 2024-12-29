@@ -3,60 +3,164 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="home-container">
-    <div class="welcome-section">
-        <h1 class="title">Welcome to Elden Ring Wiki</h1>
-        <p class="subtitle">Explore the Lands Between</p>
-    </div>
+<h1 class="page-title">Welcome to the Elden Ring Wiki</h1>
 
-    <div class="features-grid">
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/NPCs.png');">
+<div class="features-grid">
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/NPCs.png') }});">
+        <div class="feature-content">
             <h2>NPCs</h2>
-            <p>Meet the inhabitants of the Lands Between</p>
+            <p>Discover the various characters that inhabit the Lands Between.</p>
             <a href="{{ url_for('npcs_page') }}" class="feature-link">View NPCs</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Weapons.png');">
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Weapons.png') }});">
+        <div class="feature-content">
             <h2>Weapons</h2>
-            <p>Discover powerful weapons to aid your journey</p>
-            <a href="{{ url_for('weapon_groups_page') }}" class="feature-link">View Weapons</a>
+            <p>Explore the vast arsenal of weapons at your disposal.</p>
+            <a href="{{ url_for('weapons_page') }}" class="feature-link">View Weapons</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Armor.png');">
-            <h2>Armors</h2>
-            <p>Browse protective gear and equipment</p>
-            <a href="{{ url_for('armors_page') }}" class="feature-link">View Armors</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Armor.png') }});">
+        <div class="feature-content">
+            <h2>Armor</h2>
+            <p>Browse through various armor sets and their stats.</p>
+            <a href="{{ url_for('armors_page') }}" class="feature-link">View Armor</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Talismans.png');">
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Talismans.png') }});">
+        <div class="feature-content">
             <h2>Talismans</h2>
-            <p>Enhance your abilities with powerful talismans</p>
+            <p>Learn about the powerful talismans and their effects.</p>
             <a href="{{ url_for('talismans_page') }}" class="feature-link">View Talismans</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Magic.png');">
-            <h2>Magics</h2>
-            <p>Master sorceries and incantations</p>
-            <a href="{{ url_for('magic_page') }}" class="feature-link">View Magics</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Magic.png') }});">
+        <div class="feature-content">
+            <h2>Magic</h2>
+            <p>Discover spells and incantations to enhance your journey.</p>
+            <a href="{{ url_for('magic_page') }}" class="feature-link">View Magic</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Spirits.png');">
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Spirits.png') }});">
+        <div class="feature-content">
             <h2>Spirit Ashes</h2>
-            <p>Summon spirits to fight alongside you</p>
+            <p>Find your spiritual companions for battle.</p>
             <a href="{{ url_for('spirits_page') }}" class="feature-link">View Spirit Ashes</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Keys.png');">
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Keys.png') }});">
+        <div class="feature-content">
             <h2>Key Items</h2>
-            <p>Essential items for your journey</p>
+            <p>Essential items for your adventure.</p>
             <a href="{{ url_for('keys_page') }}" class="feature-link">View Key Items</a>
         </div>
+    </div>
 
-        <div class="feature-card" style="background-image: url('../static/images/homepage_sections/Bolstering.png');">
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Bolstering.png') }});">
+        <div class="feature-content">
             <h2>Bolstering Materials</h2>
-            <p>Materials to strengthen your equipment</p>
+            <p>Materials to strengthen your equipment.</p>
             <a href="{{ url_for('bolstering_page') }}" class="feature-link">View Materials</a>
         </div>
     </div>
 </div>
+
+<style>
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    position: relative;
+    border: 2px solid #8B7355;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4);
+    transition: all 0.3s ease;
+}
+
+.feature-card h2 {
+    color: #D4AF37;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #D4C5A1;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: rgba(139, 115, 85, 0.3);
+    border: 2px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-link:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 {% endblock %}

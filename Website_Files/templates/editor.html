@@ -6,58 +6,155 @@
 <h1 class="page-title">Editor Menu</h1>
 
 <div class="features-grid">
-    <div class="feature-card">
-        <h2>Edit NPCs</h2>
-        <p>Update NPC information, locations, and quests.</p>
-        <a href="{{ url_for('editor_page') }}/npcs" class="feature-link">Edit NPCs</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/NPCs.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit NPCs</h2>
+            <p>Update NPC information, locations, and quests.</p>
+            <a href="{{ url_for('editor_page', section='npcs') }}" class="feature-link">Edit NPCs</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Weapons</h2>
-        <p>Manage weapon entries, update stats, and modify weapon descriptions.</p>
-        <a href="{{ url_for('editor_page') }}/weapons" class="feature-link">Edit Weapons</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Weapons.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Weapons</h2>
+            <p>Manage weapon entries, update stats, and modify weapon descriptions.</p>
+            <a href="{{ url_for('editor_page', section='weapons') }}" class="feature-link">Edit Weapons</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Armors</h2>
-        <p>Update armor stats, manage armor sets, and modify descriptions.</p>
-        <a href="{{ url_for('editor_page') }}/armors" class="feature-link">Edit Armors</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Armor.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Armors</h2>
+            <p>Update armor stats, manage armor sets, and modify descriptions.</p>
+            <a href="{{ url_for('editor_page', section='armors') }}" class="feature-link">Edit Armors</a>
+        </div>
     </div>
 
-    <!-- <div class="feature-card">
-        <h2>Edit Talismans</h2>
-        <p>Manage talisman effects and descriptions.</p>
-        <a href="{{ url_for('editor_page') }}/talismans" class="feature-link">Edit Talismans</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Talismans.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Talismans</h2>
+            <p>Manage talisman effects and descriptions.</p>
+            <a href="{{ url_for('editor_page', section='talismans') }}" class="feature-link">Edit Talismans</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Magic</h2>
-        <p>Manage spells, incantations, and their requirements.</p>
-        <a href="{{ url_for('editor_page') }}/magic" class="feature-link">Edit Magic</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Magic.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Magic</h2>
+            <p>Manage spells, incantations, and their requirements.</p>
+            <a href="{{ url_for('editor_page', section='magic') }}" class="feature-link">Edit Magic</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Spirit Ashes</h2>
-        <p>Update spirit ash information and requirements.</p>
-        <a href="{{ url_for('editor_page') }}/spirits" class="feature-link">Edit Spirit Ashes</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Spirits.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Spirit Ashes</h2>
+            <p>Update spirit ash information and requirements.</p>
+            <a href="{{ url_for('editor_page', section='spirits') }}" class="feature-link">Edit Spirit Ashes</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Key Items</h2>
-        <p>Update key item information and locations.</p>
-        <a href="{{ url_for('editor_page') }}/keys" class="feature-link">Edit Key Items</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Keys.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Key Items</h2>
+            <p>Update key item information and locations.</p>
+            <a href="{{ url_for('editor_page', section='keys') }}" class="feature-link">Edit Key Items</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Bolstering Materials</h2>
-        <p>Manage upgrade materials and their locations.</p>
-        <a href="{{ url_for('editor_page') }}/bolstering" class="feature-link">Edit Materials</a>
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Bolstering.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Bolstering Materials</h2>
+            <p>Manage upgrade materials and their locations.</p>
+            <a href="{{ url_for('editor_page', section='bolstering') }}" class="feature-link">Edit Materials</a>
+        </div>
     </div>
 
-    <div class="feature-card">
-        <h2>Edit Locations</h2>
-        <p>Manage location information and connections.</p>
-        <a href="{{ url_for('editor_page') }}/locations" class="feature-link">Edit Locations</a>
-    </div> -->
+    <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/locations_background.jpg') }}); background-size: cover; background-position: center;">
+        <div class="feature-content">
+            <h2>Edit Locations</h2>
+            <p>Manage location information and connections.</p>
+            <a href="{{ url_for('editor_page', section='locations') }}" class="feature-link">Edit Locations</a>
+        </div>
+    </div>
 </div>
+
+<style>
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.feature-card {
+    position: relative;
+    border: 2px solid #8B7355;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4);
+}
+
+.feature-card h2 {
+    color: #D4AF37;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #D4C5A1;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: rgba(139, 115, 85, 0.3);
+    border: 2px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-link:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+</style>
 {% endblock %} 
