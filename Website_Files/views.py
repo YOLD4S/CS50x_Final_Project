@@ -855,12 +855,13 @@ def armors_page():
     slot_id = request.args.get('slot_id')
     weight_order = request.args.get('weight_order')
     page = request.args.get('page', 1, type=int)
-    per_page = 9  # Number of armors per page
+    per_page = 12  # Number of armors per page
     
     # Base query
     query = """
-        SELECT a.*, s.name as set_name, e.equip_slot 
+        SELECT a.*, i.name as name, s.name as set_name, e.equip_slot
         FROM armors a 
+        LEFT JOIN items i ON a.id = i.id
         LEFT JOIN armor_sets s ON a.set_id = s.id 
         LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id 
         WHERE 1=1
@@ -917,10 +918,16 @@ def armors_page():
                          current_page=page,
                          total_pages=total_pages)
 
-def armor_detail_page(armor_id):
+def armor_detail_page(armor_id, name=None, equip_slot=None):
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM armors WHERE id = %s", (armor_id,))
+    query = """SELECT a.*, i.name as name, e.equip_slot as equip_slot
+                FROM armors a
+                LEFT JOIN items i ON a.id = i.id
+                LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id
+                WHERE a.id = %s
+    """
+    cursor.execute(query, (armor_id,))
     armor = cursor.fetchone()
     if not armor:
         abort(404)
