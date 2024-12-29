@@ -691,3 +691,66 @@ table tr:hover {
 .dropdown:hover .dropbtn {
     background: rgba(139, 115, 85, 0.4);
 }
+
+/* Profile Page Styling */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-section {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #8B7355;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.profile-section h2 {
+    color: #D4AF37;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    font-family: 'Cinzel', serif;
+}
+
+.profile-form, .admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-section .form-group {
+    margin-bottom: 0;
+}
+
+.profile-section .submit-button {
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    align-self: flex-end;
+    border-radius: 4px;
+}
+
+.profile-section .submit-button:hover {
+    background: rgba(139, 115, 85, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.3);
+}
+
+/* Style for admin section button */
+.admin-form .submit-button {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
+}
+
+.admin-form .submit-button:hover {
+    background: rgba(212, 175, 55, 0.3);
+}

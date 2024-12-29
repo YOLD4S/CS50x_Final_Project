@@ -6,6 +6,14 @@
 <div class="profile-container">
     <h1 class="page-title">Profile Settings</h1>
 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     <div class="profile-section">
         <h2>Update Profile</h2>
         <form method="POST" action="{{ url_for('update_profile') }}" class="profile-form">
@@ -36,7 +44,7 @@
                 <label for="admin_key">Administration Key:</label>
                 <input type="text" id="admin_key" name="admin_key" required>
             </div>
-            <button type="submit" class="submit-button">Submit Request</button>
+            <button type="submit" class="submit-button">Request Access</button>
         </form>
     </div>
 </div>

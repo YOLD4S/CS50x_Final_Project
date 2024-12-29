@@ -974,14 +974,37 @@ def update_profile():
         cursor = db.cursor()
         
         try:
+            # Start transaction
+            cursor.execute("START TRANSACTION")
+            
+            # Check if username is already taken by another user
+            cursor.execute("""
+                SELECT id FROM users 
+                WHERE username = %s AND id != %s
+            """, (username, session['user_id']))
+            
+            if cursor.fetchone():
+                cursor.execute("ROLLBACK")
+                flash('Username is already taken.', 'error')
+                return redirect(url_for('profile_page'))
+            
+            # Update user profile
             cursor.execute("""
                 UPDATE users 
                 SET username = %s, email = %s, name = %s, steam_url = %s
                 WHERE id = %s
             """, (username, email, name, steam_url, session['user_id']))
+            
+            # Commit transaction
             db.commit()
+            
+            # Update session username if it was changed
+            session['username'] = username
             flash('Profile updated successfully!', 'success')
+            
         except Exception as e:
+            # Rollback in case of error
+            cursor.execute("ROLLBACK")
             flash('Error updating profile.', 'error')
             print(f"Error: {str(e)}")
             
@@ -993,24 +1016,33 @@ def request_admin():
         
     if request.method == 'POST':
         admin_key = request.form.get('admin_key')
-        
-        # You should store this key securely, preferably in environment variables
-        ADMIN_KEY = os.getenv('ADMIN_KEY', 'your-secure-admin-key')
+        ADMIN_KEY = os.getenv('ADMIN_KEY', 'CokGizli')
         
         if admin_key == ADMIN_KEY:
             db = get_db()
             cursor = db.cursor()
             
             try:
+                # Start transaction
+                cursor.execute("START TRANSACTION")
+                
+                # Update user to admin
                 cursor.execute("""
                     UPDATE users 
                     SET admin = 1
                     WHERE id = %s
                 """, (session['user_id'],))
+                
+                # Commit transaction
                 db.commit()
+                
+                # Update session
                 session['is_admin'] = True
                 flash('Administrator access granted!', 'success')
+                
             except Exception as e:
+                # Rollback in case of error
+                cursor.execute("ROLLBACK")
                 flash('Error granting administrator access.', 'error')
                 print(f"Error: {str(e)}")
         else:
