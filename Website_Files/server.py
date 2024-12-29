@@ -73,6 +73,8 @@ def create_app():
     app.add_url_rule("/editor", view_func=views.editor_page)
     app.add_url_rule("/editor/<section>", view_func=views.editor_page)
     app.add_url_rule("/profile/delete", view_func=views.delete_account, methods=["POST"])
+    app.add_url_rule("/manage_npc", view_func=views.manage_npc, methods=['GET', 'POST'])
+    app.add_url_rule("/editor/npcs", view_func=views.manage_npc, methods=['GET', 'POST'])
     
     # Armor editor routes
     app.add_url_rule("/editor/armor", view_func=views.armor_editor)

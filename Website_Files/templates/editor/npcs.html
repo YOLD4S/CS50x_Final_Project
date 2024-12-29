@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Manage NPCs{% endblock %}
+
+{% block content %}
+<h1 class="title">Manage NPCs</h1>
+
+<!-- Add NPC Button -->
+<div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+    <a class="filter-button" href="{{ url_for('add_new_npc') }}">Add NPC</a>
+</div>
+
+<!-- NPC Dropdown Form -->
+<form method="POST" action="{{ url_for('manage_npc') }}">
+    <div class="field">
+        <label class="label" for="npc_id">Select NPC:</label>
+        <div class="filter-group" style="max-width: 400px;">
+            <select class="input" id="npc_id" name="npc_id" required>
+                <option value="" disabled selected>Select an NPC</option>
+                {% for npc in npcs %}
+                <option value="{{ npc.id }}">{{ npc.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div class="field" style="margin-top: 20px; display: flex; justify-content: space-between;">
+        <!-- Update Button -->
+        <button class="filter-button" type="submit" name="action" value="update" style="margin-right: 15px;">Update NPC</button>
+        
+        <!-- Delete Button -->
+        <button class="filter-button" type="submit" name="action" value="delete" style="margin-right: 15px;" onclick="return confirm('Are you sure you want to delete this NPC?');">Delete NPC</button>
+    </div>
+</form>
+
+{% endblock %}

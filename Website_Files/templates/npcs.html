@@ -46,17 +46,12 @@
                 name="search" 
                 class="input" 
                 placeholder="Search NPC by name" 
-                value="{{ search }}" 
-                style="width: 300px; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;">
+                value="{{ search if search is not none else '' }}" 
+                style="width: 300px; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.5); background-color: rgba(0, 0, 0, 0.5); color: white;">
             <button type="submit" class="filter-button">Search</button>
         </form>
     
-        <!-- Add NPC Button -->
-        <a class="filter-button" 
-           href="{{ url_for('add_new_npc') }}" 
-           style="margin-left: 10px;">
-            Add NPC
-        </a>
+        
     </div>
     
 

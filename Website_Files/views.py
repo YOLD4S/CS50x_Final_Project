@@ -690,6 +690,35 @@ def update_npc(npc_id):
         l_armors=l_armors
     )
 
+def manage_npc():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch NPCs for dropdown
+    cursor.execute("SELECT id, name FROM npcs ORDER BY name ASC")
+    npcs = cursor.fetchall()
+
+    if request.method == 'POST':
+        npc_id = request.form.get('npc_id')
+        action = request.form.get('action')
+
+        if not npc_id or not action:
+            flash("Please select an NPC and an action.", "warning")
+            return redirect(url_for('manage_npc'))
+
+        if action == "update":
+            return redirect(url_for('update_npc', npc_id=npc_id))
+        elif action == "delete":
+            # Delete the NPC
+            cursor.execute("DELETE FROM npcs WHERE id = %s", (npc_id,))
+            db.commit()
+            flash("NPC deleted successfully!", "success")
+            return redirect(url_for('manage_npc'))
+
+    return render_template("editor/npcs.html", npcs=npcs)
+
+
+
 
 def weapon_groups_page():
     db = get_db()
