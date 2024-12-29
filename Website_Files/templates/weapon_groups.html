@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+{% block title %}Weapons by Group{% endblock %}
+{% block content %}
+<h1 class="page-title">Weapons by Group</h1>
+
+<div class="groups-container">
+    <!-- All Weapons Box -->
+    <div class="group-box">
+        <a href="{{ url_for('all_weapons_page') }}">
+            <div class="dark-image-overlay">
+                <div class="group-name-overlay">All Weapons</div>
+                <div class="multi-image-container">
+                    {% for img in all_weapons_images %}
+                    <img src="{{ img.image_url }}" alt="Weapon Image" class="multi-image">
+                    {% endfor %}
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Individual Weapon Group Boxes -->
+    {% for group in groups %}
+    <div class="group-box">
+        <a href="{{ url_for('individual_group_page', group_id=group.id) }}">
+            <div class="dark-image-overlay">
+                <div class="group-name-overlay">{{ group.name }}</div>
+                <img src="{{ group.random_image if group.random_image else url_for('static', filename='images/no_image.png') }}" alt="{{ group.name }}" class="group-image">
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+/* Page Title Styling */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Group Container Styling */
+.groups-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Group Box Styling */
+.group-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #8B7355;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.group-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Overlay for Group Images */
+.dark-image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.5);
+    transition: filter 0.3s ease-in-out;
+}
+
+.dark-image-overlay img:hover {
+    filter: brightness(0.8);
+}
+
+.group-name-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D4AF37;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Multi Image Grid for All Weapons Box */
+.multi-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.multi-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #8B7355;
+}
+</style>
+{% endblock %}

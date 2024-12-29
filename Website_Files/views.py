@@ -640,6 +640,106 @@ def update_npc(npc_id):
 
 
 
+
+def weapon_groups_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch all weapon groups
+    cursor.execute("""
+            SELECT wg.id, wg.name, 
+                   (SELECT image_url 
+                    FROM weapons 
+                    WHERE group_id = wg.id AND image_url IS NOT NULL AND image_url != ''
+                    ORDER BY RAND() LIMIT 1) AS random_image
+            FROM weapon_groups wg
+        """)
+    groups = cursor.fetchall()
+
+    # Fetch 4 random weapons for the "All Weapons" box
+    cursor.execute("""
+            SELECT image_url
+            FROM weapons
+            WHERE image_url IS NOT NULL AND image_url != ''
+            ORDER BY RAND()
+            LIMIT 4
+        """)
+    all_weapons_images = cursor.fetchall()
+
+    return render_template("weapon_groups.html", groups=groups, all_weapons_images=all_weapons_images)
+
+
+def individual_group_page(group_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get the current page from the request, default to 1
+    page = request.args.get("page", 1, type=int)
+    per_page = 20
+    offset = (page - 1) * per_page
+
+    # Fetch total weapon count for the group
+    cursor.execute("SELECT COUNT(*) AS total FROM weapons WHERE group_id = %s", (group_id,))
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Fetch weapons for the current page
+    cursor.execute("""
+            SELECT id, name, image_url
+            FROM weapons
+            WHERE group_id = %s
+            ORDER BY name ASC
+            LIMIT %s OFFSET %s
+        """, (group_id, per_page, offset))
+    weapons = cursor.fetchall()
+
+    # Fetch the group name
+    cursor.execute("SELECT id, name FROM weapon_groups WHERE id = %s", (group_id,))
+    group = cursor.fetchone()
+
+    if not group:
+        abort(404)
+
+    return render_template(
+        "individual_group.html",
+        group=group,
+        weapons=weapons,
+        current_page=page,  # Pass current_page explicitly
+        total_pages=total_pages
+    )
+
+
+def all_weapons_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get the current page from the request, default to 1
+    page = request.args.get("page", 1, type=int)
+    per_page = 20
+    offset = (page - 1) * per_page
+
+    # Fetch total weapon count for pagination
+    cursor.execute("SELECT COUNT(*) AS total FROM weapons")
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page  # Calculate total pages
+
+    # Fetch weapons for the current page
+    cursor.execute("""
+            SELECT id, name, image_url
+            FROM weapons
+            ORDER BY name ASC
+            LIMIT %s OFFSET %s
+        """, (per_page, offset))
+    weapons = cursor.fetchall()
+
+    return render_template(
+        "all_weapons.html",
+        weapons=weapons,
+        current_page=page,  # Pass current_page explicitly
+        total_pages=total_pages
+    )
+
+
 def weapons_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
@@ -685,7 +785,7 @@ def weapon_detail_page(weapon_id):
     db = get_db()
     cursor = db.cursor(dictionary=True)
 
-    # Fetch the weapon details, including group ID
+    # Fetch the weapon details
     cursor.execute("""
             SELECT w.id, w.name, w.description, w.weight, w.image_url, 
                    w.group_id, g.name AS group_name, 
@@ -722,15 +822,27 @@ def weapon_detail_page(weapon_id):
             FROM weapons_w_affinities wwa
             LEFT JOIN affinities a ON wwa.affinity_id = a.id
             LEFT JOIN effects e ON a.affinity_passive_id = e.id
-            WHERE wwa.main_weapon_id = %s AND wwa.affinity_id IS NOT NULL
+            WHERE wwa.main_weapon_id = %s
         """, (weapon_id,))
     affinities = cursor.fetchall()
+
+    # If no affinities are found, add a default "Standard" row
+    if not affinities:
+        affinities = [{
+            "affinity_name": None,
+            "affinity_passive": None,
+            "str_scaling": requirements["req_str"],
+            "dex_scaling": requirements["req_dex"],
+            "int_scaling": requirements["req_int"],
+            "fai_scaling": requirements["req_fai"],
+            "arc_scaling": requirements["req_arc"],
+        }]
 
     return render_template(
         "weapon_detail.html",
         weapon=weapon,
         requirements=requirements,
-        affinities=affinities if affinities else None
+        affinities=affinities
     )
 
 

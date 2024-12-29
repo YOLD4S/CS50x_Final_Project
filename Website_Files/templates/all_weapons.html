@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+{% block title %}All Weapons{% endblock %}
+{% block content %}
+<h1 class="page-title">All Weapons</h1>
+
+<div class="weapons-container">
+    {% for weapon in weapons %}
+    <div class="weapon-box">
+        <a href="{{ url_for('weapon_detail_page', weapon_id=weapon.id) }}">
+            <div class="image-container">
+                <img src="{{ weapon.image_url if weapon.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ weapon.name }}" class="weapon-image">
+            </div>
+            <p class="weapon-name">{{ weapon.name }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if current_page > 1 %}
+        <a href="{{ url_for('all_weapons_page', page=current_page-1) }}" class="page-link">&laquo;</a>
+    {% endif %}
+
+    {% set start = [current_page - 2, 1] | max %}
+    {% set end = [start + 4, total_pages] | min %}
+    {% set start = [end - 4, 1] | max %}
+
+    {% if start > 1 %}
+        <a href="{{ url_for('all_weapons_page', page=1) }}" class="page-link">1</a>
+        {% if start > 2 %}
+            <span class="page-ellipsis">...</span>
+        {% endif %}
+    {% endif %}
+
+    {% for p in range(start, end + 1) %}
+        <a href="{{ url_for('all_weapons_page', page=p) }}" class="page-link {% if p == current_page %}active{% endif %}">
+            {{ p }}
+        </a>
+    {% endfor %}
+
+    {% if end < total_pages %}
+        {% if end < total_pages - 1 %}
+            <span class="page-ellipsis">...</span>
+        {% endif %}
+        <a href="{{ url_for('all_weapons_page', page=total_pages) }}" class="page-link">{{ total_pages }}</a>
+    {% endif %}
+
+    {% if current_page < total_pages %}
+        <a href="{{ url_for('all_weapons_page', page=current_page+1) }}" class="page-link">&raquo;</a>
+    {% endif %}
+</div>
+
+<style>
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-link {
+    padding: 0.5rem 0.8rem;
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.page-link:hover,
+.page-link.active {
+    background: rgba(139, 115, 85, 0.4);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+.page-link.active {
+    background: rgba(212, 175, 55, 0.2);
+    pointer-events: none;
+}
+
+.page-ellipsis {
+    color: #D4C5A1;
+    padding: 0 0.3rem;
+}
+/* Weapon Grid Styling */
+.weapons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Weapon Box Styling */
+.weapon-box {
+    position: relative;
+    text-align: center;
+    border: 2px solid #8B7355;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    overflow: visible; /* Allow expansion over other items */
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 150px;
+    height: 200px; /* Default height */
+    z-index: 0; /* Ensure stacking context */
+}
+
+.weapon-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Bring to front */
+}
+
+/* Image Container Styling */
+.image-container {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.weapon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+}
+.weapon-box:hover .weapon-image {
+    filter: brightness(0.8); /* Subtle darkening on hover */
+}
+
+/* Weapon Name Styling */
+.weapon-name {
+    font-size: 0.9rem;
+    color: #D4AF37;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    max-height: 1.5rem; /* Default height for short names */
+}
+.weapon-box:hover .weapon-name {
+    white-space: normal;
+    text-overflow: clip;
+    font-size: 1rem;
+    padding: 0.5rem;
+    max-height: unset; /* Allow full height for longer names */
+    background: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+</style>
+{% endblock %}

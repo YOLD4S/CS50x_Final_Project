@@ -45,7 +45,6 @@
     </table>
 </div>
 
-{% if affinities %}
 <div class="weapon-affinities">
     <h2>Affinities</h2>
     <table>
@@ -63,7 +62,7 @@
         <tbody>
             {% for affinity in affinities %}
             <tr>
-                <td>{{ affinity.affinity_name }}</td>
+                <td>{{ affinity.affinity_name if affinity.affinity_name else 'None' }}</td>
                 <td>{{ affinity.affinity_passive if affinity.affinity_passive else 'None' }}</td>
                 <td>{{ affinity.str_scaling }}</td>
                 <td>{{ affinity.dex_scaling }}</td>
@@ -75,26 +74,17 @@
         </tbody>
     </table>
 </div>
-{% endif %}
 
 <style>
-.weapon-detail-container {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.85);
-    border: 1px solid #8B7355;
-    border-radius: 10px;
-    color: #D4C5A1;
-}
 .weapon-detail-header {
     display: flex;
-    align-items: flex-start; /* Align the top edges of the image and name */
+    align-items: flex-start;
     gap: 2rem;
     margin-bottom: 2rem;
 }
 .weapon-image img {
     max-width: 300px;
+    height: auto;
     border-radius: 10px;
     border: 1px solid #8B7355;
 }
@@ -102,18 +92,19 @@
     flex: 1;
 }
 .weapon-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #D4AF37;
     margin-bottom: 1rem;
 }
 .weapon-description {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 .weapon-attributes {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 .weapon-attributes li {
     margin-bottom: 0.5rem;
