@@ -1431,7 +1431,16 @@ def editor_page(section=None):
         flash('You need administrator privileges to access this page.', 'error')
         return redirect(url_for('home_page'))
     
-    if section:
+    if section == 'armors':
+        # Fetch armor sets and equipment slots for the armor editor
+        cursor.execute("SELECT id, name FROM armor_sets ORDER BY name")
+        armor_sets = cursor.fetchall()
+        
+        cursor.execute("SELECT id, equip_slot FROM armor_equip_slots ORDER BY id")
+        equip_slots = cursor.fetchall()
+        
+        return render_template('editor/armors.html', armor_sets=armor_sets, equip_slots=equip_slots)
+    elif section:
         # This will be used later when implementing specific editor sections
         return render_template(f'editor/{section}.html')
     
@@ -1465,5 +1474,94 @@ def delete_account():
         print(f"Error: {str(e)}")
 
     return redirect(url_for('home_page'))
+
+def update_armor(armor_id):
+    if not session.get('user_id'):
+        return jsonify({'error': 'Unauthorized'}), 401
+
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    
+    if request.method == 'POST':
+        data = request.json
+        try:
+            # Start transaction
+            cursor.execute("START TRANSACTION")
+            
+            # Update items table
+            cursor.execute("""
+                UPDATE items 
+                SET name = %s
+                WHERE id = %s
+            """, (data['name'], armor_id))
+            
+            # Update armors table
+            cursor.execute("""
+                UPDATE armors 
+                SET set_id = %s, 
+                    equip_slot_id = %s, 
+                    weight = %s, 
+                    price = %s, 
+                    can_alter = %s,
+                    description = %s,
+                    image_url = %s
+                WHERE id = %s
+            """, (
+                data['set_id'], 
+                data['equip_slot_id'],
+                data['weight'],
+                data.get('price', None),
+                data.get('can_alter', False),
+                data.get('description', ''),
+                data.get('image_url', ''),
+                armor_id
+            ))
+            
+            db.commit()
+            return jsonify({'message': 'Armor updated successfully'}), 200
+            
+        except Exception as e:
+            db.rollback()
+            return jsonify({'error': str(e)}), 500
+            
+    # GET request - fetch armor details
+    cursor.execute("""
+        SELECT a.*, i.name, s.name as set_name, e.equip_slot
+        FROM armors a 
+        LEFT JOIN items i ON a.id = i.id
+        LEFT JOIN armor_sets s ON a.set_id = s.id 
+        LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id 
+        WHERE a.id = %s
+    """, (armor_id,))
+    
+    armor = cursor.fetchone()
+    if not armor:
+        return jsonify({'error': 'Armor not found'}), 404
+        
+    return jsonify(armor)
+
+def delete_armor(armor_id):
+    if not session.get('user_id'):
+        return jsonify({'error': 'Unauthorized'}), 401
+
+    db = get_db()
+    cursor = db.cursor()
+    
+    try:
+        # Start transaction
+        cursor.execute("START TRANSACTION")
+        
+        # Delete from armors table
+        cursor.execute("DELETE FROM armors WHERE id = %s", (armor_id,))
+        
+        # Delete from items table
+        cursor.execute("DELETE FROM items WHERE id = %s", (armor_id,))
+        
+        db.commit()
+        return jsonify({'message': 'Armor deleted successfully'}), 200
+        
+    except Exception as e:
+        db.rollback()
+        return jsonify({'error': str(e)}), 500
 
 
