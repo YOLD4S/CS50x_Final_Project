@@ -1562,11 +1562,25 @@ def add_armor():
             # Start transaction
             cursor.execute("START TRANSACTION")
             
+            # Handle new set creation if selected
+            set_id = request.form['set_id']
+            if set_id == 'new':
+                new_set_name = request.form['new_set_name']
+                cursor.execute("""
+                    INSERT INTO armor_sets (name)
+                    VALUES (%s)
+                """, (new_set_name,))
+                set_id = cursor.lastrowid
+                flash(f'New armor set "{new_set_name}" created successfully!', 'success')
+            
+            # Get the armor name for the message
+            armor_name = request.form['name']
+            
             # Insert into items table first
             cursor.execute("""
                 INSERT INTO items (type_id, name)
                 VALUES (2, %s)  -- type_id 2 for armors
-            """, (request.form['name'],))
+            """, (armor_name,))
             
             armor_id = cursor.lastrowid
             
@@ -1576,7 +1590,7 @@ def add_armor():
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 armor_id,
-                request.form['set_id'],
+                set_id,
                 request.form['equip_slot'],
                 request.form['description'],
                 float(request.form['weight']),
@@ -1586,7 +1600,7 @@ def add_armor():
             ))
             
             db.commit()
-            flash('Armor added successfully!', 'success')
+            flash(f'Armor "{armor_name}" has been added successfully!', 'success')
             return redirect(url_for('armor_editor'))
             
         except Exception as e:
@@ -1596,10 +1610,9 @@ def add_armor():
     return render_template('editor/armors_add.html', armor_sets=armor_sets, equip_slots=equip_slots)
 
 @admin_required
-def modify_armor():
+def modify_armor(armor_id=None):
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    armor_id = request.args.get('armor_id')
     
     if armor_id:
         # Show edit form for specific armor
@@ -1627,12 +1640,16 @@ def modify_armor():
                 # Start transaction
                 cursor.execute("START TRANSACTION")
                 
+                # Get the old and new names for the message
+                old_name = armor['name']
+                new_name = request.form['name']
+                
                 # Update items table
                 cursor.execute("""
                     UPDATE items 
                     SET name = %s
                     WHERE id = %s
-                """, (request.form['name'], armor_id))
+                """, (new_name, armor_id))
                 
                 # Update armors table
                 cursor.execute("""
@@ -1657,14 +1674,17 @@ def modify_armor():
                 ))
                 
                 db.commit()
-                flash('Armor updated successfully!', 'success')
+                if old_name != new_name:
+                    flash(f'Armor "{old_name}" has been renamed to "{new_name}" and updated successfully!', 'success')
+                else:
+                    flash(f'Armor "{old_name}" has been updated successfully!', 'success')
                 return redirect(url_for('modify_armor'))
                 
             except Exception as e:
                 db.rollback()
                 flash(f'Error updating armor: {str(e)}', 'error')
         
-        return render_template('editor/armors_add.html', armor=armor, armor_sets=armor_sets, equip_slots=equip_slots)
+        return render_template('editor/armors_modify_form.html', armor=armor, armor_sets=armor_sets, equip_slots=equip_slots)
     
     # Show list of armors to modify
     cursor.execute("""
@@ -1679,31 +1699,21 @@ def modify_armor():
     return render_template('editor/armors_modify.html', armors=armors)
 
 @admin_required
-def delete_armor():
+def armor_delete_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    armor_id = request.args.get('armor_id')
     
-    if request.method == 'POST' and armor_id:
-        try:
-            # Start transaction
-            cursor.execute("START TRANSACTION")
-            
-            # Delete from armors table
-            cursor.execute("DELETE FROM armors WHERE id = %s", (armor_id,))
-            
-            # Delete from items table
-            cursor.execute("DELETE FROM items WHERE id = %s", (armor_id,))
-            
-            db.commit()
-            flash('Armor deleted successfully!', 'success')
-            return redirect(url_for('delete_armor'))
-            
-        except Exception as e:
-            db.rollback()
-            flash(f'Error deleting armor: {str(e)}', 'error')
+    # Fetch armor sets with their armor counts
+    cursor.execute("""
+        SELECT s.id, s.name, COUNT(a.id) as armor_count
+        FROM armor_sets s
+        LEFT JOIN armors a ON s.id = a.set_id
+        GROUP BY s.id, s.name
+        ORDER BY s.name
+    """)
+    armor_sets = cursor.fetchall()
     
-    # Show list of armors to delete
+    # Fetch armors
     cursor.execute("""
         SELECT a.*, i.name, s.name as set_name, e.equip_slot
         FROM armors a 
@@ -1713,7 +1723,80 @@ def delete_armor():
         ORDER BY i.name
     """)
     armors = cursor.fetchall()
-    return render_template('editor/armors_delete.html', armors=armors)
+    
+    return render_template('editor/armors_delete.html', armors=armors, armor_sets=armor_sets)
+
+@admin_required
+def delete_armor_set(set_id):
+    if request.method == 'POST':
+        try:
+            db = get_db()
+            cursor = db.cursor()
+            
+            # Get the set name for the message
+            cursor.execute("SELECT name FROM armor_sets WHERE id = %s", (set_id,))
+            result = cursor.fetchone()
+            if not result:
+                flash('Armor set not found.', 'error')
+                return redirect(url_for('armor_delete_page'))
+                
+            set_name = result[0]
+            
+            # Start transaction
+            cursor.execute("START TRANSACTION")
+            
+            # Update armors to remove the set_id (set to NULL)
+            # cursor.execute("UPDATE armors SET set_id = NULL WHERE set_id = %s", (set_id,))
+            
+            # Delete the armor set
+            cursor.execute("DELETE FROM armor_sets WHERE id = %s", (set_id,))
+            
+            db.commit()
+            flash(f'Armor set "{set_name}" has been deleted successfully!', 'success')
+            return redirect(url_for('armor_delete_page'))
+            
+        except Exception as e:
+            db.rollback()
+            flash(f'Error deleting armor set: {str(e)}', 'error')
+            return redirect(url_for('armor_delete_page'))
+    
+    return redirect(url_for('armor_delete_page'))
+
+@admin_required
+def delete_armor(armor_id):
+    if request.method == 'POST':
+        try:
+            db = get_db()
+            cursor = db.cursor()
+            
+            # Get the armor name for the message
+            cursor.execute("SELECT name FROM items WHERE id = %s", (armor_id,))
+            result = cursor.fetchone()
+            if not result:
+                flash('Armor not found.', 'error')
+                return redirect(url_for('armor_delete_page'))
+                
+            armor_name = result[0]
+            
+            # Start transaction
+            cursor.execute("START TRANSACTION")
+            
+            # Delete from armors table first (due to foreign key constraint)
+            cursor.execute("DELETE FROM armors WHERE id = %s", (armor_id,))
+            
+            # Then delete from items table
+            cursor.execute("DELETE FROM items WHERE id = %s", (armor_id,))
+            
+            db.commit()
+            flash(f'Armor "{armor_name}" has been deleted successfully!', 'success')
+            return redirect(url_for('armor_delete_page'))
+            
+        except Exception as e:
+            db.rollback()
+            flash(f'Error deleting armor: {str(e)}', 'error')
+            return redirect(url_for('armor_delete_page'))
+    
+    return redirect(url_for('armor_delete_page'))
 
 def delete_account():
     if not session.get('user_id'):
@@ -1808,29 +1891,5 @@ def update_armor(armor_id):
         return jsonify({'error': 'Armor not found'}), 404
         
     return jsonify(armor)
-
-def delete_armor(armor_id):
-    if not session.get('user_id'):
-        return jsonify({'error': 'Unauthorized'}), 401
-
-    db = get_db()
-    cursor = db.cursor()
-    
-    try:
-        # Start transaction
-        cursor.execute("START TRANSACTION")
-        
-        # Delete from armors table
-        cursor.execute("DELETE FROM armors WHERE id = %s", (armor_id,))
-        
-        # Delete from items table
-        cursor.execute("DELETE FROM items WHERE id = %s", (armor_id,))
-        
-        db.commit()
-        return jsonify({'message': 'Armor deleted successfully'}), 200
-        
-    except Exception as e:
-        db.rollback()
-        return jsonify({'error': str(e)}), 500
 
 

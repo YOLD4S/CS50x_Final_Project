@@ -6,9 +6,61 @@
 <div class="editor-container">
     <h1 class="page-title">Delete Armors</h1>
     
+    <div class="section-title">
+        <h2>Armor Sets</h2>
+    </div>
+    
     <div class="items-grid">
-        {% for armor in armors %}
+        {% for set in armor_sets %}
         <div class="item-card">
+            <div class="item-content">
+                <div class="item-header">
+                    <h3>{{ set.name }}</h3>
+                    <div class="item-stats">
+                        <span class="stat-badge">{{ set.armor_count }} armors</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <form method="POST" action="{{ url_for('delete_armor_set', set_id=set.id) }}" onsubmit="return confirm('Are you sure you want to delete this armor set? Armors in this set will become setless.');">
+                        <input type="hidden" name="_method" value="POST">
+                        <button type="submit" class="delete-button">Delete Set</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="section-title">
+        <h2>Individual Armors</h2>
+        <div class="section-controls">
+            <div class="search-box">
+                <input type="text" id="armorSearch" placeholder="Search armors..." oninput="filterArmors(this.value)">
+            </div>
+            <div class="filter-box">
+                <select id="setFilter" onchange="filterArmorsBySet(this.value)">
+                    <option value="">All Sets</option>
+                    {% for set in armor_sets %}
+                    <option value="{{ set.name }}">{{ set.name }}</option>
+                    {% endfor %}
+                </select>
+                <select id="slotFilter" onchange="filterArmorsBySlot(this.value)">
+                    <option value="">All Slots</option>
+                    <option value="Head">Head</option>
+                    <option value="Body">Body</option>
+                    <option value="Arms">Arms</option>
+                    <option value="Legs">Legs</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="items-grid" id="armorsGrid">
+        {% for armor in armors %}
+        <div class="item-card armor-card" 
+             data-name="{{ armor.name|lower }}"
+             data-set="{{ armor.set_name|lower if armor.set_name else '' }}"
+             data-slot="{{ armor.equip_slot|lower if armor.equip_slot else '' }}">
             <div class="item-image">
                 {% if armor.image_url %}
                 <img src="{{ armor.image_url }}" alt="{{ armor.name }}">
@@ -17,11 +69,18 @@
                 {% endif %}
             </div>
             <div class="item-content">
-                <h3>{{ armor.name }}</h3>
-                <p class="item-type">{{ armor.equip_slot }}</p>
-                <p class="item-set">{{ armor.set_name }}</p>
+                <div class="item-header">
+                    <h3>{{ armor.name }}</h3>
+                    <div class="item-stats">
+                        <span class="stat-badge">{{ armor.equip_slot }}</span>
+                        {% if armor.set_name %}
+                        <span class="stat-badge set-badge">{{ armor.set_name }}</span>
+                        {% endif %}
+                    </div>
+                </div>
                 <div class="item-actions">
                     <form method="POST" action="{{ url_for('delete_armor', armor_id=armor.id) }}" onsubmit="return confirm('Are you sure you want to delete this armor?');">
+                        <input type="hidden" name="_method" value="POST">
                         <button type="submit" class="delete-button">Delete</button>
                     </form>
                 </div>
@@ -36,6 +95,55 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.section-title {
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8B7355;
+}
+
+.section-title h2 {
+    color: #D4AF37;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.search-box input,
+.filter-box select {
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #8B7355;
+    color: #D4C5A1;
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+}
+
+.search-box input {
+    width: 300px;
+}
+
+.filter-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-box select {
+    min-width: 150px;
+}
+
+.warning-text {
+    color: #ff9999;
+    font-style: italic;
+    margin-top: 0.5rem;
 }
 
 .items-grid {
@@ -78,24 +186,40 @@
     padding: 1.5rem;
 }
 
-.item-content h3 {
-    color: #D4AF37;
+.item-header {
     margin-bottom: 1rem;
 }
 
-.item-type, .item-set {
-    color: #D4C5A1;
+.item-header h3 {
+    color: #D4AF37;
     margin-bottom: 0.5rem;
+}
+
+.item-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stat-badge {
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4C5A1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.set-badge {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
 }
 
 .item-actions {
     margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
 }
 
 .delete-button {
-    flex: 1;
     width: 100%;
     padding: 0.8rem;
     border: none;
@@ -121,4 +245,35 @@
     padding: 2rem;
 }
 </style>
+
+<script>
+function filterArmors(searchText) {
+    const cards = document.querySelectorAll('.armor-card');
+    const setFilter = document.getElementById('setFilter').value.toLowerCase();
+    const slotFilter = document.getElementById('slotFilter').value.toLowerCase();
+    searchText = searchText.toLowerCase();
+    
+    cards.forEach(card => {
+        const name = card.dataset.name;
+        const set = card.dataset.set;
+        const slot = card.dataset.slot;
+        
+        const matchesSearch = name.includes(searchText);
+        const matchesSet = !setFilter || set.includes(setFilter);
+        const matchesSlot = !slotFilter || slot.includes(slotFilter);
+        
+        card.style.display = (matchesSearch && matchesSet && matchesSlot) ? 'block' : 'none';
+    });
+}
+
+function filterArmorsBySet(setName) {
+    const searchText = document.getElementById('armorSearch').value;
+    filterArmors(searchText);
+}
+
+function filterArmorsBySlot(slot) {
+    const searchText = document.getElementById('armorSearch').value;
+    filterArmors(searchText);
+}
+</script>
 {% endblock %} 

@@ -1,90 +1,68 @@
 {% extends "layout.html" %}
 
-{% block title %}Add New Armor{% endblock %}
+{% block title %}Modify Armor{% endblock %}
 
 {% block content %}
 <div class="editor-container">
-    <h1 class="page-title">Add New Armor</h1>
+    <h1 class="page-title">Modify Armor</h1>
     
     <div class="editor-form">
-        <form method="POST" action="/editor/armor/add" class="item-form">
+        <form method="POST" action="/editor/armor/modify/{{ armor.id }}" class="item-form">
             <div class="form-group">
                 <label for="name">Armor Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required value="{{ armor.name }}">
             </div>
             
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;"></textarea>
+                <textarea id="description" name="description" rows="4" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;">{{ armor.description }}</textarea>
             </div>
             
             <div class="form-row">
                 <div class="form-group">
                     <label for="set_id">Armor Set:</label>
                     <select id="set_id" name="set_id" required style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;">
-                        <option value="">Select Existing Set</option>
                         {% for set in armor_sets %}
-                        <option value="{{ set.id }}">{{ set.name }}</option>
+                        <option value="{{ set.id }}" {% if set.id == armor.set_id %}selected{% endif %}>{{ set.name }}</option>
                         {% endfor %}
-                        <option value="new">Create New Set</option>
                     </select>
-                </div>
-                
-                <div class="form-group" id="new_set_group" style="display: none;">
-                    <label for="new_set_name">New Set Name:</label>
-                    <input type="text" id="new_set_name" name="new_set_name" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
                 </div>
                 
                 <div class="form-group">
                     <label for="equip_slot">Equipment Slot:</label>
                     <select id="equip_slot" name="equip_slot" required style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;">
                         {% for slot in equip_slots %}
-                        <option value="{{ slot.id }}">{{ slot.equip_slot }}</option>
+                        <option value="{{ slot.id }}" {% if slot.id == armor.equip_slot_id %}selected{% endif %}>{{ slot.equip_slot }}</option>
                         {% endfor %}
                     </select>
                 </div>
             </div>
             
-            <script>
-                document.getElementById('set_id').addEventListener('change', function() {
-                    const newSetGroup = document.getElementById('new_set_group');
-                    const newSetInput = document.getElementById('new_set_name');
-                    
-                    if (this.value === 'new') {
-                        newSetGroup.style.display = 'block';
-                        newSetInput.required = true;
-                    } else {
-                        newSetGroup.style.display = 'none';
-                        newSetInput.required = false;
-                    }
-                });
-            </script>
-            
             <div class="form-row">
                 <div class="form-group">
                     <label for="weight">Weight:</label>
-                    <input type="number" id="weight" name="weight" step="0.1" required style="background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
+                    <input type="number" id="weight" name="weight" step="0.1" required value="{{ armor.weight }}" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
                 </div>
                 
                 <div class="form-group">
                     <label for="price">Price (optional):</label>
-                    <input type="number" id="price" name="price" min="0" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
+                    <input type="number" id="price" name="price" min="0" value="{{ armor.price }}" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
                 </div>
             </div>
             
             <div class="form-group" style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; border-radius: 4px; padding: 0.8rem; margin: 1rem 0;">
-                <input type="checkbox" id="can_alter" name="can_alter" style="margin-right: 1rem; width: 20px; height: 20px; cursor: pointer;">
+                <input type="checkbox" id="can_alter" name="can_alter" {% if armor.can_alter %}checked{% endif %} style="margin-right: 1rem; width: 20px; height: 20px; cursor: pointer;">
                 <label for="can_alter" style="cursor: pointer; color: #D4C5A1;">Can be Altered</label>
             </div>
             
             <div class="form-group">
                 <label for="image_url">Image URL:</label>
-                <input type="url" id="image_url" name="image_url" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
+                <input type="url" id="image_url" name="image_url" value="{{ armor.image_url }}" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
             </div>
             
             <div class="form-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
-                <button type="submit" class="submit-button" style="background: rgba(139, 115, 85, 0.2); border: 2px solid #8B7355; color: #D4AF37; padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex: 1;">Save Armor</button>
-                <a href="/editor/armor" class="cancel-button" style="background: rgba(139, 0, 0, 0.2); border: 2px solid #8B0000; color: #ff9999; padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex: 1; text-decoration: none; text-align: center;">Cancel</a>
+                <button type="submit" class="submit-button" style="background: rgba(139, 115, 85, 0.2); border: 2px solid #8B7355; color: #D4AF37; padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex: 1;">Save Changes</button>
+                <a href="/editor/armor/modify" class="cancel-button" style="background: rgba(139, 0, 0, 0.2); border: 2px solid #8B0000; color: #ff9999; padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex: 1; text-decoration: none; text-align: center;">Cancel</a>
             </div>
         </form>
     </div>
