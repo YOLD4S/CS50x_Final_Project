@@ -6,9 +6,33 @@
 <div class="editor-container">
     <h1 class="page-title">Modify Armors</h1>
     
+    <div class="section-controls">
+        <div class="search-box">
+            <input type="text" id="armorSearch" placeholder="Search armors..." oninput="filterArmors(this.value)">
+        </div>
+        <div class="filter-box">
+            <select id="setFilter" onchange="filterArmorsBySet(this.value)">
+                <option value="">All Sets</option>
+                {% for set in armor_sets %}
+                <option value="{{ set.name }}">{{ set.name }}</option>
+                {% endfor %}
+            </select>
+            <select id="slotFilter" onchange="filterArmorsBySlot(this.value)">
+                <option value="">All Slots</option>
+                <option value="Head">Head</option>
+                <option value="Body">Body</option>
+                <option value="Arms">Arms</option>
+                <option value="Legs">Legs</option>
+            </select>
+        </div>
+    </div>
+    
     <div class="items-grid">
         {% for armor in armors %}
-        <div class="item-card">
+        <div class="item-card armor-card" 
+             data-name="{{ armor.name|lower }}"
+             data-set="{{ armor.set_name|lower if armor.set_name else '' }}"
+             data-slot="{{ armor.equip_slot|lower if armor.equip_slot else '' }}">
             <div class="item-image">
                 {% if armor.image_url %}
                 <img src="{{ armor.image_url }}" alt="{{ armor.name }}">
@@ -34,6 +58,37 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.section-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.search-box input,
+.filter-box select {
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #8B7355;
+    color: #D4C5A1;
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+}
+
+.search-box input {
+    width: 300px;
+}
+
+.filter-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-box select {
+    min-width: 150px;
 }
 
 .items-grid {
@@ -120,4 +175,35 @@
     padding: 2rem;
 }
 </style>
+
+<script>
+function filterArmors(searchText) {
+    const cards = document.querySelectorAll('.armor-card');
+    const setFilter = document.getElementById('setFilter').value.toLowerCase();
+    const slotFilter = document.getElementById('slotFilter').value.toLowerCase();
+    searchText = searchText.toLowerCase();
+    
+    cards.forEach(card => {
+        const name = card.dataset.name;
+        const set = card.dataset.set;
+        const slot = card.dataset.slot;
+        
+        const matchesSearch = name.includes(searchText);
+        const matchesSet = !setFilter || set.includes(setFilter);
+        const matchesSlot = !slotFilter || slot.includes(slotFilter);
+        
+        card.style.display = (matchesSearch && matchesSet && matchesSlot) ? 'block' : 'none';
+    });
+}
+
+function filterArmorsBySet(setName) {
+    const searchText = document.getElementById('armorSearch').value;
+    filterArmors(searchText);
+}
+
+function filterArmorsBySlot(slot) {
+    const searchText = document.getElementById('armorSearch').value;
+    filterArmors(searchText);
+}
+</script>
 {% endblock %} 
