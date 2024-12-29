@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% block title %}Spirit Ashes{% endblock %}
+{% block content %}
+<h1 class="page-title">Spirit Ashes</h1>
+
+<div class="spirit-ashes-container">
+    {% for spirit_ash in spirit_ashes %}
+    <div class="spirit-ash-box">
+        <a href="{{ url_for('spirit_ashes_detail', spirit_ash_id=spirit_ash.id) }}">
+            <img src="{{ spirit_ash.image_url if spirit_ash.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ spirit_ash.name }}" class="spirit-ash-image">
+            <p class="spirit-ash-name">{{ spirit_ash.name }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if current_page > 1 %}
+    <a href="{{ url_for('spirit_ashes_page', page=current_page-1) }}" class="page-link">&laquo;</a>
+    {% endif %}
+
+    {% set start = [current_page - 2, 1] | max %}
+    {% set end = [start + 4, total_pages] | min %}
+    {% set start = [end - 4, 1] | max %}
+
+    {% if start > 1 %}
+    <a href="{{ url_for('spirit_ashes_page', page=1) }}" class="page-link">1</a>
+    {% if start > 2 %}
+    <span class="page-ellipsis">...</span>
+    {% endif %}
+    {% endif %}
+
+    {% for p in range(start, end + 1) %}
+    <a href="{{ url_for('spirit_ashes_page', page=p) }}" class="page-link {% if p == current_page %}active{% endif %}">{{ p }}</a>
+    {% endfor %}
+
+    {% if end < total_pages %}
+    {% if end < total_pages - 1 %}
+    <span class="page-ellipsis">...</span>
+    {% endif %}
+    <a href="{{ url_for('spirit_ashes_page', page=total_pages) }}" class="page-link">{{ total_pages }}</a>
+    {% endif %}
+
+    {% if current_page < total_pages %}
+    <a href="{{ url_for('spirit_ashes_page', page=current_page+1) }}" class="page-link">&raquo;</a>
+    {% endif %}
+</div>
+
+<style>
+/* Spirit Ashes Container */
+.spirit-ashes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.spirit-ash-box {
+    position: relative;
+    text-align: center;
+    border: 1px solid #8B7355;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.spirit-ash-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.spirit-ash-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.spirit-ash-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #D4AF37;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-link {
+    padding: 0.5rem 0.8rem;
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.page-link:hover,
+.page-link.active {
+    background: rgba(139, 115, 85, 0.4);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+.page-link.active {
+    background: rgba(212, 175, 55, 0.2);
+    pointer-events: none;
+}
+
+.page-ellipsis {
+    color: #D4C5A1;
+    padding: 0 0.3rem;
+}
+</style>
+{% endblock %}

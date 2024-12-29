@@ -1094,8 +1094,54 @@ def magic_detail(magic_id):
 
     return render_template("magic_detail.html", magic=magic)
 
-def spirits_page():
-    return render_template("spirits.html")
+def spirit_ashes_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get current page and calculate offset
+    page = request.args.get("page", 1, type=int)
+    per_page = 12
+    offset = (page - 1) * per_page
+
+    # Query to fetch total number of spirit ashes for pagination
+    cursor.execute("SELECT COUNT(*) AS total FROM spirit_ashes")
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Query to fetch spirit ashes for the current page
+    cursor.execute("""
+            SELECT sa.id, i.name, sa.image_url 
+            FROM spirit_ashes sa
+            LEFT JOIN items i ON sa.id = i.id
+            ORDER BY i.name ASC
+            LIMIT %s OFFSET %s
+        """, (per_page, offset))
+    spirit_ashes = cursor.fetchall()
+
+    return render_template(
+        "spirit_ashes.html",
+        spirit_ashes=spirit_ashes,
+        current_page=page,
+        total_pages=total_pages
+    )
+
+def spirit_ashes_detail(spirit_ash_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch spirit ash details
+    cursor.execute("""
+            SELECT sa.id, i.name, sa.info, sa.description, sa.fp_cost, sa.hp_cost, sa.hp, sa.image_url
+            FROM spirit_ashes sa
+            LEFT JOIN items i ON sa.id = i.id
+            WHERE sa.id = %s
+        """, (spirit_ash_id,))
+    spirit_ash = cursor.fetchone()
+
+    if not spirit_ash:
+        abort(404)
+
+    return render_template("spirit_ashes_detail.html", spirit_ash=spirit_ash)
 
 def keys_page():
     return render_template("keys.html")

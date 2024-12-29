@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block title %}{{ spirit_ash.name }}{% endblock %}
+{% block content %}
+<div class="spirit-ash-detail-header">
+    <div class="spirit-ash-image">
+        <img src="{{ spirit_ash.image_url if spirit_ash.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ spirit_ash.name }}">
+    </div>
+    <div class="spirit-ash-info">
+        <h1 class="spirit-ash-title">{{ spirit_ash.name }}</h1>
+        <ul class="spirit-ash-attributes">
+            {% if spirit_ash.fp_cost %}
+            <li><strong>FP Cost:</strong> {{ spirit_ash.fp_cost }}</li>
+            {% endif %}
+            {% if spirit_ash.hp_cost %}
+            <li><strong>HP Cost:</strong> {{ spirit_ash.hp_cost }}</li>
+            {% endif %}
+            <li><strong>HP:</strong> {{ spirit_ash.hp }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="spirit-ash-details">
+    <h2 class="section-title">Info</h2>
+    <p class="spirit-ash-info-text">{{ spirit_ash.info if spirit_ash.info else 'No additional info available.' }}</p>
+
+    <h2 class="section-title">Description</h2>
+    <p class="spirit-ash-description">{{ spirit_ash.description if spirit_ash.description else 'No description available.' }}</p>
+</div>
+
+<style>
+.spirit-ash-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.spirit-ash-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8B7355;
+}
+
+.spirit-ash-info {
+    flex: 1;
+}
+
+.spirit-ash-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.spirit-ash-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.spirit-ash-attributes li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.spirit-ash-details {
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.spirit-ash-info-text,
+.spirit-ash-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+    margin-top: 1rem;
+}
+</style>
+{% endblock %}
