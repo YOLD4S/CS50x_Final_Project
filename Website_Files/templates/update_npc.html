@@ -1,151 +1,93 @@
-{% extends "npc.html" %}
-
+{% extends "layout.html" %}
 {% block title %}Update NPC{% endblock %}
 
 {% block content %}
+
+
+
 <h1 class="title">Update NPC</h1>
+<div style="text-align: left; margin-bottom: 20px;">
+    <img src="{{ npc.image_url }}" alt="{{ npc.name }}" style="max-width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+</div>
+
 <form method="POST" action="{{ url_for('update_npc', npc_id=npc['id']) }}">
     <!-- NPC Details -->
-    <div class="field">
-        <label class="label" for="name">NPC Name:</label>
-        <div class="control">
-            <input class="input" type="text" id="name" name="name" value="{{ npc['name'] }}" required>
-        </div>
+    <h2 class="subtitle">NPC Details</h2>
+    
+    <div class="form-group">
+        <label for="name">NPC Name:</label>
+        <input type="text" class="input" id="name" name="name" value="{{ npc['name'] }}" required>
     </div>
 
-    <div class="field">
-        <label class="label" for="hp">HP:</label>
-        <div class="control">
-            <input class="input" type="number" id="hp" name="hp" value="{{ npc['hp'] }}" min="0" required>
-        </div>
+    <div class="form-group">
+        <label for="hp">HP:</label>
+        <input type="number" class="input" id="hp" name="hp" value="{{ npc['hp'] }}" min="0" required>
     </div>
 
-    <div class="field">
-        <label class="label" for="runes">Runes:</label>
-        <div class="control">
-            <input class="input" type="number" id="runes" name="runes" value="{{ npc['runes'] or 0 }}" min="0">
-        </div>
+    <div class="form-group">
+        <label for="runes">Runes:</label>
+        <input type="number" class="input" id="runes" name="runes" value="{{ npc['runes'] or 0 }}" min="0">
     </div>
 
-    <div class="field">
-        <label class="label" for="location_id">Location:</label>
-        <div class="control">
-            <select class="input" id="location_id" name="location_id" required>
-                {% for location in locations %}
+    <div class="form-group">
+        <label for="location_id">Location:</label>
+        <select class="input" id="location_id" name="location_id" required>
+            <option value="">Select Location</option>
+            {% for location in locations %}
                 <option value="{{ location.id }}" {% if npc['location_id'] == location.id %}selected{% endif %}>
                     {{ location.name }}
                 </option>
-                {% endfor %}
-            </select>
-        </div>
+            {% endfor %}
+        </select>
     </div>
 
-    <div class="field">
-        <label class="checkbox">
-            <input type="checkbox" id="only_night" name="only_night" {% if npc['only_night'] %}checked{% endif %}>
-            Only Spawns at Night
-        </label>
+    <div class="form-group">
+        <label for="only_night">Only Spawns at Night:</label>
+        <select class="input" id="only_night" name="only_night">
+            <option value="0" {% if not npc['only_night'] %}selected{% endif %}>No</option>
+            <option value="1" {% if npc['only_night'] %}selected{% endif %}>Yes</option>
+        </select>
     </div>
 
     <!-- Encounter Selection -->
-    <div class="field">
-        <label class="label" for="encounter_id">Encounter:</label>
-        <div class="control">
-            <select class="input" id="encounter_id" name="encounter_id" required>
-                {% for encounter in encounters %}
+    <div class="form-group">
+        <label for="encounter_id">Encounter:</label>
+        <select class="input" id="encounter_id" name="encounter_id" required>
+            <option value="">Select Encounter</option>
+            {% for encounter in encounters %}
                 <option value="{{ encounter.id }}" {% if npc['encounter_id'] == encounter.id %}selected{% endif %}>
                     {{ encounter.name }}
                 </option>
-                {% endfor %}
-            </select>
-        </div>
+            {% endfor %}
+        </select>
     </div>
 
     <!-- Gear Selection -->
     <h2 class="subtitle">Gear Details</h2>
-    <div class="field">
-        <label class="label" for="right_weapon_id">Right Weapon:</label>
-        <div class="control">
-            <select class="input" id="right_weapon_id" name="right_weapon_id" required>
-                {% for weapon in weapons %}
-                <option value="{{ weapon.weapon_affinity_id }}" {% if npc['right_weapon_id'] == weapon.weapon_affinity_id %}selected{% endif %}>
-                    {{ weapon.weapon_name }}
+    {% for gear_field, gear_name, gear_items in [
+        ('right_weapon_id', 'Right Weapon', weapons),
+        ('left_weapon_id', 'Left Weapon', weapons),
+        ('armor_head_id', 'Head Armor', h_armors),
+        ('armor_body_id', 'Body Armor', b_armors),
+        ('armor_arms_id', 'Arms Armor', a_armors),
+        ('armor_legs_id', 'Legs Armor', l_armors)
+    ] %}
+    <div class="form-group">
+        <label for="{{ gear_field }}">{{ gear_name }}:</label>
+        <select class="input" id="{{ gear_field }}" name="{{ gear_field }}">
+            <option value="">None</option>
+            {% for item in gear_items %}
+                <option value="{{ item.armor_id or item.weapon_affinity_id }}" {% if npc[gear_field] == (item.armor_id or item.weapon_affinity_id) %}selected{% endif %}>
+                    {{ item.armor_name or item.weapon_name }}
                 </option>
-                {% endfor %}
-            </select>
-        </div>
+            {% endfor %}
+        </select>
     </div>
-
-    <div class="field">
-        <label class="label" for="left_weapon_id">Left Weapon:</label>
-        <div class="control">
-            <select class="input" id="left_weapon_id" name="left_weapon_id" required>
-                {% for weapon in weapons %}
-                <option value="{{ weapon.weapon_affinity_id }}" {% if npc['left_weapon_id'] == weapon.weapon_affinity_id %}selected{% endif %}>
-                    {{ weapon.weapon_name }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label" for="armor_head_id">Head Armor:</label>
-        <div class="control">
-            <select class="input" id="armor_head_id" name="armor_head_id" required>
-                {% for armor in h_armors %}
-                <option value="{{ armor.armor_id }}" {% if npc['armor_head_id'] == armor.armor_id %}selected{% endif %}>
-                    {{ armor.armor_name }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label" for="armor_body_id">Body Armor:</label>
-        <div class="control">
-            <select class="input" id="armor_body_id" name="armor_body_id" required>
-                {% for armor in b_armors %}
-                <option value="{{ armor.armor_id }}" {% if npc['armor_body_id'] == armor.armor_id %}selected{% endif %}>
-                    {{ armor.armor_name }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label" for="armor_arms_id">Arms Armor:</label>
-        <div class="control">
-            <select class="input" id="armor_arms_id" name="armor_arms_id" required>
-                {% for armor in a_armors %}
-                <option value="{{ armor.armor_id }}" {% if npc['armor_arms_id'] == armor.armor_id %}selected{% endif %}>
-                    {{ armor.armor_name }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label" for="armor_legs_id">Legs Armor:</label>
-        <div class="control">
-            <select class="input" id="armor_legs_id" name="armor_legs_id" required>
-                {% for armor in l_armors %}
-                <option value="{{ armor.armor_id }}" {% if npc['armor_legs_id'] == armor.armor_id %}selected{% endif %}>
-                    {{ armor.armor_name }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
-    </div>
+    {% endfor %}
 
     <!-- Submit Button -->
-    <div class="field">
-        <div class="control">
-            <button class="button is-primary" type="submit">Update NPC</button>
-        </div>
+    <div class="form-group">
+        <button class="button is-primary" type="submit" style="padding: 10px 20px; background-color: rgba(34, 139, 34, 0.7); border-radius: 5px; color: white; font-size: 16px;">Update NPC</button>
     </div>
 </form>
 {% endblock %}

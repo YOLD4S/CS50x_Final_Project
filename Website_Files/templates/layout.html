@@ -11,7 +11,7 @@
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
   <style>
     body {
-      background-image: url("../static/images/home_background.jpg");
+      background-image: url("{{ url_for('static', filename='images/home_background.jpg') }}");
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;

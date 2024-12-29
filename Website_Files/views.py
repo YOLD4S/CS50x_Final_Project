@@ -133,14 +133,14 @@ def add_new_npc():
     # Fetch weapons and armors using the appropriate joins
     cursor.execute("""
         SELECT 
-    rw.name AS weapon_name,
-    rw.id AS weapon_order_id,
-    MIN(rw_aff.id) AS weapon_affinity_id -- Select the first affinity ID (or other logic)
-FROM 
-    weapons AS rw     
-LEFT JOIN weapons_w_affinities AS rw_aff ON rw.id = rw_aff.main_weapon_id
-GROUP BY rw.id, rw.name
-
+            rw.name AS weapon_name,
+            rw.id AS weapon_order_id,
+            rw.default_skill_id AS weapon_skill_id,
+            MIN(rw_aff.id) AS weapon_affinity_id
+        FROM 
+            weapons AS rw     
+        LEFT JOIN weapons_w_affinities AS rw_aff ON rw.id = rw_aff.main_weapon_id
+        GROUP BY rw.id, rw.name
     """)
     weapons = cursor.fetchall()
 
@@ -201,13 +201,24 @@ GROUP BY rw.id, rw.name
         new_encounter_runes = request.form.get('new_encounter_runes')
 
         # Fetch gear and location data
-        location_id = request.form.get('location_id')
-        right_weapon_id = request.form.get('right_weapon_id')
-        left_weapon_id = request.form.get('left_weapon_id')
-        armor_head_id = request.form.get('armor_head_id')
-        armor_body_id = request.form.get('armor_body_id')
-        armor_arms_id = request.form.get('armor_arms_id')
-        armor_legs_id = request.form.get('armor_legs_id')
+        location_id = request.form.get('location_id') or None
+        right_weapon_id = request.form.get('right_weapon_id') or None
+        left_weapon_id = request.form.get('left_weapon_id') or None
+        armor_head_id = request.form.get('armor_head_id') or None
+        armor_body_id = request.form.get('armor_body_id') or None
+        armor_arms_id = request.form.get('armor_arms_id') or None
+        armor_legs_id = request.form.get('armor_legs_id') or None
+
+        # Fetch default skills for the selected weapons
+        right_weapon_skill_id = next(
+            (weapon['weapon_skill_id'] for weapon in weapons if weapon['weapon_affinity_id'] == int(right_weapon_id)),
+            None
+        ) if right_weapon_id else None
+
+        left_weapon_skill_id = next(
+            (weapon['weapon_skill_id'] for weapon in weapons if weapon['weapon_affinity_id'] == int(left_weapon_id)),
+            None
+        ) if left_weapon_id else None
 
         # Handle encounter logic
         if not add_to_existing_encounter:
@@ -234,9 +245,11 @@ GROUP BY rw.id, rw.name
 
         # Insert NPC gear into gear table
         cursor.execute("""
-            INSERT INTO gear (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id)
-            VALUES (%s, %s, %s, %s, %s, %s)
-        """, (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id))
+            INSERT INTO gear (right_weapon_id, left_weapon_id, right_weapon_skill_id, left_weapon_skill_id,
+                              armor_head_id, armor_body_id, armor_arms_id, armor_legs_id)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        """, (right_weapon_id, left_weapon_id, right_weapon_skill_id, left_weapon_skill_id,
+              armor_head_id, armor_body_id, armor_arms_id, armor_legs_id))
         gear_id = cursor.lastrowid
 
         # Insert NPC data
@@ -258,8 +271,8 @@ GROUP BY rw.id, rw.name
         b_armors=b_armors,
         a_armors=a_armors,
         l_armors=l_armors,
-        
     )
+
     
     
 def delete_npc(npc_id):
@@ -277,6 +290,7 @@ def npcs_page():
     # Get filter parameters
     location_id = request.args.get('location')
     only_night = request.args.get('only_night')
+    search = request.args.get('search')
     
     # Base query
     query = """
@@ -303,6 +317,9 @@ def npcs_page():
     if only_night is not None:
         query += " AND n.only_night = %s"
         params.append(only_night == '1')
+    if search:
+        query += " AND npcs.name LIKE %s"
+        params.append(f"%{search}%")
     
     query += " ORDER BY npcs.name ASC"
     
@@ -319,9 +336,9 @@ def npcs_page():
         npcs=npcs,
         locations=locations,
         selected_location=location_id,
-        only_night=only_night
+        only_night=only_night,
+        search=search
     )
-
 
 
 def npc_detail_page(npc_id):
@@ -498,6 +515,7 @@ def update_npc(npc_id):
         SELECT 
             rw.name AS weapon_name,
             rw.id AS weapon_order_id,
+            rw.default_skill_id AS weapon_skill_id,
             MIN(rw_aff.id) AS weapon_affinity_id
         FROM 
             weapons AS rw     
@@ -561,7 +579,9 @@ def update_npc(npc_id):
             npc_encounters.only_night AS encounter_only_night,
             npc_encounters.location_id AS encounter_location_id,
             gear.right_weapon_id,
+            gear.right_weapon_skill_id,
             gear.left_weapon_id,
+            gear.left_weapon_skill_id,
             gear.armor_head_id,
             gear.armor_body_id,
             gear.armor_arms_id,
@@ -584,16 +604,27 @@ def update_npc(npc_id):
         hp = request.form.get('hp')
         runes = request.form.get('runes')
         encounter_id = request.form.get('encounter_id')
-        location_id = request.form.get('location_id')  # Updates the `npc_encounters` table
+        location_id = request.form.get('location_id') or None  # Handle NULL
         only_night = request.form.get('only_night') == 'on'
 
         # Gear details
-        right_weapon_id = request.form.get('right_weapon_id')
-        left_weapon_id = request.form.get('left_weapon_id')
-        armor_head_id = request.form.get('armor_head_id')
-        armor_body_id = request.form.get('armor_body_id')
-        armor_arms_id = request.form.get('armor_arms_id')
-        armor_legs_id = request.form.get('armor_legs_id')
+        right_weapon_id = request.form.get('right_weapon_id') or None
+        left_weapon_id = request.form.get('left_weapon_id') or None
+        armor_head_id = request.form.get('armor_head_id') or None
+        armor_body_id = request.form.get('armor_body_id') or None
+        armor_arms_id = request.form.get('armor_arms_id') or None
+        armor_legs_id = request.form.get('armor_legs_id') or None
+
+        # Fetch default skills for the selected weapons
+        right_weapon_skill_id = next(
+            (weapon['weapon_skill_id'] for weapon in weapons if weapon['weapon_affinity_id'] == int(right_weapon_id)),
+            None
+        ) if right_weapon_id else None
+
+        left_weapon_skill_id = next(
+            (weapon['weapon_skill_id'] for weapon in weapons if weapon['weapon_affinity_id'] == int(left_weapon_id)),
+            None
+        ) if left_weapon_id else None
 
         # Update encounter details
         cursor.execute("""
@@ -610,16 +641,20 @@ def update_npc(npc_id):
                 cursor.execute("""
                     UPDATE gear
                     SET right_weapon_id = %s, left_weapon_id = %s, 
+                        right_weapon_skill_id = %s, left_weapon_skill_id = %s,
                         armor_head_id = %s, armor_body_id = %s, 
                         armor_arms_id = %s, armor_legs_id = %s
                     WHERE id = %s
-                """, (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id, gear_id))
+                """, (right_weapon_id, left_weapon_id, right_weapon_skill_id, left_weapon_skill_id,
+                      armor_head_id, armor_body_id, armor_arms_id, armor_legs_id, gear_id))
             else:
                 # Create new gear and update the NPC's gear_id
                 cursor.execute("""
-                    INSERT INTO gear (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id)
-                    VALUES (%s, %s, %s, %s, %s, %s)
-                """, (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id))
+                    INSERT INTO gear (right_weapon_id, left_weapon_id, right_weapon_skill_id, left_weapon_skill_id, 
+                                      armor_head_id, armor_body_id, armor_arms_id, armor_legs_id)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                """, (right_weapon_id, left_weapon_id, right_weapon_skill_id, left_weapon_skill_id,
+                      armor_head_id, armor_body_id, armor_arms_id, armor_legs_id))
                 gear_id = cursor.lastrowid
                 cursor.execute("""
                     UPDATE npcs
@@ -649,10 +684,6 @@ def update_npc(npc_id):
         a_armors=a_armors,
         l_armors=l_armors
     )
-
-
-
-
 
 
 def weapon_groups_page():
