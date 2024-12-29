@@ -1143,11 +1143,142 @@ def spirit_ashes_detail(spirit_ash_id):
 
     return render_template("spirit_ashes_detail.html", spirit_ash=spirit_ash)
 
-def keys_page():
-    return render_template("keys.html")
+def key_items_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
 
-def bolstering_page():
-    return render_template("bolstering.html")
+    # Get current page, filter, and pagination parameters
+    page = request.args.get("page", 1, type=int)
+    type_id = request.args.get("type_id", None, type=int)
+    per_page = 12
+    offset = (page - 1) * per_page
+
+    # Base query
+    query = """
+            SELECT ki.id, i.name, ki.image_url, t.key_item_type
+            FROM key_items ki
+            LEFT JOIN items i ON ki.id = i.id
+            LEFT JOIN key_item_types t ON ki.type_id = t.id
+            WHERE 1=1
+        """
+    count_query = "SELECT COUNT(*) as total FROM key_items WHERE 1=1"
+    params = []
+
+    # Apply filtering by type_id
+    if type_id:
+        query += " AND ki.type_id = %s"
+        count_query += " AND type_id = %s"
+        params.append(type_id)
+
+    # Add pagination
+    query += " ORDER BY i.name ASC LIMIT %s OFFSET %s"
+    params.extend([per_page, offset])
+
+    # Fetch total count for pagination
+    cursor.execute(count_query, params[:len(params) - 2])
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Fetch key items for the current page
+    cursor.execute(query, params)
+    key_items = cursor.fetchall()
+
+    # Fetch key item types for filtering dropdown
+    cursor.execute("SELECT id, key_item_type FROM key_item_types ORDER BY key_item_type ASC")
+    key_item_types = cursor.fetchall()
+
+    return render_template(
+        "key_items.html",
+        key_items=key_items,
+        key_item_types=key_item_types,
+        selected_type_id=type_id,
+        current_page=page,
+        total_pages=total_pages
+    )
+
+def key_item_detail(key_item_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch key item details
+    cursor.execute("""
+        SELECT ki.id, i.name, ki.info, ki.description, ki.image_url,
+               t.key_item_type, t.id AS key_item_type_id
+        FROM key_items ki
+        LEFT JOIN items i ON ki.id = i.id
+        LEFT JOIN key_item_types t ON ki.type_id = t.id
+        WHERE ki.id = %s
+    """, (key_item_id,))
+    key_item = cursor.fetchone()
+
+    if not key_item:
+        abort(404)
+
+    return render_template("key_item_detail.html", key_item=key_item)
+
+
+def bolsters_page():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get current page, sorting options, and pagination parameters
+    page = request.args.get("page", 1, type=int)
+    sort_by = request.args.get("sort_by", "name")  # Default sorting by name
+    order = request.args.get("order", "asc")  # Default order is ascending
+    per_page = 12
+    offset = (page - 1) * per_page
+
+    # Determine sorting column
+    sort_column = "i.name"
+    if sort_by == "price":
+        sort_column = "b.price"
+
+    # Ensure valid sort order
+    sort_order = "ASC" if order.lower() == "asc" else "DESC"
+
+    # Query to fetch total number of bolsters for pagination
+    cursor.execute("SELECT COUNT(*) AS total FROM bolsters")
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Query to fetch bolsters for the current page
+    cursor.execute(f"""
+        SELECT b.id, i.name, b.image_url, b.price 
+        FROM bolsters b
+        LEFT JOIN items i ON b.id = i.id
+        ORDER BY {sort_column} {sort_order}
+        LIMIT %s OFFSET %s
+    """, (per_page, offset))
+    bolsters = cursor.fetchall()
+
+    return render_template(
+        "bolsters.html",
+        bolsters=bolsters,
+        current_page=page,
+        total_pages=total_pages,
+        sort_by=sort_by,
+        order=order
+    )
+
+
+def bolster_detail(bolster_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch bolster details
+    cursor.execute("""
+        SELECT b.id, i.name, b.info, b.description, b.max_held, b.max_storage, b.price, b.image_url
+        FROM bolsters b
+        LEFT JOIN items i ON b.id = i.id
+        WHERE b.id = %s
+    """, (bolster_id,))
+    bolster = cursor.fetchone()
+
+    if not bolster:
+        abort(404)
+
+    return render_template("bolster_detail.html", bolster=bolster)
+
 
 def profile_page():
     if not session.get('user_id'):

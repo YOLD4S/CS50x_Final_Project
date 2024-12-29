@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+{% block title %}Key Items{% endblock %}
+{% block content %}
+<h1 class="page-title">Key Items</h1>
+
+<div class="filter-section">
+    <form method="GET" action="{{ url_for('key_items_page') }}">
+        <label for="type-filter">Key Item Type:</label>
+        <select id="type-filter" name="type_id" onchange="this.form.submit()">
+            <option value="">All Types</option>
+            {% for key_item_type in key_item_types %}
+            <option value="{{ key_item_type.id }}" {% if selected_type_id == key_item_type.id %}selected{% endif %}>
+                {{ key_item_type.key_item_type }}
+            </option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
+
+<div class="key-items-container">
+    {% for key_item in key_items %}
+    <div class="key-item-box">
+        <a href="{{ url_for('key_item_detail', key_item_id=key_item.id) }}">
+            <img src="{{ key_item.image_url if key_item.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ key_item.name }}" class="key-item-image">
+            <p class="key-item-name">{{ key_item.name }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if current_page > 1 %}
+    <a href="{{ url_for('key_items_page', page=current_page-1, type_id=selected_type_id) }}" class="page-link">&laquo;</a>
+    {% endif %}
+
+    {% set start = [current_page - 2, 1] | max %}
+    {% set end = [start + 4, total_pages] | min %}
+    {% set start = [end - 4, 1] | max %}
+
+    {% if start > 1 %}
+    <a href="{{ url_for('key_items_page', page=1, type_id=selected_type_id) }}" class="page-link">1</a>
+    {% if start > 2 %}
+    <span class="page-ellipsis">...</span>
+    {% endif %}
+    {% endif %}
+
+    {% for p in range(start, end + 1) %}
+    <a href="{{ url_for('key_items_page', page=p, type_id=selected_type_id) }}" class="page-link {% if p == current_page %}active{% endif %}">{{ p }}</a>
+    {% endfor %}
+
+    {% if end < total_pages %}
+    {% if end < total_pages - 1 %}
+    <span class="page-ellipsis">...</span>
+    {% endif %}
+    <a href="{{ url_for('key_items_page', page=total_pages, type_id=selected_type_id) }}" class="page-link">{{ total_pages }}</a>
+    {% endif %}
+
+    {% if current_page < total_pages %}
+    <a href="{{ url_for('key_items_page', page=current_page+1, type_id=selected_type_id) }}" class="page-link">&raquo;</a>
+    {% endif %}
+</div>
+
+<style>
+/* Key Items Container */
+.key-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.key-item-box {
+    position: relative;
+    text-align: center;
+    border: 1px solid #8B7355;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.key-item-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.key-item-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.key-item-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #D4AF37;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.filter-section label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.filter-section select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #8B7355;
+    border-radius: 8px;
+    background-color: rgba(139, 115, 85, 0.2);
+    color: #D4C5A1;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.filter-section select:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #000;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-link {
+    padding: 0.5rem 0.8rem;
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.page-link:hover,
+.page-link.active {
+    background: rgba(139, 115, 85, 0.4);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+.page-link.active {
+    background: rgba(212, 175, 55, 0.2);
+    pointer-events: none;
+}
+
+.page-ellipsis {
+    color: #D4C5A1;
+    padding: 0 0.3rem;
+}
+</style>
+{% endblock %}

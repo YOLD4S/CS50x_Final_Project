@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block title %}{{ bolster.name }}{% endblock %}
+{% block content %}
+<div class="bolster-detail-header">
+    <div class="bolster-image">
+        <img src="{{ bolster.image_url if bolster.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ bolster.name }}">
+    </div>
+    <div class="bolster-info">
+        <h1 class="bolster-title">{{ bolster.name }}</h1>
+        <ul class="bolster-attributes">
+            <li><strong>Max Held:</strong> {{ bolster.max_held }}</li>
+            <li><strong>Max Storage:</strong> {{ bolster.max_storage }}</li>
+            <li><strong>Price:</strong> {{ bolster.price if bolster.price else 'Not for sale' }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="bolster-details">
+    <h2 class="section-title">Info</h2>
+    <p class="bolster-info-text">{{ bolster.info if bolster.info else 'No additional info available.' }}</p>
+
+    <h2 class="section-title">Description</h2>
+    <p class="bolster-description">{{ bolster.description if bolster.description else 'No description available.' }}</p>
+</div>
+
+<style>
+.bolster-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bolster-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8B7355;
+}
+
+.bolster-info {
+    flex: 1;
+}
+
+.bolster-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.bolster-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.bolster-attributes li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.bolster-details {
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.bolster-info-text,
+.bolster-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+    margin-top: 1rem;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block title %}{{ key_item.name }}{% endblock %}
+{% block content %}
+<div class="key-item-detail-header">
+    <div class="key-item-image">
+        <img src="{{ key_item.image_url if key_item.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ key_item.name }}">
+    </div>
+    <div class="key-item-info">
+        <h1 class="key-item-title">{{ key_item.name }}</h1>
+        <ul class="key-item-attributes">
+            <li><strong>Type:</strong> 
+                <a href="{{ url_for('key_items_page', type_id=key_item.key_item_type_id) }}">{{ key_item.key_item_type }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="key-item-details">
+    <h2 class="section-title">Info</h2>
+    <p class="key-item-info-text">{{ key_item.info if key_item.info else 'No additional info available.' }}</p>
+
+    <h2 class="section-title">Description</h2>
+    <p class="key-item-description">{{ key_item.description if key_item.description else 'No description available.' }}</p>
+</div>
+
+<style>
+.key-item-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.key-item-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8B7355;
+}
+
+.key-item-info {
+    flex: 1;
+}
+
+.key-item-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.key-item-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.key-item-attributes li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.key-item-attributes li a {
+    color: #D4AF37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.key-item-attributes li a:hover {
+    color: #8B7355;
+    text-decoration: underline;
+}
+
+.key-item-details {
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.key-item-info-text,
+.key-item-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+    margin-top: 1rem;
+}
+</style>
+{% endblock %}

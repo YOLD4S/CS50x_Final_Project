@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+{% block title %}Bolstering Materials{% endblock %}
+{% block content %}
+<h1 class="page-title">Bolstering Materials</h1>
+
+<div class="sorting-section">
+    <form method="GET" action="{{ url_for('bolsters_page') }}">
+        <label for="sort-by">Sort By:</label>
+        <select id="sort-by" name="sort_by">
+            <option value="name" {% if sort_by == "name" %}selected{% endif %}>Name</option>
+            <option value="price" {% if sort_by == "price" %}selected{% endif %}>Price</option>
+        </select>
+
+        <label for="order">Order:</label>
+        <select id="order" name="order">
+            <option value="asc" {% if order == "asc" %}selected{% endif %}>Ascending</option>
+            <option value="desc" {% if order == "desc" %}selected{% endif %}>Descending</option>
+        </select>
+
+        <button type="submit">Apply</button>
+    </form>
+</div>
+
+<div class="bolsters-container">
+    {% for bolster in bolsters %}
+    <div class="bolster-box">
+        <a href="{{ url_for('bolster_detail', bolster_id=bolster.id) }}">
+            <img src="{{ bolster.image_url if bolster.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ bolster.name }}" class="bolster-image">
+            <p class="bolster-name">{{ bolster.name }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if current_page > 1 %}
+    <a href="{{ url_for('bolsters_page', page=current_page-1, sort_by=sort_by, order=order) }}" class="page-link">&laquo;</a>
+    {% endif %}
+
+    {% set start = [current_page - 2, 1] | max %}
+    {% set end = [start + 4, total_pages] | min %}
+    {% set start = [end - 4, 1] | max %}
+
+    {% if start > 1 %}
+    <a href="{{ url_for('bolsters_page', page=1, sort_by=sort_by, order=order) }}" class="page-link">1</a>
+    {% if start > 2 %}
+    <span class="page-ellipsis">...</span>
+    {% endif %}
+    {% endif %}
+
+    {% for p in range(start, end + 1) %}
+    <a href="{{ url_for('bolsters_page', page=p, sort_by=sort_by, order=order) }}" class="page-link {% if p == current_page %}active{% endif %}">{{ p }}</a>
+    {% endfor %}
+
+    {% if end < total_pages %}
+    {% if end < total_pages - 1 %}
+    <span class="page-ellipsis">...</span>
+    {% endif %}
+    <a href="{{ url_for('bolsters_page', page=total_pages, sort_by=sort_by, order=order) }}" class="page-link">{{ total_pages }}</a>
+    {% endif %}
+
+    {% if current_page < total_pages %}
+    <a href="{{ url_for('bolsters_page', page=current_page+1, sort_by=sort_by, order=order) }}" class="page-link">&raquo;</a>
+    {% endif %}
+</div>
+
+<style>
+/* Bolsters Container */
+.bolsters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamically adjusts columns */
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.bolster-box {
+    position: relative;
+    text-align: center;
+    border: 1px solid #8B7355;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.bolster-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bolster-image {
+    width: 100%;
+    height: 150px; /* Ensures consistent height */
+    object-fit: cover; /* Scales images proportionally to fit container */
+}
+
+.bolster-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #D4AF37;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+}
+
+.sorting-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.sorting-section label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.sorting-section select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #8B7355;
+    border-radius: 8px;
+    background-color: rgba(139, 115, 85, 0.2);
+    color: #D4C5A1;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.sorting-section select:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #000;
+}
+
+.sorting-section button {
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(139, 115, 85, 0.7);
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.sorting-section button:hover {
+    background-color: rgba(212, 175, 55, 0.9);
+    color: #000;
+    border-color: #8B7355;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+</style>
+{% endblock %}
