@@ -63,8 +63,8 @@ def create_app():
     app.add_url_rule("/bolsters/<int:bolster_id>", view_func=views.bolster_detail)
     app.add_url_rule("/profile", view_func=views.profile_page)
     app.add_url_rule("/profile/upload_picture", view_func=views.upload_profile_picture, methods=["POST"])
+    app.add_url_rule("/profile/remove_picture", view_func=views.remove_profile_picture, methods=["POST"])
     app.add_url_rule("/profile/update", view_func=views.update_profile, methods=["POST"])
-
     app.add_url_rule("/profile/request-admin", view_func=views.request_admin, methods=["POST"])
     app.add_url_rule("/editor", view_func=views.editor_page)
     app.add_url_rule("/editor/<section>", view_func=views.editor_page)

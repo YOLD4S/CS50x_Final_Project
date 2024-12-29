@@ -1422,6 +1422,40 @@ def upload_profile_picture():
 
     return redirect(url_for('profile_page'))
 
+def remove_profile_picture():
+    if not session.get('user_id'):
+        return redirect(url_for('login_page'))
+
+    try:
+        db = get_db()
+        cursor = db.cursor(dictionary=True)  # Ensure the cursor returns dictionaries
+        cursor.execute("START TRANSACTION")
+
+        # Fetch the current profile picture path
+        cursor.execute("SELECT profile_picture FROM users WHERE id = %s", (session['user_id'],))
+        user = cursor.fetchone()
+        if user and user['profile_picture']:  # Access using dictionary keys
+            # Delete the profile picture file
+            picture_path = os.path.join(current_app.root_path, 'static/uploads', user['profile_picture'])
+            if os.path.exists(picture_path):
+                os.remove(picture_path)
+
+        # Update the database to remove the profile picture
+        cursor.execute("""
+                UPDATE users
+                SET profile_picture = NULL
+                WHERE id = %s
+            """, (session['user_id'],))
+        db.commit()
+
+        flash('Profile picture removed successfully!', 'success')
+    except Exception as e:
+        db.rollback()
+        flash('Error removing profile picture. Please try again.', 'error')
+        print(f"Error: {str(e)}")
+
+    return redirect(url_for('profile_page'))
+
 def update_profile():
     if not session.get('user_id'):
         return redirect(url_for('login_page'))

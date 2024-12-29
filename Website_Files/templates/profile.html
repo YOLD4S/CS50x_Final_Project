@@ -27,6 +27,11 @@
             <input type="file" name="profile_picture" accept="image/*" id="file-input">
             <button type="submit" class="submit-button">Upload Picture</button>
         </form>
+        {% if user.profile_picture %}
+        <form method="POST" action="{{ url_for('remove_profile_picture') }}" style="margin-top: 1rem;">
+            <button type="submit" class="delete-button">Remove Picture</button>
+        </form>
+        {% endif %}
     </div>
 
     <div class="profile-section">

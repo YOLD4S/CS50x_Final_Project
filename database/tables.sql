@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `npc_encounters` (
 );
 
 CREATE TABLE IF NOT EXISTS `gear` (
-	`id` int NOT NULL,
+	`id` int AUTO_INCREMENT NOT NULL,
 	`right_weapon_id` int NULL,
 	`right_weapon_skill_id` int NULL,
 	`left_weapon_id` int NULL,

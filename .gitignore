@@ -4,3 +4,4 @@ __pycache__/
 .env
 .venv/
 Website_Files/flask_session/
+/Website_Files/static/uploads/
