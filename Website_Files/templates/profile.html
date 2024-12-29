@@ -37,15 +37,17 @@
         </form>
     </div>
 
+    {% if not user.admin %}
     <div class="profile-section">
         <h2>Request Administration Access</h2>
         <form method="POST" action="{{ url_for('request_admin') }}" class="admin-form">
             <div class="form-group">
                 <label for="admin_key">Administration Key:</label>
-                <input type="text" id="admin_key" name="admin_key" required>
+                <input type="password" id="admin_key" name="admin_key" required>
             </div>
             <button type="submit" class="submit-button">Request Access</button>
         </form>
     </div>
+    {% endif %}
 </div>
 {% endblock %} 
