@@ -1,12 +1,81 @@
 {% extends "layout.html" %}
 {% block title %}{{ armor.name }}{% endblock %}
 {% block content %}
-<h1 class="title">{{ armor.name }}</h1>
-<table class="table">
-    <tr><th>Equipment Slot</th><td>{{ armor.equip_slot }}</td></tr>
-    <tr><th>Description</th><td>{{ armor.description }}</td></tr>
-    <tr><th>Weight</th><td>{{ armor.weight }}</td></tr>
-    <tr><th>Price</th><td>{{ armor.price }}</td></tr>
-    <tr><th>Can Be Altered</th><td>{{ 'Yes' if armor.can_alter else 'No' }}</td></tr>
-</table>
+<div class="armor-detail-header">
+    <div class="armor-image">
+        <img src="{{ armor.image_url if armor.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ armor.name }}">
+    </div>
+    <div class="armor-info">
+        <h1 class="armor-title">{{ armor.name }}</h1>
+        <ul class="armor-attributes">
+            <li>
+                <strong>Set:</strong>
+                {% if armor.set_name %}
+                <a href="{{ url_for('armors_page') }}?set_id={{ armor.set_id }}">{{ armor.set_name }}</a>
+                {% else %}
+                None
+                {% endif %}
+            </li>
+            <li>
+                <strong>Equip Slot:</strong>
+                {% if armor.equip_slot %}
+                <a href="{{ url_for('armors_page') }}?slot_id={{ armor.equip_slot_id }}">{{ armor.equip_slot }}</a>
+                {% else %}
+                Unknown
+                {% endif %}
+            </li>
+            <li><strong>Weight:</strong> {{ armor.weight }}</li>
+            <li><strong>Price:</strong> {{ armor.price if armor.price else 'Not for sale' }}</li>
+            <li><strong>Can Be Altered:</strong> {{ 'Yes' if armor.can_alter else 'No' }}</li>
+        </ul>
+        <p class="armor-description">{{ armor.description if armor.description else 'No description available.' }}</p>
+    </div>
+</div>
+
+<style>
+.armor-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.armor-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8B7355;
+}
+.armor-info {
+    flex: 1;
+}
+.armor-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+.armor-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+.armor-attributes li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.armor-attributes li a {
+    color: #D4AF37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.armor-attributes li a:hover {
+    color: #8B7355;
+    text-decoration: underline;
+}
+.armor-description {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+}
+</style>
 {% endblock %}

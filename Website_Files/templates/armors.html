@@ -72,39 +72,39 @@
     {% if total_pages > 1 %}
     <div class="pagination">
         {% if current_page > 1 %}
-            <a href="{{ url_for('armors_page', page=current_page-1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+            <a href="{{ url_for('armors_page', page=current_page-1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}"
                class="page-link">&laquo;</a>
         {% endif %}
-        
+
         {% set start = [current_page - 2, 1] | max %}
         {% set end = [start + 4, total_pages] | min %}
         {% set start = [end - 4, 1] | max %}
-        
+
         {% if start > 1 %}
-            <a href="{{ url_for('armors_page', page=1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+            <a href="{{ url_for('armors_page', page=1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}"
                class="page-link">1</a>
             {% if start > 2 %}
                 <span class="page-ellipsis">...</span>
             {% endif %}
         {% endif %}
-        
+
         {% for p in range(start, end + 1) %}
-            <a href="{{ url_for('armors_page', page=p, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+            <a href="{{ url_for('armors_page', page=p, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}"
                class="page-link {% if p == current_page %}active{% endif %}">
                 {{ p }}
             </a>
         {% endfor %}
-        
+
         {% if end < total_pages %}
             {% if end < total_pages - 1 %}
                 <span class="page-ellipsis">...</span>
             {% endif %}
-            <a href="{{ url_for('armors_page', page=total_pages, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+            <a href="{{ url_for('armors_page', page=total_pages, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}"
                class="page-link">{{ total_pages }}</a>
         {% endif %}
-        
+
         {% if current_page < total_pages %}
-            <a href="{{ url_for('armors_page', page=current_page+1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}" 
+            <a href="{{ url_for('armors_page', page=current_page+1, set_id=selected_set, slot_id=selected_slot, weight_order=weight_order) }}"
                class="page-link">&raquo;</a>
         {% endif %}
     </div>

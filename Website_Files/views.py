@@ -862,14 +862,14 @@ def weapon_detail_page(weapon_id):
 def armors_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    
+
     # Get filter parameters
     set_id = request.args.get('set_id')
     slot_id = request.args.get('slot_id')
     weight_order = request.args.get('weight_order')
     page = request.args.get('page', 1, type=int)
     per_page = 12  # Number of armors per page
-    
+
     # Base query
     query = """
         SELECT a.*, i.name as name, s.name as set_name, e.equip_slot
@@ -881,7 +881,7 @@ def armors_page():
     """
     count_query = "SELECT COUNT(*) as total FROM armors WHERE 1=1"
     params = []
-    
+
     # Add filters
     if set_id:
         query += " AND a.set_id = %s"
@@ -891,7 +891,7 @@ def armors_page():
         query += " AND a.equip_slot_id = %s"
         count_query += " AND equip_slot_id = %s"
         params.append(slot_id)
-    
+
     # Add ordering
     if weight_order == 'asc':
         query += " ORDER BY a.weight ASC"
@@ -899,29 +899,29 @@ def armors_page():
         query += " ORDER BY a.weight DESC"
     else:
         query += " ORDER BY s.name, e.equip_slot"
-    
+
     # Get total count for pagination
     cursor.execute(count_query, params)
     total = cursor.fetchone()['total']
     total_pages = (total + per_page - 1) // per_page
-    
+
     # Add pagination
     query += " LIMIT %s OFFSET %s"
     offset = (page - 1) * per_page
     params.extend([per_page, offset])
-    
+
     # Execute main query
     cursor.execute(query, params)
     armors = cursor.fetchall()
-    
+
     # Get filter dropdowns
     cursor.execute("SELECT id, name FROM armor_sets ORDER BY name")
     sets = cursor.fetchall()
-    
+
     cursor.execute("SELECT id, equip_slot FROM armor_equip_slots ORDER BY id")
     slots = cursor.fetchall()
-    
-    return render_template("armors.html", 
+
+    return render_template("armors.html",
                          armors=armors,
                          sets=sets,
                          slots=slots,
@@ -934,16 +934,25 @@ def armors_page():
 def armor_detail_page(armor_id, name=None, equip_slot=None):
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    query = """SELECT a.*, i.name as name, e.equip_slot as equip_slot
-                FROM armors a
-                LEFT JOIN items i ON a.id = i.id
-                LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id
-                WHERE a.id = %s
-    """
-    cursor.execute(query, (armor_id,))
+
+    # Fetch armor details along with related set and equip slot information
+    cursor.execute("""
+            SELECT a.id, a.weight, a.description, a.price, a.can_alter, 
+                   i.name AS name, 
+                   s.name AS set_name, s.id AS set_id, 
+                   e.equip_slot AS equip_slot, e.id AS equip_slot_id, 
+                   a.image_url
+            FROM armors a
+            LEFT JOIN items i ON a.id = i.id
+            LEFT JOIN armor_sets s ON a.set_id = s.id
+            LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id
+            WHERE a.id = %s
+        """, (armor_id,))
     armor = cursor.fetchone()
+
     if not armor:
         abort(404)
+
     return render_template("armor_detail.html", armor=armor)
 
 def talismans_page():
