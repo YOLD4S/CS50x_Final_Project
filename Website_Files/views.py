@@ -1570,12 +1570,6 @@ def admin_required(f):
     return decorated_function
 
 @admin_required
-def editor_page(section=None):
-    if section:
-        return render_template(f'editor/{section}.html')
-    return render_template('editor.html')
-
-@admin_required
 def armor_editor():
     return render_template('editor/armors.html')
 
@@ -1779,8 +1773,6 @@ def delete_armor_set(set_id):
             # Start transaction
             cursor.execute("START TRANSACTION")
             
-            # Update armors to remove the set_id (set to NULL)
-            # cursor.execute("UPDATE armors SET set_id = NULL WHERE set_id = %s", (set_id,))
             
             # Delete the armor set
             cursor.execute("DELETE FROM armor_sets WHERE id = %s", (set_id,))
@@ -1794,6 +1786,7 @@ def delete_armor_set(set_id):
             flash(f'Error deleting armor set: {str(e)}', 'error')
             return redirect(url_for('armor_delete_page'))
     
+    # If GET request, redirect to delete page
     return redirect(url_for('armor_delete_page'))
 
 @admin_required
@@ -1815,10 +1808,7 @@ def delete_armor(armor_id):
             # Start transaction
             cursor.execute("START TRANSACTION")
             
-            # Delete from armors table first (due to foreign key constraint)
-            cursor.execute("DELETE FROM armors WHERE id = %s", (armor_id,))
-            
-            # Then delete from items table
+            # Delete from items table first (this will cascade to armors table)
             cursor.execute("DELETE FROM items WHERE id = %s", (armor_id,))
             
             db.commit()
@@ -1830,6 +1820,7 @@ def delete_armor(armor_id):
             flash(f'Error deleting armor: {str(e)}', 'error')
             return redirect(url_for('armor_delete_page'))
     
+    # If GET request, redirect to delete page
     return redirect(url_for('armor_delete_page'))
 
 def delete_account():
@@ -1925,5 +1916,11 @@ def update_armor(armor_id):
         return jsonify({'error': 'Armor not found'}), 404
         
     return jsonify(armor)
+
+@admin_required
+def editor_page(section=None):
+    if section == 'armor':
+        return redirect(url_for('armor_editor'))
+    return render_template('editor/editor.html', section=section)
 
 

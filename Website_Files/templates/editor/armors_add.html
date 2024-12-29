@@ -8,6 +8,7 @@
     
     <div class="editor-form">
         <form method="POST" action="/editor/armor/add" class="item-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <label for="name">Armor Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -23,10 +24,10 @@
                     <label for="set_id">Armor Set:</label>
                     <select id="set_id" name="set_id" required style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;">
                         <option value="">Select Existing Set</option>
+                        <option value="new">Create New Set</option>
                         {% for set in armor_sets %}
                         <option value="{{ set.id }}">{{ set.name }}</option>
                         {% endfor %}
-                        <option value="new">Create New Set</option>
                     </select>
                 </div>
                 

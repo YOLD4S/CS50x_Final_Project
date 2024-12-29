@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block title %}Game Editor{% endblock %}
+
+{% block content %}
+<div class="editor-container">
+    <h1 class="page-title">Game Editor</h1>
+
+    <div class="editor-sections">
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Armor.png') }}); background-size: cover; background-position: center;">
+            <div class="feature-content">
+                <h2>Edit Armors</h2>
+                <p>Update armor stats, manage armor sets, and modify descriptions.</p>
+                <a href="{{ url_for('armor_editor') }}" class="feature-link">Edit Armors</a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Weapons.png') }}); background-size: cover; background-position: center;">
+            <div class="feature-content">
+                <h2>Edit Weapons</h2>
+                <p>Manage weapon stats, affinities, and skills.</p>
+                <a href="{{ url_for('editor_page', section='weapons') }}" class="feature-link">Edit Weapons</a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/NPCs.png') }}); background-size: cover; background-position: center;">
+            <div class="feature-content">
+                <h2>Edit NPCs</h2>
+                <p>Update NPC information, locations, and encounters.</p>
+                <a href="{{ url_for('editor_page', section='npcs') }}" class="feature-link">Edit NPCs</a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Talismans.png') }}); background-size: cover; background-position: center;">
+            <div class="feature-content">
+                <h2>Edit Talismans</h2>
+                <p>Manage talisman effects and descriptions.</p>
+                <a href="{{ url_for('editor_page', section='talismans') }}" class="feature-link">Edit Talismans</a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Magic.png') }}); background-size: cover; background-position: center;">
+            <div class="feature-content">
+                <h2>Edit Magic</h2>
+                <p>Update spells, incantations, and their requirements.</p>
+                <a href="{{ url_for('editor_page', section='magic') }}" class="feature-link">Edit Magic</a>
+            </div>
+        </div>
+
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Spirit_Ashes.png') }}); background-size: cover; background-position: center;">
+            <div class="feature-content">
+                <h2>Edit Spirit Ashes</h2>
+                <p>Manage spirit ash summons and their attributes.</p>
+                <a href="{{ url_for('editor_page', section='spirit_ashes') }}" class="feature-link">Edit Spirit Ashes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.editor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.editor-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #8B7355;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
+
+.feature-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), transparent);
+    color: #D4C5A1;
+}
+
+.feature-content h2 {
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.feature-content p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.feature-link:hover {
+    background: rgba(139, 115, 85, 0.4);
+    border-color: #D4AF37;
+}
+</style>
+{% endblock %} 
