@@ -19,19 +19,19 @@
         <form method="POST" action="{{ url_for('update_profile') }}" class="profile-form">
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" value="{{ user.username }}" required>
+                <input type="text" id="username" name="username" value="{{ user.username if user.username != None }}" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="{{ user.email }}">
+                <input type="email" id="email" name="email" value="{{ user.email if user.email != None else '' }}">
             </div>
             <div class="form-group">
                 <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" value="{{ user.name }}">
+                <input type="text" id="name" name="name" value="{{ user.name if user.name != None else '' }}">
             </div>
             <div class="form-group">
                 <label for="steam_url">Steam Profile URL:</label>
-                <input type="url" id="steam_url" name="steam_url" value="{{ user.steam_url }}">
+                <input type="url" id="steam_url" name="steam_url" value="{{ user.steam_url if user.steam_url != None else '' }}">
             </div>
             <button type="submit" class="submit-button">Update Profile</button>
         </form>
@@ -49,5 +49,13 @@
         </form>
     </div>
     {% endif %}
+
+    <div class="profile-section">
+        <h2 class="delete-heading">Delete Account</h2>
+        <p style="color: #ff9999; margin-bottom: 15px;">Warning: This action cannot be undone. All your data will be permanently deleted.</p>
+        <form method="POST" action="{{ url_for('delete_account') }}" class="delete-account-form" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
+            <button type="submit" class="delete-button">Delete Account</button>
+        </form>
+    </div>
 </div>
 {% endblock %} 

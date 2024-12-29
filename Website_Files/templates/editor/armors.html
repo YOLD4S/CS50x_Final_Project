@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block title %}Edit Armors{% endblock %}
+
+{% block content %}
+<div class="editor-container">
+    <h1 class="page-title">Armors Editor</h1>
+
+    <div class="editor-buttons" style="display: flex; flex-direction: row; gap: 20px; margin-bottom: 30px;">
+        <div class="editor-button-row" style="flex: 1;">
+            <button onclick="showAddForm()" class="large-button add-button" style="width: 100%; height: 150px; margin: 10px 0; background: rgba(255, 255, 255, 0.1); border: 2px solid #8B7355; color: #D4AF37; font-family: 'Cinzel', serif; font-size: 2rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 2px;">
+                Add
+            </button>
+        </div>
+
+        <div class="editor-button-row" style="flex: 1;">
+            <button onclick="showUpdateList()" class="large-button update-button" style="width: 100%; height: 150px; margin: 10px 0; background: rgba(255, 255, 255, 0.1); border: 2px solid #8B7355; color: #D4AF37; font-family: 'Cinzel', serif; font-size: 2rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 2px;">
+                Modify
+            </button>
+        </div>
+
+        <div class="editor-button-row" style="flex: 1;">
+            <button onclick="showDeleteList()" class="large-button delete-button" style="width: 100%; height: 150px; margin: 10px 0; background: rgba(255, 255, 255, 0.1); border: 2px solid #8B7355; color: #D4AF37; font-family: 'Cinzel', serif; font-size: 2rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 2px;">
+                Delete
+            </button>
+        </div>
+    </div>
+
+    <!-- Add Form (Hidden by default) -->
+    <div id="armorForm" class="editor-form" style="display: none;">
+        <h2 id="formTitle">Add New Armor</h2>
+        <form method="POST" action="{{ url_for('editor_page', section='armors') }}" class="item-form">
+            <div class="form-group">
+                <label for="name">Armor Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="set_id">Armor Set:</label>
+                    <select id="set_id" name="set_id" required style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;">
+                        {% for set in armor_sets %}
+                        <option value="{{ set.id }}">{{ set.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="equip_slot">Equipment Slot:</label>
+                    <select id="equip_slot" name="equip_slot" required style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem; box-sizing: border-box; transition: all 0.3s ease;">
+                        {% for slot in equip_slots %}
+                        <option value="{{ slot.id }}">{{ slot.equip_slot }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" name="weight" step="0.1" required style="background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Price (optional):</label>
+                    <input type="number" id="price" name="price" min="0" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
+                </div>
+            </div>
+            
+            <div class="form-group" style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; border-radius: 4px; padding: 0.8rem; margin: 1rem 0;">
+                <input type="checkbox" id="can_alter" name="can_alter" style="margin-right: 1rem; width: 20px; height: 20px; cursor: pointer;">
+                <label for="can_alter" style="cursor: pointer; color: #D4C5A1;">Can be Altered</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="image_url">Image URL:</label>
+                <input type="url" id="image_url" name="image_url" style="width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid #8B7355; color: #D4C5A1; border-radius: 4px; padding: 0.8rem;">
+            </div>
+            
+            <div class="form-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button type="submit" class="submit-button" style="background: rgba(139, 115, 85, 0.2); border: 2px solid #8B7355; color: #D4AF37; padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex: 1;">Save Armor</button>
+                <button type="button" class="cancel-button" onclick="hideForm()" style="background: rgba(139, 0, 0, 0.2); border: 2px solid #8B0000; color: #ff9999; padding: 10px 20px; font-family: 'Cinzel', serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex: 1;">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Update List (Hidden by default) -->
+    <div id="updateList" class="items-grid" style="display: none;">
+        {% for armor in armors %}
+        <div class="item-card">
+            <div class="item-image">
+                {% if armor.image_url %}
+                <img src="{{ armor.image_url }}" alt="{{ armor.name }}">
+                {% else %}
+                <div class="no-image">No Image</div>
+                {% endif %}
+            </div>
+            <div class="item-content">
+                <h3>{{ armor.name }}</h3>
+                <p class="item-type">{{ armor.equip_slot }}</p>
+                <p class="item-set">{{ armor.set_name }}</p>
+                <div class="item-actions">
+                    <button onclick="editItem({{ armor.id }})" class="edit-button">Edit</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Delete List (Hidden by default) -->
+    <div id="deleteList" class="items-grid" style="display: none;">
+        {% for armor in armors %}
+        <div class="item-card">
+            <div class="item-image">
+                {% if armor.image_url %}
+                <img src="{{ armor.image_url }}" alt="{{ armor.name }}">
+                {% else %}
+                <div class="no-image">No Image</div>
+                {% endif %}
+            </div>
+            <div class="item-content">
+                <h3>{{ armor.name }}</h3>
+                <p class="item-type">{{ armor.equip_slot }}</p>
+                <p class="item-set">{{ armor.set_name }}</p>
+                <div class="item-actions">
+                    <button onclick="deleteItem({{ armor.id }})" class="delete-button">Delete</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function showAddForm() {
+    document.getElementById('armorForm').style.display = 'block';
+    document.getElementById('updateList').style.display = 'none';
+    document.getElementById('deleteList').style.display = 'none';
+}
+
+function showUpdateList() {
+    document.getElementById('armorForm').style.display = 'none';
+    document.getElementById('updateList').style.display = 'grid';
+    document.getElementById('deleteList').style.display = 'none';
+}
+
+function showDeleteList() {
+    document.getElementById('armorForm').style.display = 'none';
+    document.getElementById('updateList').style.display = 'none';
+    document.getElementById('deleteList').style.display = 'grid';
+}
+
+function hideForm() {
+    document.getElementById('armorForm').style.display = 'none';
+}
+
+function editItem(id) {
+    document.getElementById('armorForm').style.display = 'block';
+    document.getElementById('formTitle').textContent = 'Edit Armor';
+    fetch(`/api/armors/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('name').value = data.name;
+            document.getElementById('description').value = data.description;
+            document.getElementById('set_id').value = data.set_id;
+            document.getElementById('equip_slot').value = data.equip_slot_id;
+            document.getElementById('weight').value = data.weight;
+            document.getElementById('price').value = data.price;
+            document.getElementById('can_alter').checked = data.can_alter;
+            document.getElementById('image_url').value = data.image_url;
+        });
+}
+
+function deleteItem(id) {
+    if (confirm('Are you sure you want to delete this armor?')) {
+        fetch(`/api/armors/${id}`, { method: 'DELETE' })
+            .then(response => {
+                if (response.ok) {
+                    location.reload();
+                }
+            });
+    }
+}
+</script>
+
+<style>
+.editor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.editor-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.editor-button-row {
+    flex: 1;
+}
+
+.large-button:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: scale(1.02);
+}
+</style>
+{% endblock %} 

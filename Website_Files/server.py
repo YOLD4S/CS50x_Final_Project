@@ -17,6 +17,17 @@ def create_app():
     
     app.teardown_appcontext(close_db)
 
+    # Context processor to make user available in all templates
+    @app.context_processor
+    def inject_user():
+        if session.get('user_id'):
+            db = get_db()
+            cursor = db.cursor(dictionary=True)
+            cursor.execute("SELECT * FROM users WHERE id = %s", (session['user_id'],))
+            user = cursor.fetchone()
+            return {'user': user}
+        return {'user': None}
+
     # Routes
     app.add_url_rule("/", view_func=views.home_page)
     app.add_url_rule("/login", view_func=views.login_page, methods=["GET", "POST"])
@@ -49,6 +60,8 @@ def create_app():
     app.add_url_rule("/profile/update", view_func=views.update_profile, methods=["POST"])
     app.add_url_rule("/profile/request-admin", view_func=views.request_admin, methods=["POST"])
     app.add_url_rule("/editor", view_func=views.editor_page)
+    app.add_url_rule("/editor/<section>", view_func=views.editor_page)
+    app.add_url_rule("/profile/delete", view_func=views.delete_account, methods=["POST"])
 
     return app
 

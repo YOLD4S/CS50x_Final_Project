@@ -1143,11 +1143,15 @@ def update_profile():
                 return redirect(url_for('profile_page'))
             
             # Update user profile
-            cursor.execute("""
-                UPDATE users 
-                SET username = %s, email = %s, name = %s, steam_url = %s
-                WHERE id = %s
-            """, (username, email, name, steam_url, session['user_id']))
+            update_query = """UPDATE users SET username = %s"""
+            if email != "":
+                update_query += ", email = %s"
+            if name != "":
+                update_query += ", name = %s"
+            if steam_url != "":
+                update_query += ", steam_url = %s"
+            update_query += " WHERE id = %s"
+            cursor.execute(update_query, (username, email, name, steam_url, session['user_id']))
             
             # Commit transaction
             db.commit()
@@ -1204,9 +1208,54 @@ def request_admin():
             
     return redirect(url_for('profile_page'))
 
-def editor_page():
-    if not session.get('is_admin'):
-        abort(403)  # Forbidden
+def editor_page(section=None):
+    if not session.get('user_id'):
+        flash('Please log in to access this page.', 'error')
+        return redirect(url_for('login_page'))
+    
+    # Check admin status from database
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT admin FROM users WHERE id = %s", (session['user_id'],))
+    user = cursor.fetchone()
+    
+    if not user or not user['admin']:
+        flash('You need administrator privileges to access this page.', 'error')
+        return redirect(url_for('home_page'))
+    
+    if section:
+        # This will be used later when implementing specific editor sections
+        return render_template(f'editor/{section}.html')
+    
     return render_template('editor.html')
+
+def delete_account():
+    if not session.get('user_id'):
+        return redirect(url_for('login_page'))
+
+    db = get_db()
+    cursor = db.cursor()
+
+    try:
+        # Start transaction
+        cursor.execute("START TRANSACTION")
+
+        # Delete user from database
+        cursor.execute("DELETE FROM users WHERE id = %s", (session['user_id'],))
+
+        # Commit transaction
+        db.commit()
+
+        # Clear session
+        session.clear()
+
+        flash('Your account has been deleted successfully!', 'success')
+    except Exception as e:
+        # Rollback in case of error
+        cursor.execute("ROLLBACK")
+        flash('Error deleting account.', 'error')
+        print(f"Error: {str(e)}")
+
+    return redirect(url_for('home_page'))
 
 
