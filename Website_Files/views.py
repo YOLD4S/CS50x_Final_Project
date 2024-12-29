@@ -251,11 +251,54 @@ def weapons_page():
 def weapon_detail_page(weapon_id):
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM weapons WHERE id = %s", (weapon_id,))
+
+    # Fetch the weapon details, including group ID
+    cursor.execute("""
+            SELECT w.id, w.name, w.description, w.weight, w.image_url, 
+                   w.group_id, g.name AS group_name, 
+                   e1.description AS passive_effect, 
+                   e2.description AS hidden_effect, 
+                   ws.name AS skill
+            FROM weapons w
+            JOIN weapon_groups g ON w.group_id = g.id
+            LEFT JOIN effects e1 ON w.weapon_passive_id = e1.id
+            LEFT JOIN effects e2 ON w.hidden_effect_id = e2.id
+            LEFT JOIN weapon_skills ws ON w.default_skill_id = ws.id
+            WHERE w.id = %s
+        """, (weapon_id,))
     weapon = cursor.fetchone()
+
     if not weapon:
         abort(404)
-    return render_template("weapon_detail.html", weapon=weapon)
+
+    # Fetch requirements
+    cursor.execute("""
+            SELECT req_str, req_dex, req_int, req_fai, req_arc
+            FROM weapons
+            WHERE id = %s
+        """, (weapon_id,))
+    requirements = cursor.fetchone()
+
+    # Fetch affinities
+    cursor.execute("""
+            SELECT a.name AS affinity_name, 
+                   a.affinity_passive_id,
+                   wwa.str_scaling, wwa.dex_scaling, 
+                   wwa.int_scaling, wwa.fai_scaling, wwa.arc_scaling,
+                   e.description AS affinity_passive
+            FROM weapons_w_affinities wwa
+            LEFT JOIN affinities a ON wwa.affinity_id = a.id
+            LEFT JOIN effects e ON a.affinity_passive_id = e.id
+            WHERE wwa.main_weapon_id = %s AND wwa.affinity_id IS NOT NULL
+        """, (weapon_id,))
+    affinities = cursor.fetchall()
+
+    return render_template(
+        "weapon_detail.html",
+        weapon=weapon,
+        requirements=requirements,
+        affinities=affinities if affinities else None
+    )
 
 
 def armors_page():
