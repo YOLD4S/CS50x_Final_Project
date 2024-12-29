@@ -7,11 +7,11 @@
     <h1 class="page-title">Game Editor</h1>
 
     <div class="editor-sections">
-        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Armor.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/NPCs.png') }}); background-size: cover; background-position: center;">
             <div class="feature-content">
-                <h2>Edit Armors</h2>
-                <p>Update armor stats, manage armor sets, and modify descriptions.</p>
-                <a href="{{ url_for('armor_editor') }}" class="feature-link">Edit Armors</a>
+                <h2>Edit NPCs</h2>
+                <p>Update NPC information, locations, and encounters.</p>
+                <a href="{{ url_for('editor_page', section='npcs') }}" class="feature-link">Edit NPCs</a>
             </div>
         </div>
 
@@ -23,11 +23,11 @@
             </div>
         </div>
 
-        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/NPCs.png') }}); background-size: cover; background-position: center;">
+        <div class="feature-card" style="background-image: url({{ url_for('static', filename='images/homepage_sections/Armor.png') }}); background-size: cover; background-position: center;">
             <div class="feature-content">
-                <h2>Edit NPCs</h2>
-                <p>Update NPC information, locations, and encounters.</p>
-                <a href="{{ url_for('editor_page', section='npcs') }}" class="feature-link">Edit NPCs</a>
+                <h2>Edit Armors</h2>
+                <p>Update armor stats, manage armor sets, and modify descriptions.</p>
+                <a href="{{ url_for('armor_editor') }}" class="feature-link">Edit Armors</a>
             </div>
         </div>
 
