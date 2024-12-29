@@ -3,6 +3,8 @@
 {% block title %}NPCs{% endblock %}
 
 {% block content %}
+<h1 class="title">NPCs</h1>
+
 <div class="npcs-container">
     <h1 class="page-title">NPCs of the Lands Between</h1>
 
@@ -34,30 +36,34 @@
         </form>
     </div>
 
-    <!-- NPCs List -->
-    <div class="npcs-grid">
-        {% for npc in npcs %}
-        <div class="npc-card">
-            <h2>{{ npc.name }}</h2>
-            <div class="npc-details">
-                <p>HP: {{ npc.hp }}</p>
-                <p>Runes: {{ npc.runes }}</p>
-                {% if npc.location_name %}
-                    <p>Location: {{ npc.location_name }}</p>
-                {% endif %}
-                <p>Appears: {{ 'Night Only' if npc.only_night else 'Day & Night' }}</p>
-            </div>
-            <a href="{{ url_for('npc_detail_page', npc_id=npc.id) }}" class="view-details">View Details</a>
-        </div>
-        {% else %}
-        <p class="no-results">No NPCs found matching the selected filters.</p>
-        {% endfor %}
-    </div>
-
-    {% if logged_in %}
-    <div class="add-npc-section">
-        <a href="{{ url_for('add_npc') }}" class="add-npc-button">Add New NPC</a>
-    </div>
-    {% endif %}
+<!-- Search Bar and Add NPC Button -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <form method="get" action="{{ url_for('npcs_page') }}" style="display: flex; align-items: center; gap: 10px; flex-grow: 1;">
+        <input 
+            type="text" 
+            name="search" 
+            class="input" 
+            placeholder="Search NPC by name" 
+            value="{{ request.args.get('search', '') }}" 
+            style="width: 300px; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;">
+        <button type="submit" class="button is-link" 
+                style="padding: 10px 20px; background-color: rgba(34, 139, 34, 0.559); border-radius: 5px; font-size: 16px; color: white; border: none;">
+            <strong>Search</strong>
+        </button>
+    </form>
+    <a class="button is-link" 
+       href="{{ url_for('add_new_npc') }}" 
+       style="padding: 10px 20px; background-color: rgba(34, 139, 34, 0.559); border-radius: 5px; font-size: 16px; color: white; text-decoration: none; margin-left: 10px;">
+        Add NPC
+    </a>
 </div>
+
+<!-- NPC List -->
+<ul>
+    {% for npc in npcs %}
+    <li>
+        <a href="{{ url_for('npc_detail_page', npc_id=npc.id) }}">{{ npc.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}

@@ -1,46 +1,122 @@
-{% extends "npcs.html" %}
+{% extends "npc.html" %}
+
 {% block title %}Add NPC{% endblock %}
+
 {% block content %}
-    <h1 class="title">Add NPC</h1>
+<h1 class="title">Add NPC</h1>
 
-    <form action="/add_new_npc" method="POST" class="form">
-        <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-                <input class="input" type="text" name="name" required>
-            </div>
-        </div>
+<form method="POST" action="{{ url_for('add_new_npc') }}">
+    <!-- NPC Details -->
+    <label for="name">NPC Name:</label>
+    <input type="text" id="name" name="name" required>
 
-        <div class="field">
-            <label class="label">HP</label>
-            <div class="control">
-                <input class="input" type="number" name="hp" required>
-            </div>
-        </div>
+    <label for="hp">HP:</label>
+    <input type="number" id="hp" name="hp" min="0" required>
 
-        <div class="field">
-            <label class="label">Runes</label>
-            <div class="control">
-                <input class="input" type="number" name="runes" required>
-            </div>
-        </div>
+    <label>
+        <input type="checkbox" id="human" name="human">
+        Is Human
+    </label>
 
-        <div class="field">
-            <label class="label">Location ID</label>
-            <div class="control">
-                <input class="input" type="number" name="location_id">
-            </div>
-        </div>
+    <!-- Encounter Options -->
+    <label>
+        <input type="checkbox" id="add_to_existing_encounter" name="add_to_existing_encounter" onclick="toggleEncounterOptions()">
+        Add to Existing Encounter
+    </label>
 
-        <div class="field">
-            <label class="label">Only Night</label>
-            <div class="control">
-                <input class="checkbox" type="checkbox" name="only_night">
-            </div>
-        </div>
+    <div id="existing-encounter-section" style="display: none;">
+        <label for="encounter_id">Select Encounter:</label>
+        <select id="encounter_id" name="encounter_id">
+            {% for encounter in encounters %}
+            <option value="{{ encounter.id }}">{{ encounter.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
 
-        <div class="control">
-            <button class="button is-primary" type="submit">Add NPC</button>
-        </div>
-    </form>
+    <div id="new-encounter-section">
+        <label for="new_encounter_name">New Encounter Name:</label>
+        <input type="text" id="new_encounter_name" name="new_encounter_name">
+
+        <label for="new_encounter_hp">New Encounter HP:</label>
+        <input type="number" id="new_encounter_hp" name="new_encounter_hp" min="0">
+        <label for="new_encounter_runes">New Encounter Runes:</label>
+        <input type="number" id="new_encounter_hp" name="new_encounter_runes" min="0">
+    </div>
+
+    <!-- Location Selection -->
+    <label for="location_id">Location:</label>
+    <select id="location_id" name="location_id">
+        {% for location in locations %}
+        <option value="{{ location.id }}">{{ location.name }}</option>
+        {% endfor %}
+    </select>
+
+    <!-- Gear Selection -->
+    <label for="right_weapon_id">Right Weapon:</label>
+<select id="right_weapon_id" name="right_weapon_id">
+    {% for weapon in weapons %}
+    <option value="{{ weapon.weapon_affinity_id }}">
+        {{ weapon.weapon_name }} 
+    </option>
+    {% endfor %}
+</select>
+
+<label for="left_weapon_id">Left Weapon:</label>
+<select id="left_weapon_id" name="left_weapon_id">
+    {% for weapon in weapons %}
+    <option value="{{ weapon.weapon_affinity_id }}">
+        {{ weapon.weapon_name }} 
+    </option>
+    {% endfor %}
+</select>
+
+
+    <label for="armor_head_id">Head Armor:</label>
+    <select id="armor_head_id" name="armor_head_id">
+        {% for armor in h_armors %}
+        <option value="{{ armor.armor_id }}">{{ armor.armor_name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="armor_body_id">Body Armor:</label>
+    <select id="armor_body_id" name="armor_body_id">
+        {% for armor in b_armors %}
+        <option value="{{ armor.armor_id }}">{{ armor.armor_name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="armor_arms_id">Arms Armor:</label>
+    <select id="armor_arms_id" name="armor_arms_id">
+        {% for armor in a_armors %}
+        <option value="{{ armor.armor_id }}">{{ armor.armor_name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="armor_legs_id">Legs Armor:</label>
+    <select id="armor_legs_id" name="armor_legs_id">
+        {% for armor in l_armors %}
+        <option value="{{ armor.armor_id }}">{{ armor.armor_name }}</option>
+        {% endfor %}
+    </select>
+
+    <!-- Submit -->
+    <button type="submit">Add NPC</button>
+</form>
+
+<script>
+    function toggleEncounterOptions() {
+        const checkbox = document.getElementById('add_to_existing_encounter');
+        const existingEncounterSection = document.getElementById('existing-encounter-section');
+        const newEncounterSection = document.getElementById('new-encounter-section');
+
+        if (checkbox.checked) {
+            existingEncounterSection.style.display = 'block';
+            newEncounterSection.style.display = 'none';
+        } else {
+            existingEncounterSection.style.display = 'none';
+            newEncounterSection.style.display = 'block';
+        }
+    }
+</script>
+
 {% endblock %}

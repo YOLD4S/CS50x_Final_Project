@@ -1,4 +1,6 @@
 from functools import wraps
+from datetime import datetime
+
 from flask import (
     Flask, 
     render_template,
@@ -114,40 +116,157 @@ def item_page(item_key):
         abort(404)
     return render_template("item.html", item=item)
 
+
 def add_new_npc():
-    if request.method == "POST":
-        name = request.form.get("name")
-        hp = request.form.get("hp")
-        runes = request.form.get("runes")
-        location_id = request.form.get("location_id") or 0 
-        only_night = request.form.get("only_night") == "on"
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
 
-        try:
-            if not name or not hp or not runes:
-                flash("All fields except Location ID are required.", "error")
-                return render_template("add_npc.html")
+    # Fetch existing encounters and locations for dropdowns
+    cursor.execute("SELECT id, name FROM npc_encounters")
+    encounters = cursor.fetchall()
 
-            db = get_db()
-            cursor = db.cursor()
-            query = """
-                INSERT INTO npc_encounters (name, hp, runes, location_id, only_night)
-                VALUES (%s, %s, %s, %s, %s)
-            """
-            cursor.execute(query, (name, hp, runes, location_id, only_night))
-            db.commit()
-            flash("NPC added successfully!", "success")
-            return redirect(url_for("npcs_page"))
-        except Exception as e:
-            flash(f"An error occurred: {str(e)}", "error")
-            return render_template("add_npc.html")
+    cursor.execute("SELECT id, name FROM locations")
+    locations = cursor.fetchall()
 
-    return render_template("npcs.html")
+    # Fetch weapons and armors using the appropriate joins
+    cursor.execute("""
+        SELECT 
+    rw.name AS weapon_name,
+    rw.id AS weapon_order_id,
+    MIN(rw_aff.id) AS weapon_affinity_id -- Select the first affinity ID (or other logic)
+FROM 
+    weapons AS rw     
+LEFT JOIN weapons_w_affinities AS rw_aff ON rw.id = rw_aff.main_weapon_id
+GROUP BY rw.id, rw.name
 
+    """)
+    weapons = cursor.fetchall()
 
-def add_npc():
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 1
+    """)
+    h_armors = cursor.fetchall()
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 2
+    """)
+    b_armors = cursor.fetchall()
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 3
+    """)
+    a_armors = cursor.fetchall()
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 4
+    """)
+    l_armors = cursor.fetchall()
 
-    return render_template("add_npc.html")
+    if request.method == 'POST':
+        # Fetch NPC data
+        name = request.form.get('name')
+        hp = request.form.get('hp')
+        human = request.form.get('human') == 'on'
+        add_to_existing_encounter = request.form.get('add_to_existing_encounter') == 'on'
+        encounter_id = request.form.get('encounter_id') if add_to_existing_encounter else None
+        new_encounter_name = request.form.get('new_encounter_name') or name
+        new_encounter_hp = request.form.get('new_encounter_hp')
+        new_encounter_runes = request.form.get('new_encounter_runes')
 
+        # Fetch gear and location data
+        location_id = request.form.get('location_id')
+        right_weapon_id = request.form.get('right_weapon_id')
+        left_weapon_id = request.form.get('left_weapon_id')
+        armor_head_id = request.form.get('armor_head_id')
+        armor_body_id = request.form.get('armor_body_id')
+        armor_arms_id = request.form.get('armor_arms_id')
+        armor_legs_id = request.form.get('armor_legs_id')
+
+        # Handle encounter logic
+        if not add_to_existing_encounter:
+            # Create new encounter
+            cursor.execute("""
+                INSERT INTO npc_encounters (name, hp, runes, location_id)
+                VALUES (%s, %s, %s, %s)
+            """, (new_encounter_name, new_encounter_hp or 0, new_encounter_runes or 0, location_id))
+            encounter_id = cursor.lastrowid
+        else:
+            # Update existing encounter HP
+            cursor.execute("""
+                SELECT hp FROM npc_encounters WHERE id = %s
+            """, (encounter_id,))
+            existing_encounter = cursor.fetchone()
+            if existing_encounter:
+                existing_hp = existing_encounter['hp']
+                updated_hp = existing_hp + int(hp or 0)
+                cursor.execute("""
+                    UPDATE npc_encounters
+                    SET hp = %s
+                    WHERE id = %s
+                """, (updated_hp, encounter_id))
+
+        # Insert NPC gear into gear table
+        cursor.execute("""
+            INSERT INTO gear (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id))
+        gear_id = cursor.lastrowid
+
+        # Insert NPC data
+        cursor.execute("""
+            INSERT INTO npcs (name, hp, human, encounter_id, gear_id)
+            VALUES (%s, %s, %s, %s, %s)
+        """, (name, hp, human, encounter_id, gear_id))
+
+        db.commit()
+
+        return redirect(url_for('npc_detail_page', npc_id=cursor.lastrowid))
+
+    return render_template(
+        'add_npc.html', 
+        encounters=encounters, 
+        locations=locations, 
+        weapons=weapons, 
+        h_armors=h_armors,
+        b_armors=b_armors,
+        a_armors=a_armors,
+        l_armors=l_armors,
+        
+    )
+    
+    
+def delete_npc(npc_id):
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute("DELETE FROM npcs WHERE id = %s", (npc_id,))
+    db.commit()
+    flash("NPC deleted successfully!", "success")
+    return redirect(url_for('npcs_page'))
 
 def npcs_page():
     db = get_db()
@@ -190,14 +309,157 @@ def npcs_page():
                          selected_location=location_id,
                          only_night=only_night)
 
+
 def npc_detail_page(npc_id):
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM npcs WHERE id = %s", (npc_id,))
+
+    # Fetch NPC details along with associated encounter, gear, and item details
+    cursor.execute("""
+        SELECT 
+            npcs.*, 
+            npc_encounters.name AS encounter_name,
+            npc_encounters.hp AS encounter_hp,
+            npc_encounters.runes AS encounter_runes,
+            npc_encounters.only_night AS encounter_only_night,
+            locations.name AS location_name,
+            gear.right_weapon_id,
+            gear.right_weapon_skill_id,
+            gear.left_weapon_id,
+            gear.left_weapon_skill_id,
+            gear.armor_head_id,
+            gear.armor_body_id,
+            gear.armor_arms_id,
+            gear.armor_legs_id,
+            items.name AS dropped_item_name
+        FROM 
+            npcs
+        LEFT JOIN 
+            npc_encounters ON npcs.encounter_id = npc_encounters.id
+        LEFT JOIN 
+            locations ON npc_encounters.location_id = locations.id
+        LEFT JOIN 
+            gear ON npcs.gear_id = gear.id
+        LEFT JOIN 
+            items ON npcs.dropped_item_id = items.id
+        WHERE 
+            npcs.id = %s
+    """, (npc_id,))
     npc = cursor.fetchone()
+
     if not npc:
         abort(404)
-    return render_template("npc_detail.html", npc=npc)
+
+    # Handle case where gear_id is null
+    gear_id = npc.get("gear_id")
+    if gear_id:
+        # Fetch detailed gear information (weapons, weapons_w_affinities, and armors)
+        cursor.execute("""
+            SELECT 
+                rw_aff.main_weapon_id AS right_weapon_main_id,
+                rw.name AS right_weapon_name,
+                rws.name AS right_weapon_skill_name,
+                lw_aff.main_weapon_id AS left_weapon_main_id,
+                lw.name AS left_weapon_name,
+                lws.name AS left_weapon_skill_name,
+                head.id AS head_armor_id,
+                items_head.name AS head_armor_name,
+                body.id AS body_armor_id,
+                items_body.name AS body_armor_name,
+                arms.id AS arms_armor_id,
+                items_arms.name AS arms_armor_name,
+                legs.id AS legs_armor_id,
+                items_legs.name AS legs_armor_name
+            FROM 
+                gear
+            LEFT JOIN weapons_w_affinities AS rw_aff ON gear.right_weapon_id = rw_aff.id
+            LEFT JOIN weapons AS rw ON rw_aff.main_weapon_id = rw.id
+            LEFT JOIN weapon_skills AS rws ON gear.right_weapon_skill_id = rws.id
+            LEFT JOIN weapons_w_affinities AS lw_aff ON gear.left_weapon_id = lw_aff.id
+            LEFT JOIN weapons AS lw ON lw_aff.main_weapon_id = lw.id
+            LEFT JOIN weapon_skills AS lws ON gear.left_weapon_skill_id = lws.id
+            LEFT JOIN armors AS head ON gear.armor_head_id = head.id
+            LEFT JOIN items AS items_head ON head.id = items_head.id
+            LEFT JOIN armors AS body ON gear.armor_body_id = body.id
+            LEFT JOIN items AS items_body ON body.id = items_body.id
+            LEFT JOIN armors AS arms ON gear.armor_arms_id = arms.id
+            LEFT JOIN items AS items_arms ON arms.id = items_arms.id
+            LEFT JOIN armors AS legs ON gear.armor_legs_id = legs.id
+            LEFT JOIN items AS items_legs ON legs.id = items_legs.id
+            WHERE gear.id = %s
+        """, (gear_id,))
+        gear_details = cursor.fetchone()
+    else:
+        # No gear associated with the NPC
+        gear_details = {
+            "right_weapon_name": None,
+            "right_weapon_skill_name": None,
+            "left_weapon_name": None,
+            "left_weapon_skill_name": None,
+            "head_armor_name": None,
+            "body_armor_name": None,
+            "arms_armor_name": None,
+            "legs_armor_name": None,
+        }
+
+    # Organize the fetched details into structured data for rendering
+    npc_data = {
+        "npc": npc,
+        "gear": {
+            "weapons": {
+                "right_weapon": {
+                    "name": gear_details.get("right_weapon_name"),
+                    "skill": gear_details.get("right_weapon_skill_name"),
+                },
+                "left_weapon": {
+                    "name": gear_details.get("left_weapon_name"),
+                    "skill": gear_details.get("left_weapon_skill_name"),
+                },
+            },
+            "armors": {
+                "head": gear_details.get("head_armor_name"),
+                "body": gear_details.get("body_armor_name"),
+                "arms": gear_details.get("arms_armor_name"),
+                "legs": gear_details.get("legs_armor_name"),
+            },
+        },
+    }
+
+    # Render template with detailed NPC data
+    return render_template("npc_detail.html", npc=npc_data["npc"], gear_details=npc_data["gear"])
+
+
+    gear_details = cursor.fetchone()
+    
+    # Organize the fetched details into structured data for rendering
+    npc_data = {
+        "npc": npc,
+        "gear": {
+            "weapons": {
+                "right_weapon": {
+                    "name": gear_details.get("right_weapon_name"),
+                    "skill": gear_details.get("right_weapon_skill_name"),
+                },
+                "left_weapon": {
+                    "name": gear_details.get("left_weapon_name"),
+                    "skill": gear_details.get("left_weapon_skill_name"),
+                },
+            },
+            "armors": {
+                "head": gear_details.get("head_armor_name"),
+                "body": gear_details.get("body_armor_name"),
+                "arms": gear_details.get("arms_armor_name"),
+                "legs": gear_details.get("legs_armor_name"),
+            },
+        },
+    }
+    print(gear_details)
+
+    # Render template with detailed NPC data
+    return render_template("npc_detail.html", npc=npc_data["npc"], gear_details=npc_data["gear"])
+
+
+
 
 def npc_page(npc_key): # may remove this later
     db_npcs = current_app.config["db_npcs"]
@@ -205,6 +467,177 @@ def npc_page(npc_key): # may remove this later
     if npc is None:
         abort(404)
     return render_template("npc.html", npc=npc)
+
+def update_npc(npc_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch existing encounters and locations for dropdowns
+    cursor.execute("SELECT id, name FROM npc_encounters")
+    encounters = cursor.fetchall()
+
+    cursor.execute("SELECT id, name FROM locations")
+    locations = cursor.fetchall()
+
+    # Fetch weapons and armors for dropdowns
+    cursor.execute("""
+        SELECT 
+            rw.name AS weapon_name,
+            rw.id AS weapon_order_id,
+            MIN(rw_aff.id) AS weapon_affinity_id
+        FROM 
+            weapons AS rw     
+        LEFT JOIN weapons_w_affinities AS rw_aff ON rw.id = rw_aff.main_weapon_id
+        GROUP BY rw.id, rw.name
+    """)
+    weapons = cursor.fetchall()
+
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 1
+    """)
+    h_armors = cursor.fetchall()
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 2
+    """)
+    b_armors = cursor.fetchall()
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 3
+    """)
+    a_armors = cursor.fetchall()
+    cursor.execute("""
+        SELECT 
+            armors.id AS armor_id,
+            items.name AS armor_name,
+            armors.equip_slot_id
+        FROM 
+            armors 
+        LEFT JOIN items ON armors.id = items.id
+        WHERE armors.equip_slot_id = 4
+    """)
+    l_armors = cursor.fetchall()
+
+    # Fetch NPC and related encounter details for pre-filling the form
+    cursor.execute("""
+        SELECT 
+            npcs.*, 
+            npc_encounters.name AS encounter_name,
+            npc_encounters.hp AS encounter_hp,
+            npc_encounters.runes AS encounter_runes,
+            npc_encounters.only_night AS encounter_only_night,
+            npc_encounters.location_id AS encounter_location_id,
+            gear.right_weapon_id,
+            gear.left_weapon_id,
+            gear.armor_head_id,
+            gear.armor_body_id,
+            gear.armor_arms_id,
+            gear.armor_legs_id
+        FROM 
+            npcs
+        LEFT JOIN npc_encounters ON npcs.encounter_id = npc_encounters.id
+        LEFT JOIN gear ON npcs.gear_id = gear.id
+        WHERE npcs.id = %s
+    """, (npc_id,))
+    npc = cursor.fetchone()
+
+    if not npc:
+        abort(404)
+
+    # Handle POST request to update NPC
+    if request.method == 'POST':
+        # NPC and encounter details
+        name = request.form.get('name')
+        hp = request.form.get('hp')
+        runes = request.form.get('runes')
+        encounter_id = request.form.get('encounter_id')
+        location_id = request.form.get('location_id')  # Updates the `npc_encounters` table
+        only_night = request.form.get('only_night') == 'on'
+
+        # Gear details
+        right_weapon_id = request.form.get('right_weapon_id')
+        left_weapon_id = request.form.get('left_weapon_id')
+        armor_head_id = request.form.get('armor_head_id')
+        armor_body_id = request.form.get('armor_body_id')
+        armor_arms_id = request.form.get('armor_arms_id')
+        armor_legs_id = request.form.get('armor_legs_id')
+
+        # Update encounter details
+        cursor.execute("""
+            UPDATE npc_encounters
+            SET name = %s, hp = %s, runes = %s, location_id = %s, only_night = %s
+            WHERE id = %s
+        """, (name, hp, runes, location_id, only_night, encounter_id))
+
+        # Check if the NPC already has gear
+        gear_id = npc.get('gear_id')
+        if right_weapon_id or left_weapon_id or armor_head_id or armor_body_id or armor_arms_id or armor_legs_id:
+            if gear_id:
+                # Update existing gear
+                cursor.execute("""
+                    UPDATE gear
+                    SET right_weapon_id = %s, left_weapon_id = %s, 
+                        armor_head_id = %s, armor_body_id = %s, 
+                        armor_arms_id = %s, armor_legs_id = %s
+                    WHERE id = %s
+                """, (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id, gear_id))
+            else:
+                # Create new gear and update the NPC's gear_id
+                cursor.execute("""
+                    INSERT INTO gear (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id)
+                    VALUES (%s, %s, %s, %s, %s, %s)
+                """, (right_weapon_id, left_weapon_id, armor_head_id, armor_body_id, armor_arms_id, armor_legs_id))
+                gear_id = cursor.lastrowid
+                cursor.execute("""
+                    UPDATE npcs
+                    SET gear_id = %s
+                    WHERE id = %s
+                """, (gear_id, npc_id))
+
+        # Update the NPC details
+        cursor.execute("""
+            UPDATE npcs
+            SET name = %s, hp = %s, encounter_id = %s
+            WHERE id = %s
+        """, (name, hp, encounter_id, npc_id))
+
+        db.commit()
+        flash("NPC updated successfully!", "success")
+        return redirect(url_for('npc_detail_page', npc_id=npc_id))
+
+    return render_template(
+        'update_npc.html', 
+        npc=npc, 
+        encounters=encounters, 
+        locations=locations, 
+        weapons=weapons, 
+        h_armors=h_armors,
+        b_armors=b_armors,
+        a_armors=a_armors,
+        l_armors=l_armors
+    )
+
+
+
 
 
 def weapons_page():
@@ -395,4 +828,5 @@ def keys_page():
 
 def bolstering_page():
     return render_template("bolstering.html")
+
 
