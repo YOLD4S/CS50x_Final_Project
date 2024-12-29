@@ -1952,4 +1952,85 @@ def editor_page(section=None):
         return redirect(url_for('armor_editor'))
     return render_template('editor/editor.html', section=section)
 
+@admin_required
+def weapon_editor_page():
+    return render_template('editor/weapons.html')
 
+@admin_required
+def add_weapon():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch data for dropdowns
+    cursor.execute("SELECT id, name FROM weapon_groups ORDER BY name")
+    weapon_groups = cursor.fetchall()
+
+    cursor.execute("SELECT id, description FROM effects ORDER BY id")
+    effects = cursor.fetchall()
+
+    cursor.execute("SELECT id, name FROM weapon_skills ORDER BY name")
+    skills = cursor.fetchall()
+
+    cursor.execute("SELECT id, name FROM affinities ORDER BY name")
+    affinities = cursor.fetchall()
+
+    if request.method == 'POST':
+        try:
+            # Start a transaction
+            cursor.execute("START TRANSACTION")
+
+            # Insert into `weapons` table
+            name = request.form.get('name')
+            description = request.form.get('description')
+            group_id = request.form.get('group_id')
+            weapon_passive_id = request.form.get('weapon_passive_id') or None
+            hidden_effect_id = request.form.get('hidden_effect_id') or None
+            default_skill_id = request.form.get('default_skill_id') or None
+            weight = float(request.form.get('weight'))
+            req_str = int(request.form.get('req_str'))
+            req_dex = int(request.form.get('req_dex'))
+            req_int = int(request.form.get('req_int'))
+            req_fai = int(request.form.get('req_fai'))
+            req_arc = int(request.form.get('req_arc'))
+            image_url = request.form.get('image_url')
+
+            cursor.execute("""
+                INSERT INTO weapons (group_id, name, description, weapon_passive_id, hidden_effect_id,
+                                     default_skill_id, weight, req_str, req_dex, req_int, req_fai, req_arc, image_url)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """, (group_id, name, description, weapon_passive_id, hidden_effect_id, default_skill_id, weight,
+                  req_str, req_dex, req_int, req_fai, req_arc, image_url))
+            weapon_id = cursor.lastrowid
+
+            # Insert affinities into `weapons_w_affinities` table
+            for affinity in affinities:
+                affinity_id = request.form.get(f'affinity_{affinity["id"]}') or None
+                str_scaling = request.form.get(f'str_scaling_{affinity["id"]}') or req_str
+                dex_scaling = request.form.get(f'dex_scaling_{affinity["id"]}') or req_dex
+                int_scaling = request.form.get(f'int_scaling_{affinity["id"]}') or req_int
+                fai_scaling = request.form.get(f'fai_scaling_{affinity["id"]}') or req_fai
+                arc_scaling = request.form.get(f'arc_scaling_{affinity["id"]}') or req_arc
+
+                cursor.execute("""
+                    INSERT INTO weapons_w_affinities (main_weapon_id, affinity_id, str_scaling, dex_scaling, 
+                                                      int_scaling, fai_scaling, arc_scaling)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s)
+                """, (weapon_id, affinity_id, str_scaling, dex_scaling, int_scaling, fai_scaling, arc_scaling))
+
+                # Insert into `items` table
+                affinity_name = [a["name"] for a in affinities if a["id"] == affinity_id]
+                item_name = f"{affinity_name} {name}" if affinity_name else name
+                cursor.execute("""
+                    INSERT INTO items (type_id, name)
+                    VALUES (1, %s)
+                """, (item_name,))
+
+            db.commit()
+            flash(f"Weapon '{name}' added successfully!", "success")
+            return redirect(url_for('add_weapon'))
+
+        except Exception as e:
+            db.rollback()
+            flash(f"Error adding weapon: {str(e)}", "error")
+
+    return render_template('editor/weapons_add.html', weapon_groups=weapon_groups, effects=effects, skills=skills, affinities=affinities)

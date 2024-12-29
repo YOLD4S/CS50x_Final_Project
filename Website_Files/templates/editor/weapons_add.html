@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}Add Weapon{% endblock %}
+
+{% block content %}
+<div class="editor-container">
+    <h1 class="page-title">Add Weapon</h1>
+    <form method="POST" action="" class="weapon-form">
+        <div class="form-group">
+            <label for="name">Weapon Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="group_id">Weapon Group</label>
+            <select name="group_id" id="group_id" required>
+                {% for group in weapon_groups %}
+                <option value="{{ group.id }}">{{ group.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="weapon_passive_id">Passive Effect</label>
+            <select name="weapon_passive_id" id="weapon_passive_id">
+                <option value="">None</option>
+                {% for effect in effects %}
+                <option value="{{ effect.id }}">{{ effect.description }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="hidden_effect_id">Hidden Effect</label>
+            <select name="hidden_effect_id" id="hidden_effect_id">
+                <option value="">None</option>
+                {% for effect in effects %}
+                <option value="{{ effect.id }}">{{ effect.description }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="default_skill_id">Default Skill</label>
+            <select name="default_skill_id" id="default_skill_id">
+                <option value="">None</option>
+                {% for skill in skills %}
+                <option value="{{ skill.id }}">{{ skill.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight</label>
+            <input type="number" step="0.01" name="weight" id="weight" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image_url">Image URL</label>
+            <input type="url" name="image_url" id="image_url">
+        </div>
+
+        <h3>Requirements</h3>
+        <div class="form-group">
+            <label for="req_str">Strength</label>
+            <input type="number" name="req_str" id="req_str" required>
+        </div>
+        <div class="form-group">
+            <label for="req_dex">Dexterity</label>
+            <input type="number" name="req_dex" id="req_dex" required>
+        </div>
+        <div class="form-group">
+            <label for="req_int">Intelligence</label>
+            <input type="number" name="req_int" id="req_int" required>
+        </div>
+        <div class="form-group">
+            <label for="req_fai">Faith</label>
+            <input type="number" name="req_fai" id="req_fai" required>
+        </div>
+        <div class="form-group">
+            <label for="req_arc">Arcane</label>
+            <input type="number" name="req_arc" id="req_arc" required>
+        </div>
+
+        <h3>Affinities</h3>
+        {% for affinity in affinities %}
+        <div class="form-group">
+            <label for="affinity_{{ affinity.id }}">{{ affinity.name }}</label>
+            <input type="checkbox" name="affinity_{{ affinity.id }}" value="{{ affinity.id }}">
+            <label for="str_scaling_{{ affinity.id }}">STR Scaling</label>
+            <input type="number" name="str_scaling_{{ affinity.id }}">
+            <label for="dex_scaling_{{ affinity.id }}">DEX Scaling</label>
+            <input type="number" name="dex_scaling_{{ affinity.id }}">
+            <label for="int_scaling_{{ affinity.id }}">INT Scaling</label>
+            <input type="number" name="int_scaling_{{ affinity.id }}">
+            <label for="fai_scaling_{{ affinity.id }}">FAI Scaling</label>
+            <input type="number" name="fai_scaling_{{ affinity.id }}">
+            <label for="arc_scaling_{{ affinity.id }}">ARC Scaling</label>
+            <input type="number" name="arc_scaling_{{ affinity.id }}">
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="submit-button">Add Weapon</button>
+    </form>
+</div>
+{% endblock %}

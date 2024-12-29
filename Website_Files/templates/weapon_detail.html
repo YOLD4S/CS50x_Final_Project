@@ -11,7 +11,7 @@
         <ul class="weapon-attributes">
             <li>
                 <strong>Weapon Group:</strong>
-                <a href="{{ url_for('weapons_page') }}?group_id={{ weapon.group_id }}">{{ weapon.group_name }}</a>
+                <a href="{{ url_for('weapon_groups_page') }}/{{ weapon.group_id }}">{{ weapon.group_name }}</a>
             </li>
             <li><strong>Weight:</strong> {{ weapon.weight }}</li>
             <li><strong>Passive Effect:</strong> {{ weapon.passive_effect if weapon.passive_effect else 'None' }}</li>

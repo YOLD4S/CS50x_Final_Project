@@ -1,7 +1,6 @@
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask_wtf.csrf import CSRFProtect
 
 import views
 from database import ItemDatabase, NPCDatabase
@@ -17,7 +16,6 @@ def create_app():
     Session(app)
     
     # Initialize CSRF protection
-    csrf = CSRFProtect(app)
     
     app.teardown_appcontext(close_db)
 
@@ -84,6 +82,12 @@ def create_app():
     app.add_url_rule("/editor/armor/delete", view_func=views.armor_delete_page, methods=["GET"])
     app.add_url_rule("/editor/armor/delete/<int:armor_id>", view_func=views.delete_armor, methods=["GET", "POST"])
     app.add_url_rule("/editor/armor/set/delete/<int:set_id>", view_func=views.delete_armor_set, methods=["GET", "POST"])
+
+    # Weapon editor routes
+    app.add_url_rule("/editor/weapons", view_func=views.weapon_editor_page)
+    app.add_url_rule("/editor/weapons/add", view_func=views.add_weapon, methods=["GET", "POST"])
+
+
 
     return app
 
