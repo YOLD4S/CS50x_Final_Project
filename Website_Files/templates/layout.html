@@ -28,11 +28,19 @@
         </a>
         <div class="navbar-buttons">
           {% if 'username' in session %}
-          <span class="username">Welcome, {{ session['username'] }}</span>
-          <a class="button is-link" href="{{ url_for('logout_page') }}">Logout</a>
+            <div class="dropdown">
+              <button class="dropbtn">Welcome, {{ session['username'] }} ▼</button>
+              <div class="dropdown-content">
+                <a href="{{ url_for('profile_page') }}">Profile Settings</a>
+                {% if session.get('is_admin') %}
+                  <a href="{{ url_for('editor_page') }}">Editor Menu</a>
+                {% endif %}
+                <a href="{{ url_for('logout_page') }}">Logout</a>
+              </div>
+            </div>
           {% else %}
-          <a class="button is-link" href="{{ url_for('login_page') }}">Login</a>
-          <a class="button is-link register-button" href="{{ url_for('register_page') }}">Register</a>
+            <a class="button is-link" href="{{ url_for('login_page') }}">Login</a>
+            <a class="button is-link register-button" href="{{ url_for('register_page') }}">Register</a>
           {% endif %}
         </div>
       </div>

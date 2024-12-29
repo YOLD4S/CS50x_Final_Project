@@ -1,5 +1,6 @@
 from functools import wraps
 from datetime import datetime
+import os
 
 from flask import (
     Flask, 
@@ -947,5 +948,79 @@ def keys_page():
 
 def bolstering_page():
     return render_template("bolstering.html")
+
+def profile_page():
+    if not session.get('user_id'):
+        return redirect(url_for('login_page'))
+        
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM users WHERE id = %s", (session['user_id'],))
+    user = cursor.fetchone()
+    
+    return render_template('profile.html', user=user)
+
+def update_profile():
+    if not session.get('user_id'):
+        return redirect(url_for('login_page'))
+        
+    if request.method == 'POST':
+        username = request.form.get('username')
+        email = request.form.get('email')
+        name = request.form.get('name')
+        steam_url = request.form.get('steam_url')
+        
+        db = get_db()
+        cursor = db.cursor()
+        
+        try:
+            cursor.execute("""
+                UPDATE users 
+                SET username = %s, email = %s, name = %s, steam_url = %s
+                WHERE id = %s
+            """, (username, email, name, steam_url, session['user_id']))
+            db.commit()
+            flash('Profile updated successfully!', 'success')
+        except Exception as e:
+            flash('Error updating profile.', 'error')
+            print(f"Error: {str(e)}")
+            
+    return redirect(url_for('profile_page'))
+
+def request_admin():
+    if not session.get('user_id'):
+        return redirect(url_for('login_page'))
+        
+    if request.method == 'POST':
+        admin_key = request.form.get('admin_key')
+        
+        # You should store this key securely, preferably in environment variables
+        ADMIN_KEY = os.getenv('ADMIN_KEY', 'your-secure-admin-key')
+        
+        if admin_key == ADMIN_KEY:
+            db = get_db()
+            cursor = db.cursor()
+            
+            try:
+                cursor.execute("""
+                    UPDATE users 
+                    SET admin = 1
+                    WHERE id = %s
+                """, (session['user_id'],))
+                db.commit()
+                session['is_admin'] = True
+                flash('Administrator access granted!', 'success')
+            except Exception as e:
+                flash('Error granting administrator access.', 'error')
+                print(f"Error: {str(e)}")
+        else:
+            flash('Invalid administration key.', 'error')
+            
+    return redirect(url_for('profile_page'))
+
+def editor_page():
+    if not session.get('is_admin'):
+        abort(403)  # Forbidden
+    return render_template('editor.html')
 
 

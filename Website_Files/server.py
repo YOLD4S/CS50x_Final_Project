@@ -43,6 +43,10 @@ def create_app():
     app.add_url_rule("/spirits", view_func=views.spirits_page)
     app.add_url_rule("/keys", view_func=views.keys_page)
     app.add_url_rule("/bolstering", view_func=views.bolstering_page)
+    app.add_url_rule("/profile", view_func=views.profile_page)
+    app.add_url_rule("/profile/update", view_func=views.update_profile, methods=["POST"])
+    app.add_url_rule("/profile/request-admin", view_func=views.request_admin, methods=["POST"])
+    app.add_url_rule("/editor", view_func=views.editor_page)
 
     return app
 

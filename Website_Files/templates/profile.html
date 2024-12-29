@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}Profile Settings{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h1 class="page-title">Profile Settings</h1>
+
+    <div class="profile-section">
+        <h2>Update Profile</h2>
+        <form method="POST" action="{{ url_for('update_profile') }}" class="profile-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="{{ user.username }}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{ user.email }}">
+            </div>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" value="{{ user.name }}">
+            </div>
+            <div class="form-group">
+                <label for="steam_url">Steam Profile URL:</label>
+                <input type="url" id="steam_url" name="steam_url" value="{{ user.steam_url }}">
+            </div>
+            <button type="submit" class="submit-button">Update Profile</button>
+        </form>
+    </div>
+
+    <div class="profile-section">
+        <h2>Request Administration Access</h2>
+        <form method="POST" action="{{ url_for('request_admin') }}" class="admin-form">
+            <div class="form-group">
+                <label for="admin_key">Administration Key:</label>
+                <input type="text" id="admin_key" name="admin_key" required>
+            </div>
+            <button type="submit" class="submit-button">Submit Request</button>
+        </form>
+    </div>
+</div>
+{% endblock %} 
