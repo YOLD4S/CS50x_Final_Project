@@ -1021,7 +1021,78 @@ def talisman_detail(talisman_id):
 
 
 def magic_page():
-    return render_template("magic.html")
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get current page, filter, and pagination parameters
+    page = request.args.get("page", 1, type=int)
+    type_id = request.args.get("type_id", None, type=int)
+    per_page = 12
+    offset = (page - 1) * per_page
+
+    # Base query
+    query = """
+            SELECT m.id, i.name, m.image_url, t.magic_type 
+            FROM magic m
+            LEFT JOIN items i ON m.id = i.id
+            LEFT JOIN magic_types t ON m.type_id = t.id
+            WHERE 1=1
+        """
+    count_query = "SELECT COUNT(*) as total FROM magic WHERE 1=1"
+    params = []
+
+    # Apply filtering by type_id
+    if type_id:
+        query += " AND m.type_id = %s"
+        count_query += " AND type_id = %s"
+        params.append(type_id)
+
+    # Add sorting and pagination
+    query += " ORDER BY i.name ASC LIMIT %s OFFSET %s"
+    params.extend([per_page, offset])
+
+    # Fetch total count for pagination
+    cursor.execute(count_query, params[:len(params) - 2])
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Fetch magic for the current page
+    cursor.execute(query, params)
+    magics = cursor.fetchall()
+
+    # Fetch magic types for filtering dropdown
+    cursor.execute("SELECT id, magic_type FROM magic_types ORDER BY magic_type ASC")
+    magic_types = cursor.fetchall()
+
+    return render_template(
+        "magic.html",
+        magics=magics,
+        magic_types=magic_types,
+        selected_type_id=type_id,
+        current_page=page,
+        total_pages=total_pages
+    )
+
+def magic_detail(magic_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch magic details along with type information
+    cursor.execute("""
+        SELECT m.id, i.name, m.info, m.description, m.fp_cost, m.fp_cost_continuous, 
+               m.stamina_cost, m.slots_used, m.req_int, m.req_fai, m.req_arc, m.image_url,
+               t.magic_type, t.id AS magic_type_id
+        FROM magic m
+        LEFT JOIN items i ON m.id = i.id
+        LEFT JOIN magic_types t ON m.type_id = t.id
+        WHERE m.id = %s
+    """, (magic_id,))
+    magic = cursor.fetchone()
+
+    if not magic:
+        abort(404)
+
+    return render_template("magic_detail.html", magic=magic)
 
 def spirits_page():
     return render_template("spirits.html")

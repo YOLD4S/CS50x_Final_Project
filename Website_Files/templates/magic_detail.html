@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+{% block title %}{{ magic.name }}{% endblock %}
+{% block content %}
+<div class="magic-detail-header">
+    <div class="magic-image">
+        <img src="{{ magic.image_url if magic.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ magic.name }}">
+    </div>
+    <div class="magic-info">
+        <h1 class="magic-title">{{ magic.name }}</h1>
+        <ul class="magic-attributes">
+            <li><strong>Magic Type:</strong> 
+                <a href="{{ url_for('magic_page', type_id=magic.magic_type_id) }}">{{ magic.magic_type }}</a>
+            </li>
+            <li><strong>FP Cost:</strong> {{ magic.fp_cost }}</li>
+            {% if magic.fp_cost_continuous %}
+            <li><strong>FP Cost (Continuous):</strong> {{ magic.fp_cost_continuous }}</li>
+            {% endif %}
+            <li><strong>Stamina Cost:</strong> {{ magic.stamina_cost }}</li>
+            <li><strong>Slots Used:</strong> {{ magic.slots_used }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="magic-requirements">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Requirements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>INT</td>
+                <td>{{ magic.req_int }}</td>
+            </tr>
+            <tr>
+                <td>FAI</td>
+                <td>{{ magic.req_fai }}</td>
+            </tr>
+            <tr>
+                <td>ARC</td>
+                <td>{{ magic.req_arc }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 class="section-title">Info</h2>
+<p class="magic-info-text">{{ magic.info if magic.info else 'No additional info available.' }}</p>
+
+<h2 class="section-title">Description</h2>
+<p class="magic-description">{{ magic.description if magic.description else 'No description available.' }}</p>
+
+
+<style>
+.magic-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.magic-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8B7355;
+}
+
+.magic-info {
+    flex: 1;
+}
+
+.magic-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.magic-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.magic-attributes li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.magic-attributes li a {
+    color: #D4AF37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.magic-attributes li a:hover {
+    color: #8B7355;
+    text-decoration: underline;
+}
+
+.magic-info-text {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+}
+
+.magic-description {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+}
+
+.magic-requirements {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent; /* Solid background color */
+    padding: 1rem;
+    width: 250px;
+    z-index: 10; /* Ensure it appears on top */
+}
+
+.magic-requirements table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #D4AF37;
+}
+
+.magic-requirements th {
+    text-align: center;
+    background-color: rgba(212, 175, 55, 0.4);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #8B7355;
+}
+
+.magic-requirements td {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #8B7355;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+</style>
+{% endblock %}
