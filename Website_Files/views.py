@@ -987,6 +987,45 @@ def armor_detail_page(armor_id, name=None, equip_slot=None):
 
     return render_template("armor_detail.html", armor=armor)
 
+def create_armor_set():
+    if not session.get('user_id'):
+        return jsonify({'error': 'Unauthorized'}), 401
+
+    if not request.is_json:
+        return jsonify({'error': 'Content-Type must be application/json'}), 400
+
+    data = request.get_json()
+    name = data.get('name')
+
+    if not name:
+        return jsonify({'error': 'Set name is required'}), 400
+
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    try:
+        # Start transaction
+        cursor.execute("START TRANSACTION")
+        
+        # Insert new armor set
+        cursor.execute("""
+            INSERT INTO armor_sets (name)
+            VALUES (%s)
+        """, (name,))
+        
+        set_id = cursor.lastrowid
+        
+        db.commit()
+        return jsonify({
+            'id': set_id,
+            'name': name,
+            'message': 'Armor set created successfully'
+        }), 201
+        
+    except Exception as e:
+        db.rollback()
+        return jsonify({'error': str(e)}), 500
+
 def talismans_page():
     db = get_db()
     cursor = db.cursor(dictionary=True)
@@ -1416,35 +1455,204 @@ def request_admin():
             
     return redirect(url_for('profile_page'))
 
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not session.get('user_id'):
+            flash('Please log in to access this page.', 'error')
+            return redirect(url_for('login_page'))
+        
+        db = get_db()
+        cursor = db.cursor(dictionary=True)
+        cursor.execute("SELECT admin FROM users WHERE id = %s", (session['user_id'],))
+        user = cursor.fetchone()
+        
+        if not user or not user['admin']:
+            flash('You need administrator privileges to access this page.', 'error')
+            return redirect(url_for('home_page'))
+            
+        return f(*args, **kwargs)
+    return decorated_function
+
+@admin_required
 def editor_page(section=None):
-    if not session.get('user_id'):
-        flash('Please log in to access this page.', 'error')
-        return redirect(url_for('login_page'))
-    
-    # Check admin status from database
+    if section:
+        return render_template(f'editor/{section}.html')
+    return render_template('editor.html')
+
+@admin_required
+def armor_editor():
+    return render_template('editor/armors.html')
+
+@admin_required
+def add_armor():
     db = get_db()
     cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT admin FROM users WHERE id = %s", (session['user_id'],))
-    user = cursor.fetchone()
     
-    if not user or not user['admin']:
-        flash('You need administrator privileges to access this page.', 'error')
-        return redirect(url_for('home_page'))
+    # Fetch armor sets and equipment slots for dropdowns
+    cursor.execute("SELECT id, name FROM armor_sets ORDER BY name")
+    armor_sets = cursor.fetchall()
     
-    if section == 'armors':
-        # Fetch armor sets and equipment slots for the armor editor
+    cursor.execute("SELECT id, equip_slot FROM armor_equip_slots ORDER BY id")
+    equip_slots = cursor.fetchall()
+    
+    if request.method == 'POST':
+        try:
+            # Start transaction
+            cursor.execute("START TRANSACTION")
+            
+            # Insert into items table first
+            cursor.execute("""
+                INSERT INTO items (type_id, name)
+                VALUES (2, %s)  -- type_id 2 for armors
+            """, (request.form['name'],))
+            
+            armor_id = cursor.lastrowid
+            
+            # Then insert into armors table
+            cursor.execute("""
+                INSERT INTO armors (id, set_id, equip_slot_id, description, weight, price, can_alter, image_url)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            """, (
+                armor_id,
+                request.form['set_id'],
+                request.form['equip_slot'],
+                request.form['description'],
+                float(request.form['weight']),
+                request.form['price'] if request.form['price'] else None,
+                'can_alter' in request.form,
+                request.form['image_url']
+            ))
+            
+            db.commit()
+            flash('Armor added successfully!', 'success')
+            return redirect(url_for('armor_editor'))
+            
+        except Exception as e:
+            db.rollback()
+            flash(f'Error adding armor: {str(e)}', 'error')
+    
+    return render_template('editor/armors_add.html', armor_sets=armor_sets, equip_slots=equip_slots)
+
+@admin_required
+def modify_armor():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    armor_id = request.args.get('armor_id')
+    
+    if armor_id:
+        # Show edit form for specific armor
         cursor.execute("SELECT id, name FROM armor_sets ORDER BY name")
         armor_sets = cursor.fetchall()
         
         cursor.execute("SELECT id, equip_slot FROM armor_equip_slots ORDER BY id")
         equip_slots = cursor.fetchall()
         
-        return render_template('editor/armors.html', armor_sets=armor_sets, equip_slots=equip_slots)
-    elif section:
-        # This will be used later when implementing specific editor sections
-        return render_template(f'editor/{section}.html')
+        cursor.execute("""
+            SELECT a.*, i.name, s.name as set_name, e.equip_slot
+            FROM armors a 
+            LEFT JOIN items i ON a.id = i.id
+            LEFT JOIN armor_sets s ON a.set_id = s.id 
+            LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id 
+            WHERE a.id = %s
+        """, (armor_id,))
+        armor = cursor.fetchone()
+        
+        if not armor:
+            abort(404)
+        
+        if request.method == 'POST':
+            try:
+                # Start transaction
+                cursor.execute("START TRANSACTION")
+                
+                # Update items table
+                cursor.execute("""
+                    UPDATE items 
+                    SET name = %s
+                    WHERE id = %s
+                """, (request.form['name'], armor_id))
+                
+                # Update armors table
+                cursor.execute("""
+                    UPDATE armors 
+                    SET set_id = %s, 
+                        equip_slot_id = %s, 
+                        description = %s,
+                        weight = %s, 
+                        price = %s, 
+                        can_alter = %s,
+                        image_url = %s
+                    WHERE id = %s
+                """, (
+                    request.form['set_id'],
+                    request.form['equip_slot'],
+                    request.form['description'],
+                    float(request.form['weight']),
+                    request.form['price'] if request.form['price'] else None,
+                    'can_alter' in request.form,
+                    request.form['image_url'],
+                    armor_id
+                ))
+                
+                db.commit()
+                flash('Armor updated successfully!', 'success')
+                return redirect(url_for('modify_armor'))
+                
+            except Exception as e:
+                db.rollback()
+                flash(f'Error updating armor: {str(e)}', 'error')
+        
+        return render_template('editor/armors_add.html', armor=armor, armor_sets=armor_sets, equip_slots=equip_slots)
     
-    return render_template('editor.html')
+    # Show list of armors to modify
+    cursor.execute("""
+        SELECT a.*, i.name, s.name as set_name, e.equip_slot
+        FROM armors a 
+        LEFT JOIN items i ON a.id = i.id
+        LEFT JOIN armor_sets s ON a.set_id = s.id 
+        LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id 
+        ORDER BY i.name
+    """)
+    armors = cursor.fetchall()
+    return render_template('editor/armors_modify.html', armors=armors)
+
+@admin_required
+def delete_armor():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    armor_id = request.args.get('armor_id')
+    
+    if request.method == 'POST' and armor_id:
+        try:
+            # Start transaction
+            cursor.execute("START TRANSACTION")
+            
+            # Delete from armors table
+            cursor.execute("DELETE FROM armors WHERE id = %s", (armor_id,))
+            
+            # Delete from items table
+            cursor.execute("DELETE FROM items WHERE id = %s", (armor_id,))
+            
+            db.commit()
+            flash('Armor deleted successfully!', 'success')
+            return redirect(url_for('delete_armor'))
+            
+        except Exception as e:
+            db.rollback()
+            flash(f'Error deleting armor: {str(e)}', 'error')
+    
+    # Show list of armors to delete
+    cursor.execute("""
+        SELECT a.*, i.name, s.name as set_name, e.equip_slot
+        FROM armors a 
+        LEFT JOIN items i ON a.id = i.id
+        LEFT JOIN armor_sets s ON a.set_id = s.id 
+        LEFT JOIN armor_equip_slots e ON a.equip_slot_id = e.id 
+        ORDER BY i.name
+    """)
+    armors = cursor.fetchall()
+    return render_template('editor/armors_delete.html', armors=armors)
 
 def delete_account():
     if not session.get('user_id'):
@@ -1508,7 +1716,7 @@ def update_armor(armor_id):
                 WHERE id = %s
             """, (
                 data['set_id'], 
-                data['equip_slot_id'],
+                data['equip_slot'],
                 data['weight'],
                 data.get('price', None),
                 data.get('can_alter', False),

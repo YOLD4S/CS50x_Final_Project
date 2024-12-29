@@ -67,6 +67,14 @@ def create_app():
     app.add_url_rule("/editor", view_func=views.editor_page)
     app.add_url_rule("/editor/<section>", view_func=views.editor_page)
     app.add_url_rule("/profile/delete", view_func=views.delete_account, methods=["POST"])
+    
+    # Armor editor routes
+    app.add_url_rule("/editor/armor", view_func=views.armor_editor)
+    app.add_url_rule("/editor/armor/add", view_func=views.add_armor, methods=["GET", "POST"])
+    app.add_url_rule("/editor/armor/modify", view_func=views.modify_armor, methods=["GET", "POST"])
+    app.add_url_rule("/editor/armor/modify/<int:armor_id>", view_func=views.modify_armor, methods=["GET", "POST"])
+    app.add_url_rule("/editor/armor/delete", view_func=views.delete_armor, methods=["GET", "POST"])
+    app.add_url_rule("/editor/armor/delete/<int:armor_id>", view_func=views.delete_armor, methods=["POST"])
 
     return app
 

@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block title %}Modify Armors{% endblock %}
+
+{% block content %}
+<div class="editor-container">
+    <h1 class="page-title">Modify Armors</h1>
+    
+    <div class="items-grid">
+        {% for armor in armors %}
+        <div class="item-card">
+            <div class="item-image">
+                {% if armor.image_url %}
+                <img src="{{ armor.image_url }}" alt="{{ armor.name }}">
+                {% else %}
+                <div class="no-image">No Image</div>
+                {% endif %}
+            </div>
+            <div class="item-content">
+                <h3>{{ armor.name }}</h3>
+                <p class="item-type">{{ armor.equip_slot }}</p>
+                <p class="item-set">{{ armor.set_name }}</p>
+                <div class="item-actions">
+                    <a href="/editor/armor/modify/{{ armor.id }}" class="edit-button">Edit</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.editor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.item-card {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #8B7355;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
+
+.item-image {
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 1.5rem;
+}
+
+.item-content h3 {
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.item-type, .item-set {
+    color: #D4C5A1;
+    margin-bottom: 0.5rem;
+}
+
+.item-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.edit-button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: rgba(139, 115, 85, 0.2);
+    border: 1px solid #8B7355;
+    color: #D4AF37;
+    text-decoration: none;
+    text-align: center;
+}
+
+.edit-button:hover {
+    background: rgba(139, 115, 85, 0.4);
+    transform: translateY(-2px);
+}
+
+.no-image {
+    color: #8B7355;
+    text-align: center;
+    padding: 2rem;
+}
+</style>
+{% endblock %} 
