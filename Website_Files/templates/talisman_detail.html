@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block title %}{{ talisman.name }}{% endblock %}
+{% block content %}
+<div class="talisman-detail-header">
+    <div class="talisman-image">
+        <img src="{{ talisman.image_url if talisman.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ talisman.name }}">
+    </div>
+    <div class="talisman-info">
+        <h1 class="talisman-title">{{ talisman.name }}</h1>
+        <ul class="talisman-attributes">
+            <li><strong>Info:</strong> {{ talisman.info if talisman.info else 'No additional info available.' }}</li>
+            <li><strong>Weight:</strong> {{ talisman.weight }}</li>
+            <li><strong>Price:</strong> {{ talisman.price if talisman.price else 'Not for sale' }}</li>
+        </ul>
+        <p class="talisman-description">{{ talisman.description if talisman.description else 'No description available.' }}</p>
+    </div>
+</div>
+
+<style>
+.talisman-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.talisman-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8B7355;
+}
+.talisman-info {
+    flex: 1;
+}
+.talisman-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+.talisman-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+.talisman-attributes li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.talisman-description {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #D4C5A1;
+}
+</style>
+{% endblock %}

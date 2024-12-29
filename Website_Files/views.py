@@ -3,15 +3,16 @@ from datetime import datetime
 import os
 
 from flask import (
-    Flask, 
+    Flask,
     render_template,
-    request, 
-    session, 
-    flash, 
-    redirect, 
-    url_for, 
+    request,
+    session,
+    flash,
+    redirect,
+    url_for,
     abort,
-    current_app
+    current_app,
+    jsonify
 )
 from werkzeug.security import check_password_hash, generate_password_hash
 from db import get_db
@@ -956,7 +957,68 @@ def armor_detail_page(armor_id, name=None, equip_slot=None):
     return render_template("armor_detail.html", armor=armor)
 
 def talismans_page():
-    return render_template("talismans.html")
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get current page, sorting options, and order
+    page = request.args.get("page", 1, type=int)
+    sort_by = request.args.get("sort_by", "name")
+    sort_order = request.args.get("order", "asc")  # Default order is ascending
+    per_page = 12
+    offset = (page - 1) * per_page
+
+    # Determine sorting column
+    sort_column = "i.name"  # Default sorting by name
+    if sort_by == "weight":
+        sort_column = "t.weight"
+    elif sort_by == "price":
+        sort_column = "t.price"
+
+    # Ensure valid sort order
+    sort_order = "ASC" if sort_order.lower() == "asc" else "DESC"
+
+    # Query to fetch total number of talismans for pagination
+    cursor.execute("SELECT COUNT(*) AS total FROM talismans")
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Query to fetch talismans for the current page
+    cursor.execute(f"""
+            SELECT t.id, i.name, t.image_url, t.weight, t.price
+            FROM talismans t
+            LEFT JOIN items i ON t.id = i.id
+            ORDER BY {sort_column} {sort_order}
+            LIMIT %s OFFSET %s
+        """, (per_page, offset))
+    talismans = cursor.fetchall()
+
+    return render_template(
+        "talismans.html",
+        talismans=talismans,
+        current_page=page,
+        total_pages=total_pages,
+        sort_by=sort_by,
+        order=sort_order.lower()
+    )
+
+def talisman_detail(talisman_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch talisman details
+    cursor.execute("""
+            SELECT t.id, i.name, t.info, t.description, t.weight, t.price, t.image_url
+            FROM talismans t
+            LEFT JOIN items i ON t.id = i.id
+            WHERE t.id = %s
+        """, (talisman_id,))
+    talisman = cursor.fetchone()
+
+    if not talisman:
+        abort(404)
+
+    return render_template("talisman_detail.html", talisman=talisman)
+
 
 def magic_page():
     return render_template("magic.html")
