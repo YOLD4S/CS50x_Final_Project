@@ -15,8 +15,13 @@ from flask import (
     jsonify
 )
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.utils import secure_filename
+from PIL import Image
 from db import get_db
 
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def login_required(f):
     @wraps(f)
@@ -1360,6 +1365,62 @@ def profile_page():
     user = cursor.fetchone()
     
     return render_template('profile.html', user=user)
+
+def upload_profile_picture():
+    if not session.get('user_id'):
+        return redirect(url_for('login_page'))
+
+    if 'profile_picture' not in request.files:
+        flash('No file part', 'error')
+        return redirect(url_for('profile_page'))
+
+    file = request.files['profile_picture']
+    if file.filename == '':
+        flash('No selected file', 'error')
+        return redirect(url_for('profile_page'))
+
+    if file and allowed_file(file.filename):
+        # Define the upload folder for profile pictures
+        upload_folder = os.path.join(current_app.root_path, 'static/uploads/profile_pictures')
+        os.makedirs(upload_folder, exist_ok=True)  # Ensure the directory exists
+
+        # Save the file as user_<id>.png
+        filename = f"user_{session['user_id']}.png"
+        filepath = os.path.join(upload_folder, filename)
+
+        try:
+            # Open the image and crop it to a square
+            image = Image.open(file)
+            min_dim = min(image.size)  # Find the smallest dimension
+            left = (image.width - min_dim) / 2
+            top = (image.height - min_dim) / 2
+            right = (image.width + min_dim) / 2
+            bottom = (image.height + min_dim) / 2
+
+            cropped_image = image.crop((left, top, right, bottom))
+            cropped_image = cropped_image.resize((150, 150))  # Resize to 150x150 pixels
+            cropped_image.save(filepath)
+
+            # Update the database
+            db = get_db()
+            cursor = db.cursor()
+            cursor.execute("START TRANSACTION")
+            cursor.execute("""
+                    UPDATE users
+                    SET profile_picture = %s
+                    WHERE id = %s
+                """, (f"profile_pictures/{filename}", session['user_id']))
+            db.commit()
+
+            flash('Profile picture updated successfully!', 'success')
+        except Exception as e:
+            db.rollback()
+            flash('Error saving profile picture. Please try again.', 'error')
+            print(f"Error: {str(e)}")
+    else:
+        flash('Invalid file type. Please upload a PNG, JPG, or GIF.', 'error')
+
+    return redirect(url_for('profile_page'))
 
 def update_profile():
     if not session.get('user_id'):
