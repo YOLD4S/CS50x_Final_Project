@@ -33,8 +33,6 @@ def create_app():
     app.add_url_rule("/login", view_func=views.login_page, methods=["GET", "POST"])
     app.add_url_rule("/logout", view_func=views.logout_page)
     app.add_url_rule("/register", view_func=views.register_page, methods=["GET", "POST"])
-    app.add_url_rule("/items", view_func=views.items_page)
-    app.add_url_rule("/items/<int:item_key>", view_func=views.item_page)
     app.add_url_rule("/npcs", view_func=views.npcs_page, methods=["GET", "POST"])
     app.add_url_rule("/add_new_npc", view_func=views.add_new_npc, methods=["GET", "POST"])
     app.add_url_rule("/npcs/<int:npc_key>", view_func=views.npc_page)
@@ -50,7 +48,6 @@ def create_app():
     app.add_url_rule("/npc/<int:npc_id>", view_func=views.npc_detail_page)
     app.add_url_rule("/npc/<int:npc_id>/delete", view_func=views.delete_npc, methods=['POST'])
     app.add_url_rule("/npc/<int:npc_id>/update", view_func=views.update_npc, methods=['GET', 'POST'])
-    app.add_url_rule("/items/<int:item_id>", view_func=views.item_detail_page)
     app.add_url_rule("/talismans", view_func=views.talismans_page)
     app.add_url_rule("/talismans/<int:talisman_id>", view_func=views.talisman_detail)
     app.add_url_rule("/magic", view_func=views.magic_page)
@@ -84,8 +81,10 @@ def create_app():
     # Weapon editor routes
     app.add_url_rule("/editor/weapons", view_func=views.weapon_editor_page)
     app.add_url_rule("/editor/weapons/add", view_func=views.add_weapon, methods=["GET", "POST"])
-
-
+    app.add_url_rule("/editor/weapons/modify/<int:weapon_id>", view_func=views.modify_weapon, methods=["GET", "POST"])
+    app.add_url_rule("/editor/weapons/modify", view_func=views.modify_weapons, methods=["GET"])
+    app.add_url_rule('/editor/weapons/delete', view_func=views.navigate_weapons_delete, methods=["GET"])
+    app.add_url_rule('/editor/weapons/delete/<int:weapon_id>', view_func=views.delete_weapon, methods=['POST'])
 
     return app
 
