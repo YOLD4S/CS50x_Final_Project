@@ -2089,3 +2089,184 @@ def add_weapon():
 
     return render_template('editor/weapons_add.html', weapon_groups=weapon_groups, effects=effects, skills=skills,
                            affinities=affinities)
+
+@admin_required
+def modify_weapon(weapon_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch data for dropdowns
+    cursor.execute("SELECT id, name FROM weapon_groups ORDER BY name")
+    weapon_groups = cursor.fetchall()
+
+    cursor.execute("SELECT id, description FROM effects ORDER BY id")
+    effects = cursor.fetchall()
+
+    cursor.execute("SELECT id, name FROM weapon_skills ORDER BY name")
+    skills = cursor.fetchall()
+
+    cursor.execute("SELECT id, name FROM affinities ORDER BY id")
+    affinities = cursor.fetchall()
+
+    # Fetch current weapon details
+    cursor.execute("""
+        SELECT * FROM weapons WHERE id = %s
+    """, (weapon_id,))
+    weapon = cursor.fetchone()
+
+    if not weapon:
+        abort(404)
+
+    # Fetch affinities for the weapon
+    cursor.execute("""
+        SELECT wwa.*, a.name AS affinity_name
+        FROM weapons_w_affinities wwa
+        LEFT JOIN affinities a ON wwa.affinity_id = a.id
+        WHERE wwa.main_weapon_id = %s
+    """, (weapon_id,))
+    weapon_affinities = cursor.fetchall()
+
+    if request.method == 'POST':
+        try:
+            cursor.execute("START TRANSACTION")
+
+            # Update weapon fields
+            name = request.form.get('name')
+            description = request.form.get('description')
+            group_id = request.form.get('group_id')
+            weapon_passive_id = request.form.get('weapon_passive_id') or None
+            hidden_effect_id = request.form.get('hidden_effect_id') or None
+            default_skill_id = request.form.get('default_skill_id') or None
+            weight = float(request.form.get('weight'))
+            req_str = int(request.form.get('req_str') or 0)
+            req_dex = int(request.form.get('req_dex') or 0)
+            req_int = int(request.form.get('req_int') or 0)
+            req_fai = int(request.form.get('req_fai') or 0)
+            req_arc = int(request.form.get('req_arc') or 0)
+
+            # Update weapon in the database
+            cursor.execute("""
+                UPDATE weapons
+                SET group_id = %s, name = %s, description = %s, weapon_passive_id = %s,
+                    hidden_effect_id = %s, default_skill_id = %s, weight = %s,
+                    req_str = %s, req_dex = %s, req_int = %s, req_fai = %s, req_arc = %s
+                WHERE id = %s
+            """, (group_id, name, description, weapon_passive_id, hidden_effect_id, default_skill_id,
+                  weight, req_str, req_dex, req_int, req_fai, req_arc, weapon_id))
+
+            # Handle image upload
+            file = request.files.get('image_file')
+            if file and file.filename and allowed_file(file.filename):
+                upload_folder = os.path.join(current_app.root_path, 'static/uploads/weapons')
+                os.makedirs(upload_folder, exist_ok=True)
+
+                filename = f"{weapon_id}.png"
+                filepath = os.path.join(upload_folder, filename)
+
+                image = Image.open(file)
+                min_dim = min(image.size)
+                left = (image.width - min_dim) / 2
+                top = (image.height - min_dim) / 2
+                right = (image.width + min_dim) / 2
+                bottom = (image.height + min_dim) / 2
+
+                cropped_image = image.crop((left, top, right, bottom))
+                resized_image = cropped_image.resize((200, 200))
+                resized_image.save(filepath)
+
+                image_url = f"uploads/weapons/{filename}"
+                cursor.execute("""
+                    UPDATE weapons
+                    SET image_url = %s
+                    WHERE id = %s
+                """, (image_url, weapon_id))
+
+            # Update affinities
+            for affinity in affinities:
+                affinity_id = affinity['id']
+                str_scaling = int(request.form.get(f'str_scaling_{affinity_id}') or 0)
+                dex_scaling = int(request.form.get(f'dex_scaling_{affinity_id}') or 0)
+                int_scaling = int(request.form.get(f'int_scaling_{affinity_id}') or 0)
+                fai_scaling = int(request.form.get(f'fai_scaling_{affinity_id}') or 0)
+                arc_scaling = int(request.form.get(f'arc_scaling_{affinity_id}') or 0)
+
+                if any([str_scaling, dex_scaling, int_scaling, fai_scaling, arc_scaling]):
+                    # Check if the affinity already exists for this weapon
+                    cursor.execute("""
+                        SELECT id FROM weapons_w_affinities
+                        WHERE main_weapon_id = %s AND affinity_id = %s
+                    """, (weapon_id, affinity_id))
+                    existing_affinity = cursor.fetchone()
+
+                    if existing_affinity:
+                        # Update the existing scaling values
+                        cursor.execute("""
+                            UPDATE weapons_w_affinities
+                            SET str_scaling = %s, dex_scaling = %s, int_scaling = %s,
+                                fai_scaling = %s, arc_scaling = %s
+                            WHERE id = %s
+                        """, (str_scaling, dex_scaling, int_scaling, fai_scaling, arc_scaling, existing_affinity['id']))
+                    else:
+                        # Add a new item for this affinity
+                        item_name = f"{affinity['name']} {name}"
+                        cursor.execute("""
+                            INSERT INTO items (type_id, name)
+                            VALUES (1, %s)
+                        """, (item_name,))
+                        wwa_id = cursor.lastrowid
+
+                        cursor.execute("""
+                            INSERT INTO weapons_w_affinities (id, main_weapon_id, affinity_id, str_scaling, dex_scaling,
+                                                              int_scaling, fai_scaling, arc_scaling)
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                        """, (wwa_id, weapon_id, affinity_id, str_scaling, dex_scaling, int_scaling, fai_scaling,
+                              arc_scaling))
+
+            db.commit()
+            flash(f"Weapon '{name}' updated successfully!", "success")
+            return redirect(url_for('modify_weapon', weapon_id=weapon_id))
+
+        except Exception as e:
+            db.rollback()
+            flash(f"Error updating weapon: {str(e)}", "error")
+
+    return render_template(
+        'editor/weapons_modify.html',
+        weapon=weapon,
+        weapon_groups=weapon_groups,
+        effects=effects,
+        skills=skills,
+        affinities=affinities,
+        weapon_affinities=weapon_affinities
+    )
+
+@admin_required
+def modify_weapons():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get the current page from the request, default to 1
+    page = request.args.get("page", 1, type=int)
+    per_page = 20
+    offset = (page - 1) * per_page
+
+    # Fetch total weapon count for pagination
+    cursor.execute("SELECT COUNT(*) AS total FROM weapons")
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page  # Calculate total pages
+
+    # Fetch weapons for the current page
+    cursor.execute("""
+        SELECT id, name, image_url
+        FROM weapons
+        ORDER BY name ASC
+        LIMIT %s OFFSET %s
+    """, (per_page, offset))
+    weapons = cursor.fetchall()
+
+    return render_template(
+        "editor/weapons_modify_navigate.html",
+        weapons=weapons,
+        current_page=page,
+        total_pages=total_pages
+    )

@@ -86,8 +86,8 @@ def create_app():
     # Weapon editor routes
     app.add_url_rule("/editor/weapons", view_func=views.weapon_editor_page)
     app.add_url_rule("/editor/weapons/add", view_func=views.add_weapon, methods=["GET", "POST"])
-
-
+    app.add_url_rule("/editor/weapons/modify/<int:weapon_id>", view_func=views.modify_weapon, methods=["GET", "POST"])
+    app.add_url_rule("/editor/weapons/modify", view_func=views.modify_weapons, methods=["GET"])
 
     return app
 
