@@ -4,108 +4,270 @@
 
 {% block content %}
 <div class="editor-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
     <h1 class="page-title">Add Weapon</h1>
-    <form method="POST" action="" class="weapon-form">
-        <div class="form-group">
-            <label for="name">Weapon Name</label>
-            <input type="text" name="name" id="name" required>
-        </div>
+    <form method="POST" action="{{ url_for('add_weapon') }}" enctype="multipart/form-data" class="weapon-form">
+        <h3>Weapon Details</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input type="number" step="0.01" name="weight" id="weight" required>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea name="description" id="description"></textarea>
-        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="group_id">Weapon Group</label>
+                    <select name="group_id" id="group_id" required>
+                        {% for group in weapon_groups %}
+                        <option value="{{ group.id }}">{{ group.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="image_file">Upload Weapon Image</label>
+                    <input type="file" name="image_file" id="image_file" accept="image/*">
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="group_id">Weapon Group</label>
-            <select name="group_id" id="group_id" required>
-                {% for group in weapon_groups %}
-                <option value="{{ group.id }}">{{ group.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="weapon_passive_id">Passive Effect</label>
+                    <select name="weapon_passive_id" id="weapon_passive_id">
+                        <option value="">None</option>
+                        {% for effect in effects %}
+                        <option value="{{ effect.id }}">{{ effect.description }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hidden_effect_id">Hidden Effect</label>
+                    <select name="hidden_effect_id" id="hidden_effect_id">
+                        <option value="">None</option>
+                        {% for effect in effects %}
+                        <option value="{{ effect.id }}">{{ effect.description }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="default_skill_id">Default Skill</label>
+                    <select name="default_skill_id" id="default_skill_id">
+                        <option value="">None</option>
+                        {% for skill in skills %}
+                        <option value="{{ skill.id }}">{{ skill.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="weapon_passive_id">Passive Effect</label>
-            <select name="weapon_passive_id" id="weapon_passive_id">
-                <option value="">None</option>
-                {% for effect in effects %}
-                <option value="{{ effect.id }}">{{ effect.description }}</option>
-                {% endfor %}
-            </select>
-        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" rows="2"></textarea>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="hidden_effect_id">Hidden Effect</label>
-            <select name="hidden_effect_id" id="hidden_effect_id">
-                <option value="">None</option>
-                {% for effect in effects %}
-                <option value="{{ effect.id }}">{{ effect.description }}</option>
-                {% endfor %}
-            </select>
-        </div>
+            <h3>Requirements</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="req_str">Strength</label>
+                    <input type="number" name="req_str" id="req_str">
+                </div>
+                <div class="form-group">
+                    <label for="req_dex">Dexterity</label>
+                    <input type="number" name="req_dex" id="req_dex">
+                </div>
+                <div class="form-group">
+                    <label for="req_int">Intelligence</label>
+                    <input type="number" name="req_int" id="req_int">
+                </div>
+                <div class="form-group">
+                    <label for="req_fai">Faith</label>
+                    <input type="number" name="req_fai" id="req_fai">
+                </div>
+                <div class="form-group">
+                    <label for="req_arc">Arcane</label>
+                    <input type="number" name="req_arc" id="req_arc">
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="default_skill_id">Default Skill</label>
-            <select name="default_skill_id" id="default_skill_id">
-                <option value="">None</option>
-                {% for skill in skills %}
-                <option value="{{ skill.id }}">{{ skill.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
+            <h3>Affinities</h3>
+            <table class="affinity-table">
+                <thead>
+                    <tr>
+                        <th>Affinity</th>
+                        <th>STR</th>
+                        <th>DEX</th>
+                        <th>INT</th>
+                        <th>FAI</th>
+                        <th>ARC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for affinity in affinities %}
+                    <tr>
+                        <td>{{ affinity.name }}</td>
+                        <td><input type="number" name="str_scaling_{{ affinity.id }}" id="str_scaling_{{ affinity.id }}"></td>
+                        <td><input type="number" name="dex_scaling_{{ affinity.id }}" id="dex_scaling_{{ affinity.id }}"></td>
+                        <td><input type="number" name="int_scaling_{{ affinity.id }}" id="int_scaling_{{ affinity.id }}"></td>
+                        <td><input type="number" name="fai_scaling_{{ affinity.id }}" id="fai_scaling_{{ affinity.id }}"></td>
+                        <td><input type="number" name="arc_scaling_{{ affinity.id }}" id="arc_scaling_{{ affinity.id }}"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
-        <div class="form-group">
-            <label for="weight">Weight</label>
-            <input type="number" step="0.01" name="weight" id="weight" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image_url">Image URL</label>
-            <input type="url" name="image_url" id="image_url">
-        </div>
-
-        <h3>Requirements</h3>
-        <div class="form-group">
-            <label for="req_str">Strength</label>
-            <input type="number" name="req_str" id="req_str" required>
-        </div>
-        <div class="form-group">
-            <label for="req_dex">Dexterity</label>
-            <input type="number" name="req_dex" id="req_dex" required>
-        </div>
-        <div class="form-group">
-            <label for="req_int">Intelligence</label>
-            <input type="number" name="req_int" id="req_int" required>
-        </div>
-        <div class="form-group">
-            <label for="req_fai">Faith</label>
-            <input type="number" name="req_fai" id="req_fai" required>
-        </div>
-        <div class="form-group">
-            <label for="req_arc">Arcane</label>
-            <input type="number" name="req_arc" id="req_arc" required>
-        </div>
-
-        <h3>Affinities</h3>
-        {% for affinity in affinities %}
-        <div class="form-group">
-            <label for="affinity_{{ affinity.id }}">{{ affinity.name }}</label>
-            <input type="checkbox" name="affinity_{{ affinity.id }}" value="{{ affinity.id }}">
-            <label for="str_scaling_{{ affinity.id }}">STR Scaling</label>
-            <input type="number" name="str_scaling_{{ affinity.id }}">
-            <label for="dex_scaling_{{ affinity.id }}">DEX Scaling</label>
-            <input type="number" name="dex_scaling_{{ affinity.id }}">
-            <label for="int_scaling_{{ affinity.id }}">INT Scaling</label>
-            <input type="number" name="int_scaling_{{ affinity.id }}">
-            <label for="fai_scaling_{{ affinity.id }}">FAI Scaling</label>
-            <input type="number" name="fai_scaling_{{ affinity.id }}">
-            <label for="arc_scaling_{{ affinity.id }}">ARC Scaling</label>
-            <input type="number" name="arc_scaling_{{ affinity.id }}">
-        </div>
-        {% endfor %}
+            <script>
+            function toggleScaling(affinityId) {
+                const scalingFields = document.querySelectorAll(`#str_scaling_${affinityId}, #dex_scaling_${affinityId}, #int_scaling_${affinityId}, #fai_scaling_${affinityId}, #arc_scaling_${affinityId}`);
+                scalingFields.forEach(field => field.style.display = field.style.display === 'none' ? 'block' : 'none');
+            }
+            </script>
 
         <button type="submit" class="submit-button">Add Weapon</button>
     </form>
 </div>
+
+<style>
+.flash-messages {
+    margin: 1rem 0;
+}
+
+.alert {
+    padding: 0.75rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.submit-button {
+    padding: 0.75rem 2rem;
+    background-color: rgba(139, 115, 85, 0.7);
+    color: #D4AF37;
+    border: 2px solid #8B7355;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    align-self: center;
+}
+
+.submit-button:hover {
+    background-color: rgba(212, 175, 55, 0.9);
+    color: #000;
+    border-color: #D4AF37;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(212, 175, 55, 0.3);
+}
+
+.weapon-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #8B7355;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #8B7355;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #D4AF37;
+}
+
+textarea {
+    resize: none;
+}
+
+.affinity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.affinity-table th,
+.affinity-table td {
+    border: 1px solid #8B7355;
+    padding: 0.5rem;
+}
+
+.affinity-table th {
+    background: rgba(139, 115, 85, 0.3);
+    color: #D4AF37;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.affinity-table td {
+    background: rgba(0, 0, 0, 0.85);
+    color: #D4C5A1;
+}
+
+.affinity-table input {
+    width: 80%;
+    padding: 0.3rem;
+    border: 1px solid #8B7355;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #D4AF37;
+    text-align: center;
+}
+
+</style>
 {% endblock %}
+
+

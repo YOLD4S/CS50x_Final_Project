@@ -1971,15 +1971,14 @@ def add_weapon():
     cursor.execute("SELECT id, name FROM weapon_skills ORDER BY name")
     skills = cursor.fetchall()
 
-    cursor.execute("SELECT id, name FROM affinities ORDER BY name")
+    cursor.execute("SELECT id, name FROM affinities ORDER BY id")
     affinities = cursor.fetchall()
 
     if request.method == 'POST':
         try:
-            # Start a transaction
             cursor.execute("START TRANSACTION")
 
-            # Insert into `weapons` table
+            # Weapon data
             name = request.form.get('name')
             description = request.form.get('description')
             group_id = request.form.get('group_id')
@@ -1987,50 +1986,106 @@ def add_weapon():
             hidden_effect_id = request.form.get('hidden_effect_id') or None
             default_skill_id = request.form.get('default_skill_id') or None
             weight = float(request.form.get('weight'))
-            req_str = int(request.form.get('req_str'))
-            req_dex = int(request.form.get('req_dex'))
-            req_int = int(request.form.get('req_int'))
-            req_fai = int(request.form.get('req_fai'))
-            req_arc = int(request.form.get('req_arc'))
-            image_url = request.form.get('image_url')
+            req_str = int(request.form.get('req_str') or 0)
+            req_dex = int(request.form.get('req_dex') or 0)
+            req_int = int(request.form.get('req_int') or 0)
+            req_fai = int(request.form.get('req_fai') or 0)
+            req_arc = int(request.form.get('req_arc') or 0)
 
             cursor.execute("""
                 INSERT INTO weapons (group_id, name, description, weapon_passive_id, hidden_effect_id,
                                      default_skill_id, weight, req_str, req_dex, req_int, req_fai, req_arc, image_url)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NULL)
             """, (group_id, name, description, weapon_passive_id, hidden_effect_id, default_skill_id, weight,
-                  req_str, req_dex, req_int, req_fai, req_arc, image_url))
+                  req_str, req_dex, req_int, req_fai, req_arc))
             weapon_id = cursor.lastrowid
 
-            # Insert affinities into `weapons_w_affinities` table
+            # Handle image upload
+            file = request.files.get('image_file')
+            print(file)
+            if file and file.filename and allowed_file(file.filename):
+                try:
+                    # Define upload folder and ensure it exists
+                    upload_folder = os.path.join(current_app.root_path, 'static/uploads/weapons')
+                    os.makedirs(upload_folder, exist_ok=True)
+
+                    # Use weapon ID as the filename
+                    filename = f"{weapon_id}.png"
+                    filepath = os.path.join(upload_folder, filename)
+
+                    # Open the image, crop and resize it to 200x200 pixels
+                    image = Image.open(file)
+                    min_dim = min(image.size)  # Find the smallest dimension
+                    left = (image.width - min_dim) / 2
+                    top = (image.height - min_dim) / 2
+                    right = (image.width + min_dim) / 2
+                    bottom = (image.height + min_dim) / 2
+
+                    cropped_image = image.crop((left, top, right, bottom))
+                    resized_image = cropped_image.resize((200, 200))
+                    resized_image.save(filepath)
+
+                    # Update the weapon record with the image path
+                    image_url = f"uploads/weapons/{filename}"
+                    cursor.execute("""
+                        UPDATE weapons
+                        SET image_url = %s
+                        WHERE id = %s
+                    """, (image_url, weapon_id))
+                except Exception as e:
+                    db.rollback()
+                    flash(f"Error processing image: {str(e)}", "error")
+            else:
+                flash('Invalid or missing image file. Weapon added without image.', 'info')
+
+            # Process affinities (same logic as before)
             for affinity in affinities:
-                affinity_id = request.form.get(f'affinity_{affinity["id"]}') or None
-                str_scaling = request.form.get(f'str_scaling_{affinity["id"]}') or req_str
-                dex_scaling = request.form.get(f'dex_scaling_{affinity["id"]}') or req_dex
-                int_scaling = request.form.get(f'int_scaling_{affinity["id"]}') or req_int
-                fai_scaling = request.form.get(f'fai_scaling_{affinity["id"]}') or req_fai
-                arc_scaling = request.form.get(f'arc_scaling_{affinity["id"]}') or req_arc
+                affinity_id = affinity['id']
+                str_scaling = int(request.form.get(f'str_scaling_{affinity_id}') or 0)
+                dex_scaling = int(request.form.get(f'dex_scaling_{affinity_id}') or 0)
+                int_scaling = int(request.form.get(f'int_scaling_{affinity_id}') or 0)
+                fai_scaling = int(request.form.get(f'fai_scaling_{affinity_id}') or 0)
+                arc_scaling = int(request.form.get(f'arc_scaling_{affinity_id}') or 0)
 
-                cursor.execute("""
-                    INSERT INTO weapons_w_affinities (main_weapon_id, affinity_id, str_scaling, dex_scaling, 
-                                                      int_scaling, fai_scaling, arc_scaling)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s)
-                """, (weapon_id, affinity_id, str_scaling, dex_scaling, int_scaling, fai_scaling, arc_scaling))
+                if any([str_scaling, dex_scaling, int_scaling, fai_scaling, arc_scaling]):
+                    item_name = f"{affinity['name']} {name}"
+                    cursor.execute("""
+                            INSERT INTO items (type_id, name)
+                            VALUES (1, %s)
+                        """, (item_name,))
+                    wwa_id = cursor.lastrowid
 
-                # Insert into `items` table
-                affinity_name = [a["name"] for a in affinities if a["id"] == affinity_id]
-                item_name = f"{affinity_name} {name}" if affinity_name else name
+                    cursor.execute("""
+                            INSERT INTO weapons_w_affinities (id, main_weapon_id, affinity_id, str_scaling, dex_scaling, 
+                                                              int_scaling, fai_scaling, arc_scaling)
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                        """, (
+                    wwa_id, weapon_id, affinity_id, str_scaling, dex_scaling, int_scaling, fai_scaling, arc_scaling))
+
+            # Default entry if no affinities
+            if not any(
+                    any([int(request.form.get(f'{scaling}_{affinity["id"]}') or 0) for scaling in
+                         ["str_scaling", "dex_scaling", "int_scaling", "fai_scaling", "arc_scaling"]])
+                    for affinity in affinities
+            ):
                 cursor.execute("""
-                    INSERT INTO items (type_id, name)
-                    VALUES (1, %s)
-                """, (item_name,))
+                        INSERT INTO items (type_id, name)
+                        VALUES (1, %s)
+                    """, (name,))
+                wwa_id = cursor.lastrowid
+                cursor.execute("""
+                        INSERT INTO weapons_w_affinities (id, main_weapon_id, affinity_id, str_scaling, dex_scaling, 
+                                                          int_scaling, fai_scaling, arc_scaling)
+                        VALUES (%s, %s, NULL, 0, 0, 0, 0, 0)
+                    """, (wwa_id, weapon_id))
 
             db.commit()
             flash(f"Weapon '{name}' added successfully!", "success")
-            return redirect(url_for('add_weapon'))
+            return redirect(url_for('add_weapon'))  # Redirect stays on the same page
 
         except Exception as e:
             db.rollback()
             flash(f"Error adding weapon: {str(e)}", "error")
 
-    return render_template('editor/weapons_add.html', weapon_groups=weapon_groups, effects=effects, skills=skills, affinities=affinities)
+    return render_template('editor/weapons_add.html', weapon_groups=weapon_groups, effects=effects, skills=skills,
+                           affinities=affinities)

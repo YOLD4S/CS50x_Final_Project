@@ -3,7 +3,18 @@
 {% block content %}
 <div class="weapon-detail-header">
     <div class="weapon-image">
-        <img src="{{ weapon.image_url if weapon.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ weapon.name }}">
+        {% if weapon.image_url %}
+            {% if 'http://' in weapon.image_url or 'https://' in weapon.image_url %}
+                <!-- External URL -->
+                <img src="{{ weapon.image_url }}" alt="{{ weapon.name }}">
+            {% else %}
+                <!-- Internal URL -->
+                <img src="{{ url_for('static', filename=weapon.image_url) }}" alt="{{ weapon.name }}">
+            {% endif %}
+        {% else %}
+            <!-- Default image -->
+            <img src="{{ url_for('static', filename='images/no_image.png') }}" alt="Default Weapon Image">
+        {% endif %}
     </div>
     <div class="weapon-info">
         <h1 class="weapon-title">{{ weapon.name }}</h1>

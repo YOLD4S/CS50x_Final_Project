@@ -8,7 +8,18 @@
     <div class="weapon-box">
         <a href="{{ url_for('weapon_detail_page', weapon_id=weapon.id) }}">
             <div class="image-container">
-                <img src="{{ weapon.image_url if weapon.image_url else url_for('static', filename='images/no_image.png') }}" alt="{{ weapon.name }}" class="weapon-image">
+                {% if weapon.image_url %}
+                    {% if 'http://' in weapon.image_url or 'https://' in weapon.image_url %}
+                        <!-- External URL -->
+                        <img src="{{ weapon.image_url }}" alt="{{ weapon.name }}" class="weapon-image">
+                    {% else %}
+                        <!-- Internal URL -->
+                        <img src="{{ url_for('static', filename=weapon.image_url) }}" alt="{{ weapon.name }}" class="weapon-image">
+                    {% endif %}
+                {% else %}
+                    <!-- Default image -->
+                    <img src="{{ url_for('static', filename='images/no_image.png') }}" alt="Default Weapon Image" class="weapon-image">
+                {% endif %}
             </div>
             <p class="weapon-name">{{ weapon.name }}</p>
         </a>
