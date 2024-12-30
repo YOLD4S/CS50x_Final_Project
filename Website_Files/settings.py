@@ -8,9 +8,9 @@ DEBUG = os.getenv("DEBUG", True)
 PORT = os.getenv("PORT", 8080)
 
 # Read environment variables
-MYSQL_HOST = os.getenv("MYSQL_HOST", "blg317e-eldenring.cpg8owueqg7x.eu-north-1.rds.amazonaws.com")
-MYSQL_USER = os.getenv("MYSQL_USER", "admin")
-MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "alihan2004")
+MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
+MYSQL_USER = os.getenv("MYSQL_USER", "root")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
 MYSQL_DB = os.getenv("MYSQL_DB", "blg317e_eldenring")
 
 # Secret key is loaded from .env file

@@ -104,26 +104,6 @@ def register_page():
             return redirect(url_for("login_page"))
     return render_template("register.html")
 
-def items_page():
-    return render_template("items.html")
-
-def item_detail_page(item_id):
-    db = get_db()
-    cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM items WHERE id = %s", (item_id,))
-    item = cursor.fetchone()
-    if not item:
-        abort(404)
-    return render_template("item_detail.html", item=item)
-
-def item_page(item_key):
-    db_items = current_app.config["db_items"]
-    item = db_items.get_item(item_key)
-    if item is None:
-        abort(404)
-    return render_template("item.html", item=item)
-
-
 def add_new_npc():
     db = get_db()
     cursor = db.cursor(dictionary=True)
@@ -2245,28 +2225,121 @@ def modify_weapons():
     db = get_db()
     cursor = db.cursor(dictionary=True)
 
-    # Get the current page from the request, default to 1
+    # Get the current page and search query from the request
     page = request.args.get("page", 1, type=int)
     per_page = 20
     offset = (page - 1) * per_page
+    search_query = request.args.get("search", "").strip()
 
-    # Fetch total weapon count for pagination
-    cursor.execute("SELECT COUNT(*) AS total FROM weapons")
+    # Build the query for total count and filtered weapons
+    search_clause = "WHERE name LIKE %s" if search_query else ""
+    search_param = f"%{search_query}%" if search_query else None
+
+    # Fetch total weapon count
+    cursor.execute(f"SELECT COUNT(*) AS total FROM weapons {search_clause}", (search_param,) if search_param else ())
     total = cursor.fetchone()["total"]
-    total_pages = (total + per_page - 1) // per_page  # Calculate total pages
+    total_pages = (total + per_page - 1) // per_page
 
     # Fetch weapons for the current page
-    cursor.execute("""
-        SELECT id, name, image_url
-        FROM weapons
-        ORDER BY name ASC
-        LIMIT %s OFFSET %s
-    """, (per_page, offset))
+    cursor.execute(f"""
+            SELECT id, name, image_url
+            FROM weapons
+            {search_clause}
+            ORDER BY name ASC
+            LIMIT %s OFFSET %s
+        """, ((search_param,) if search_param else ()) + (per_page, offset))
     weapons = cursor.fetchall()
 
     return render_template(
         "editor/weapons_modify_navigate.html",
         weapons=weapons,
         current_page=page,
-        total_pages=total_pages
+        total_pages=total_pages,
+        search_query=search_query  # Pass the search query to the template
     )
+
+
+@admin_required
+def navigate_weapons_delete():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Get current page, search query, and pagination settings
+    page = request.args.get("page", 1, type=int)
+    per_page = 20
+    offset = (page - 1) * per_page
+    search_query = request.args.get("search", "").strip()
+
+    # Build the query for total count and filtered weapons
+    search_clause = f"WHERE name LIKE %s" if search_query else ""
+    search_param = f"%{search_query}%" if search_query else None
+
+    # Fetch total weapon count
+    cursor.execute(f"SELECT COUNT(*) AS total FROM weapons {search_clause}", (search_param,) if search_param else ())
+    total = cursor.fetchone()["total"]
+    total_pages = (total + per_page - 1) // per_page
+
+    # Fetch weapons for the current page
+    cursor.execute(f"""
+            SELECT id, name, image_url
+            FROM weapons
+            {search_clause}
+            ORDER BY name ASC
+            LIMIT %s OFFSET %s
+        """, ((search_param,) if search_param else ()) + (per_page, offset))
+    weapons = cursor.fetchall()
+
+    return render_template(
+        "editor/weapons_delete_navigate.html",
+        weapons=weapons,
+        current_page=page,
+        total_pages=total_pages,
+        search_query=search_query  # Pass the search query to the template
+    )
+
+@admin_required
+def delete_weapon(weapon_id):
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    # Fetch query parameters from form data or default values
+    page = request.form.get("page", 1, type=int)
+    search_query = request.form.get("search", "").strip()
+
+    # Fetch weapon details
+    cursor.execute("SELECT name FROM weapons WHERE id = %s", (weapon_id,))
+    weapon = cursor.fetchone()
+
+    if not weapon:
+        flash("Weapon not found.", "error")
+        return redirect(url_for('navigate_weapons_delete', page=page, search=search_query))
+
+    try:
+        # Start transaction
+        cursor.execute("START TRANSACTION")
+
+        # Fetch item IDs from weapons_w_affinities before deletion
+        cursor.execute("""
+                SELECT id FROM weapons_w_affinities
+                WHERE main_weapon_id = %s
+            """, (weapon_id,))
+        affinity_items = cursor.fetchall()
+
+        # Delete associated rows from items
+        for item in affinity_items:
+            cursor.execute("""
+                    DELETE FROM items
+                    WHERE id = %s
+                """, (item['id'],))
+
+        # Delete the weapon (this also deletes rows in weapons_w_affinities due to foreign key constraints)
+        cursor.execute("DELETE FROM weapons WHERE id = %s", (weapon_id,))
+
+        # Commit transaction
+        db.commit()
+        flash(f"Weapon '{weapon['name']}' and associated items have been deleted successfully!", "success")
+    except Exception as e:
+        db.rollback()
+        flash(f"Error deleting weapon: {str(e)}", "error")
+
+    return redirect(url_for('navigate_weapons_delete', page=page, search=search_query))

@@ -3,6 +3,12 @@
 {% block content %}
 <h1 class="page-title">Navigate Weapons to Modify</h1>
 
+<!-- Search Form -->
+<form method="GET" action="{{ url_for('modify_weapons') }}" class="search-form">
+    <input type="text" name="search" placeholder="Search weapons..." value="{{ search_query }}" class="search-bar">
+    <button type="submit" class="search-button">Search</button>
+</form>
+
 <div class="weapons-container">
     {% for weapon in weapons %}
     <div class="weapon-box">
@@ -10,14 +16,11 @@
             <div class="image-container">
                 {% if weapon.image_url %}
                     {% if 'http://' in weapon.image_url or 'https://' in weapon.image_url %}
-                        <!-- External URL -->
                         <img src="{{ weapon.image_url }}" alt="{{ weapon.name }}" class="weapon-image">
                     {% else %}
-                        <!-- Internal URL -->
                         <img src="{{ url_for('static', filename=weapon.image_url) }}" alt="{{ weapon.name }}" class="weapon-image">
                     {% endif %}
                 {% else %}
-                    <!-- Default image -->
                     <img src="{{ url_for('static', filename='images/no_image.png') }}" alt="Default Weapon Image" class="weapon-image">
                 {% endif %}
             </div>
@@ -29,7 +32,7 @@
 
 <div class="pagination">
     {% if current_page > 1 %}
-        <a href="{{ url_for('modify_weapons', page=current_page-1) }}" class="page-link">&laquo;</a>
+        <a href="{{ url_for('modify_weapons', page=current_page-1, search=search_query) }}" class="page-link">&laquo;</a>
     {% endif %}
 
     {% set start = [current_page - 2, 1] | max %}
@@ -37,14 +40,14 @@
     {% set start = [end - 4, 1] | max %}
 
     {% if start > 1 %}
-        <a href="{{ url_for('modify_weapons', page=1) }}" class="page-link">1</a>
+        <a href="{{ url_for('modify_weapons', page=1, search=search_query) }}" class="page-link">1</a>
         {% if start > 2 %}
             <span class="page-ellipsis">...</span>
         {% endif %}
     {% endif %}
 
     {% for p in range(start, end + 1) %}
-        <a href="{{ url_for('modify_weapons', page=p) }}" class="page-link {% if p == current_page %}active{% endif %}">
+        <a href="{{ url_for('modify_weapons', page=p, search=search_query) }}" class="page-link {% if p == current_page %}active{% endif %}">
             {{ p }}
         </a>
     {% endfor %}
@@ -53,16 +56,50 @@
         {% if end < total_pages - 1 %}
             <span class="page-ellipsis">...</span>
         {% endif %}
-        <a href="{{ url_for('modify_weapons', page=total_pages) }}" class="page-link">{{ total_pages }}</a>
+        <a href="{{ url_for('modify_weapons', page=total_pages, search=search_query) }}" class="page-link">{{ total_pages }}</a>
     {% endif %}
 
     {% if current_page < total_pages %}
-        <a href="{{ url_for('modify_weapons', page=current_page+1) }}" class="page-link">&raquo;</a>
+        <a href="{{ url_for('modify_weapons', page=current_page+1, search=search_query) }}" class="page-link">&raquo;</a>
     {% endif %}
 </div>
 
 
 <style>
+
+/* Search Bar Styling */
+.search-form {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #8B7355;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #D4AF37;
+}
+
+.search-button {
+    padding: 0.5rem 1rem;
+    background-color: #8B7355;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #D4AF37;
+    color: #000;
+}
 /* Pagination */
 .pagination {
     display: flex;
