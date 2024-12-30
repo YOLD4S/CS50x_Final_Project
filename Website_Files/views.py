@@ -1494,15 +1494,25 @@ def update_profile():
                 return redirect(url_for('profile_page'))
             
             # Update user profile
-            update_query = """UPDATE users SET username = %s"""
+            update_query = "UPDATE users SET username = %s"
+            parameters = [username]
+
             if email != "":
                 update_query += ", email = %s"
+                parameters.append(email)
             if name != "":
                 update_query += ", name = %s"
+                parameters.append(name)
             if steam_url != "":
                 update_query += ", steam_url = %s"
+                parameters.append(steam_url)
+
+            # Add the WHERE clause
             update_query += " WHERE id = %s"
-            cursor.execute(update_query, (username, email, name, steam_url, session['user_id']))
+            parameters.append(session['user_id'])
+
+            # Execute the query
+            cursor.execute(update_query, tuple(parameters))
             
             # Commit transaction
             db.commit()

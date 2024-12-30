@@ -3,15 +3,15 @@
 {% block content %}
 <h1 class="page-title">Navigate Weapons to Delete</h1>
 
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <div class="flash-messages">
-        {% for category, message in messages %}
-        <div class="alert alert-{{ category }}">{{ message }}</div>
-        {% endfor %}
-    </div>
-    {% endif %}
-{% endwith %}
+{#{% with messages = get_flashed_messages(with_categories=true) %}#}
+{#    {% if messages %}#}
+{#    <div class="flash-messages">#}
+{#        {% for category, message in messages %}#}
+{#        <div class="alert alert-{{ category }}">{{ message }}</div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#    {% endif %}#}
+{#{% endwith %}#}
 
 <form method="GET" action="{{ url_for('navigate_weapons_delete') }}" class="search-form">
     <input type="text" name="search" placeholder="Search weapons..." value="{{ search_query }}" class="search-bar">
