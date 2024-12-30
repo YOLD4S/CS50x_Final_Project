@@ -12,3 +12,5 @@ Group Members:
 3- Run foreign_keys.sql in you database to create the foreign keys.
 4- Configure .env file with your database credentials.
 5- Run server.py to start the server.
+
+Note: make sure you have the required packages installed. You can find them in the requirements.txt file.
