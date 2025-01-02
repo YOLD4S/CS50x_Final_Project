@@ -1,6 +1,7 @@
 from functools import wraps
 from datetime import datetime
 import os
+from mysql.connector import Error
 
 from flask import (
     Flask,
@@ -76,17 +77,18 @@ def login_page():
             
     return render_template("login.html")
 
-
 def logout_page():
     session.clear()
     flash("You have been logged out successfully!", "success")
     return redirect(url_for("home_page"))
+
 
 def register_page():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
         password_confirm = request.form.get("password_confirm")
+
         if not username or not password or not password_confirm:
             flash("All fields are required.", "error")
         elif password != password_confirm:
@@ -94,15 +96,38 @@ def register_page():
         else:
             db = get_db()
             cursor = db.cursor()
-            query = """
-                INSERT INTO users (username, password)
-                VALUES (%s, %s)
-            """
-            cursor.execute(query, (username, generate_password_hash(password)))
-            db.commit()
-            flash("You have been registered successfully!", "success")
-            return redirect(url_for("login_page"))
+
+            try:
+                # Start a transaction
+                cursor.execute("START TRANSACTION")
+
+                # Insert the user into the database
+                query = """
+                    INSERT INTO users (username, password)
+                    VALUES (%s, %s)
+                """
+                cursor.execute(query, (username, generate_password_hash(password)))
+
+                # Commit the transaction if all goes well
+                db.commit()
+                flash("You have been registered successfully!", "success")
+                return redirect(url_for("login_page"))
+
+            except Error as e:
+                # Rollback the transaction if something goes wrong
+                db.rollback()
+
+                if e.errno == 1062 and "users.username" in str(e):  # Duplicate entry error code
+                    flash("There is already an existing user with that username.", "error")
+                else:
+                    flash(f"An error occurred: {str(e)}", "error")
+
+            finally:
+                # Always close the cursor
+                cursor.close()
+
     return render_template("register.html")
+
 
 def add_new_npc():
     db = get_db()
