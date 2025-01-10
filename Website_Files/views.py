@@ -470,37 +470,6 @@ def npc_detail_page(npc_id):
     return render_template("npc_detail.html", npc=npc_data["npc"], gear_details=npc_data["gear"])
 
 
-    gear_details = cursor.fetchone()
-    
-    # Organize the fetched details into structured data for rendering
-    npc_data = {
-        "npc": npc,
-        "gear": {
-            "weapons": {
-                "right_weapon": {
-                    "name": gear_details.get("right_weapon_name"),
-                    "skill": gear_details.get("right_weapon_skill_name"),
-                },
-                "left_weapon": {
-                    "name": gear_details.get("left_weapon_name"),
-                    "skill": gear_details.get("left_weapon_skill_name"),
-                },
-            },
-            "armors": {
-                "head": gear_details.get("head_armor_name"),
-                "body": gear_details.get("body_armor_name"),
-                "arms": gear_details.get("arms_armor_name"),
-                "legs": gear_details.get("legs_armor_name"),
-            },
-        },
-    }
-    print(gear_details)
-
-    # Render template with detailed NPC data
-    return render_template("npc_detail.html", npc=npc_data["npc"], gear_details=npc_data["gear"])
-
-
-
 
 def npc_page(npc_key): # may remove this later
     db_npcs = current_app.config["db_npcs"]
