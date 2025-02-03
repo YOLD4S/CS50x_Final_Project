@@ -1,9 +1,23 @@
-# BLG317E - Database Systems Project Repository
-Group Members:
-- Alihan Esen 150220338
-- Arif Eren Yoldaş 150210032
-- Hasan İnanç Güney 150190048
+# CS50x Final Project - Elden Ring Wiki
 
+This is a web application that users can see and modify the stuff of the game Elden Ring.
+
+Contributors:
+- Arif Eren Yoldaş
+- Alihan Esen
+- Hasan İnanç Güney
+
+Languages:
+This web apllication was made mostly with Python's Flask framework. In the design of web pages HTML and CSS were also utilized.
+MySQL was also used to create and operate the database.
+
+Data Source:
+The data about the items of the game was obtained from the link below.
+https://docs.google.com/spreadsheets/d/1x6LvzrqA9LWXPbzPZBDG8aL4N3Xc_ZxtEFMWpUxQj5c/edit?gid=1415047826#gid=1415047826
+
+The data obtained from this link was in the csv format. To be integrated and used in the website it was reformatted.
+
+Files:
 
 ## How to run the project
 
