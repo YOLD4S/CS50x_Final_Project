@@ -1,4 +1,4 @@
- CS50x Final Project - Elden Ring Wiki
+# CS50x Final Project - Elden Ring Wiki
 #### Video Demo:  https://www.youtube.com/watch?v=sI4ZPwMvEgU&ab_channel=ArifErenYolda%C5%9F
 #### Description:
 This is a web application that allows users to view and modify various elements of the game Elden Ring. The application provides a comprehensive database of items, weapons, armors, NPCs, and more, all sourced from the game. Users can explore detailed information about each item and even contribute by adding or modifying entries.
